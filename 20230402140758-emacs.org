@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       9d5d89cc-4f44-45a4-86a4-7dc57f50a7ae
+:END:
+#+title: Emacs
+

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       a9677c0d-3624-4f90-ad92-87fa113a1c4b
+:END:
+#+title: Roam
+
+* Basics
+
+Create nodes. Nodes can be linked with links.
+Basic link syntax =[[id:"Node ID Number"]["Display Text"]]=
+These are basic [[id:9d5d89cc-4f44-45a4-86a4-7dc57f50a7ae][Emacs]] links, but work off the idea of note id's.
+Creating links does more than let you jump around, it creates associations (learn more about what specifically it does.)
+** Keybindings
+ =C-c n d t= Capture Today's Journal Entry
+*Make* =C-c n d C= Org-Roam-Capture
+*Make* =C-c n I= Org-Roam-Node-Insert-Immediate
+=C-c n i= Org-Roam-Node-Insert
+* Goals
+
+Streamline the whole process better.
+Integrate Roam into your notetaking process

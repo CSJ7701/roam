@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       358cd346-a51f-4960-bcfc-d81e3f99c9ca
+:END:
+#+title: 2023-04-03
+
+
+This weekend wasn't as productive as I would have liked. I spent all Saturday playing video games and watching netflix, which was fun, but not particularly useful.
+
+I need to figure out a better workflow for Org Roam. I want to use it more - I think it could be useful, but I need to sit down and learn it, which I just don't have time for. 
