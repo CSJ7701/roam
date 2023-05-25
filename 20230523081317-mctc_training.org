@@ -3,7 +3,7 @@
 :END:
 #+title: MCTC-Training
 #+filetags: :Cadre:
-
+ this is a test
 
 [[id:931e43fe-6dcc-4d9c-9d16-0ea69410878f][MCTC]]
 * Shoe Shining
