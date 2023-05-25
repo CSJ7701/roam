@@ -7,7 +7,10 @@
 
 
 * Day One
+[[id:1a994b6f-6fae-4082-8ca1-dd97897a6770][MCTC-Training]]
 ** Drill
+[[id:2eaac0e7-e947-451e-9526-ac457cd75864][Drill]]
+
 6 to the front 3 to the rear
 Proper commands - emphatic
 Practice in front of a mirror
@@ -136,22 +139,142 @@ Memory
 - "Test" them on whatever we've just covered
 - E.G. For drill commands, once I've taught it, have the group execute it. If there seems to be confusion, break it down either within the group or break down the information (seperate people, or teach the information piece by piece). 
 
-** Marshmallow Activity
-
-
 ** UNDERSTANDING THE ROLE OF CADRE
+What is the purpose of the Cadre program?
+- To develop and teach incoming cadets
+- Develop leadership among second class cadets
+- Practice teamwork
+  
+Why do we have Cadre?
+- To train new swabs
+- Instill the Coast Guard core values in the incoming class
+
+
+Take this seriously - maintain a reputation, and back the reputation up with action.
+Stay squared away now, during the summer, and during the rest of the school year. 
 
 ** COAST GUARD LEADERSHIP MODELS: Train the Trainer (Session 1)
+*Interact Model*
+
+Used to address performance or behavior
+Behavior needs to meet one of 4 "questions" in order for the Interact model to apply
+- Is the bahavior having a negative impact on the job
+- Is the behavior preventing others from doing their job
+- Is the behavior preventing you from doing your job
+- Is the behavior a violation of unit or CG policy
+
+1. Communicate the situation
+   - State the standard/expectation, state the difference between what is currently happening in a *specific* and *non-punishing* way.
+
+2. Pause, allow time for a response. If there is no response, ask /why/. Allow ample time (7 seconds or so).
+
+3. Diagnose
+   - Find out why this happened.
 
 
+Categories of performance problems
+1. Role Clarity
+   "If i'd known, i'd have done it"
+   - Response: Re-establish role/expectation, Establish a follow up, Then follow up
+2. Ability
+   "If I could have done it, I would have"
+   - Response: Show/Tell how to accomplish the expectation or provide them the materials they need, Re-establish role/expectation, Establish a follow up, Then follow up 
+3. Willingness
+   "I know what is expected but I chose not to do it"
+   - Response: Communicate Natural Consequences (To the job, To others, To the Supervisor, To them), Stop at compliance, Re-establish role/expectation, Establish follow up, then follow up.
+4. Emergent Problem
+   Extreme situations (Sexual harrasment, Familt Loss, Financial, etc.)
+   - Response: Find out what it is (listen), Solve or postpone (How urgent is it), Return to original issue if appropriate
+
+
+Ronnie/Jamie: Cadre
+Berger: Ability
+Me: Role-Clarity
+Carson: Willingness
+Jimmy: Emergent Problem
+
+     
 * Day Two
 ** Shout Out Activity
 
 ** GROWTH MINDSET AND HEAT MOMENTS
+What is a growth mindset
+- Means being open to change and development
+- Approaching something willing to learn, and most of all willing to be wrong
+- Think about your position on the topic, and approach whatever it is with vigor and intention, but be able to recognize when that isn't correct.
+
+Possible Roadblocks
+- Stubborness
+- Desire to be right
+- "Black and White" Mindset
+- Seeing a situation as something where only one option may work
+- Biases or Previous Life Experiences
+- Comfort
+- Fear of Failure
+
+
+I am concerned about not knowing information well enough, or presenting incorrect information. I can adopt a positive growth mindset, and instead view this worry as an opportunity to practice my own understanding of the information, and ensure that I review all information with my cadre before I present it to the trainees.
+
+*Heat Moment* - "For an individual or team, heat is a stressful assignment that pushes you to your limits in a way that can be career-defining. It can be mentally taxing, emotionally confusing, or physically demanding - and sometimes all at once"
+
+Examples of possible "Heat Moments":
+- Disagreements
+- High intensity evolutions where we have to motivate the swabs
+- speaing w/o thinking
+- Swab in danger/medical emergency
+
+How do we get through the heat moment and develop as a leader from it:
+- Seperate yourself from the situation
+- Breathe and get some perspective
+- Keep a level head & understand what you need to do in the situation
+
+This is crucial to developing as a leader. It helps to learn control over impulses and emotions.
+
+
+
 
 ** PRINCIPLES OF EFFECTIVE FEEDBACK
+What is Feedback?
+- Respectful and purposeful information about performance and how best to improve
+
+Can you distinguish between feedback and correction?
+- Feedback involves presenting ways to improve and progress from the current position. Correction is simply identifying and pointing out deficiencies.
+
+Swab Summer focuses a great deal on negative feedback and reinforcement. This is intended to eliminate deficiency and cement the idea that the swabs should seek perfection. While this does mean that we aren't focusing a great deal on positive reinforcement we are able to use a lack of negative reinforcement just as effectively.
 
 ** DiSC PROFILE APPLICATION
+C - Conscientiousness
+- Analytical
+- Reserved
+- Precise
+- Private
+- Systematic
+
+
+What characteristics of this style help me to be a great leader?
+- I am able to analyze and process situations well.
+- 
+
+What characteristics get in the way of being a great leader?
+- Take too long analyzing situations
+- Would prefer to look at situations from a theoretical perspective rather than a practical one
+
+How can I be a more effective leader?
+- Make an effort to be more assertive
+- Force myself to take charge of situations and evolutions
+
+How do I approach conflict?
+- I tend to deal with conflict by analyzing the causes and best solutions to the issue
+- This is useful to me, but others may not see it as helpful and can see it as supercillious or condescending
+
+How do I react to stress?
+- Revert to the logical solution, which may not always be the correct one.
+- Tend to go and do my own thing when I see that things are not proceeding well
+
+How am I misunderstood?
+- People might think I don't care
+- Seen as condescending
+- 
 
 ** COAST GUARD LEADERSHIP MODELS: Train the Trainer (Session 2)
 

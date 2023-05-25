@@ -1,0 +1,77 @@
+:PROPERTIES:
+:ID:       c7116628-429e-4cd6-91da-00b938ef9d43
+:END:
+#+title: MCTC-Coach Meeting
+#+filetags: :Cadre:
+
+
+* Leadership Framework
+
+
+CORE VALUES: Honesty, Dedication, Flexibility
+I expect complete honesty. Honesty is more than just truth – it’s trust. I can only trust a
+person if I know they’re willing to come to me when they find problems, make mistakes, or need
+help – otherwise they might experience a problem, never seek help, and could make a simple
+problem much worse. Conversely, this trust is a two-way street. People can only trust me if I
+demonstrate that I deserve that trust. As such, I will always do my best to answer any questions
+you might have, listen to concerns that you bring to me, and address problems as soon as I can.
+This type of openness requires a certain amount of dedication. To me, dedication applies beyond
+the typical Coast Guard “Devotion to Duty”. I expect devotion to duty, but I also expect devotion
+to Country, Family, and Command. Devotion to Country should be obvious – you are a member
+of the Armed Forces; this involves dedication to the ideals and epithets that our country was built
+on. Family should also be evident – I expect myself and those around me to value family.
+Barring extreme circumstances, I will always make your family a priority in my decisions, and I
+expect the same from those that I interact with. Devotion to Command may seem odd. I do not
+expect “devotion” to me, but rather I expect you to be aware of the fact that I am devoted to you.
+As a leader, my job is to facilitate your success, but I can only do that if you utilize that as a
+resource. Flexibility is more of a goal for me than an expectation. We exercise little to no control
+over our environment, and as a result, we have even less control over the things that happen to
+us. We must be constantly flexible, and ready to adapt to changing situations and inclement
+circumstances. I feel this is represented best by Seneca, stating “Why need we weep over parts of
+our life? the whole of it calls for tears: new miseries assail us before we have freed ourselves
+from the old ones. You, therefore, who allow them to trouble you to an unreasonable extent
+ought especially to restrain yourselves, and to muster all the powers of the human breast to
+combat your fears and your pains.”
+Framework: Building trust, Forging relationships, Tempering teamwork
+As I discussed earlier, trust is integral to a properly functioning team. Building this trust
+is one of my primary goals. In order to effectively build trust, I need to focus on building
+relationships with each individual member of my team. This involves getting to know everyone
+as an individual – outside of a work environment. Understanding the people you work with, and
+who work for you is extremely important, as it allows you to understand their motivations and
+foster a more productive work environment. As relationships grow, it’s important to focus on
+making sure that collaboration grows with it. My overall goal is to create an environment that
+people feel comfortable in, that promotes accountability, responsibility, honesty, and dedication.
+I hope to accomplish this by setting an example of integrity and adaptability, establishing the
+idea of leadership and teamwork as a two-way street.
+
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/Leadership Framework.png]]
+
+
+
+* Questions and Meeting Notes
+
+1. Since our interactions with swabs are going to be markedly different from interactions with subordinates in the fleet, what can we take away from swab summer that would apply to the larger coast guard?
+   - Perspective. Understand that I am in their position - everyone has worked for someone else. Is what I'm asking of them reasonable; is my approach similar to the way I would want to be led/directed. 
+
+2. Since I'll be coming in as a phase two cadre, with the swabs already well in the swing of things, do you have any advice for me and the rest of my cadre section on how best to communicate and prepare so that we work as a cohesive unit?
+   - Each of the cadre shoud take notice of the swabs (strengths and weaknesses). Capitolize on that. Take weaker with stronger. We hav information, use it to structure actvities and teams. Share and communicate about different swabs and what theyre doing well on. 
+
+3. How would you recommend motivating my section? (as an introvert?)
+   - Honesty - "I am not comfortable talking in groups, and I know it will make me stronger"
+
+   - Vulnerability
+
+   - For the swabs: explain, I understand that they may not find positions comfortable, but tell them "yes, its uncomfortable", but I've done it, gone through it, and I understand. (move this closer to the swab-cadre dynamic)
+
+
+Leadership Framework:
+
+Focus on the topmost levels.
+My expectation is for them to tell me if they are confused.
+- connects to honesty and trust
+- Tells them that I am trustworthy
+
+I'm training them - they look up to me, look to me for guidance.
+

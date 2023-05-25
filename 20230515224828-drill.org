@@ -3,6 +3,9 @@
 :END:
 #+title: Drill
 
+[[id:931e43fe-6dcc-4d9c-9d16-0ea69410878f][MCTC Drill practice]]
+
+
 * Personal Priorities
 
 ** Appearance
