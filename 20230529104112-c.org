@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       a0701eb5-765d-4d20-92b0-e8e027b5b54c
+:END:
+#+title: C++
+

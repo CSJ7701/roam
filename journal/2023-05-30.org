@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       be654f85-a0aa-47d9-be06-92c2d38421ee
+:END:
+#+title: 2023-05-30
+* 06:51 AM: First day in [[id:21c174c9-aa20-4cc4-9f11-e452d7b31f38][CGCYBER]]
+We went to Cyber HQ today. Left around 7, took a shuttle, and met our escort (ENS Brianna Nelson). Spent the first hour or so working through some general Q&A with her, then getting our clearances finalized. We went around several of the cubicles next, meeting some people and learning about a generic workday, then we went up to one of the SCIF's to see NOSC (Network Operations Security Command - I think). We moved over to the other part of the SCIF to meet some people working in CSOC, then we went downstairs to talk to someone from IT. After that, we sat in on a briefing - classified (Secret), then we ate lunch and headed out. I spent most of the afternoon with Cowen in the National Museum of Natural History, then we headed back to the hotel to rest and get dinner at Founding Farmers. 

@@ -2,6 +2,7 @@
 :ID:       a9677c0d-3624-4f90-ad92-87fa113a1c4b
 :END:
 #+title: Roam
+#+filetags: :Emacs:
 
 * Basics
 

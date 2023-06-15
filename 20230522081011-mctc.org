@@ -5,7 +5,6 @@
 #+filetags: :Cadre:
 
 
-
 * Day One
 [[id:1a994b6f-6fae-4082-8ca1-dd97897a6770][MCTC-Training]]
 ** Drill
@@ -193,7 +192,7 @@ Me: Role-Clarity
 Carson: Willingness
 Jimmy: Emergent Problem
 
-     
+
 * Day Two
 ** Shout Out Activity
 
@@ -276,27 +275,115 @@ How am I misunderstood?
 - Seen as condescending
 - 
 
-** COAST GUARD LEADERSHIP MODELS: Train the Trainer (Session 2)
-
 ** TAKING CARE OF PEOPLE
+What does it mean to take care of people?
+- Ensuring that each individual ahs everything they need to succeed on a personal and a professional level.
+
+Maslow's hierarchy of needs outlines 5 basic categories of needs that each person has:
+Self-actualization, Self-esteem, Love and Belonging, Safety and Security, and physiological needs
+We challenge each of these categories in unique ways, depriving them of food, sleep, physical contact, emotional connection, and validation.
+We also provide for these needs in ways  that are unique to the cadre-swab relationship, ensuring their safety at all times, providing a very tough love support system.
+It's crucial to understand the needs of the people you lead and understand how your leadership both provides for and challenges those needs.
+
+
+How can I incorporate these needs to ensure that I am taking care of myself?
+- Have a checklist that i use to ensure that I'm getting the proper amount of sleep, food, water, etc.
+- Ensure that I'm taking a portion of each day for reflection and seperation from people and the day.
+
+
+How can I ensure that I use these needs to take care of the rest of my cadre section?
+- Check in regularly
+- If i notice something is off, then mention something to that person.
+
+
+Make sure cadre roles and responsibilities switch on a regular basis. 
+Implementing a duty schedule will help set accountability - making sure cadre take care of themselves. 
 
 
 * Day Three
-** Teach Back Revisit
 
 ** Conflict Management
+Words that come to mind when I think of conflict
+- Disagreement
+- Engaging
+- Grating
+- Strong Opinions
+- Rigid
+Feeling related to conflict:
+- Irritation
+- Stubborness
+- Anger
+- Competition
+After conflict I feel:
+- Angry
+- Irritated
+- Combative
+- Confrontational
 
+Conflict styles:
+Competing (I win you lose), Collaborating (I win you win), Compromising (1/2 win 1/2 win), Avoiding (I lose you lose), Accomodating (I lose you win)
+
+Each of these are useful in their own circumstance
+Competing: Exigent issues
+Collaborating: Larger groups where we have people to mediate, good default
+Compromising: one on one, not time sensitive
+Avoiding: immediate task
+Accomodate: When dealing with superior or unknowns.
+
+Conflict can be approached with the RESOLVE model
+Reach out, Engage in conversation, Seek to solve the problem, Open up, Listen intently, Voice solutions, End on a good note
 ** OCS
+We had a very productive talk with two OCS cadre. Unfortunately I don't remember much of what they had to say, but I do remember them mentioning to take time to form as a team and to focus on not stretching ourselves beyond our limits. There's a time and a place for different interactions. If the swab needs support, give it to them. If they need a question answered, or want to understand the motivation behind something, explain it. Most of all, we should be the examples - on a physical and a mental level. We should understand almost everything we're teaching them. 
 
 
 * Day Four
-** Teach Back Revisit
-
 ** COAST GUARD LEADERSHIP MODELS: Tuckmans Model Applications
-
+Forming:
+- Teams have just come together. They don't know much about each other yet, and they haven't figured out how to function as a team yet. Everyone very polite and considerate of each other's place - which is good, but unproductive
+Storming:
+- Teams have started to grate on each other. Individuals are starting to come into conflict, and as membvers learn more about each other, they gain confidence in themselves. There's going to be less politeness as people start to get more comfortable voicing their opinions over others. Groups need to enter this stage in order to improve and gain efficiency as a team
+Norming:
+- Team accepts their goals and roles, should now fully understand themselves, their peers, and the group. They work positively together to accomplish goals, are comfortable with each other.
+Performing:
+- Best place to be. They focus on achieving goals, and should have moved past disagreements and petty opinions to solve conflicts positively. 
+Adjourning:
+- The group is disbanding, some dissapointment over the gradual feeling of failure and seperation.
 ** COAST GUARD LEADERSHIP MODELS: Leadership Action Model Applications
+Made up of a graph divided into quadrants. two perpendicular scales, Ability and Motivation.
+High ability and low motivation requires an instructur to /Inspire/ the trainee (top left)
+Low ability and motivation requires an instructor to /Teach/ and /Inspire/ the trainee (bottom left)
+High ability and moticvation requires an instructor to /Trust/ the trainee (top right)
+Low ability and high motivation requires an instructor to /Teach/ the trainee (bottom right)
+
+Teach
+- Task focused
+- high training
+- reviuew work
+- clear task direction
+- knwledge and skill
+
+
+Inspire
+- Member focused
+- task meaningfulness
+- listen
+- remove barriers
+- show progress
+- feedback
+
+
+Trust
+- Autonomy
+- check work occassionally
+- Independance
+- Involve in decision making
+
 
 ** CULTURAL FLUENCY
+What does it mean to be culturally fluent?
+- be respectful
+- seek knowledge and understanding about another persons culture
+- get a basinc understanding before asking
 
 ** COAST GUARD LEADERSHIP MODELS: Interact Model Application
 
@@ -304,9 +391,23 @@ How am I misunderstood?
 
 
 * Day Five
-** Teach Back Revisit
-
 ** COAST GUARD LEADERSHIP MODELS: TLC Applications
 
 ** EMPATHETIC LEADERSHIP
 
+Empathy
+- putting yourself in someone elses shoes
+- Treating them as people, not robots (when necessary)
+- People perform the best when they think you care about them
+
+
+** Reflection
+What am I looking for out of swab summer?
+- A chance to get out of my comfort zone
+- I've had leadership positions before, but this will be my first time being responsible for actual people (as opposed to just money or tasks/results)
+
+
+What will cause tension for me?
+- Differences of opinions
+- Perceived lack of effort
+- Lack of preparation

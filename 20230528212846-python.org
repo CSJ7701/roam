@@ -1,0 +1,593 @@
+:PROPERTIES:
+:ID:       7fc21633-542b-41b5-9019-a820af991795
+:END:
+#+title: Python
+#+filetags: :Coding:
+
+<BOOKMARK>
+
+* Intro - [[https://www.w3schools.com/python/][W3 Schools Python]]
+
+Uses:
+- Web Development
+- Software
+- Math
+- Scripting
+
+
+Specs:
+- Used with a server to create applications
+- Used with software to supplement workflow
+- Connects to database systems
+- Can read and modify files
+- Complex Math
+- Rapid Prototyping/production-ready software development and deployment
+
+
+Benefits:
+- Cross-platform
+- Readable
+- Compact
+- Can be written and executed in the same program
+- Can be written procedurally, object-oriented, or functional
+- Developed for readability
+- Uses newlines to complete commands (as opposed to C (;) or Lisp (Parentheses))
+- Relies on indentation, whitespace to define scope
+
+** First Code Block
+
+Using Org-Babel, we have a choice between session and non session mode.
+Here I am using non-session mode, meaning that each block is a seperate piece of code (they don't interact).
+If I wanted to make one Org document with several Babel blocks that communicate, I could use sessions, naming them to differentiate between different sessions. This is done with syntax ":session [name]".
+#+begin_src python :results {output, value}
+
+  def test(x):
+      if x>0: 
+          return x
+      else:
+          return x-1
+
+
+
+  return test(5)
+
+#+end_src
+
+#+RESULTS:
+: 5
+
+
+In an actual .py file, we could use print() to output text, but using babel, we shoud instead use return. *Note* - there is a difference between what the two actually do. print does not actually return an output, rather it writes text. My point here is only that, while we could normally use print in .py files, we can't as long as we're using babel.
+#+begin_src python :results {output, value}
+  return "Hello World"
+  return print("Hello World!!!")
+
+#+end_src
+
+#+RESULTS:
+: Hello World
+
+We can use the "python" command in a teminal to test quick lines of code
+- "python"
+- Enter python commands
+- "exit()" to end the python session
+
+* Indentation
+Python is based on indentation, meaning that while:
+#+begin_src python
+  def bob():
+      print("HI")
+#+end_src
+would work,
+#+begin_src python
+  def bob():
+  print("HI")
+#+end_src
+would not.
+
+The actual number of indentations is arbitrary, but it must be at least one, and it must be consistant (emacs should handle this for you).
+
+* Variables
+Variables are created once you assign a value to a unique name.
+For instance, x and y are created as unique variables even though they share a value.
+#+begin_src python
+  x=5
+  y=5
+#+end_src
+
+There is no unique command for declaring a variable, and each is assigned the corresponsing type according to what the value is.
+- Unlike [[id:a2cd7f2f-b2eb-4465-a7ba-5220491682d9][C]] or [[id:a0701eb5-765d-4d20-92b0-e8e027b5b54c][C++]], there's no need to specify whether each variable is a string, double, int, etc. The variable detects automatically and handles that for you.
+  You still need to handle different variables differently, e.g. you can't add two strings like integers, but theres no need to name them as such.
+
+** Type
+
+Variables can change type after they have been set. So if I were to declare x, then redeclare it as a new type of variable, it would simply take on the most recent value.
+#+begin_src python
+  x="bob"
+  x=5
+#+end_src
+
+While it isn't necessary to define a variable's type, it can be done using casting.
+#+begin_src python
+  x=str(3) #x='3'
+  x=int(3) #x=3
+  x=float(3) #x=3.0
+#+end_src
+
+A variables type or class can be found with the type command.
+
+Strings are declared using either single or double quotes.
+
+** Names
+
+Variable names are case sensitive, e.g. =a= is not the same variable as =A=
+
+*Rules for a variable name:*
+- must start with either a letter or an underscore
+- Cannot start with a number
+- Can contain only alphanumeric characters and underscores (no spaces)
+- Case sensitive
+- Cannot be any of the [[https://www.w3schools.com/python/python_ref_keywords.asp][Python Keywords]]
+
+
+Multiword variables can be difficult to read. Recommended to use one of several strategies to make them easier to interpret
+*Camel Case*
+- Capitalize every new word except the first
+- myVariableName
+
+
+*Pascal Case*
+- Capitaloze Every Word
+- MyVariableName
+
+
+*Snake Case*
+- Seperate every word with an underscore
+- my_variable_name
+
+** Multiple Values
+
+Assigning multiple values:
+Python lets you assign several variables in a single line.
+#+begin_src python
+    x, y, z = 1, 2, 3
+    return x, z, y
+#+end_src
+
+#+RESULTS:
+| 1 | 3 | 2 |
+
+Assigning one value to multiple variables:
+Similarly, you can use one line to assign one value to multiple variables
+#+begin_src python
+  x = y = z = "bob"
+  return x,z,y
+#+end_src
+
+#+RESULTS:
+| bob | bob | bob |
+
+If you have an array, tuple, list, etc assigned to a single value, you can "Unpack" it into multiple variables
+#+begin_src python
+  fruits = ["lemon", "apple", "banana"]
+  x, y, z = fruits
+  return z,x,y
+#+end_src
+
+#+RESULTS:
+| banana | lemon | apple |
+
+** Global Variables
+Global Variables are created /outside of a function/.
+(Everything that has been shown so far)
+
+If you create a global variable outside a funtion, then create a new variable with the same name inside a function, the variable inside the function becomes a /local variable/, seperate from the global variable. The global iteration remains unchanged while the local one is affected by the function.
+#+begin_src python :results output
+  x=5
+
+  def test(input):
+    x=1
+    y=x+input
+    print("x (local) = ", x)
+    print("y (local) = ", y)
+
+    
+  print("x (global) = ", x)
+  test(1)
+#+end_src
+
+#+RESULTS:
+: x (global) =  5
+: x (local) =  1
+: y (local) =  2
+
+
+If you create a variable inside a function, that variable can typically not be used outside that function. We can, however, use the =global= keyword to create a global variable inside a function
+
+#+begin_src python :results output
+    def test(input):
+      global x
+      x=5
+      y=1
+      print("x+y=",x+y)
+
+
+    test(1)
+    print("x=",x)
+    print("y= undefined")
+#+end_src
+
+#+RESULTS:
+: x+y= 6
+: x= 5
+: y= undefined
+
+We also use this keyword when we want to change a global variable inside a function
+#+begin_src python :results output
+  x=" Awesome"
+
+  def test():
+      global x
+      x=" fantastic"
+  print("Python is" + x)
+  test()
+  print("Python is" + x)
+
+
+#+end_src
+
+#+RESULTS:
+: Python is Awesome
+: Python is fantastic
+
+* Data Types
+Text: str
+Numeric: =Int=, =Float=, =Complex=
+Sequence: =List=, =Tuple=, =Range=
+Mapping: =Dict=
+Set: =Set=, =Frozenset=
+Boolean: =Bool=
+Binary: =Bytes=, =Bytearray=, =Memoryview=
+None: =Nonetype=
+
+The [[*Type][Type Function]] returns the datatype of a variable
+
+Datatype is set automatically when a variable is declared, but it can be set manually as well.
+=str=, =int=, =float=, =tuple=, =complex=, =list=, =range=, =dict=, =set=, =frozenset=, =bool=, =bytes=, =bytearray=, =memoryview=
+#+begin_src python :results {output, value}
+x=str('3')
+#+end_src
+
+** Numeric
+#+begin_src python :results {output, value}
+  x=1 # int
+  y=2.0 #float
+  z=1j #complex
+#+end_src
+
+Int - a whole number of unlimited length, positive or negative, without decimals
+Float - a number, positive or negative, containing one or more decimals. Can also be scientific numbers with an =e= to indicate a power of 10
+- 5e4 = 5000
+Complex - Written with a j to indicate an imaginary part (3+5j, -5j, etc)
+
+You can convert between these using the =int()=, =float()=, and =complex()= commands.
+Much of this conversion happens automatically. If i were to add int(2) and float(0.8), 2 would automatically convert to 2.0, add to 0.8, and produce the float value of 2.8.
+
+If we have to convert to something thats not a numerical value (treat int(2) as a string) we could simply say =string(2)=. This is called Type Casting. 
+
+*Random Numbers*
+Python does not have a builtin random number command, instead you must use a module called random (which /is/ built in)
+#+begin_src python :results output
+  import random
+  print(random.randrange(1, 10))
+#+end_src
+
+#+RESULTS:
+: 8
+
+
+** Strings
+Strings are denoted by either single or double quotation marks.
+Multiline strings are denoted with three quotation marks (either double or single)
+
+As with other programming languages ([[id:a2cd7f2f-b2eb-4465-a7ba-5220491682d9][C]], [[id:a0701eb5-765d-4d20-92b0-e8e027b5b54c][C++]]), strings are just arrays - however, Python does not have a "character" data type. A single character is a string of length 1.
+Square brackets can be used to index into arrays, and as with other programming languages, the index begins with 0.
+#+begin_src python :results output
+  x = "12345"
+  print(x[1])
+#+end_src
+
+#+RESULTS:
+: 2
+
+*Looping through a string*
+Since strings are just arrays, we can loop through them with a for loop
+#+begin_src python :results output
+  for x in "banana":
+    print(x)
+#+end_src
+
+#+RESULTS:
+: b
+: a
+: n
+: a
+: n
+: a
+
+the [[*Len][Len Command]] returns the length of a string
+
+*** In
+
+We can use the keyword =in= to check if a (case sensitive) phrase or character is present in a given string
+#+begin_src python :results output
+  x = "The best things in life are free"
+  print("free in x?","free" in x)
+  print("Free in x?","Free" in x)
+#+end_src
+
+#+RESULTS:
+: free in x? True
+: Free in x? False
+
+We can use =not= to check the opposite
+#+begin_src python :results output
+  txt = "The best things in life are free"
+  if "free" in txt:
+      print("Dobby is FREEEE!")
+
+  if "Dobby" not in txt:
+      print("Dobby is a BAD elf!")
+#+end_src
+
+#+RESULTS:
+: Dobby is FREEEE!
+: Dobby is a BAD elf!
+
+*** Slicing
+Slicing allows us to return a range of characters
+We specify the start and end index seperated with a colon.
+If we want to slice from the start, we can use either [0:#] or [:#] (# is any number)
+The same is true for slicing to the end.
+We can slice "negatively" using negative indeces. This will start at the end and subtract the first index, then proceed to the end index. 
+
+Note that the end value is non-inclusive. If I slice 2 to 5, I'm only going to get the 2nd, 3rd, and 4th characters. 
+#+begin_src python :results output
+  x = "Hello, World!"
+  print("2:5 - ",x[2:5])       #Characters 2,3,4
+  print("B:5 - ",x[:5])        #Characters 0,1,2,3,4
+  print("5:E - ",x[5:])        #Characters 5,6,7,8,9,10,11,12,13
+  print("-5:-2 - ",x[-5:-2])   #Characters 9,10,11 --- 13-5, 13-4, 13-3
+#+end_src
+
+#+RESULTS:
+: 2:5 -  llo
+: B:5 -  Hello
+: 5:E -  , World!
+: -5:-2 -  orl
+
+*** Modifying Strings
+- [[*Upper][Upper()]]
+  Converts a string to upper case
+- [[*Lower][Lower()]]
+  Converts a string to lower case
+- [[*Strip][Strip()]]
+  Removes whitespace from the beginning and end of a string
+- [[*Replace][Replace()]]
+  Replaces a given string with another (can be smaller parts of a string too)
+- [[*Split][Split()]]
+  Defines a character within a string as a seperator, then formats a list with elements comprised of strings in between each seperator
+
+*** Concatenate Strings
+#+begin_src python :results output
+  a="Hello"
+  b="world"
+  c=a+b
+  d=a+" "+b
+  print(c)
+  print(d)
+#+end_src
+
+#+RESULTS:
+: Helloworld
+: Hello world
+
+*** Formatting Strings
+We have already seen that we cannot combine strings and integers.
+For example, this code will not work:
+#+begin_src python :results {output, value}
+  a=36
+  b="Jon is "+a+" years old."
+  print(b)
+#+end_src
+
+We can use the [[*Format][Format Command]] to combine multiple datatypes in a print function.
+This function takes an unlimited number of arguments, which are placed into their respective placeholders in order of appearance.
+#+begin_src python :results output
+  quantity = 3
+  itemno = 567
+  price = 49.95
+  myorder = "I want {} pieces of item {} for {} dollars."
+  print(myorder.format(quantity, itemno, price))
+#+end_src
+
+#+RESULTS:
+: I want 3 pieces of item 567 for 49.95 dollars.
+
+You can also use index numbers to ensure that the arguments are placed correctly.
+#+begin_src python :results output
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price))
+#+end_src
+
+#+RESULTS:
+: I want to pay 49.95 dollars for 3 pieces of item 567.
+
+*** Escape Characters
+
+<BOOKMARK>
+
+* Comments
+Comments are handled with #.
+Python doesn't support multiline comments, comment each line with a seperate #.
+
+You can /technically/ use a multiline string. Python ignores strings that are not part of an action, so if you have a string thats outside a function and not being acted on, you can use that as a comment. This is done with triple quotation marks. Like so: """ this \n is \n a \n comment """ (pretend the \n is newline).
+
+As long as the string is not assigned to a variable, Python will read the sting then ignore it.
+
+* Commands
+** Print
+print()
+
+used to write text to the terminal. The input is treated as output, and is returned
+
+#+begin_src python :results output
+  x="bob"
+  print(x)
+#+end_src
+
+#+RESULTS:
+: bob
+
+Print can take multiple inputs, as long as they are seperated by a comma or a plus (+) for math. + can also add text input, but there are no spaces between the words.
+Using a comma is the best overall method. This method supports different data types as well. 
+#+begin_src python :results output
+  x="bob"
+  y="says"
+  z="hi"
+  a=5
+  A=3
+  print(x,y,z), print(a+A), print(x + y + z)
+
+#+end_src
+
+#+RESULTS:
+: bob says hi
+: 8
+: bobsayshi
+
+** Type
+
+type()
+
+Returns the type of the input variable
+
+#+begin_src python
+  x=5
+  y="bob"
+  return type(x), type (y)
+  # in a regular .py file, this would be:
+  # print(type(x))
+  # print(type(y))
+#+end_src
+
+#+RESULTS:
+| <class | int | > | <class | str | > |
+
+*** Conversion
+These commands convert between numerical value data types. They actually convert the number, meaning that int(2.8)=2, complex(5)=5+0j, etc
+- =int()=
+- =float()=
+- =complex()=
+
+Typecasting can convert explicitly between variables of different data type. Functions in the same way, simply type the name of the type then parentheses around the variable or value you want to convert.  
+
+** Len
+len()
+
+returns the length of a string
+
+#+begin_src python :results value
+  x="bob"
+  return len("bob")
+#+end_src
+
+#+RESULTS:
+: 3
+
+** Upper
+upper()
+
+Converts a string to upper case
+
+#+begin_src python :results output
+  a = "Hello World"
+  print(a.upper())
+#+end_src
+
+#+RESULTS:
+: HELLO WORLD
+
+** Lower
+lower()
+
+Converts a string to lower case
+
+#+begin_src python :results output
+  a = "Hello World"
+  print(a.lower())
+#+end_src
+
+#+RESULTS:
+: hello world
+
+** Strip
+strip()
+
+removes whitespace from the beginning or end of a string
+
+#+begin_src python :results output
+  a = "     Hello World     "
+  print(a.strip())
+#+end_src
+
+#+RESULTS:
+: Hello World
+
+** Replace
+replace()
+
+Replaces a string with another string
+
+#+begin_src python :results output
+  a = "Hello World"
+  print(a.replace("H", "J"))
+#+end_src
+
+#+RESULTS:
+: Jello World
+
+** Split
+split()
+
+Allows you to define a seperator which uses a string to define terms in a list.
+The seperator is not counted among the contents of any of the terms. 
+
+#+begin_src python :results output
+  a = "Hello, World!"
+  print(a.split(","))
+  print(a.split(" "))
+  print(a.split("W"))
+#+end_src
+
+#+RESULTS:
+: ['Hello', ' World!']
+: ['Hello,', 'World!']
+: ['Hello, ', 'orld!']
+
+** Format
+format()
+
+Uses placeholders ( {} ) and input arguments to input strings of multiple data types.
+
+#+begin_src python :results output
+  age = 36
+  txt = "My name is John and I am {}"
+  print(txt.format(age))
+#+end_src
+
+#+RESULTS:
+: My name is John and I am 36

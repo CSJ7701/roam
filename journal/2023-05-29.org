@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2297eabe-4e9f-458d-a22c-3a4b956aa4c2
+:END:
+#+title: 2023-05-29
+* 08:16 PM: First Day in DC for Cyber
+Took the train down from New London this morning. Spent pretty much the entire ride working on my [[id:7fc21633-542b-41b5-9019-a820af991795][Python]] notes.
+Got to DC around 3, checked in to the hotel, then went out. I was with Joe Church, Cohen Bland, and Torin Kearney. We went to the Capitol Building, then headed to the White House to get dinner at Old Ebbitt's Grill. I forgot how much I enjoyed being in DC. I don't really enjoy cities in general, but DC feels different. We'll see how I enjoy being at CGCYBER, but I honestly think I'd enjoy working here. I'm really excited for this week. 
