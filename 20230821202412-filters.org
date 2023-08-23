@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       ebd7681f-a6a2-43c2-871b-c68c34206d57
+:END:
+#+title: Filters
+#+filetags: :Linear:
+
+Filters - are discriminators.
+In EE - typically filter as a function of Frequency
+
+We can typically characterize a filter by its [[id:6478ce45-e2f4-4bae-848f-fb59890a15b1][Frequency Response]], recognizing the magnitude as [[id:3a9a668a-5f74-4ecc-a02c-c099361bc890][Magnitude Response]].
+We can also do so with [[id:28c4eaf6-f1bc-4915-b031-a91b291e62e1][Phase Response]] or [[id:fa91476b-19eb-4056-83c7-af381aa2c105][Impulse Response]].
+
+Ideal filters are not possible. This contradicts what we studied in EE1.
+Proof:
+[[id:4608b015-77b5-4ed2-9f1f-07d8cf2661f3][Ideal Low Pass Filter]]
+
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/LinearCircuitsLecture-2023-08-23.png]]
+In an Ideal filter, Amax = 0, Amin = $\infty$, $f_c = f_s$
+

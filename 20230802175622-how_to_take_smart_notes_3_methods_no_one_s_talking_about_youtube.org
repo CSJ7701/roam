@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       aa8194a6-2684-4c87-af84-56b85e688e72
+:ROAM_REFS: https://youtu.be/5O46Rqh5zHE
+:END:
+#+title: How To Take Smart Notes (3 methods no one's talking about) - YouTube
+#+STARTUP: inlineimages
+#+Filetags: :Productivity:Video:
+[[yt:5O46Rqh5zHE]]
+| Timestamp  | Description | Link |
+|------------+-------------+------|
+| [[ https://youtu.be/5O46Rqh5zHE&t=0 ][ 00:00:00 ]] | Video Start | N/A  |
+
+* Notes

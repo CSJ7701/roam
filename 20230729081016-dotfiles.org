@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       ce83c2b8-398b-48d5-9c8b-85b96c3415f9
+:END:
+#+title: Dotfiles
+#+category: Dotfiles
+#+filetags: :Emacs:Project:
+
+
+* Inbox
+** SHORT-TERM Start EWW 
+  [2023-05-17 Wed 17:52]
+  [[file:~/.dotfiles/.config/hypr/hyprland.conf]]
+
+** DEFER Change Bar from Waybar to EWW 
+:LOGBOOK:
+- State "DEFER"      from "INBOX"      [2023-06-23 Fri 19:20] \\
+  Not sure EWW bar is what I'm looking for, might be better to stick to waybar but with entries that activate eww widgets
+:END:
+  [2023-05-19 Fri 13:21]
+  [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
+
+** LOW Add more bar configs to go with new wallpapers 
+  [2023-05-19 Fri 13:22]
+  [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
+
+** LOW Figure out how to add MPVPAPER to wallpaper script 
+  [2023-05-19 Fri 13:22]
+  [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
+
+** NEXT Make a "find file in XXX tab" function
+Should let me limit my tab layout to directly specified.
+I want Startpage tab, Roam tab, and general (plus any others I decide to add)
+  [2023-06-28 Wed 20:28]
+  [[file:~/.dotfiles/.emacs.d/emacs.org::*Org Roam UI][Org Roam UI]]
+
+** TODO Make function - insert tag from list.
+Make a list of existing tags, insert one from list. If tag I want doesn't exist I can type it and insert.
+Should be similar to my old search by tags function.
+  [2023-07-02 Sun 13:30]
+  [[file:~/roam/20230702131029-permanent_notes.org::- Structure notes (or MOC's)]]
+
+** TODO Fix Org Capture Templates 
+  [2023-06-28 Wed 22:27]
+
+** NEXT Start optimizing tab functions
+There are a few things I'm missing, as i use the setup I'll find them.
+First one I can think of is a more robust switching command
+  [2023-06-28 Wed 20:30]
+  [[file:~/.dotfiles/.emacs.d/emacs.org::*Org Roam UI][Org Roam UI]]
+
+** TODO Fix Project TODOS
+** TODO Fix capture templates 

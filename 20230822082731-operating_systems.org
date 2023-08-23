@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       80edeaf5-f295-4806-9fb1-0ba8a23f0c49
+:END:
+#+title: Operating Systems
+#+filetags: :Class:MOC:OS:
+
+In general, an OS is in charge of Memory management, Process management, Device management, Storage management, Security policy management, etc. 
+
+
+Central logic - [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]]
+[[id:8b260d84-a4a5-43eb-928a-7661d2035013][Compilation]]

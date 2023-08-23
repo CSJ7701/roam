@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       7dcb79d7-4047-4a4b-bbac-5c7953b158ba
+:END:
+#+title: Bels 
+#+filetags: :Linear:
+
+Bel $\stackrel{\triangle}{=} log_{10}(\frac{P_{Out}}{P_{In}})$
+dB = DeciBel = $$\stackrel{\triangle}{=} 10 log_{10}(\frac{P_{out}}{P_{in}} = 10 log_{10}(\frac{V_{out}^{2} / R}{V_{in}^{2} / R}) = 20 log_{10}(\frac{V_{out}}{V_{in}})$$
+
+$$\therefore dBm = 10log_{10}(\frac{P_{out}}{1 mW})$$
+$$\therefore dBv = 20log_{10}(\frac{V_{out}}{1V})$$
+

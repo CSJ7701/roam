@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       52790acd-48e1-4cb3-b69f-559a36412326
+:END:
+#+title: Antennas and Propogation
+#+filetags: :Class:Antennas:MOC:
+
+[[id:31df971c-3f7c-473f-b78a-4590b93fa8cf][Antennas]]
+
+One of the primary objectives of this class is getting from point A to point B while dealing with:
+- Obstructions
+- Curve of the Earth
+- Non line of sight
+- Interference
+
+[[id:04910895-b3b3-4e02-b5a0-587beb368c99][Radio Signals]]
+[[id:f5e9e67a-f54c-40d7-bbb2-26edcc081608][Electric Field]]
+[[id:b45d1a4b-f92e-4df7-a88b-9ff85bb02735][Magnetic Field]]
+[[id:88a8bbcc-0f9c-4dcc-b1d4-63888d01abc5][Electric Flux]]
+[[id:bae1c0cb-43cd-44ea-aa64-f83f6d608440][Magnetic Flux]]
+[[id:a3771f1d-da60-4c28-9e5b-5d202c2f6998][Travelling Waves]]
+
+
+
+* Basic Equations
+
+$c = f\lambda$
+Speed = frequency*wavelength
+
+
+** Units
+| Variable      | Description                   | Units           | Alternate Unit |
+|---------------+-------------------------------+-----------------+----------------|
+| B             | Magnetic Flux Density         | T (Tesla)       | Webers/m^2     |
+| H             | Magnetic Field Intensity      | Amps/Meter      |                |
+| E             | Electric Field Intensity      | Volts/Meter     |                |
+| D             | Electric Fluc Density         | C/m^2           |                |
+| C             | Coulombs                      |                 |                |
+| V             | Voltage, EMF, Potential Diff. | Volts           | Joules/Coulomb |
+| I             | Current                       | Amps            | Coulombs/Sec   |
+| R             | Resistance                    | Ohms ($\omega$) |                |
+| W             | Power                         | Watts           | Joules/Sec     |
+| J             | Energy                        | Joules          |                |
+| *J*           | Current Density               | Amps/Meter^2    |                |
+| C             | Capacitance                   | Farads          | volt-sec/amp   |
+| L             | Inductance                    | Henries         |                |
+| H             | Henry                         | 1 Coulomb/Volt  | Q=CV           |
+| F             | Farad                         |                 |                |
+| Q             | Charge                        | Coulombs        |                |
+| q             | charge                        | coulombs        |                |
+| F             | Force                         | Newtons         |                |
+| T             | Torque                        | Newton-Meter    |                |
+| $\varepsilon$ | Permitivity                   | Farads/meter    |                |
+| $\mu$         | Permeability (magnetic)       | Henries/Meter   |                |
+| $\phi$        | Magnetic Flux                 | Webers          |                |
+| $\Lambda$     | Magnetic Flux Linkage         | Webers          | $N\Phi$        |

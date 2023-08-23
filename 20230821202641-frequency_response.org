@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6478ce45-e2f4-4bae-848f-fb59890a15b1
+:END:
+#+title: Frequency Response
+#+filetags: :SST:Linear:
+
+Frequency Response: a function that expresses /exactly/ how a filter responds to sinusoidal inputs at different frequencies.
+The magnitude of frequency response is known as [[id:3a9a668a-5f74-4ecc-a02c-c099361bc890][Magnitude Response]].

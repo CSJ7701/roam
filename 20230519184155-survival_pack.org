@@ -2,8 +2,10 @@
 :ID:       8ddbe307-e3c0-4789-bdff-6cb3335d99af
 :END:
 #+title: Survival Pack
-#+filetags: :personal.survival:
+#+filetags: :Video:Permanent:
 
+
+[[yt:rL5wePSjTL8]]
 
 * Video Notes: [[https://www.youtube.com/watch?v=rL5wePSjTL8][Garand Thumb Assault Pack Setup]]
 

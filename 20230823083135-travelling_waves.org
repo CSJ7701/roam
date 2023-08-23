@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       a3771f1d-da60-4c28-9e5b-5d202c2f6998
+:END:
+#+title: Travelling Waves
+#+filetags: :Antennas:
+
+
+$y(x,t) = A cos[\frac{2\pi t}{T} - \frac{2x\pi}{\lambda} + \phi_{0}] = A cos[2ft\pi - \frac{2x\pi}{\lambda} + \phi_{0}]$
+The wave varies in time t, and distance x.
+$\phi$ = phase (radians or degrees)
+$\lambda$ = wavelength (meters)
+A = Amplitude
+T = period
+$f = \frac{1}{T}$ = frequency (Hz)
+$\omega = 2f\pi$ = frequency in radians/sec
+
+
+[[id:0c261ce1-8379-4006-bb1c-bbd257e7c626][Wave Velocity]]
+
+
+Travelling Waves diminish/become attenuated over an increasing distance for three reasons:
+[[id:955e234f-3f8f-4979-8a23-b742c1b7458c][Lossy Medium]]
+[[id:a4f568a8-1f8b-482b-8590-322b17bf36a3][Spherical Dispersion]]
+[[id:9f9c2553-252d-4207-9f52-82bdfb5562b1][Multipath Interference]]

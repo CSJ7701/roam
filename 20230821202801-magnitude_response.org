@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3a9a668a-5f74-4ecc-a02c-c099361bc890
+:END:
+#+title: Magnitude Response
+#+filetags: :SST:Linear:
+
+
+
+Magnitude Response: a graph of the filter's gain (or amplification) as a function of frequency. 

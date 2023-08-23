@@ -2,4 +2,80 @@
 :ID:       21c174c9-aa20-4cc4-9f11-e452d7b31f38
 :END:
 #+title: CGCYBER
+#+filetags: :Cadre:
 
+* Career
+Follow on tours allowed - still unsure
+
+3 year tour out of the academy.
+2 year afloat then Cyber - has happened in the past
+- This is probably my best bet, since I want to continue my career in the Coast Guard.
+  In order to maintain my credibility as a Coast Guard Officer, I need some afloat time under my belt.
+
+
+First tour I would be in charge of a duty group - a Chief, an Ensign, and 6-10 Enlisted.
+
+
+Technical experience isn't necessarily required, but it does help. Most of the learning is done on the job.
+
+/First Impression/ - Beautiful campus, Office is mainly cubicles. Everyone seems welcoming, and in general it seems like a great environment. Housing is the only real challenge. 
+** Tour
+first year as a battlewatch captain
+- In charge of a duty group
+- People management, Communication, Triage
+Second year in a more technical team
+- Get more certifications, use more technical ability
+
+
+*It's important to remember that no matter how technical the team I'm a part of, I am always going to be the leader, not the team member. This means that I will almost never have "Hands on keyboard", instead I'll be directing my people on how to respond and what actions to take*
+* Certs
+- SECPLUS
+  - Network structure, cyber security policies
+- SANDS
+  - Seperate company
+* General
+DODIN - Department of Defence Info. Network
+C5I - Coast Guard part of DODIN network. 
+CGCYBER - Helps to protect C5I and DODIN. Maintaining their availability (among other things)
+NOSC - Network Operations Security. Works with the battle watch to maintain C5I and DODIN availability.
+
+These groups also work with USCYBERCOM and other groups.
+
+* NOSC and CSOC SCIF
+2 midsize bench/workstation areas. 5-6 person workgroups. NOSC is the battlestation area (1st year stuff), CSOC is 2nd year, more advanced position.
+NOSC - general overview, initial surveillance and response to network threats. Generally in charge of monitoring and coordinating the protection of CG network assets. This involves acting as the central point for repsonse to any outages or attacks.
+CSOC - More specific forwarding or response.
+
+* OFFICER SPECIALTY CODES
+Sharepoint, OPM3
+
+Cyber 1st tour effectively locks you out of afloat (No OOD qual). It does open you up to a more diverse career field though - presents the opportunity for you to specialize in intel, etc. as well as Cyber.
+
+Afloat 1st then Cyber sort of shelves you into afloat/cyber specialization. This could lock you into "generic cyber" which isn't bad, but it might prevent you from doing some of the more diverse career path options that would otherwise be available. 
+
+* MCRB
+Maritime Cyber Readiness Branch
+
+Works with port security and other resources to coordinate between cyber and the "operational" Coast Guard. Working on making more opeings for joint afloat/cyber specialties.
+
+* CPT
+Cyber Protection Team
+
+This is stereotypical cyber stuff. On request, go to units or ports/other CG civilian agencies. Check out / analyze their security, trying to break in/find weaknesses.
+
+* Meeting with ADM Vann and Master Chief Brewer
+
+Question - "Both of your careers were primarily not cyber; with that "perspective" do you have any advice for us as we get closer to choosing our billets, especially as career paths evolve?
+
+Response - "There are no bad paths"
+Everything offers perspective, and the Coast Fuard is alwats looking for diverse abilities and experiences. Shoort for what you enjoy and dont docus on planning far ahead. Have a cloudy goal 10 years down the line, and beyond that focus on the next tour.
+
+* Contact Info
+ENS Brianna Nelson
+LT Stepenchuck
+LT Jill Eleazar (Eleayar?)
+LT Collin Fenster
+LTJG Katharine Doty
+LTJG Justin Steiner
+LTJG Luke Arsenault
+LTJG Garret Cavanaugh

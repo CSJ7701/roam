@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       bae1c0cb-43cd-44ea-aa64-f83f6d608440
+:END:
+#+title: Magnetic Flux
+#+filetags: :Antennas:
+
+$$\begin{align} B = \mu H \text{Magnetic Flux Intensity} (T) \\ H = \text{Magnetic Field Intensity} (A/m) \\ \mu = \text{Magnetic Permeability}\end{align}$$

@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       c66ffc4b-d29c-4a39-878a-06be12f7ea30
+:END:
+#+title: Zettelkasten
+#+filetags: :Permanent:
+
+
+Three general types of notes
+[[id:38bf58c7-d45d-452b-861a-5f214ce05aac][Permanent Notes]]
+[[id:31f392ad-66cf-44dd-8b76-6fef65f4aaa6][Project Notes]]
+[[id:1092c402-14a5-406e-bb6d-e5f77d0c6b9d][Fleeting Notes]]
+
+*note* - might be a good idea to add a tag to roam - INBOX or something like REFILE, UPDATE, REVIEW, etcetera.
+This would be for notes that I would want to review or update into a better format before saving to a relevant /permanent note/ or /MOC/.
+This would be particularly useful for class notes - take notes in class in a node titled "Linear Circuits june 1" or something similar, tag it with an "INBOX" tag, then later that day or week, review all the inbox notes, refiling the information and archiving/deleting the class note. 

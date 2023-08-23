@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       a4f568a8-1f8b-482b-8590-322b17bf36a3
+:END:
+#+title: Spherical Dispersion
+#+filetags: :Antennas:
+
+As distance increases, the wave disperses. Think about a flashlight - the beam is focused at a close distance, but further away the beam creates a larger circle. 
+
+The remedy for this is to introduce a reflector.
+
+$L_{Path} = \text{Path loss due to spherical dispersion}$
+$L_{Spherical Dispersion} = (\frac{4l\pi}{\lambda})^2 = (\frac{4fl\pi}{c})^{2}$
+$P_{Rx} = P_{Tx}*g_{Tx_{antenna}}*g_{Rx_{antenna}} / L_{Path}$

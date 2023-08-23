@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       62e5e4de-8353-4b39-9ed1-a1146b400e17
+:END:
+#+title: Combinatorial Methods
+#+filetags: :ProbTheory:
+
+Ex - Order a book online
+3 books, 2 credit cards, 4 shipping options
+Num of ways to order -> 3*2*4 = 24
+
+Ex - Test with 50 q's
+1-20 T/F
+21-50 5 options, choose 1
+Num of ways to answer the questions? -> $2^{20} * 5^{30}$
+
+Theorem:
+If an operation consists of K steps,
+1st $n_1$ ways, 2nd $n_2$ ways, kth $n_k$ ways.
+Num of ways to do an operation = $n_{1}*n_{2}*...*n_{k}$

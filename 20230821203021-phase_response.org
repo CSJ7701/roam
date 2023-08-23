@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       28c4eaf6-f1bc-4915-b031-a91b291e62e1
+:END:
+#+title: Phase Response
+#+filetags: :SST:Linear:
+
+Phase Response: The phase of the filter's frequency response. A function which expresses the shift in phase from input to output as a function of frequency. 

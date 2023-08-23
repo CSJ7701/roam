@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       f5e9e67a-f54c-40d7-bbb2-26edcc081608
+:END:
+#+title: Electric Field
+#+filetags: :Antennas:
+
+Electric Field, *E*
+- An invisible force field produced by the presence of charged particles.
+
+  $E = \frac{q}{4\pi\varepsilon d^{2}}(\frac{V}{m})$
+
+  Where $\varepsilon=\varepsilon_{r}\varepsilon_{o}$
+  $\varepsilon_r = 1$(air)
+  $\varepsilon_o = 8.85*10^{-12}$
+  $q = 1.6*10^{-19}C$ (Single Charge)
+  $d = R =$ Distance
+  $q =$ Charge in Coulombs
+
+  Electric Fields can also be produced by a changing magnetic field (induced)
+
+  $\int_{C} E \cdot dl = -\frac{d}{dt}\int_{S}B\cdot da$
+
+** TLDR
+Charges or potential difference produces an electric field, but a time varying magnetic field can also create an electric field.

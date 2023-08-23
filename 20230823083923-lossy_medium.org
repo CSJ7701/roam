@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       955e234f-3f8f-4979-8a23-b742c1b7458c
+:END:
+#+title: Lossy Medium
+#+filetags: :Antennas:
+
+Mediums absorb the signal. This is a decrease in amplitude. 
+This is how Shielding works.
+
+If a wave travels in a conductive medium (e.g. seawater), the waves energy is absorbed by the medium.
+
+$x(x,t) = A cos[ ] \rightarrow Ae^{-\alpha x}cos[ ]$
+
+A - contant attenuation
+$Ae^{-\alpha x}$ - attenuation varies with distance.
+
+$\alpha$ - attenuation constant. Function of the material and the frequency.
+
+Conductors absorb EM signals easily - this is why we shield electronic systems from external interference using aluminum or copper foil.
+Shielding:
+A. reduces susceptibility to external interfrence
+B. minimizes radiation of the signal (spying)

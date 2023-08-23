@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       2477dab4-4157-464d-bc16-237cf6a5c4f5
+:END:
+#+title: Binomial Theorem
+#+filetags: :ProbTheory:
+
+$(x+y)^n = \sum_{r=0}^{n}\binom{n}{r}x^{n-r}y^r$
+
+
+You can also use pascals triangle to do this math for you.
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/ProbTheoryLecture-2023-08-23.png]]

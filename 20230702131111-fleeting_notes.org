@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       1092c402-14a5-406e-bb6d-e5f77d0c6b9d
+:END:
+#+title: Fleeting Notes
+#+filetags: :Roam:
+
+Meant to capture thoughts/tasks/ideas througout the day.
+
+Meant for recording information in order to process it and refile/record it later.
+
+*Fleeting notes are meant to be /thrown away/ after being processed*
+
+In order for this to properly work, I can't leave fleeting notes in my system - I /HAVE/ to go back and put the content into permanent notes.  

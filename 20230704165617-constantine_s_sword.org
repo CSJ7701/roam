@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       92920d62-ea55-4900-88f8-ce3f6f7302b9
+:END:
+#+title: Constantine's Sword
+#+filetags: :Book:
+#+todo: W(w) | D(d)
+#+columns: %TODO( ) %ITEM(Chapter) %begin(Start) %length(Pages){+}
+#+startup: overview
+
+#+BEGIN: columnview :hlines 1 :id global :skip-empty-rows t :indent 1
+|   | Chapter                            | Start | Pages |
+|---+------------------------------------+-------+-------|
+|   | The Cross at Auschwitz             |       |    21 |
+| W | \_  1. Sign of Folly               |     3 |    10 |
+|   | \_  2. Stumbling Block to the Jews |    13 |     6 |
+|   | \_  3. The Journey                 |    19 |     5 |
+#+END
+
+* The Cross at Auschwitz
+** W 1. Sign of Folly
+:PROPERTIES:
+:begin: 3
+:length: 10
+:END:
+** 2. Stumbling Block to the Jews
+:PROPERTIES:
+:begin: 13
+:length: 6
+:END:
+** 3. The Journey
+:PROPERTIES:
+:begin: 19
+:length: 5
+:END:
+** 4. My Mother's Clock
+:PROPERTIES:
+:begin: 24
+:length: 7
+:END:
+

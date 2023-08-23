@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       66f346b8-8d11-41e3-919f-e0375a0a347f
+:END:
+#+title: Binomial Coefficients
+#+filetags: :ProbTheory:
+
+$(x+y)^{2} = x^2 + 2xy +y^2$
+$(x+y)^3 = x^3 + 3x^2 y + 3xy^2 +y^3$
+
+The coefficients are chosen with Pascal's triangle, but we can also use combinations.
+The first term would be $\binom{3}{3}$, second would be $\binom{3}{2}$, etc. 
+
+
+[[id:2477dab4-4157-464d-bc16-237cf6a5c4f5][Binomial Theorem]]

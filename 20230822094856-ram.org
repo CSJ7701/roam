@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       8fa836e1-a0ad-4b48-b2f3-bc61e2c91893
+:END:
+#+title: RAM
+

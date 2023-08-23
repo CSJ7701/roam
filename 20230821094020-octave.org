@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5db62d2a-348a-4403-979e-fa6439fd83aa
+:END:
+#+title: Octave
+#+filetags: :Linear:
+
+Octave $\stackrel{\triangle}{=} log_{2}(\frac{f_2}{f_1})$

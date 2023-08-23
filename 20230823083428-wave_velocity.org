@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       0c261ce1-8379-4006-bb1c-bbd257e7c626
+:END:
+#+title: Wave Velocity
+#+filetags: :Antennas:
+
+$\mu_{p} = \lambda f$
+
+$\mu_{p} = \frac{1}{\sqrt{\varepsilon\mu}}$
+Where:
+$\varepsilon = \varepsilon_{r}\varepsilon_{0}$
+$\mu = \mu_{r}\mu_{0}$
+
+Wave velocity /always/ decreases when passing through non-vacuum media - EVEN AIR. 

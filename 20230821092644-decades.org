@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       0db37459-a2ba-419a-bfa7-700e1b72ba1c
+:END:
+#+title: Decades
+#+filetags: :Linear:
+
+
+decade $$\stackrel{\triangle}{=} log_{10} (\frac{f_2}{f_1})$$

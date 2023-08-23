@@ -4,7 +4,7 @@
 #+title: MCTC
 #+filetags: :Cadre:
 
-
+[[id:c7116628-429e-4cd6-91da-00b938ef9d43][MCTC-Coach Meeting]]
 * Day One
 [[id:1a994b6f-6fae-4082-8ca1-dd97897a6770][MCTC-Training]]
 ** Drill

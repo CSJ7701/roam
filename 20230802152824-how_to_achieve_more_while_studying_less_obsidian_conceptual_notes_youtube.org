@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       0e007284-6479-4623-bf2e-e4a6c21aa596
+:ROAM_REFS: https://youtu.be/MYJsGksojms
+:END:
+#+title: How to achieve more while studying less - Obsidian & Conceptual Notes - YouTube
+#+STARTUP: inlineimages
+#+Filetags: :Video:
+[[yt:MYJsGksojms]]
+| Timestamp  | Description              | Link                  |
+|------------+--------------------------+-----------------------|
+| [[ https://youtu.be/MYJsGksojms&t=0 ][ 00:00:00 ]] | Video Start              | N/A                   |
+| [[ https://youtu.be/MYJsGksojms&t=124 ][ 00:02:04 ]] | Breaking it down         |                       |
+| [[ https://youtu.be/MYJsGksojms&t=197 ][ 00:03:17 ]] | U.S.E                    | [[Properly taking notes]] |
+| [[ https://youtu.be/MYJsGksojms&t=438 ][ 00:07:18 ]] | Sequential vs Conceptual | [[*Benefits][Benefits]]              |
+
+* Notes
+
+** Intro
+We don't take notes for the /notes/, but for the /information/.
+
+The entire point of taking notes is to have quick access to lots of relevant information.
+
+** Properly taking notes
+
+Listen to a lecture, does the information match the U.S.E model:
+U - Unimportant
+S - Self Explanatory
+E - Easy Enough to Memorize
+
+Make a new note for new *concepts*, if a concept has been addressed already, add information to that note. It's not as necessary to make a note for each class - this isn't really the most efficient way to organize information.
+For figures, you can create a new note with the image/drawing, and an explanation. This note can then be linked to the relevant topic.
+
+He suggests not writing down examples - I disagree, unless I have easy access outside of class. I like being able to see the process in its entirety - as opposed to his suggestion - watching the process, and predicting the next step; making notes of where I would differ from the professor (since that step is apparently not intuitive).
+
+The goal is to write *ATOMIC* notes that are organized conceptually, not sequentially. 
+
+** Benefits
+
+Conceptual notes use old notes - this combats the typical "information dump" struggle in school by merging old concepts with newer ones.
+This provides you a framework for learning new concepts, especially since you dont need to retake notes you forgot.
+Older notes also grow over time, which means you can expand your knowledge base on a certain topic with relative ease.
+
+Linking avoids pigeonholing topics into defined topics. All ideas are connected, and we should treat them that way. 
+
+** Tips
+
+PKM isn't meant as a data hoard - it's meant to help you recall information and make connections. Use it that way - don't treat it as a project that you have to maintain and upkeep - treat it as a garden that you prune and nurture, but one that grows on its own. 

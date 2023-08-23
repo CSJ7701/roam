@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       d88662c8-daef-4ebe-9d7b-e8befca3d3a3
+:END:
+#+title: alist
+#+filetags: :Permanent:Emacs:

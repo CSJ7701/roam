@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       4608b015-77b5-4ed2-9f1f-07d8cf2661f3
+:END:
+#+title: Ideal Low Pass Filter
+#+filetags: :Linear:
+
+$H(f) = ke^{-j2\pi fT_{0}}, |f|<f_{c}$
+
+This =0, otherwise we get an integral.
+$h(t) = \int_{-f_c}^{f_c}H(f)e^{jft2\pi}df$
+$k\int_{-f_c}^{f_c}{e^{-2jfT_{D}\pi}*e^{j2ft\pi}df}$
+$k\int_{-f_c}^{f_c}{e^{2j\pi(t-T_{d})}df}$
+$\frac{k}{j2\pi(t-T_D)}[e^{j2\pi f_{c}(t-T_D)} - e^{-j2\pi f_{c}(t-T_D)}]$
+
+= $\frac{k sin[2\pi f_{c}(t-T_D)]}{\pi(t-T_D)}$
+
+If we use this formula to simulate an impulse at t=0, we get an impulse response at some time between 0 and 5. This indicates that we cannot have an ideal filter - since an ideal filter would have an impulse response at t=0.
+
+(I don't really understand what we did here.)

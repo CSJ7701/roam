@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       1f4477ec-2dcc-4ad5-ba72-89b2ebf65f1b
+:END:
+#+title: Economics
+#+filetags: :Econ:
+
+Economics - the study of how best to allocate resources based on [[id:21ca356d-cf0b-4dbd-8795-c71ffe5ba687][Scarcity]].

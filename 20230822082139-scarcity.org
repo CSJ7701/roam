@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       21ca356d-cf0b-4dbd-8795-c71ffe5ba687
+:END:
+#+title: Scarcity
+#+filetags: :Econ:
+
+
+Scarcity - lack of enough resources to satisfy all desired uses of those resource. 

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       1aff77d2-5232-45e2-a253-9b31f1443071
+:END:
+#+title: Essentials of Econ
+#+filetags: :Class:Econ:MOC:
+
+
+
+
+* Terms
+[[id:21ca356d-cf0b-4dbd-8795-c71ffe5ba687][Scarcity]]
+[[id:1f4477ec-2dcc-4ad5-ba72-89b2ebf65f1b][Economics]]

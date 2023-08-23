@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       31df971c-3f7c-473f-b78a-4590b93fa8cf
+:END:
+#+title: Antennas
+#+filetags: :Antennas:
+
+Devices that radiate or capture electromagnetic energy.
+
+You can either have a focused antenna, or one that captures from a wide range of directions (omni-directional or focused).
+
+The two primary variables are the frequency of the signal and the type of Antenna. 

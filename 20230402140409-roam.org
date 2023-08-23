@@ -10,6 +10,9 @@ Create nodes. Nodes can be linked with links.
 Basic link syntax =[[id:"Node ID Number"]["Display Text"]]=
 These are basic [[id:9d5d89cc-4f44-45a4-86a4-7dc57f50a7ae][Emacs]] links, but work off the idea of note id's.
 Creating links does more than let you jump around, it creates associations (learn more about what specifically it does.)
+
+Works off the basic concept of [[id:c66ffc4b-d29c-4a39-878a-06be12f7ea30][Zettelkasten]].
+Make use of [[id:38bf58c7-d45d-452b-861a-5f214ce05aac][Permanent Notes]], [[id:31f392ad-66cf-44dd-8b76-6fef65f4aaa6][Project Notes]], and especially [[id:1092c402-14a5-406e-bb6d-e5f77d0c6b9d][Fleeting Notes]]. 
 ** Keybindings
  =C-c n d t= Capture Today's Journal Entry
 *Make* =C-c n d C= Org-Roam-Capture

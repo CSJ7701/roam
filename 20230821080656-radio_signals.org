@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       04910895-b3b3-4e02-b5a0-587beb368c99
+:END:
+#+title: Radio Signals
+#+filetags: :Antennas:
+
+An electromagnetic Wave.
+Can have [[id:f5e9e67a-f54c-40d7-bbb2-26edcc081608][Electric Field]] or [[id:b45d1a4b-f92e-4df7-a88b-9ff85bb02735][Magnetic Field]]
+
+Electromagnetic waves produce time-varying electromagnetic fields.
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/Radio Wave.png]]
+
+
+$\frac{\partial E}{\partial t} \leftrightarrow \frac{\partial B}{\partial t}$ -> a time varyinf field E produces a time varying B field (vice versa)
+
+

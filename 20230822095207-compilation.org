@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       8b260d84-a4a5-43eb-928a-7661d2035013
+:END:
+#+title: Compilation
+#+filetags: :OS:
+
+
+When writing an operating system, the language you use must be translated to instructions the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] can understand. This process is known as Compilation.

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       9f9c2553-252d-4207-9f52-82bdfb5562b1
+:END:
+#+title: Multipath Interference
+#+filetags: :Antennas:
+
+A wave may travel over two different paths and interfere with itself, or even cancel itself out. 

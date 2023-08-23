@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       904a3c16-d1c4-453f-8155-5c9f2a1444bd
+:END:
+#+title: Sidebar
+#+filetags: :Permanent:Emacs:
+
+
+
+Sidebars - handled with display-buffer-alist
+- This is an [[id:d88662c8-daef-4ebe-9d7b-e8befca3d3a3][alist]]
+
+2 important characteristics - side, and slot.
+- Side is the side to display on.
+- Slot is where on that side to display it.
+  Negative values indicate up or left, 0 is middle, positive are down or right.
+
+
+You must designate the number of slots per side if you want more than one sidebar window - oterhwise it will default to one window.
+(setq window-sides-slots '(L T R B)) ;; Where L T R B are numbers, nil being infinite slots.
+
+This is typically used to specify where certain buffers should go; buffers delimited by name.
+If you want to use this for a custom buffer/setup, the most conventional method seems to simply be renaming the buffer than displaying it again.
+
+Learn from example:
+
+(add-to-list 'display-buffer-alist
+ '("\\*info\\*"
+   (display-buffer-in-side-window)
+   (side . right)
+   (slot . 0)
+   (window-width . 80)
+   (window-parameters
+    (no-delete-other-windows . t))))
+
+
+    Window parameters are another alist, look up their options and the other available options for display-buffer-alist later.

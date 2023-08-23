@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       38bf58c7-d45d-452b-861a-5f214ce05aac
+:END:
+#+title: Permanent Notes
+#+filetags: :Roam:Permanent:
+
+
+Notes meant to keep forever.
+
+Each note should be a /single/ idea, and written in full *concise* prose.
+- I need to work on this; my python note is a bad example.
+- Instead of placing all the information in a single file, like I did for python, I need to turn the python note into something more
+  similar to an index - where it contains basic context, and links to other files discussing the more specific content.
+
+
+Permanent notes can be one of several types of notes:
+- Main notes
+  Content, general information.
+- Literature notes
+- Structure notes (or MOC's)
+
+
+Roam is particularly good at handling permanent notes.
+Org-roam-ui is useful for visualizing connections, since org roam doesn't use the traditional zettelkasten numbering system to draw relationships between permanent notes.
+
+Single topic notes are much more useful - this will come by utilizing [[id:1092c402-14a5-406e-bb6d-e5f77d0c6b9d][Fleeting Notes]] as an inbox before you parse down to the relevant information.
+An example:
+- "Electrical Engineering" - one file with headlines for topics
+- "Electrical Engineering 1 - Current" - one file that defines current and its relevant formulas, then links to other mentions of current in other notes.
+The second note will be much more useful, particularly as you refile information on current into that file, then create links to other topics. This will help you visualize and understand the information much better. 
+
+  

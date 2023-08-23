@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       b45d1a4b-f92e-4df7-a88b-9ff85bb02735
+:END:
+#+title: Magnetic Field
+#+filetags: :Antennas:
+
+Magnetic Field - an invisible force field created by either a magnet or a current flow.
+
+$$B = \frac{\mu I}{2\pi d}(T)$$ and $$B = \mu H$$
+
+Where $\mu$ = Magnetic Permeability $(H/m)$
+
+$I$ = current
+$d$ = distance
+$\mu = \mu_{r}\mu_{o}$
+$\mu_r = 1$ (air)
+$\mu_0 = 4\pi*10^{-7} (H/m)$
+$H =$ magnetic field intensity (Amps/Meter)
+$B =$ Magnetic Flux Density (Tesla or Webers/meter squared)
+
+*Note:*
+A time varying charge -> DC current -> constant Magnetic Field
+An accelerating Charge -> AC Current -> time varying Magnetic Field

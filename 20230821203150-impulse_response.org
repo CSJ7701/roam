@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       fa91476b-19eb-4056-83c7-af381aa2c105
+:END:
+#+title: Impulse Response
+#+filetags: :SST:Linear:
+
+Impulse Response: the time-domain response of a system to an impulse input. 

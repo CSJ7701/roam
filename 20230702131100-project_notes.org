@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       31f392ad-66cf-44dd-8b76-6fef65f4aaa6
+:END:
+#+title: Project Notes
+#+filetags: :Roam:Permanent:
+
+Notes intended to help organize work on a single project.
+
+This is where TODOs would be stored
+(This is also where I would use the systemcrafters function to add todos to my agenda based on file tag)
+
+Project notes are meant to be kept for the lifetime of a project, then either archived or discarded.
+I should look into how archiving works within Org Roam
+
+- According to systemcrafters, in order to archive project notes I could filter out completed projects from the node list using a custom function. 

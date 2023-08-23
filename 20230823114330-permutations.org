@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       49dfb940-99b1-4bde-84c7-6c7871723133
+:END:
+#+title: Permutations
+#+filetags: :ProbTheory:
+
+
+
+*Permutations of n Objects*
+Order matters without replacement
+
+Ex - How many orderings/permutations of letters I, J, K, L, M are there?
+$5! = 120$
+
+Ex - How many ways can 3 people be assigned to 3 different duties?
+$3! = 6$
+
+*Permutations of n distinct items taken r at a time*
+$r\le n$
+
+Ex - num of permutations of 3 of the 5 letters: I, J, K, L, M?
+$5*4*3 = 60$
+
+Theorem
+The num of permutations of n distinct objects taken r at a time:
+$\frac{n!}{(n-r)!}$
+
+*Permutations when some alike*
+Ex - How many /distinct/ permutations of the letters in the word "Probability" are there?
+Num of letters in probability = 11
+_Didnt get all of this example_
+
+Theorem
+the num of distinguishable permutations of n objects of which $n_1$ are one of a kind, $n_2$ of another, $n_k$ of the kth kind.
+$\frac{n!}{n_{1}!*n_{2}!*...*n_{k}!}$
+

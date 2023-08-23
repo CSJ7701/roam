@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       328fd59f-4054-4369-9410-3e03cb620b8e
+:END:
+#+title: Linear Circuits
+#+filetags: :Class:Linear:MOC:
+
+
+[[id:7dcb79d7-4047-4a4b-bbac-5c7953b158ba][Bels]] - This is how we measure gain
+[[id:0db37459-a2ba-419a-bfa7-700e1b72ba1c][Decades]]
+[[id:5db62d2a-348a-4403-979e-fa6439fd83aa][Octave]]
+[[id:ebd7681f-a6a2-43c2-871b-c68c34206d57][Filters]]
+
+* Basic Equations
+
+$log_{10}(2) = 0.3$
+
+$\text{gain} = 20log_{10}(\frac{V_{\text{out}}}{V_{\text{in}}})$

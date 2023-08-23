@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6bae3321-927a-415d-ab9b-2554a92809f4
+:END:
+#+title: Stephen Colbert Video
+#+filetags: :Video:
+
+[[yt:YB46h1koicQ]]

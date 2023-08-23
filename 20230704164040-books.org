@@ -1,0 +1,60 @@
+:PROPERTIES:
+:ID:       9c358a35-236c-490d-bffb-7dd57eb4d992
+:END:
+#+title: Books
+#+filetags: :MOC:Book:
+#+startup: overview
+#+todo: TODO(t) WORKING(w) | NOPE(n) DONE(d)
+#+columns: %50ITEM(Title) %author(Author) %genre(Genre) %pages(Pages){+} %roam(Roam)
+
+
+#+BEGIN: columnview :hlines 1 :id global :skip-empty-rows t :indent t :match "-noexport"
+| Title                                            | Author          | Genre             | Pages | Roam                |
+|--------------------------------------------------+-----------------+-------------------+-------+---------------------|
+| 2023                                             |                 |                   |   621 |                     |
+| \_  Constantine's Sword: The Church and the Jews | James Carroll   | Religious History |   621 | [[id:92920d62-ea55-4900-88f8-ce3f6f7302b9][Constantine's Sword]] |
+|--------------------------------------------------+-----------------+-------------------+-------+---------------------|
+| Inbox                                            |                 |                   |  1684 |                     |
+| \_  The Divine Comedy                            | Dante Alighieri | Classics          |   541 | [[id:6c8f8301-af46-47d0-b3e6-79ea3b357184][The Divine Comedy]]   |
+| \_  Dune                                         | Frank Herbert   | Science Fiction   |   884 | [[id:f3c7557d-934a-4d28-b42c-e9ed2a6e5c59][Dune]]                |
+| \_  Brave New World                              | Alduous Huxley  | Science Fiction   |   259 | [[id:4396c4d6-97f0-4b8d-a0e2-a99a5d258ca0][Brave New World]]     |
+#+END
+
+
+
+* 2023
+
+** TODO Constantine's Sword: The Church and the Jews
+:PROPERTIES:
+:author: James Carroll
+:genre: Religious History
+:url:
+:pages: 621
+:roam: [[id:92920d62-ea55-4900-88f8-ce3f6f7302b9][Constantine's Sword]]
+:END:
+
+* Inbox
+** TODO The Divine Comedy
+:PROPERTIES:
+:author: Dante Alighieri
+:genre: Classics
+:url: https://www.goodreads.com/book/show/2764176-the-divine-comedy
+:pages: 541
+:roam: [[id:6c8f8301-af46-47d0-b3e6-79ea3b357184][The Divine Comedy]]
+:END:
+** TODO Dune
+:PROPERTIES:
+:author: Frank Herbert
+:genre: Science Fiction
+:url: https://www.goodreads.com/book/show/44767458-dune?from_search=true&from_srp=true&qid=xwQGFfRXIj&rank=3 
+:pages: 884
+:roam: [[id:f3c7557d-934a-4d28-b42c-e9ed2a6e5c59][Dune]]
+:END:
+** TODO Brave New World
+:PROPERTIES:
+:author: Alduous Huxley
+:genre: Science Fiction
+:url:
+:pages: 259
+:roam: [[id:4396c4d6-97f0-4b8d-a0e2-a99a5d258ca0][Brave New World]]
+:END:

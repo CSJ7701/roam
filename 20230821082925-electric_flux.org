@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       88a8bbcc-0f9c-4dcc-b1d4-63888d01abc5
+:END:
+#+title: Electric Flux
+#+filetags: :Antennas:
+
+$$\begin{align} E = \text{Electric Field Intensity} \\ D = \varepsilon E = \text{Electric Flux Intensity} (C/m^{2}) \\ \varepsilon = \text{electric permittivity} (F/m) \end{align}$$
