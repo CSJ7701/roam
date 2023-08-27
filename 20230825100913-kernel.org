@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       fc1b6d59-b345-4d60-96ec-3d35f1e4db98
+:END:
+#+title: Kernel
+
+Typically responsible for Memory management, Processor/process management, Device management, Storage management, Security policy enforcement, etc
+
+* Process Management
+It's important to recognize the difference between a program and a process.
+A single program or application becomes a process once executed. A single program/application can run multiple processes.
+Programs are inherently executable - text files are not programs.
+
+TLDR: Programs are files or commands that /can/ be executed. Once they are executed, they run a /process/ that handles their data flow.
+
+When multiple processes are running at one time, they are using a capability known as [[id:036216a0-86ba-4964-95e7-0227060992ec][Multiprogramming]].
+In order to prevent greedy processes from causing unecessary delays, we use a process called [[id:f85220a1-f453-410c-9dfc-e6de173acc77][Multitasking]].
+
+[[id:eca6b615-19dd-4296-8490-a0318ed89dee][Processors]] can operate in [[id:303b6ea1-b932-4071-ac2e-d37d4f72353c][User Mode]] or in [[id:2fd71ab2-8c45-47be-9f81-37a3d7fe8c14][Kernel Mode]].
+Switching modes requires a System Call, which tells the processed which mode to use and for how long. 
+
+* Device Management.
+How does an operating system know that an I/O or write request is completed?
+The I/O communicates with the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] using [[id:18f6d434-7aa5-4d7f-b44d-c729560282ee][Interrupts]]. I/O devices include disks, mice, keyboards, etc.
+
+* Memory Management

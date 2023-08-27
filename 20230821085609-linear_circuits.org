@@ -9,6 +9,8 @@
 [[id:0db37459-a2ba-419a-bfa7-700e1b72ba1c][Decades]]
 [[id:5db62d2a-348a-4403-979e-fa6439fd83aa][Octave]]
 [[id:ebd7681f-a6a2-43c2-871b-c68c34206d57][Filters]]
+[[id:cb7750a9-9aba-473d-b01c-cabe4aa1c977][Bode Plots]]
+
 
 * Basic Equations
 

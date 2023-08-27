@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d8705bf9-bd09-4943-959c-0da9473a2e57
+:END:
+#+title: Effective Radiated Power
+
+Transmitter Power * Antenna Gain

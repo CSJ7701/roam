@@ -9,3 +9,14 @@ Devices that radiate or capture electromagnetic energy.
 You can either have a focused antenna, or one that captures from a wide range of directions (omni-directional or focused).
 
 The two primary variables are the frequency of the signal and the type of Antenna. 
+
+[[id:6ef01d18-9941-46a8-8ff1-e2e0bcbc6dae][Maximizing Transmitter to an Antenna]]
+
+
+An Antennas [[id:d8705bf9-bd09-4943-959c-0da9473a2e57][Effective Radiated Power]] is a function of transmitter power and antenna gain.
+
+Antennas can have several functions.
+- Radiate/Capture an EM signal.
+- Increase the effective radiated or received power
+- Interference Rejection: can point the antenna towards a source/direction in order to reject other signals.
+- Spatial Multiplexing: Similar to what we learned in CCN. The others still apply (Code division, Time division, Frequency division). Spatial is a new one, two stations can transmit simultaneously if polarizations or directions are different. 

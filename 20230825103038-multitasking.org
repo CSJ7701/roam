@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       f85220a1-f453-410c-9dfc-e6de173acc77
+:END:
+#+title: Multitasking
+#+filetags: :OS:
+
+This cycles tasks in a "round-robin" style, forcing older tasks out to make room for a new one on each repetition.
+This schedules a certain wait time per process, and uses [[id:b6c45bfe-a167-440e-9cd0-2cd16a933088][Context Switching]] to divide resources between the processes. It prioritizes some processes over other, these priorities can be affected in windows with the task manager, and manually in linux. 

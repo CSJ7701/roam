@@ -26,6 +26,19 @@ One of the primary objectives of this class is getting from point A to point B w
 $c = f\lambda$
 Speed = frequency*wavelength
 
+$P_{Out} = P_{In} * Gain$
+
+Antenna Size, length must be greater than 1/10 of the wavelength.
+Most effective at 1/2 or 1/3 the wavelength.
+
+Curve of the earth is ~30 miles. Waves typically travel line of sight.
+Can be deflected via /Skywave propogation/ (propogate via the ionosphere), /Groundwave propogation/ (travel in the troposphere or near the ground).
+
+Signals less than 15 MHz refract off the ionospheres F-layer.
+
+Max Usable Frequency (MUF) - maximum frequency in which signals refract off the F layer.
+
+Typically, below 1-3 MHz, signals travel around the Earth's curve following the Norton Surface wave. 
 
 ** Units
 | Variable      | Description                   | Units           | Alternate Unit |

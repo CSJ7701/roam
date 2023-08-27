@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       303b6ea1-b932-4071-ac2e-d37d4f72353c
+:END:
+#+title: User Mode
+#+filetags: :OS:
+
+This mode does not have elevated permissions. It can only affect the files that the user mode owns. 

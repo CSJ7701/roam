@@ -5,3 +5,26 @@
 #+filetags: :Antennas:
 
 A wave may travel over two different paths and interfere with itself, or even cancel itself out. 
+
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/AntennasLecture-25AUG2023-2.png]]
+
+Transmitter Signal = $x_{T_{x}}(t) = A cos(\omega t)$
+This signal has split into 2 pieces (multipath).
+The direct signal (signal 1) has a delay of 45, and the reflected has a delay of 225 degrees.
+$\therefore$ the received signal is $y(t) = A cos(\omega t-45\degree) + A cos (\omega t -225\degree) = 0$
+In this case, the signal completely destroyed itself.
+
+This situation demonstrated [[id:bccc6e06-5756-431f-9445-1e700720be42][Destructive Interference]], but we can also create a system where the delays create [[id:1d77fc2b-fda4-4ffe-b510-d3e516d60993][Constructive Interference]].
+
+E.G. if the direct and reflected signals had a phase of 360 and 720 degrees respectively, the received signal would be:
+
+$y(t) = A cos (\omega t -360) + A cos (\omega t-720) = 2A cos (\omega t)$
+*Note* - phase and time delay are not the same.
+
+$z(t) = A cos (2\pi ft -\phi) = A cos[2\pi f(t-t_{d})] = A cos[2\pi ft-2\pi ft_{d}]
+$t_{d} = \text{Time Delay}$
+$\therefore \phi = 2\pi ft_{d}$
+
+*Note* -  Distance = Rate*Time $\rightarrow t_{d} = d/c$

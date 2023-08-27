@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       e771afa1-9eab-4234-b7a1-29f1a42ba6d3
+:END:
+#+title: Internal Fragmentation
+#+filetags: :OS:
+
+Divides total contiguous memory into equal blocks (say theyre 4KB).
+If process A requests 5KB, it is allocated 2 blocks (8 total KB). 3 KB are unused until A frees its 5KB. 
+
+This uses extremely large amounts of storage, which was solved by [[id:44101295-a070-4d0b-b8a3-fb6935ab4e16][Virtual Memory]].

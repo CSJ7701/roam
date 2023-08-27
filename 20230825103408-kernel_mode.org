@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2fd71ab2-8c45-47be-9f81-37a3d7fe8c14
+:END:
+#+title: Kernel Mode
+#+filetags: :OS:
+
+Elevated permissions, can run potentially dangerous commands and access typically locked files. 

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       bccc6e06-5756-431f-9445-1e700720be42
+:END:
+#+title: Destructive Interference
+

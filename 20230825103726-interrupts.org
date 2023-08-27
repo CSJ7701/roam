@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       18f6d434-7aa5-4d7f-b44d-c729560282ee
+:END:
+#+title: Interrupts
+#+filetags: :OS:
+
+These use 4 general keywords.
+- Raise - device sends a signal via an interrupt request line
+- Catch - [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] uses the interrupt request line number to find the interrupt service routine.
+- Dispatch - CPU invokes the Interrupt Service Routine (ISR)
+- Clear - the ISR runs

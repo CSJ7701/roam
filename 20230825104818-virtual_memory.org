@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       44101295-a070-4d0b-b8a3-fb6935ab4e16
+:END:
+#+title: Virtual Memory
+#+filetags: :OS:
+
+Speed is much slower than alternatives, but capacity is much larger. 

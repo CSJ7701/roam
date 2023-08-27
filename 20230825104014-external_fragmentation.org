@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       32d03cb6-c043-447c-b2f5-df4ebd996faa
+:ROAM_ALIASES: Partitioning
+:END:
+#+title: External Fragmentation
+#+filetags: :OS:
+
+Memory or storage is allocated in "blocks". Any unused memory is designated as "free".
+You can allocate multiple non-contiguous blocks to a single process.
+If C requests memory equal to the sum of non-contiguous free blocks, C cannot use that memory because it is not contiguous.
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/OperatingSystemsLecture-2023-08-25-2.png]]
+
+This is an issue that was solved by [[id:e771afa1-9eab-4234-b7a1-29f1a42ba6d3][Internal Fragmentation]].

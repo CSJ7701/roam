@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       1d77fc2b-fda4-4ffe-b510-d3e516d60993
+:END:
+#+title: Constructive Interference
+

@@ -11,3 +11,11 @@ The remedy for this is to introduce a reflector.
 $L_{Path} = \text{Path loss due to spherical dispersion}$
 $L_{Spherical Dispersion} = (\frac{4l\pi}{\lambda})^2 = (\frac{4fl\pi}{c})^{2}$
 $P_{Rx} = P_{Tx}*g_{Tx_{antenna}}*g_{Rx_{antenna}} / L_{Path}$
+
+* Example
+Consider a 1000 watt NY city FM station whose frequency is 88 MHz. Both transmitter and receiver are "whip style" and thus, $T_x$ and $R_x$ antennas are isotropic. What is power received in Hartford? Assume distance is 160 km.
+
+Isotropic means the gain for both antennas is 1.
+
+$L_{path} = L_{Spherical Dispersion} = (\frac{4\pi fl}{c})^{2} = (\frac{4\pi 88*10^{6}*160000}{3*10^8})^{2} = 3.48*10^11 = L_{Path}$
+$P_{Received} = \frac{P_{T_{X}}}{L} = 1000/3.48*10^{11} = 2.88*10^{-9}W = 2.88nW$

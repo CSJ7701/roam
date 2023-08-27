@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       036216a0-86ba-4964-95e7-0227060992ec
+:END:
+#+title: Multiprogramming
+#+filetags: :OS:
+This is a loop that runs to select different processes running at the same time.
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/OperatingSystemsLecture-2023-08-25-1.png]]

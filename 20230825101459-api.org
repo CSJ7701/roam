@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       920e163f-b226-4817-8c7b-579de7b382d9
+:END:
+#+title: API
+#+filetags: :OS:
+
+A collection of functions that a developer can use to do certain things. These functions must be made available by a certain program. In general, API's are relatively ambiguous in terms of what they /actually/ are - any time an app or program makes a function available as an endpoint for a user or other program to use, this is considered an API. 
+
+These functions, in operating systems, are typically provided by [[id:72f05190-574c-4084-a9f1-64931e4be103][Libraries]].

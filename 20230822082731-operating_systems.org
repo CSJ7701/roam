@@ -6,6 +6,14 @@
 
 In general, an OS is in charge of Memory management, Process management, Device management, Storage management, Security policy management, etc. 
 
+Operating Systems communicate between applications and hardware.
+
+This architecture looks something like this:
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/OperatingSystemsLecture-2023-08-25.png]]
+
+[[id:fc1b6d59-b345-4d60-96ec-3d35f1e4db98][Kernel]]
+
 
 Central logic - [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]]
 [[id:8b260d84-a4a5-43eb-928a-7661d2035013][Compilation]]

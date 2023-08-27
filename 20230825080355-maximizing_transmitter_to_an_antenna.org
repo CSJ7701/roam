@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       6ef01d18-9941-46a8-8ff1-e2e0bcbc6dae
+:END:
+#+title: Maximizing Transmitter to an Antenna
+#+filetags: :Antennas:
+
+
+* Example Problem
+** Assumptions
+All impedances are /pure resistances/ - no reactive or imaginary component
+When load impedance is real and the same as the source impedance, max power is delivered to a load.
+Transmitter can be represented as a voltage source /w internal impedance $Z_{s} = 50\Omega$
+Antenna can be represented a load impedance $Z_{L}$
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/AntennasLecture-25AUG2023.png]]
+
+
+** If the load is reactive
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/class/Files/Attachments/AntennasLecture-25AUG2023-1.png]]
+
+
+When we have reactive loads, we can help cancel out the reactance with the opposite element. For example, in the instance above, we could add a capacitor in series with the inductor, giving the capacitor a capacitance of $-j100$ which will cancel with the inductance of $+j100$. This is known as adding a matching Network. 
