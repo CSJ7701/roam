@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       0ec663f2-2230-4a6b-8ef4-32014574af29
+:END:
+#+title: Bayes Theorem
+#+filetags: :ProbTheory:
+
+Definition: B1,...,Bk are a partition of the sample space S if they are pairwise mutually exclusive and $B_{1}\cup B_{2}\cup ...\cup B_{k}=S$
+
+| B1 | B2 | B3 | ... | Bk |
+|    |    |    | ... |    |
+|    |    |    | ... |    |
+|    |    |    | ... |    |
+
+To find $P(A)$ given that a is a subset of S,
+We could do: $P(A\cap B_1)+P(A\cap B_2)+...+P(A\cap B_k)$
+This equals: $P(A|B_1)P(B_1)+P(A|B_2)(B_2)+...+P(A|B_k)P(B_k)$.
+
+Bayes theorem:
+$P(B_1|A) = \frac{P(B_1\cap A)}{P(A)} = \frac{P(A|B_1)P(B_1)}{P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+...+P(A|B_k)P(B_k)$
+
+
+Ex.
+Roll a die.
+B1 is the event you get a 1 or 2
+B2 is the event you get a 3, 4, or 5
+B3 is the event you get a 6
+
+If you get a 1 or 2, flip a balanced coin
+If H you get $5000 (Event A)
+If T you get 0
+-> $P(A|B_1)=1/2$
+
+If you get a 3, 4, or 5 draw a card from a deck
+If ace, get $5000 (Event A)
+-> $P(A|B_2) = 1/13$
+
+If you got a 6, draw a slip of paper from 1-5.
+If you get a 1, get $5000 (Event A)
+-> $P(A|B_3) = 1/5$
+
+Total - probability of getting $5000 = $P(A) = P(A\cap B_1)+P(A\cap B_2)+P(A\cap B_3)$
+This equals (through Bayes Theorem) - $P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+P(A|B_3)(B_3)$
+$=\frac{1}{2}\frac{1}{6}+\frac{1}{13}\frac{3}{6}+\frac{1}{5}\frac{1}{6}=\frac{186}{780}$
+
+Assuming we got the $5000, whats the probability that it came from us getting a 1 or 2
+$P(B_1|A) = \frac{P(A\cap B_1)}{P(A)} = \frac{\frac{1}{2}\frac{2}{6}}{\frac{186}{780}}$
+
+Theorem:
+
+If $B_1, B_2, ... , B_k$ are a partition of S and $P(B_i)\ne 0,  i=1,...,k$ then for any event A in S such that $P(A)\ne 0$
+$P(B_r|A) = \frac{P(B_r)P(A|B_r)}{\sum_{i=1}^{k}P(B_i)P(A|B_i)}$

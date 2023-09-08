@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       8f47575b-e883-402b-bfb2-06a400ce99ce
+:END:
+#+title: Rule of Total Probability
+#+filetags: :ProbTheory:
+
+Rule of Total Probability
+If the events $B_1, B_2, B_3, ... B_k$ constitutes a partition of the sample space $S+P(Bi)\ne 0$ for $i=1...k$
+then for any event A in S,
+$P(A)=\sum_{i=1}^{k}P(B_i)P(A|B_i)$

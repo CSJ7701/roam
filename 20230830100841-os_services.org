@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       b1295ee7-b785-4ee9-8b32-fa4541b05860
+:END:
+#+title: OS Services
+#+filetags: :OS:
+
+
+Services are the underlying proceses that run in order to support other applications and functions, like a GUI, etc.
+Typically, services operate /below/ [[id:d9152677-08e7-46aa-9797-b4772ef1a32d][Interfaces]] like a GUI.
+
+Such interfaces make [[id:88a26516-aef3-4b21-b0c0-6628e8c2a5d7][System Calls]] down to services in order to accomplish tasks. 

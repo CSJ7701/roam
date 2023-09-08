@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       09e9d00b-25ed-417b-b096-c2aa945a6567
+:END:
+#+title: Standing Wave
+#+filetags: :Antennas:
+
+Standing wave:
+The presence of two waves propogating in opposite directions.
+Two waves opposing each other, causing a standoff or standing wave. 
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-08SEP2023.png]]
+[[id:1520036c-274f-41d7-a914-7ecc0e5420de][Incident Wave]] - wave travels toward the load
+[[id:6c11b8c1-9923-4065-b476-a4be90d126d0][Reflected Wave]] - wave travels toward the source.
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-08SEP2023-1.png]]
+This is what the current profile looks like (along a transmission line) when both source and load are outputting a signal to create a standing wave.
+
+[[id:775f78f7-5169-4944-b41c-995afdbdf579][Reflection Coefficient]]

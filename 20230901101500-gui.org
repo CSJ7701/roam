@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       de12ea67-0c1c-4772-aff3-05bab32ba28d
+:END:
+#+title: GUI
+#+filetags: :OS:
+
+Face level - works with a [[id:46c69683-13d7-4d94-87a4-7b7b77a04e37][Desktop Environment]]
+You can switch Desktop Environments with a [[id:2d443f44-79fe-46b4-b23e-51e7edae6233][Display Manager]].
+At a lower level, we use a [[id:317d832e-bfe8-4ef8-bccd-b8e7ec5c50a9][Window System]] such as X11 or Wayland. 

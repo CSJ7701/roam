@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       b5474faa-4f81-4e86-9f94-0a1838751a88
+:END:
+#+title: Linux Filesystem
+#+filetags: :OS:
+
+Starts at the root directory ("/")
+Subdirectories of the root include:
+- /bin - *Essential* command binaries
+- /boot - Static files, used by the bootloader
+- /dev - Device Files
+- /etc - Host specific system configuration
+- /home - User home directories
+- /lib - Shared Libraries
+- /media - Removeable Media
+- /mnt - Mounted Filesystem
+- /opt - Add-on application software packages
+- /sbin - System Binaries
+- /srv - Date for service from system
+- /tmp - Temp
+- /usr - User utilities and applications
+- /prov - process info
+
+  There are a variety of different binary directories:
+  - /bin
+  - /sbin
+  - /usr/bin
+  - /usr/sbin
+  - /usr/local/bin
+  - /usr/local/sbin
+  - /opt
+
+
+
+

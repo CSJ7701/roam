@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       d9152677-08e7-46aa-9797-b4772ef1a32d
+:END:
+#+title: Interfaces
+#+filetags: :OS:
+
+* GUI
+Controlled by buttons, checkboxes, etc
+"Message pump" that waits for events, etc
+
+Touch input, interact with genstures etc
+
+* CLI
+Commands and command interpreters. Bash is an example of a command interpreter. 
+
+CLI is typically the only way to interact with things like headless servers. 
+It's generally faster, and it's almost always more powerful/more adaptable than the GUI.

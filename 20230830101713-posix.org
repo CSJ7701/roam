@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       251f562c-1ad7-45e0-aa72-60e7a69dcd56
+:END:
+#+title: POSIX
+#+filetags: :OS:
+
+Portable Operating System Interface
+This is the standard [[id:920e163f-b226-4817-8c7b-579de7b382d9][API]] across all *NIX operating systems.
+
+Just like the windows API only works on windows, this only works on *NIX systems. 

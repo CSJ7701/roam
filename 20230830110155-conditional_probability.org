@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       a12998e4-a60b-44b0-84b8-d9aab5589f99
+:END:
+#+title: Conditional Probability
+#+filetags: :ProbTheory:
+
+This reduces the set that we are looking at.
+
+The number of something given that something else.
+
+$P(Something|Something Else)$
+
+We can say that the probability of B given A is the same as:
+
+$$\frac{P(A\cap B)}{P(A)}$$
+
+We can derive a multiplication rule:
+$$P(A\cap B) =  P(B|A)P(A)$$
+OR: $$P(A\cap B) = P(A|B)P(B)$$
+

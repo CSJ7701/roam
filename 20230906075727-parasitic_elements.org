@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       57bc23bc-8422-4f06-8b03-1aa088254166
+:END:
+#+title: Parasitic Elements
+#+filetags: :Antennas:
+
+Since a "Pure" elements don't exist, all wires have some amount of inductance/capacitance.
+
+This is known as parasitic capacitance or inductance. 
+
+Leads become parasitic, in general, once their length is greater than 0.01*Wavelength

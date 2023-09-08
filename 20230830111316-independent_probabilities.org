@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       b5dc870f-9bc4-4740-921e-bd5baf493f46
+:END:
+#+title: Independent Probabilities
+#+filetags: :ProbTheory:
+
+An event is independent if its outcome does not depend on other events. 
+
+Definition:
+A and B are independent if $P(B|A) = P(B)$ OR $P(A|B) = P(A)$
+
+For an independent event:
+$$P(B|A) = \frac{P(B\cap A)}{P(A)} = P(B)$$
+
+If A and B are independent then A' and B' are also independent.
+-> $$P(A\cap B') = P(A)*P(B)$$
+
+*Independence of more than 2 events*
+Events $A_1, A_2, A_3, ...$ are independent if the product of the intersection of any 2,3,...,k of them equals the product of their probabilities.
+
+You must find the probability of each combination of the possibilities.
+Given $A_1, A_2, A_3, A_4$
+We must find all 6 combinations of 2, both combinations of 3, and the combination of 4. 

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       317d832e-bfe8-4ef8-bccd-b8e7ec5c50a9
+:END:
+#+title: Window System
+#+filetags: :OS:
+
+Wayland, X11, etc.
+Windows: Desktop Window Manager
+Android: SurfaceFlinger
+Apple: Quartz Compositor

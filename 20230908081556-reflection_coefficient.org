@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       775f78f7-5169-4944-b41c-995afdbdf579
+:END:
+#+title: Reflection Coefficient
+
+Given a transmission line with a characteristic impedance of $Z_0$ and a load impedance of $Z_L$
+
+If $Z_L\ne Z_0$, then some of the signal that went to the load will /reflect/ back to the source - creating a standing wave.
+
+We define the reflection coefficient as:
+$\Gamma = \frac{V_{0}^{-}}{V_{0}^{+}} = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{(Z_L/Z_0) - (Z_0/Z_0)}{(Z_L/Z_0) + (Z_0/Z_0)} = \frac{Z_L -1}{Z_L +1}$
+
+Example:
+Transmission line with $Z_0 = 100$ feeding a RC circuit with $R+50\ohm$, $C=10pf$, and source frequency = 100MHz.
+What is $Gamma$?
+
+$Z_L = \frac{1}{j*2\pi*100*10^6 * 10*10^-12} = 50-j159 \rightarrow Z_L/Z_0 = 0.5-j1.59 = z_L$
+
+$\Gamma = \frac{z_L -1}{z_L +1} = \frac{0.5-j1.59-1}{0.5-j1.59+1} = \frac{1.67\angle 253\degree}{2.18\angle -47\degree} = 0.76\angle300\degree = 0.76\angle -60\degree$
+$\Gamma = 0.76e^{-60}$
+$Power = V^2 \rightarrow P_{reflected} = |\Gamma|^{2}\rightarrow0.76^{2}=0.578$

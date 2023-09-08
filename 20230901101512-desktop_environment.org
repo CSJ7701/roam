@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       46c69683-13d7-4d94-87a4-7b7b77a04e37
+:END:
+#+title: Desktop Environment
+#+filetags: :OS:
+
+GNOME, XFCE, KDE, etc

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2d443f44-79fe-46b4-b23e-51e7edae6233
+:END:
+#+title: Display Manager
+#+filetags: :OS:
+
+Handles login. SDDM, LightDM, GDM (GNOME). 

@@ -10,10 +10,18 @@ Operating Systems communicate between applications and hardware.
 
 This architecture looks something like this:
 #+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
-[[file:/home/csj7701/class/Files/Attachments/OperatingSystemsLecture-2023-08-25.png]]
+[[file:/home/csj7701/roam/Attachments/OperatingSystemsLecture-2023-08-25.png]]
+
+There are several different ways to structure an OS.
+- [[id:3caa55fd-2427-4d65-b15b-a6b2f1e0105d][Monolithic Structure]]
+- [[id:6192b5b0-e1c5-4812-91d1-14b4514a5ec3][Layered Approach]]
+- [[id:23ddcacd-e96b-4dbe-bff5-c436c4ae14b2][Microkernels]]
+
+[[id:b5474faa-4f81-4e86-9f94-0a1838751a88][Linux Filesystem]]
+[[id:1fb35b55-544d-44c6-8ee5-294fdbcaed3c][Writing a Shell Script]]
 
 [[id:fc1b6d59-b345-4d60-96ec-3d35f1e4db98][Kernel]]
-
+[[id:de12ea67-0c1c-4772-aff3-05bab32ba28d][GUI]]
 
 Central logic - [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]]
 [[id:8b260d84-a4a5-43eb-928a-7661d2035013][Compilation]]

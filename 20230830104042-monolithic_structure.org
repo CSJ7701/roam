@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       3caa55fd-2427-4d65-b15b-a6b2f1e0105d
+:END:
+#+title: Monolithic Structure
+
+No structure. Big blob of code.
+[[id:74eb6e5b-b59a-49f4-a43b-1cf23b4e8be2][Monolithic Structure vs Layered Approach]]

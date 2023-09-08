@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       84d8dda9-5690-4efb-b55f-1307c46ed764
+:END:
+#+title: Probability Distributions
+#+filetags: :ProbTheory:
+
+Ex.
+Box /w slips 1-4
+Draw 2 with replacement.
+Sample Space: $S={(1,1), (1,2), (1,3), (1,4), (2,1), ...}$
+Each outcome would therefore have probability $\frac{1}{16}$.
+
+Given a sample space with a probability measure, as long as X is a real valued function (its values lie within the sample space) defined over the elements in S, then X is a random variable.
+
+We can define a distribution from here, given the random variable, we can find the probability that the random variable has a certain value. 
+Each of these probabilities must sum to one. E.G. Probability that X=1 is 4/16, probability that X=2 is 9/16, probability that X=3 is 3/16.
+
+Example:
+Toss a coin until a tail.
+x = toss on which you get the first tail
+
+$P(x=1) = 1/2$
+$P(x=2) = P(HT)=(1/2)^2$
+$P(x=3) = P(HHT) = (1/2)^3$
+...
+$P(x=m) = (1/2)^m$
+
+
+Example.
+A lab test is 95% effective in detecting a disease.
+It gives 1% false positive rate.
+.5% of the population actually has the disease.
+
+Find probability a person has the disease given the result was positive.
+
+$P(D|S) = .95$
+$P(D|S') = .01$
+$P(S) = 0.005$
+$P(S') = 0.995$
+
+We want $P(S|D) = \frac{P(S\cap D)}{P(D)}$
+$P(D) = P(D|S)P(D) + P(D|S')P(S') = 0.0147$
+$P(S|D) - \frac{P(S\cap D)}{P(D)} = .323$
+
+Example:
+f(x) = 1/10 while x=0, 2/10 while x=1, 5/10 while x=4, 2/10 while x=10
+Therefore, F(x) = 0 while x<0, 1/10 while 0<=x<1, 3/10 while 1<=x<4, 8/10 while 4<=x<10, 1 while x>=10

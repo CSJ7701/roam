@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       23ddcacd-e96b-4dbe-bff5-c436c4ae14b2
+:END:
+#+title: Microkernels
+
+Minimize the kernel. What to let go?

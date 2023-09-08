@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       16f39d84-0837-4c46-83c7-bc309c9d9326
+:END:
+#+title: Coaxial Cable
+#+filetags: :Antennas:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-06SEP2023-1.png]]
+3 Layers - Vinyl Jacket on the outside, A shield/dialectric, then the inner conductor.
+
+Coax is used for network or radio systems below 1GHz.
+The shield allows it to be bent at sharp angles and placed in close proximity to metallic objects (unlike twin lead or twisted pair)
+
+Coax is effectively just 2 conductors, whose resistances are a function of frequency, conductivity, permeability, permittivity, length, and cross-sectional area.
+($\sigma_{c}$ - conductivity, $\mu_{c}$ - permeability, $\varepsilon_{c}$ - permittivity)
+
+Since the dialectric is imperfect, it is also technically a conductor (its resistance is higher than conductance, but there exists some small amount of conductance).
+This conductance is a function of frequency, conductivity, permeability, permittivity, length and cross-sectional area.
+
+*Transmission Line Parameters:*
+
+$a = \frac{\text{inner diameter}}{2}$
+$b = \frac{\text{outer diameter}}{2}$
+$R_{s} = \sqrt{\pi*f*\mu_{c} / \sigma_{c}}$
+$R' = \frac{R_{s}}{2\pi}(\frac{1}{a}+\frac{1}{b})$
+$L' = \frac{\mu}{2\pi}ln(b/a)$
+$G' = \frac{2\pi\sigma}{ln(b/a)}$
+$C' = \frac{2\pi\varepsilon}{ln(b/a)} = \frac{2\pi\varepsilon_{r}\varepsilon_{0}}{ln(b/a)}$
+

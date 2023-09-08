@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6192b5b0-e1c5-4812-91d1-14b4514a5ec3
+:END:
+#+title: Layered Approach
+
+Layer n is closer to HW then n+1
+Layer n used n+1
+[[id:74eb6e5b-b59a-49f4-a43b-1cf23b4e8be2][Monolithic Structure vs Layered Approach]]

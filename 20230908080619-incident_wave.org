@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       1520036c-274f-41d7-a914-7ecc0e5420de
+:END:
+#+title: Incident Wave
+#+filetags: :Antennas:
+
+When wave travels in +z direction (towards the load)

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       74eb6e5b-b59a-49f4-a43b-1cf23b4e8be2
+:END:
+#+title: Monolithic Structure vs Layered Approach
+#+filetags: :OS:
+
+The [[id:6192b5b0-e1c5-4812-91d1-14b4514a5ec3][Layered Approach]] is typically slower, since there are more "layers" and paths for functions and data to traverse. The [[id:3caa55fd-2427-4d65-b15b-a6b2f1e0105d][Monolithic Structure]] is faster since all the code is close to itself.
+
+Layered is easier to debug, since the layers help us to know where errors happen and how to find the relevant information to fix such errors.
+
+Layered approach is also easier to update, since you can update a solitary layer and its dependencies, rather than the entire glob of unorganized code. 

@@ -18,8 +18,11 @@ In order to prevent greedy processes from causing unecessary delays, we use a pr
 [[id:eca6b615-19dd-4296-8490-a0318ed89dee][Processors]] can operate in [[id:303b6ea1-b932-4071-ac2e-d37d4f72353c][User Mode]] or in [[id:2fd71ab2-8c45-47be-9f81-37a3d7fe8c14][Kernel Mode]].
 Switching modes requires a System Call, which tells the processed which mode to use and for how long. 
 
+[[id:b1295ee7-b785-4ee9-8b32-fa4541b05860][OS Services]]
+
 * Device Management.
 How does an operating system know that an I/O or write request is completed?
 The I/O communicates with the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] using [[id:18f6d434-7aa5-4d7f-b44d-c729560282ee][Interrupts]]. I/O devices include disks, mice, keyboards, etc.
 
 * Memory Management
+The initial method incolved [[id:32d03cb6-c043-447c-b2f5-df4ebd996faa][External Fragmentation]]. This presented challenges, and [[id:e771afa1-9eab-4234-b7a1-29f1a42ba6d3][Internal Fragmentation]] was created to help fix them. [[id:44101295-a070-4d0b-b8a3-fb6935ab4e16][Virtual Memory]] is one of the more recent advancements in this area. 

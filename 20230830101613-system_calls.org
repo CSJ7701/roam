@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       88a26516-aef3-4b21-b0c0-6628e8c2a5d7
+:END:
+#+title: System Calls
+#+filetags: :OS:
+
+System Calls are typically provided by/interacted with via an [[id:920e163f-b226-4817-8c7b-579de7b382d9][API]]. Two of the most common examples of API's are the Windows API and [[id:251f562c-1ad7-45e0-aa72-60e7a69dcd56][POSIX]]. 

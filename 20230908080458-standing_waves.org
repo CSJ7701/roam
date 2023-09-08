@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       1ee861f3-fe9b-4066-ab8a-38789a88cdb1
+:END:
+#+title: Standing Waves
+
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-08SEP2023.png]]
+
+[[id:1520036c-274f-41d7-a914-7ecc0e5420de][Incident Wave]] - travels toward the load
+[[id:6c11b8c1-9923-4065-b476-a4be90d126d0][Reflected Wave]] - travels toward the source
+
+[[id:09e9d00b-25ed-417b-b096-c2aa945a6567][Standing Wave]].
+
+

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6c11b8c1-9923-4065-b476-a4be90d126d0
+:END:
+#+title: Reflected Wave
+#+filetags: :Antennas:
+
+When wave travels in the -z direction (toward the source)

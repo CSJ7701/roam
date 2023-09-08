@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       1fb35b55-544d-44c6-8ee5-294fdbcaed3c
+:END:
+#+title: Writing a Shell Script
+#+filetags: :OS:
+
+Create a shell script/Run it
+Add it to path
+
+Needs execute permissions (chmod u+x filename) (chmod +x filename)
+
+Adding to path:
+Add the root folder to $PATH.
+Best way to add random programs to the path is to add them to the /usr/local/bin directory.
+The next best option is to create your own folder (scripts, for example) and add it to the path. 
