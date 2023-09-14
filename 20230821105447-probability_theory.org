@@ -14,3 +14,4 @@
 [[id:a12998e4-a60b-44b0-84b8-d9aab5589f99][Conditional Probability]]
 [[id:0ec663f2-2230-4a6b-8ef4-32014574af29][Bayes Theorem]]
 [[id:84d8dda9-5690-4efb-b55f-1307c46ed764][Probability Distributions]]
+[[id:37c3e287-a119-45ab-9f62-16ea66bac748][Continuous Random Variables and Probability Density Functions]]

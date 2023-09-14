@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7d6a011b-a895-450e-b1e1-21d272b34d4b
+:END:
+#+title: File Extensions
+#+filetags: :OS:
+
+These are the typical suffixes to a file.
+.exe, .txt, etc.
+These are useful for helping programs determine file-type, but these are not what actually does this. File extensions operate in conjunction with [[id:e90743ed-966b-4e58-8a07-f750b469339e][File Signatures]].

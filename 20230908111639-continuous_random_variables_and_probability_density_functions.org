@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       37c3e287-a119-45ab-9f62-16ea66bac748
+:END:
+#+title: Continuous Random Variables and Probability Density Functions
+#+filetags: :ProbTheory:
+
+Definition:
+$P(a\le X \le b) = \int_{a}^{b}{f(x)dx} \,\,\,  \forall a,b\,\element\, \mathbb{R}\,\,\text{  with  } a<b$
+
+Constants: $P(X=c)=\int_{c}^{c}{f(x)dx} = 0$
+
+Conditions:
+$f(x)\ge 0$
+
+
+$\int_{-\infty}^{\infty}{f(x)dx} = 1$
+
+Ex.
+Given: $f(x) = {Ke^{-2x}\,\,\,x\ge0 \,\,\,;\,\,\,0\text{ otherwise}}$
+Find K
+
+$k\int_0^\infty{e^{-2x}dx} = \frac{k}{-2}\int{e^u}du$
+solve ... k=2
+
+
+Cumulative:
+$F(x) = P(X\le x) = \int_{-\infty}^{x}{f(t)dt}\,\,\,-\infty<x<\infty$
+
+$F(-\infty) = 0\,\,\,\,\,\,\,F(\infty) = 1$
+$F(a)\le F(b)\rightarrow a<b$
+$P(a\le x\le b) = \int_{-\infty}^{b}{f(x)dx}-\int_{-\infty}^{a}{f(x)dx} = F(b)-F(a)$
+
+$f(x)=\frac{d}{dx}F(x)$
+
+
+Ex.
+Find the cumulative distribution:
+
+$f(x) = 2e^{-2x}\,\,x\ge0\,\,;\,\,0 \text{ otherwise}$
+$F(x) = \int_{0}^{\infty}{2e^{-2t}dt} = e^{-2t}|_{0}^{x} = 0\,\,x<0\,\,;\,\,1-e^{-2x}\,\,x\ge0$

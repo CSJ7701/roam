@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       e90743ed-966b-4e58-8a07-f750b469339e
+:END:
+#+title: File Signatures
+#+filetags: :OS:
+
+These are a byte at the very beginning of a file that signifies the files use-case.
+In windows, all executable files begin with "MF".
+In linux, all executable files begin with "ELF".
+
+These are "magic bytes" that prepend all files in order to indicate what they are used for. 

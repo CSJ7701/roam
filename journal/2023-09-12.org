@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       33238a11-cbdd-4baf-ac4d-a76b057b0c53
+:END:
+#+title: 2023-09-12
+
+
+* Daily Log
+This is the first entry in a while. I've made a fair amount of progress creating a workflow that actually works for me. On the other hand, school is in full swing and I'm really not enjoying my classes so far. [[id:52790acd-48e1-4cb3-b69f-559a36412326][Antennas and Propogation]] and [[id:328fd59f-4054-4369-9410-3e03cb620b8e][Linear Circuits]] both /SUCK/. They are everything I despise about Electrical Engineering - convoluted, confusing, and seemingly pointless. On the other hand, I'm really enjoying [[id:80edeaf5-f295-4806-9fb1-0ba8a23f0c49][Operating Systems]] and [[id:15a5db25-60e9-46c2-b5cd-e8c2ccde3dae][Probability Theory]]. They're subjects that actually interest me, and I'm having a great time nerding out about linux in OS. Despite the fact that this year has about half the coursework I had last semester, I feel remarkably more depressed than last year. On top of that is the fact that relationships and emotions just /suck/. I've started developing feelings for Sydney (Phipps) and I don't really know what to do. I don't feel as if she returns that feeling, but we've been getting closer and I'm not entirely sure how to move forward.
+** What went well?
+
+** What didn't?
+
+** What can I change?
