@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       98a6e14d-b8bc-4152-9058-1bfc70580925
+:END:
+#+title: Writing an Abstract
+
+
+*What did we do?*
+- one sentence description to summarize lab/project/etc
+=The purpose of this lab (entitleed a study of real world op-amps) is to learn about real world operationa amplifier characteristics, as compared to ideal operational amplifier assumptions=
+
+- Diving into more detail
+  =Here we present numerous measurements conducted on the 741 op amp, using laboratory equipment, matlab, and multisim.=
+
+- What did we examine
+=More specifically, we examined slew rate, gain bandwidth product, input bias current, open loop output impedance, etc for inverting amplifier configurations=
+
+=We show that with reference to slew rate, output product and something impedance the ___ behaves exactly like an idela op amp, provided that the input signal frequency and amplitude are well within the gain bandwidth product and slew rate limitations for the device.=
+
+- What did we find out?
+=SCHTUFF=
+
+=Finally, we predicted theoretical open and closed loop magnitude response plots, measurements, and multisim, and we highlight that lab measurements and simulation are consistant with the predicted theory=
+
+Generic formula:
+- General summary
+- Slightly more specific
+- What we looked for and what we used
+- What we found
+- What that means
+
+
+Dont use too much detail, but summarize what we found.
+Purpose is to look at findings from a high level, and give information to someone who might potentially want more information about what we did. 

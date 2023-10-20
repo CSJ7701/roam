@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       66491127-4a67-415a-9224-b4af86df8c5c
+:END:
+#+title: Resources
+#+filetags: :Econ:
+
+Individual Resources - time and money
+
+Society's Resources - [[id:fd01ddbe-0004-4cc5-9281-32b402b7726c][Factors of Production]]

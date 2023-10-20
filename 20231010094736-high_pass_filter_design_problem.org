@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       f1f98385-b43f-47e7-87de-b960156c63f5
+:END:
+#+title: High Pass Filter Design Problem
+#+filetags: :Linear:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-10OCT2023.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-10OCT2023-1.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-10OCT2023-2.png]]
+

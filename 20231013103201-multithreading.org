@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       8bba04ef-2525-4033-a8bd-aed189ee9dc0
+:END:
+#+title: Multithreading
+
+* Multithreading models
+
+*Many to One*
+Not great - why?
+
+*One to One*
+Currently implemented in windows and linux
+When running a program with "X" number of user threads, the operating system will create "X" kernel threads.
+This can be a potential issue, because this can place a lot of strain on the OS. 
+
+*Many to Many*

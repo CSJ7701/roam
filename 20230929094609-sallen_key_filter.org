@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a3aabb53-e424-4c02-b9ce-6d0ae94cf9aa
+:END:
+#+title: Sallen-Key Filter
+#+filetags: :Linear:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023-7.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023-8.png]]

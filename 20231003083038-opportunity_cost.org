@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       be880b15-106b-417e-a870-a08f1c3822b4
+:END:
+#+title: Opportunity Cost
+#+filetags: :Econ:
+
+Every decision regarding use of resources causes a trade-off
+
+Opportunity Cost - The most desired goods and services that are foregone in order to obtain something else
+*The value of the next best alternative* that could have been selected.
+
+

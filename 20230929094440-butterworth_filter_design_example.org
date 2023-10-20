@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       57ced548-30fe-41b5-9ff6-a0f556857663
+:END:
+#+title: Butterworth Filter Design Example
+#+filetags: :Linear:
+
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023-1.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023-2.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023-3.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023-4.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023-5.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-29SEP2023-6.png]]
+
+
+[[id:a3aabb53-e424-4c02-b9ce-6d0ae94cf9aa][Sallen-Key Filter]]

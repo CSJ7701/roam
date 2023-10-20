@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       fd23aa0e-8d34-4e3c-85b2-5a159c7c4c77
+:END:
+#+title: Expected Values
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-25SEP2023.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-25SEP2023-1.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-25SEP2023-2.png]]

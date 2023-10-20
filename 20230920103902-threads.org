@@ -1,0 +1,72 @@
+:PROPERTIES:
+:ID:       cc2d0b4e-6d27-4c45-86fd-cd824806a594
+:END:
+#+title: Threads
+#+filetags: :OS:
+
+Threads can be visualized as small units within a process.
+Something like sub tasks - multiple threads can exist within a single process. 
+
+Processes use threads when they need to accomplish multiple tasks at a time.
+
+Threads came about as [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]]'s increased the number of cores.
+In order to use multiple cores, we had to design processes that ran with multiple threads.
+
+Thread Libraries
+- POSIX: pthreads
+- Windows: WTL
+- Java: -- something else --
+
+
+Threads are lightweight processes.
+- Faster creation/termination
+- Easier/faster data sharing ([[id:3d101961-f138-4482-bdc0-1b1176a17b99][Interprocess Communication]])
+- Uses parent [[id:04734ab6-f46e-4da9-84ed-7a59f4f06974][PCB]] - this is unlike child processes, which get their own PCB's.
+  When a new thread is created, it shared the Code, Data, and Files with its parent. Each thread gets its own Reg and Stack.
+
+
+Threads use what is called the "fork-join-model"
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/OperatingSystemsLecture-06OCT2023.png]]
+
+If a thread gets stuck, it may never rejoin the original thread.
+This is a case that must be accounted for in the code.
+
+Threads can be used for a variety of tasks.
+
+Threads can be used for the "same" task - i.e. dividing a task into "chunks" with each thread working on a different chunk.
+Examples:
+- Image/video processing
+- RDB queries (?)
+- Large Scale facial recognition
+- Numerical weather prediction
+=Embarrissingly Parrallel= - Easy to implement, makes large operations easier.
+
+They can also operate on different tasks.
+Examples:
+- Games (rendering/Audio/AI/etc)
+- Word (rendering/spell-check/search, etc)
+- Browser (rendering {common theme here}, downloading, audio video, etc)
+
+
+*Amdahl's Law*
+$\text{speedup}\le\frac{1}{S+\frac{(1-S)}{N}}$
+Where S is the number processing cores.
+
+Data parallelism involves running the same operation on each core, with each core acting on a seperate set of data.
+Task parallelism involves assigning a seperate operation to each core. These different tasks are all run on the same set of data.
+
+
+* Types of threads
+
+*User threads*
+implemented by a user level library. No kernel support. Faster to create and run.
+
+*Kernel Threads*
+implemented by a kernel-specific library. Kernel managed. Using this is less portable since whatever code you write using kernel threads relies on whatever kernel it was written for. Slower.
+
+We need to map _User Threads_ to _Kernel Threads_.
+We do this with:
+[[id:8bba04ef-2525-4033-a8bd-aed189ee9dc0][Multithreading]]
+

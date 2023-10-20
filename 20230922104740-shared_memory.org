@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       5b9fc7a4-a87a-47ef-b903-43fb5350801e
+:END:
+#+title: Shared Memory
+#+filetags: :OS:
+
+Shared Memory operates using a singular data storage space. Processes use the same space to write memory, and on larger scales memory from other processes can be overwritten.
+
+This is much faster, but it is risky since the processes don't know what they should overwrite and what they shouldn't.
+
+One example is something known as a =Data Race=.
+These are situations where a given program may asynchronously execute two functions, =print(x)= and =print(x++)=
+We don't know which one of these functions will execute first - so we can't guaruntee which value will print.

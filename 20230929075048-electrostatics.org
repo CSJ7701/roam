@@ -1,0 +1,175 @@
+:PROPERTIES:
+:ID:       5d99c0de-cb69-4410-bbfa-addd18c82b93
+:END:
+#+title: Electrostatics
+#+filetags: :Antennas:
+
+
+$\nabla\cdot D=\rho_{v}\rightarrow$ Guass's law and Charge Density
+$\nabla * E = -\frac{\partial B}{\partial t}\rightarrow$ Faraday's Law
+- Time rate of change in magnetic field (induces an electric field)
+
+$\nabla\cdot B=0\rightarrow$ Gauss's law for magnetism (There are no single monopoles).
+$\nabla * H=J+\frac{\partial D}{\partial t}\rightarrow$ Ampere's Law
+- A current or time varying electric field causes a magnetic field
+
+  E,D - electric field intensities (V/m), electric flux (C/m^2)
+  H,B - Magnetic Field Intensity (A/m), magnetic flux intensity (T)
+  $\rho_v$ - Charge/unit volume
+  J - current density/area (amps/m^2)
+  B - $\mu H$
+  D - $\varepsilon E$
+  $\mu$ - magnetic permeability
+
+
+*NOTE*
+Difference here between /statics/ and /dynamics/
+
+In /statics/ $\partial / \partial t=0$
+which means that
+$$\nabla\cdot D=\rho_{p}$$
+$\nabla*E=0$
+$\nabla\cdot B=0$
+$\nabla*H=J$
+
+** Charge and Current Distributions
+
+Clasically, when charge is moving, we have current
+$i(t) = \frac{dq}{dt}=I$
+with current density $I=\int_{s}J\cdot ds$
+note that ds here represents area perpendicular to the flow of current.
+
+*Convection Current* - When current is caused by actual movement of electrically charged matter in space.
+*Conduction Current* - Current is caused by movement of charged particles from one atom to another.
+                                      This is what happens in wires - the electrons leaving one end of the wire are not the same that entered.
+
+ Later, we will see a third type, called *Displacement Current* - where there is no movement of charge.
+ When we have a /time varying electric flux density/ we create a displacement current.
+$I_{d} = \int_{s}\frac{\partial D}{\partial t}\cdot ds\rightarrow$ displacement current
+
+This is how capacitors appear to conduct current, despite the dialectric between their terminals
+
+** Coulomb's Law
+
+Charge generates magnetic field.
+Given a second charge, we have a force.
+
+$E=\hat{R}\frac{q}{4\pi\varepsilon R^{2}}(V/m)\rightarrow$ E field lines face outward. If we have another charge with charge of q, then force $F=qE$
+
+$\varepsilon=\varepsilon_{r}\varepsilon_{0}$
+$\varepsilon_0 = 8.85*10^{-12}$
+$\varepsilon_{r}$ - relative permeability
+
+** Gauss's Law
+
+Relates electric field flux to charge
+
+$\nabla\cdot D = \rho_{v} \leftrightarrow \ointD\cdot ds = Q$
+
+$\nabla\cdot D\rightarrow$ Divergence.
+$\nabla=\hat{i}\frac{\partial}{\partial x}+\hat{j}\frac{\partial}{\partial y}+\hat{k}\frac{\partial}{\partial z}$
+Divergence is a measure of the flow vectors tendency to /diverge/ from that point (what point??)
+If outward flux exceeds inward flux, we have positive divergence. If outward less than inward, negative divergence. Equal, zero divergence.
+
+$\nabla\cdot E$ - measures how much the electric field lines diverge
+
+
+*** What is Flux - $\phi$
+
+$\phi =$ Field * Surface Area
+
+
+$\phi_{E} =$ number of Electric Field Lines actually passing through a surface
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-29SEP2023.png]]
+
+Through a closed surface (what does this mean?)
+$\phi_{E} = \oint_{s}E\cdot dA = \frac{q_{enc}}{\varepsilon_{0}}$
+
+
+*Any electric charge produces an electric field*
+The flux of that field passing through any closed surface is:
+/proportional to the total charge contained within that surface/
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-29SEP2023-1.png]]
+
+
+Electric field - force generated
+$E=\frac{F_e}{q_0}$
+
+
+** Electric Scalar Potential
+[[id:16677255-00cb-44d8-b159-d77192a4925d][Voltage]] - voltage potential, also known as electromotive force (EMF)
+
+Given that $F=-qE$ and W=distance*force -> $dW=F_{ext}\cdot dl=-qE\cdot dl$
+
+The differential potential energy per unit charge - differential electric potential or differential voltage
+$dv=\frac{dW}{q}=-E\cdot dl (J/C) or Volts$
+$V_{21}=V_{2}-V_{1}=-\int_{p1}^{p2}E\cdot dl \rightarrow\text{If the length is along x}\rightarrow V=E_{x}l$
+and $I=\int_{A}J\cdot ds=\int_{A}\sigma E\cdot ds$
+
+** Conuctors
+
+[[id:62f4c08c-744e-4c97-8a5f-80c1dbbb74f2][Conductivity]]
+
+Conductors and dialectrics (insulators).
+Some materials often considered insulators can conduct.
+Conductors have a large number of loosely attached electrons.
+In the absence of an electric field, these move in random directions, but inside a field we have a conduction current.
+$J=\sigma E(A/m^{s})$ where $\sigma$ is conductivity
+
+With this definition, DC resistance becomes:
+$R=\frac{l}{\sigma A}=\rho l/A$
+This is different from what we discussed in chapter 2:
+$R'=\frac{R_{s}}{2\pi a}$ where $R_{s}=\sqrt{\pi f\mu_{c}/\sigma_{c}}$
+When a wire is carrying an AC signal, the conductor has a surface resistance $R_s$
+
+Thus:
+DC resistance: $R=\frac{l}{\sigma A}$
+AC resistance: $R'=\frac{R_{s}}{2\pi a}$ where $R_{s}=\sqrt{\pi f\mu_{c}/\sigma_{c}}\rightarrow R_{ac}=R'*length$
+
+** Joules Law
+
+[[id:3d6f8078-0a14-45b1-9b41-405530daa033][Joule's Law]]
+$P=I^{2}R=V^{2}/R=VI$
+
+** Dielectrics
+In conductors, outer electrons are bound weakly to the atom - free to migrate.
+In dielectrics, outer electrons tightly bound.
+
+*Dielectric Breakdown*
+So far, we've assumed that electric field does not exceed some critical value (called dielectric strength $E_{ds}$)
+If $E>E_{ds}$ then electrons begin to detach from the molecules and move through the material as conduction current.
+This is known as dielectric breakdown - damage usually permanent.
+
+Dielectric strength is a function of the material, temperature, frequency, humidity, etc.
+
+** Capacitance
+
+In any 2 conductor arrangement
+$C=\frac{Q}{V}\rightarrow C=\frac{\int_{s}{\varepsilon E\cdot ds}}{-\int_{l}E\cdot dl}$
+
+Parallel Plate: $C=\frac{\varepsilon A}{l}$
+Coax: $C=\frac{2\pi\varepsilon}{ln(b/a)}$
+
+
+* Important Definitions
+
+Dielectric
+
+Conductor
+
+Dielectric Breakdown
+
+Flux
+
+Divergence
+
+Conductance vs Resistance
+
+Coulomb's Law
+
+Gauss's Law
+
+

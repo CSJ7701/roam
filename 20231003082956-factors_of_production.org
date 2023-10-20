@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       fd01ddbe-0004-4cc5-9281-32b402b7726c
+:END:
+#+title: Factors of Production
+#+filetags: :Econ:
+
+Land Labor Capitol Entrepreneurship

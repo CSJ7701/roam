@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b03e3650-3917-47d4-a778-80b3afa9bbfe
+:END:
+#+title: Poisson DIstribution
+#+filetags: :ProbTheory:
+

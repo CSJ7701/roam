@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       3d101961-f138-4482-bdc0-1b1176a17b99
+:END:
+#+title: Interprocess Communication
+#+filetags: :OS:
+
+Concurrent Processes are independent, but cooperate.
+
+This allows them to share information, speeds up operation (since they aren't running as one large program).
+
+There are two ways to implement this:
+- [[id:5b9fc7a4-a87a-47ef-b903-43fb5350801e][Shared Memory]]
+- [[id:911bf314-6501-4e8d-a802-69d9ec5ad182][Message Passing]]
+
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d399c4ca-a4a0-407a-9a9d-e7be4359e4eb
+:END:
+#+title: Special Probability Distributions
+#+filetags: :ProbTheory:
+
+[[id:153cd705-b02b-43df-8aa4-270096639f9c][Discrete Uniform Distribution]]
+[[id:8c30a149-f889-4adf-b058-6b16d19ff38a][Bernoulli Distribution]]
+[[id:6cfa1dc2-bccf-4606-b9fa-0e43bd5c3d00][Binomial Distribution]]

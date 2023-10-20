@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       3d6f8078-0a14-45b1-9b41-405530daa033
+:END:
+#+title: Joule's Law
+#+filetags: :EE1:
+
+$P=I^{2}R=V^{2}/R=VI$

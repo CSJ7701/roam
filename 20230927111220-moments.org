@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       3a1c7dc2-cecd-4c5f-8d6a-35d4f66d33b1
+:END:
+#+title: Moments
+#+filetags: :ProbTheory:
+
+We use [[id:fd23aa0e-8d34-4e3c-85b2-5a159c7c4c77][Expected Values]] to calculate most of this.
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023-1.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023-2.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023-3.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023-4.png]]

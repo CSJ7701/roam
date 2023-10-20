@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       c371ff79-0428-42b3-beab-ab890d8f20bf
+:END:
+#+title: Standing Wave Ratio
+#+filetags: :Antennas:
+
+$S = \frac{|V_{\text{max}}|}{|V_{\text{min}}} = \frac{1+|\Gamma|}{1-|\Gamma|}$
+
+We also know that $z_{L} = \frac{Z_{L}}{Z_0}$
+
+From this:
+$\Gamma=\frac{z_{L}-1}{z_{L}+1}$
+
+$|\Gamma|=\frac{S-1}{S+1}$

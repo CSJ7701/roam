@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       ac650e3f-1390-46ad-b751-dc79752b41d3
+:END:
+#+title: Covariance
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-04OCT2023.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-04OCT2023-1.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-04OCT2023-2.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-04OCT2023-3.png]]

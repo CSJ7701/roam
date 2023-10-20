@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       153cd705-b02b-43df-8aa4-270096639f9c
+:END:
+#+title: Discrete Uniform Distribution
+#+filetags: :ProbTheory:
+
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-10OCT2023.png]]

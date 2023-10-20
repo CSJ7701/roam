@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       911bf314-6501-4e8d-a802-69d9ec5ad182
+:END:
+#+title: Message Passing
+#+filetags: :OS:
+
+This is more effective with smaller amounts of data.
+Easier with distributed cores.
+Used in super computers.

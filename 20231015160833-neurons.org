@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       21c9a4f9-0ab6-467a-89c1-26b6f0ef2d26
+:END:
+#+title: Neurons
+#+filetags: :NeuralNetworks:
+* Neural Networks
+"A thing that holds a number"
+This number is typcially between 0 and 1. 

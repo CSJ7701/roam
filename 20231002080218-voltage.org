@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       16677255-00cb-44d8-b159-d77192a4925d
+:END:
+#+title: Voltage
+#+filetags: :EE1:
+
+Voltage Potential
+Electromotive Force (EMF)

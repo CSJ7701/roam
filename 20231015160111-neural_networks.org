@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       0310fde6-e526-4639-a1a5-48c477ceb8ce
+:END:
+#+title: Neural Networks
+#+filetags: :NeuralNetworks:
+
+* Background
+
+When we look at handwritten numbers, we can see and recognize completely different shapes as the same number.
+If 3 different people write the number "3", each one will look dramatically different, but will still be recognizeable as the number "3" - because our brains can process a specific arrangement of "pixels" as a significant meaning.
+
+Imagine, however, trying to write a bash script that does the same thing. What we do so easily can be almost impossible to replicate in code.
+This is where neural networks come in - we can train them to recotgnize patterns, etc, the same way the human brain might.
+
+* Neural Networks
+
+Neural Networks are constructed of [[id:21c9a4f9-0ab6-467a-89c1-26b6f0ef2d26][Neurons]].
+Using the example of a neural network intended to recognize handwritten numbers, the neural network might start with (for a 28x28 rendering of a number) 28*28=784 neurons to represent each of the pixels in the image. These neurons would hold a decuimal value representing the greyscale intensity of the pixel they represent, 0 as black and 1 as white.
+
+This decimal number is known as the neurons [[id:b29de2c9-5bd4-4eb7-8d84-22d59956a02a][Activation]].
+
+
+If the 784 initial neurons represent the leftmost layer of the network (or initial input), then there will be 10 neurons on the far rightmost layer, representing digits 0-9. The [[id:b29de2c9-5bd4-4eb7-8d84-22d59956a02a][Activation]] in these neurons represents how much the network "thinks" that a given image corresponds to a given digit.
+
+The layers between these two are "hidden", and are what actually perform the logic. The activation in one layer directly affects the activation in the next, adjacent layer. This proceeds throughout the entire network in order to reach the decision at the end.

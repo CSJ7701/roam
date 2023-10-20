@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       e459d90f-feb6-4e2c-b526-fa4b01c25fe3
+:END:
+#+title: Low Pass Filter
+#+filetags: :Linear:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-18SEP2023-2.png]]
+
+
+Special Kind of Low Pass Filter:
+[[id:27a6b8ba-14c7-4ece-bda1-9c18994f0f98][Butterworth Filter]]

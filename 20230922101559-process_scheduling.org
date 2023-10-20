@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       568c8809-16dc-4535-9d41-d1f139b6813e
+:END:
+#+title: Process Scheduling
+#+filetags: :OS:
+
+We schedule process to maximize CPU utilization and minimize idle time
+
+Schedules work based on queues, which work on a =Last in, First out= basis.
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/OperatingSystemsLecture-22SEP2023-1.png]]f
+
+
+These queues read the [[id:04734ab6-f46e-4da9-84ed-7a59f4f06974][PCB]] for each process, and use those to organize the queue.
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/OperatingSystemsLecture-22SEP2023-2.png]]
+

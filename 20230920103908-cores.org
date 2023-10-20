@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b1d6ff3b-08b8-4cdd-a4ad-f7c5bfbff6b1
+:END:
+#+title: Cores
+#+filetags: :OS:
+
+Cores are the physical / virtual processing units that exist within the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]]. Each core handles its own thread, and computers with multiple cores can handle multiple threads seperately. 

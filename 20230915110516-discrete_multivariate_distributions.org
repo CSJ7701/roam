@@ -1,0 +1,54 @@
+:PROPERTIES:
+:ID:       758216bd-1161-4f9a-a1b6-9c9c6686cf7a
+:END:
+#+title: Discrete Multivariate Distributions
+#+filetags: :ProbTheory:
+
+
+Ex.
+
+box with slips 1-4, draw 2
+
+S = {(1,1), (1,2), (1,3), (1,4), (2,1), ...}
+
+x = # on first draw
+y = # on second draw
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-15SEP2023.png]]
+
+
+
+
+$f(x,y) = P(X=x,Y=y)$ - joint probability distribution
+
+
+
+Ex.
+Bag with 3 orange balls, 4 blue, and 2 white
+2 balls selected without replacement
+x = # orange
+y = # blue
+
+Find f(x,y) + F(x,y)
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-15SEP2023-1.png]]i
+
+Each entry in the table represents the probability of getting the values on the side of the table.
+The values on each side represent the /real/ possibilities given in the situation, e.g., even though there are 4 blue balls, the top axis only goes to 2 since we are only drawing 2 balls.
+
+The above graph is the probability distribution, below is the cumulative distribution.
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-15SEP2023-2.png]]
+
+
+3 flips of a balanced coin
+x = # heads
+y = # heads - # tails
+
+find f(x,y)
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-15SEP2023-3.png]]

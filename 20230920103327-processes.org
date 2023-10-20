@@ -1,0 +1,78 @@
+:PROPERTIES:
+:ID:       a165c83c-2c50-4dc1-908f-b808bb156e0c
+:END:
+#+title: Processes
+#+filetags: :OS:
+
+Processes and Programs are different - ELABORATE
+A process is simply a running program
+
+Processes and Resources are different.
+[[id:88e22c48-525a-400c-8c59-bc94621aa72f][Resources]] are used by processes and programs, routinely overwritten.
+
+Threads and Cores
+[[id:cc2d0b4e-6d27-4c45-86fd-cd824806a594][Threads]]
+[[id:b1d6ff3b-08b8-4cdd-a4ad-f7c5bfbff6b1][Cores]]
+
+
+There are multiple sections to a process.
+*Text*
+- this is the "code" section, where the executable code resides.
+  It contains the actual instructions for the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] to execute. Typically read only, the code is usually meant to remain unchanged during execution.
+
+*Data*
+- This holds initialized global and static variables. These are variables that have a specifically assigned value within the program code. This can be subdivided into read only and read-write sections.
+
+*Stack*
+- This is intended for function calls and local variables. It is able to grow and shrink as functions are called and return values.
+  It operates on a =Last-in-First-out= basis - meaning the most value that was pushed onto the stack most recently is going to be the first off.
+
+*Heap*
+- This is a dynamically allocated memory area. Intended for storing data that has no fixed size at compile time, it is where we allocate memory using functions like =malloc= in C or =new= in C++.
+  This section is integral to data structures like linked lists, trees, and other variable-size objects.
+
+  [[id:04734ab6-f46e-4da9-84ed-7a59f4f06974][PCB]] help to contain information about the various running processes on a system.
+
+  Processes can also be [[id:568c8809-16dc-4535-9d41-d1f139b6813e][Scheduled]]
+
+  When processes are scheduled, they change /state/.
+  Process states are OS specific, in linux they are:
+  - Running (currently being executed)
+  - Sleeping (waiting to be executed)
+  - Orphan (A process without a parent)
+  - Zombie (A process that isn't running, waiting, or anything else, and is in the process of dying. Has been killed, but PCB and other data is still in memory. These are bad - bloat).
+
+State diagram:
+- Process starts as "New"
+- Proceeds to "Ready" - Ready vs Running is based on the ready queue.
+- Then starts "Running"
+- Can "Wait" on other programs - typically reliant on I/O from other processes/programs
+- When over, process is "Terminated"
+
+When an OS creates a new process, there are several design choices that can be made. These are made at the kernel level.
+Should parent split resources with child?
+Should child be concurrent with parent?
+Should child be identical or not?
+What should child inherit from parent?
+
+When terminating a process:
+- Resources are released (Memory deallocated, Files closed, PCB removed)
+
+When using a program that has memory allocated to it, this memory must be *deallocated* once the program is terminated - otherwise this can result in what is called a memory leak. 
+
+In order to let programs and processes work together, they utilise [[id:3d101961-f138-4482-bdc0-1b1176a17b99][Interprocess Communication]]
+
+Processes run [[id:cc2d0b4e-6d27-4c45-86fd-cd824806a594][Threads]].
+  
+*** PID Fork Example
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/OS-Lecture-04OCT2023.png]]
+
+Fork returns the PID in the parent process and 0 in the child process.
+This means that at =A=, PID=0.
+When we run getpid() in the child however, we get the childs PID, so PID1=2603 at =B=.
+
+In the Parent, PID=2600, so at =C=, PID=2600.
+At =D=, we are getting the PID of the same process, so at =D= PID1 = 2600 as well.
+
+

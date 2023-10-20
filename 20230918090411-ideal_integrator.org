@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       829c53fa-b448-49f8-9a33-9ae092d0716c
+:END:
+#+title: Ideal Integrator
+#+filetags: :Linear:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-2023-09-18.png]]
+
+$\frac{v_{out}}{v_{in}} = H(s) = \frac{-1}{scr}$

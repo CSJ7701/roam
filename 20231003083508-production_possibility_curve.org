@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       5c2726fe-9329-4901-87f6-3af76db63504
+:END:
+#+title: Production Possibility Curve
+#+filetags: :Econ:
+
+Describes the /alternative combinations of goods and services that could be produced/.
+
+Represents a menu of output choices. 
+

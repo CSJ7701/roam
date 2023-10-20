@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       6cfa1dc2-bccf-4606-b9fa-0e43bd5c3d00
+:END:
+#+title: Binomial Distribution
+#+filetags: :ProbTheory:
+
+[[id:8c30a149-f889-4adf-b058-6b16d19ff38a][Bernoulli Distribution]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-10OCT2023-2.png]]

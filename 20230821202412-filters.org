@@ -16,6 +16,7 @@ Proof:
 
 
 #+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
-[[file:/home/csj7701/class/Files/Attachments/LinearCircuitsLecture-2023-08-23.png]]
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-2023-08-23.png]]
 In an Ideal filter, Amax = 0, Amin = $\infty$, $f_c = f_s$
 
+[[id:e459d90f-feb6-4e2c-b526-fa4b01c25fe3][Low Pass Filter]]

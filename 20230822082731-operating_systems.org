@@ -20,6 +20,8 @@ There are several different ways to structure an OS.
 [[id:b5474faa-4f81-4e86-9f94-0a1838751a88][Linux Filesystem]]
 [[id:1fb35b55-544d-44c6-8ee5-294fdbcaed3c][Writing a Shell Script]]
 
+[[id:a165c83c-2c50-4dc1-908f-b808bb156e0c][Processes]]
+
 [[id:fc1b6d59-b345-4d60-96ec-3d35f1e4db98][Kernel]]
 [[id:de12ea67-0c1c-4772-aff3-05bab32ba28d][GUI]]
 

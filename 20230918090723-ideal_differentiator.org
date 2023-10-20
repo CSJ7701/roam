@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       6c9d5e8e-3c9a-4a7d-a4ee-abe768118634
+:END:
+#+title: Ideal Differentiator
+#+filetags: :Linear:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-18SEP2023-1.png]]
+
+$H(s) = \frac{-R}{1/sc}$

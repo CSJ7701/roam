@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b29de2c9-5bd4-4eb7-8d84-22d59956a02a
+:END:
+#+title: Activation
+#+filetags: :NeuralNetworks:
+
+*I THINK* - the magnitude of the decimal value stored in a neuron. 

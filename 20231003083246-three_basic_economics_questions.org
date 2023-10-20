@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       f30ea104-ac8e-4996-a0c1-1484e21482c2
+:END:
+#+title: Three Basic Economics Questions
+#+filetags: :Econ:
+
+1. What to produce
+We decide what we want most, sacrificing less desired activities and goods
+There arent enough [[id:66491127-4a67-415a-9224-b4af86df8c5c][Resources]] in en economy to produce all the goods and services desired by society.
+[[id:5c2726fe-9329-4901-87f6-3af76db63504][Production Possibility Curve]]
+
+2. How to produce
+
+   
+3. For Whom to produce

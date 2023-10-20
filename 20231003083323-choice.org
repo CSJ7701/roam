@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       60013a12-53ec-4531-854b-de4afc9dce36
+:END:
+#+title: Choice
+#+filetags: :Econ:
+
+Expected benefit vs [[id:be880b15-106b-417e-a870-a08f1c3822b4][Opportunity Cost]]
+

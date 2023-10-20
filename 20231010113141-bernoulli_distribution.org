@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       8c30a149-f889-4adf-b058-6b16d19ff38a
+:END:
+#+title: Bernoulli Distribution
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-10OCT2023-1.png]]

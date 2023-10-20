@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       27a6b8ba-14c7-4ece-bda1-9c18994f0f98
+:END:
+#+title: Butterworth Filter
+#+filetags: :Linear:
+
+Butterworth Filter - "maximally flat" magnitude response
+
+Butterworth Response: $|H(j\omega)|^{2} = \frac{1}{1+(\frac{\omega}{\omega_{0}})^{2n}}$
+
+Where $\omega_0$ is half power or -3 dB frequency
+*Note* - $|H(j\omega)|^{2} = H(j\omega) * H^{*}(j\omega)$ - H times H conjugate
+
+
+These are generally "higher order" - meaning ...
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn :page 1
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-25SEP2023.pdf]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn :page 2
+[[file:/home/csj7701/roam/Attachments/LinearCircuitsLecture-25SEP2023.pdf]]

@@ -3,6 +3,8 @@
 :END:
 #+title: Probability Theory
 #+filetags: :Class:ProbTheory:MOC:
+*Resources:*
+[[file:~/class/F23/Prob Theory/Distributions and Density Chart.rnote][Distributions and Density Chart]]
 
 
 [[id:62e5e4de-8353-4b39-9ed1-a1146b400e17][Combinatorial Methods]]
@@ -15,3 +17,14 @@
 [[id:0ec663f2-2230-4a6b-8ef4-32014574af29][Bayes Theorem]]
 [[id:84d8dda9-5690-4efb-b55f-1307c46ed764][Probability Distributions]]
 [[id:37c3e287-a119-45ab-9f62-16ea66bac748][Continuous Random Variables and Probability Density Functions]]
+[[id:758216bd-1161-4f9a-a1b6-9c9c6686cf7a][Discrete Multivariate Distributions]]
+[[id:a228cfec-e537-481f-8316-df261e1ca1ee][Continuous Multivariate Distributions]]
+[[id:fd23aa0e-8d34-4e3c-85b2-5a159c7c4c77][Expected Values]]
+[[id:3a1c7dc2-cecd-4c5f-8d6a-35d4f66d33b1][Moments]]
+[[id:93110d93-5591-47dd-9fa5-a8b9593454f5][Chebyshev's Theorem]]
+[[id:b3f6555b-5d6a-460a-a2da-93a0c21e662b][Moment Generating Functions]]
+[[id:ac650e3f-1390-46ad-b751-dc79752b41d3][Covariance]]
+[[id:dd82e14c-4529-4ea4-b890-263149529b57][Conditional Expectations]]
+[[id:d399c4ca-a4a0-407a-9a9d-e7be4359e4eb][Special Probability Distributions]]
+[[id:160c7d40-7090-4563-aba8-019a3a3ab49e][Negative Binomial Distribution]]
+[[id:d7db9b3e-791b-4437-835a-550135fa3aca][Geometric Distribution]]

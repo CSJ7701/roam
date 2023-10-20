@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       88e22c48-525a-400c-8c59-bc94621aa72f
+:END:
+#+title: Resources
+#+filetags: :OS:
+
+
+Resources are files that other processes or programs use/access.
+Resources are typically written and accessed by programs and processes.

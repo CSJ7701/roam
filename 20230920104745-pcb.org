@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       04734ab6-f46e-4da9-84ed-7a59f4f06974
+:END:
+#+title: PCB
+#+filetags: :OS:
+
+PCB - or Process Control Block
+
+Information management. Records and allows access to information about running processes. 
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/OperatingSystemsLecture-22SEP2023.png]]
+
+Information we can get from a PCB:
+- Process State
+- Process Number
+- Program Counter
+- Memory Limits
+- List of open files

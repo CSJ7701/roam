@@ -4,9 +4,12 @@
 #+title: Essentials of Econ
 #+filetags: :Class:Econ:MOC:
 
-
+[[id:f30ea104-ac8e-4996-a0c1-1484e21482c2][Three Basic Economics Questions]]
 
 
 * Terms
 [[id:21ca356d-cf0b-4dbd-8795-c71ffe5ba687][Scarcity]]
 [[id:1f4477ec-2dcc-4ad5-ba72-89b2ebf65f1b][Economics]]
+[[id:66491127-4a67-415a-9224-b4af86df8c5c][Resources]]
+[[id:be880b15-106b-417e-a870-a08f1c3822b4][Opportunity Cost]]
+[[id:60013a12-53ec-4531-854b-de4afc9dce36][Choice]]

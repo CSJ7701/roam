@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       7c3c6f9b-5851-4ded-9371-d4aed64db9f6
+:END:
+#+title: Impedance of a Lossless Line
+#+filetags: :Antennas:
+
+Impedance at the generator is seen as a function of /distance/
+
+Distance is expressed in wavelengths.
+
+$Z_{in}(l) = Z_{0}(\frac{z_{L}cos(\beta l)+j sin(\beta l)}{cos(\beta l) +jz_{l}sin(\beta l)}) = Z_{0}(\frac{z_{l}+jtan(\beta l)}{1 + jz_{l}tan(\beta l)})$
+
+* Impedance Example
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-15SEP2023-1.png]]
+
+In this example, we solve for $z_{L}$, then use the equation for $Z_{in}(l)$, where l is expressed in wavelength.
+
+* Matching Stub Example
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-15SEP2023-2.png]]
+
+This example, we solve for $\beta l$, then plug that into the Z in equation to solve for Z02. We then solve for Zin with Z02/ZL.
+
+* Short and Open Circuits

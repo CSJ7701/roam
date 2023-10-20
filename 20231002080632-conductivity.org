@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       62f4c08c-744e-4c97-8a5f-80c1dbbb74f2
+:END:
+#+title: Conductivity
+#+filetags: :EE1:
+
+The measure of how easily electrons travel through a material under the influence of an external field.

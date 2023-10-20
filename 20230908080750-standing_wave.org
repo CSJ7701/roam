@@ -18,3 +18,10 @@ Two waves opposing each other, causing a standoff or standing wave.
 This is what the current profile looks like (along a transmission line) when both source and load are outputting a signal to create a standing wave.
 
 [[id:775f78f7-5169-4944-b41c-995afdbdf579][Reflection Coefficient]]
+[[id:c371ff79-0428-42b3-beab-ab890d8f20bf][Standing Wave Ratio]]
+
+
+*Special Cases:*
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/AntennasLecture-15SEP2023.png]]

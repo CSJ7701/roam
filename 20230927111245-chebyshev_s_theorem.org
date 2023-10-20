@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       93110d93-5591-47dd-9fa5-a8b9593454f5
+:END:
+#+title: Chebyshev's Theorem
+#+filetags: :ProbTheory:
+
+[[id:3a1c7dc2-cecd-4c5f-8d6a-35d4f66d33b1][Moments]]
+[[id:fd23aa0e-8d34-4e3c-85b2-5a159c7c4c77][Expected Values]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023-5.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023-6.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023-7.png]]

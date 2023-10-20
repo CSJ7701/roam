@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       a228cfec-e537-481f-8316-df261e1ca1ee
+:END:
+#+title: Continuous Multivariate Distributions
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-18SEP2023.png]]
+
+
+This relies on a lot of the material learned in Multi.
+Remember that, since probabilities of these types of functions are effectively evaluations in terms of area, the probability whenever either variable is set equal to a specific value is 0 (P(x=1/2, 0<y<5)=0, since area of a line is 0 and P(x=1/2,y=5)=0 since the area of a point is 0).
+
+
+*Bivariate Density*
+$P((x,y)\epsilon A) = \iint_{A}{f(x,y)dx dy}$
+
+$f(x,y)\ge 0$
+$\iint f(x,y)dxdy = 1$
+
+$F(x,y) = \int_{-\infty}^{y}\int_{-\infty}^{x}{f(s,t)dsdt}$
+$P(X\le x, Y\le y)$
+$F(-\infty, -\infty) = 0$
+$F(\infty, \infty) = 1$
+if a<b and c<d then $F(a,c)\le F(b,d)$
+
+$f(x,y) = \frac{\partial^{2}}{\partial{x}\partial{y}}F(x,y)$
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn :page 1
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-22SEP2023.pdf
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn :page 2
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-22SEP2023.pdf]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn :page 3
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-22SEP2023.pdf]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn :page 4
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-22SEP2023.pdf]]

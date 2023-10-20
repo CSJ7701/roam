@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d7db9b3e-791b-4437-835a-550135fa3aca
+:END:
+#+title: Geometric Distribution
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-16OCT2023-4.png]]
