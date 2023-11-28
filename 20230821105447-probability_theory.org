@@ -28,3 +28,15 @@
 [[id:d399c4ca-a4a0-407a-9a9d-e7be4359e4eb][Special Probability Distributions]]
 [[id:160c7d40-7090-4563-aba8-019a3a3ab49e][Negative Binomial Distribution]]
 [[id:d7db9b3e-791b-4437-835a-550135fa3aca][Geometric Distribution]]
+[[id:9c38aa2c-8329-4683-b4f7-9122ba694e93][Hypergeometric Distribution]]
+[[id:84f7b508-8761-4761-8906-7ef8aa8c9613][Multinomial Distribution]]
+[[id:44b52837-2aa6-438c-8938-c13dad73f65f][Uniform Density]]
+[[id:b03e3650-3917-47d4-a778-80b3afa9bbfe][Poisson Distribution]]
+[[id:aaa9caf0-0525-4e5b-8b3b-885e1a3dceb2][Gamma Function]] - This goes on study sheet.
+[[id:3b74a792-1b2e-4e7b-bc0b-3246496b9de6][Gamma Density]] - This goes in chart
+[[id:124681e1-dbcf-4a59-86e0-70b201937cbb][Exponential Density]]
+[[id:6830ea2b-12a3-4713-b883-79743f8aa572][Chi-Square Density]]
+[[id:7884d183-7dce-4822-ae66-43cb5a6f8c9e][Beta Density]]
+[[id:e076efc1-4601-40b8-bfab-116c0a20ac87][Normal Distribution]]
+[[id:010a067f-65ef-4270-b04d-91f391e62852][Bivariate Normal Distribution]]
+[[id:ca416d19-3310-46b1-ba6e-978393c8fcd6][Transformation Techniques]]

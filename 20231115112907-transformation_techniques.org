@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ca416d19-3310-46b1-ba6e-978393c8fcd6
+:END:
+#+title: Transformation Techniques
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-15NOV2023.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-15NOV2023-1.png]]

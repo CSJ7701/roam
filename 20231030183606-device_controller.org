@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ae4eca20-760d-484a-a74d-b0f6a7f531b3
+:END:
+#+title: Device Controller
+#+filetags: :OS:
+
+Device controllers are a component of an operating system, which are in charge of helping the rest of the OS communicate with various connected devices, like a USB device, an Audio Device, a Disk Drive, etc.
+Each controller is assigned to a specific /type/ of device, but can have multiple devices of that type connected.
+Typically, there is a [[id:0814df67-98bd-481f-af39-c53267082764][Device Driver]] assigned to each controller that acts as a sort of [[id:920e163f-b226-4817-8c7b-579de7b382d9][API]].
+
+These controllers use a [[id:c19b8f34-8fb2-443e-804c-d60235741185][Bus]] to communicate with the central system.

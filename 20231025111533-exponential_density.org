@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       124681e1-dbcf-4a59-86e0-70b201937cbb
+:END:
+#+title: Exponential Density
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-25OCT2023-2.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-25OCT2023-3.png]]

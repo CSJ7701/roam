@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       e076efc1-4601-40b8-bfab-116c0a20ac87
+:END:
+#+title: Normal Distribution
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-30OCT2023.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-30OCT2023-1.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-30OCT2023-2.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-30OCT2023-3.png]]

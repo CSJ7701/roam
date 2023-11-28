@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       44b52837-2aa6-438c-8938-c13dad73f65f
+:END:
+#+title: Uniform Density
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-23OCT2023.png]]

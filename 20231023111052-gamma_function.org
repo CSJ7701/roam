@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       aaa9caf0-0525-4e5b-8b3b-885e1a3dceb2
+:END:
+#+title: Gamma Function
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-23OCT2023-1.png]]

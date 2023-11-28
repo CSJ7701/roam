@@ -17,3 +17,68 @@ These queues read the [[id:04734ab6-f46e-4da9-84ed-7a59f4f06974][PCB]] for each 
 #+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
 [[file:/home/csj7701/roam/Attachments/OperatingSystemsLecture-22SEP2023-2.png]]
 
+
+Without process scheduling, processes will begin running, and then run until completion.
+This doesn't work well, because if a process needs to access data, or requests I/O, then the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] must sit idle while it waits for this to finish, before it can continue running the process.
+
+What happens instead, is context switching. We interweave processes, transitioning the process that needs input to the "waiting" step, and letting the CPU take over running the next program in the ready queue.
+
+Process scheduling algorithms seek to achieve the following:
+**Objectives of Process Scheduling**
+- Maximize CPU utilization
+- Maximize throughput
+- Minimze turnaround time (Time between "New" and "Terminated" states)
+- Minimize waiting time (Time spent in the "Ready Queue")
+- Minimize response time (Time between when the process begins running and the first response to the user)
+
+
+The Scheduling Algorithm makes decisions - mainly which process should enter the running state.
+
+The DIspatcher executes the decision, switching contexts and trying to make the change as quickly as possible.
+Saves state of each process it changes in their PCB, Restores states from PCB.
+The time it takes to transition from P1 executing to P2 executing is /Dispatch Latency/.
+
+* Algorithms
+These can be /Pre-emptive/ (Forces a process to leave a CPU) or /Non-Preemptive/ (Assumes processes will relinquish control on their own)
+** FCFS
+First Come First Served
+- Longer jobs can force shorter jobs to wait
+** SJF
+Shortest Job First
+- Optimizes Wait Time
+- Can't be implemented as is
+  CPU burst times must be approximated
+- Preemptive
+  Shorted remaining time first.
+
+
+** RR
+Round Robin
+One of the most common
+
+- Preemptive First Come First Served
+  10-100 ms time slice (Time Quantum)
+- In the running state:
+  I/O request, short CPU burtst -> leaves CPU
+  Timer goes off -> Leaves CPU
+- High Average Waiting Time
+- Performance depends on quantum length
+
+** PS
+- Priority Queue
+
+Priority defined in 2 ways
+- Internal: ration of average I/O to CPU bursts
+- External: By the OS or User etc
+
+Lower Priority processes are discriminated against (starvation)
+They can climb the "social ladder" (aging)
+
+Processes that are too low on the list can be blocked indefinitely (starvation). The solution to this is Aging, or using a round robin in addition to the Priority Queue.
+
+** MQS
+
+** MFQS
+
+
+

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0814df67-98bd-481f-af39-c53267082764
+:END:
+#+title: Device Driver
+#+filetags: :OS:
+
+Provides a uniform interface between the OS and the Device Driver

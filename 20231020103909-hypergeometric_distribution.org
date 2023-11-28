@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       9c38aa2c-8329-4683-b4f7-9122ba694e93
+:END:
+#+title: Hypergeometric Distribution
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-20OCT2023.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-20OCT2023-1.png]]

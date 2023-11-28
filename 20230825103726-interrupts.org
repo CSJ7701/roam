@@ -9,3 +9,28 @@ These use 4 general keywords.
 - Catch - [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] uses the interrupt request line number to find the interrupt service routine.
 - Dispatch - CPU invokes the Interrupt Service Routine (ISR)
 - Clear - the ISR runs
+
+  Interrupts allow processes and operations to end and transfer gracefully.
+  Hardware can trigger an interrupt at any time by sending a signal to the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]], typically using the System [[id:c19b8f34-8fb2-443e-804c-d60235741185][Bus]].
+
+  Once interrupted, the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] stops whatever operation is underway and transfers execution, usually to the service routine for the interrupt is located.
+
+  There are several interrupt service routines, depending on what type of interrupt was called.
+
+  Addresses for different types of routines are store in an [[id:1b65a374-211e-47ee-855e-b627406d158c][Interrupt Vector]], which is indexed to find the routine needed.
+
+  *Typical Implementation*
+  The [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] has  a physical wire called the [[id:f3551089-2610-4761-afde-0fcdd04a018a][Interrupt-Request Line]] that tells the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] when something has been interrupted.
+  When the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] detects a signal on this line, it reads the interrupt number and runs the proper interrupt-handler routine by using that number as an index into the [[id:1b65a374-211e-47ee-855e-b627406d158c][Interrupt Vector]].
+
+  The interrupt handler saves any state that it changes, determines what caused the interrupt, performs any necesary processing, then restores the state before running a =Return_From_Interrupt= function.
+
+  Typically, there are 2 types of interrupt requests.
+  - Nonmaskable Interrupts - reserved for events like non recoverable memory errors.
+  - Maskable Interrupts - can be turned off before the [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]] executes critical instruction sequences that shouldn't be interrupted.
+
+
+In order to reduce processing, we can use *interrupt chaining*, where each element in the interrupt vector points to the head of a list of interrupt handlers. When an interrupt is raised, these handlers are called one by one until an appropriate handler is found. 
+
+
+

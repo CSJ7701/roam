@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       7884d183-7dce-4822-ae66-43cb5a6f8c9e
+:END:
+#+title: Beta Density
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27OCT2023-1.png]]

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ed7094bb-49d8-49a0-b973-30e6bffbbd85
+:END:
+#+title: I/O Devices
+#+filetags: :OS:
+

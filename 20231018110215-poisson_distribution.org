@@ -1,6 +1,8 @@
 :PROPERTIES:
 :ID:       b03e3650-3917-47d4-a778-80b3afa9bbfe
 :END:
-#+title: Poisson DIstribution
+#+title: Poisson Distribution
 #+filetags: :ProbTheory:
 
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-18OCT2023.png]]

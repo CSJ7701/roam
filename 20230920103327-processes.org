@@ -63,7 +63,9 @@ When using a program that has memory allocated to it, this memory must be *deall
 In order to let programs and processes work together, they utilise [[id:3d101961-f138-4482-bdc0-1b1176a17b99][Interprocess Communication]]
 
 Processes run [[id:cc2d0b4e-6d27-4c45-86fd-cd824806a594][Threads]].
-  
+
+[[id:568c8809-16dc-4535-9d41-d1f139b6813e][Process Scheduling]] can help organize operations.
+
 *** PID Fork Example
 #+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
 [[file:/home/csj7701/roam/Attachments/OS-Lecture-04OCT2023.png]]

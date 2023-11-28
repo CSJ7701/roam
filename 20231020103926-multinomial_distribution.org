@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       84f7b508-8761-4761-8906-7ef8aa8c9613
+:END:
+#+title: Multinomial Distribution
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-20OCT2023-2.png]]

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       010a067f-65ef-4270-b04d-91f391e62852
+:END:
+#+title: Bivariate Normal Distribution
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-08NOV2023.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-08NOV2023-1.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-08NOV2023-2.png]]

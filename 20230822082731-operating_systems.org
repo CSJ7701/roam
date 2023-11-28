@@ -8,6 +8,22 @@ In general, an OS is in charge of Memory management, Process management, Device 
 
 Operating Systems communicate between applications and hardware.
 
+*Operating System* - A program that manages a computer's hardware, provides a basis for application programs, and acts as an intermediary between the computer user and hardware.
+
+Can be broken into four general components
+- User
+- Application Programs - [[id:8b260d84-a4a5-43eb-928a-7661d2035013][Compilers]], Web Browsers, apps, etc
+- Operating System
+- Computer Hardware - [[id:eca6b615-19dd-4296-8490-a0318ed89dee][CPU]], Memory, [[id:ed7094bb-49d8-49a0-b973-30e6bffbbd85][I/O Devices]]
+
+One of the central components of an OS is a [[id:c19b8f34-8fb2-443e-804c-d60235741185][Bus]] which can help components communicate.
+
+[[id:ae4eca20-760d-484a-a74d-b0f6a7f531b3][Device Controller]]s use this [[id:c19b8f34-8fb2-443e-804c-d60235741185][Bus]] to communicate with the system.
+
+[[id:18f6d434-7aa5-4d7f-b44d-c729560282ee][Interrupts]]
+
+
+
 This architecture looks something like this:
 #+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
 [[file:/home/csj7701/roam/Attachments/OperatingSystemsLecture-2023-08-25.png]]

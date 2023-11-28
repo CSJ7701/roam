@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       3b74a792-1b2e-4e7b-bc0b-3246496b9de6
+:END:
+#+title: Gamma Density
+#+filetags: :ProbTheory:
+
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-25OCT2023.png]]
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-25OCT2023-1.png]]

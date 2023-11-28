@@ -13,7 +13,6 @@
 ** Competencies
 Military Bearing: The degree to which the member adhered  to uniform and grooming standards, and projected a professional image that brought credit to the Coast Guard. Enforced Standards for others.
 
-
 Customs, Courtesies and Traditions: The extent to which the member conformed to military customs, courtesies, traditions and protocols; set and enforced standards for others.
 
 Quality of Work: The degree to which the member utilized knowledge, skills, and expertise to effectively organize and prioritize tasks. Completed quality work and met needs of others.
@@ -142,64 +141,165 @@ Absolutely, here are the slightly expanded bullet points with an additional sent
 :VISIBILITY: children
 :END:
 
-*** TODO Military Bearing[0%]
-- [ ] MBR Demonstrates unwavering commitment to uniform and grooming standards, setting an examplary professional image within the coast guard.
-- [ ] MBR enforces these standards rigorously, and serves as a positive example for peers and underclassmen.
-*** TODO Customs, Courtesies, and Traditions [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Quality of Work [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Technical Proficiency [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Initiative [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Critical/Strategic Thinking [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Decision Making and Problem Solving [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Military Readiness [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Self Awareness and Learning [0%] 
-- [ ] Following a suboptimal performance on the PFE, MBR began following a workout plan in addition to MBR's mandated RPTII workouts. MBR committed MBR's self to going above the requirements in an effort to improve MBR's fitness and ability to meet academy standards. MBR actively identified areas for personal development, and worked to achieve those goals, helping to set the standard for continuous growth at the academy while improving MBR's PFE score by almost 15 points.
-- [ ]
-- [ ]
-*** TODO Partnering [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Respect for Others [33%]
-- [X] As part of a continuing initiative to improvce cross-cultural understanding, MBR has been learning spanish. MBR uses online resources to help develop a broader comprehension for the language and its culture, interacting with shipmates to enhance linguistic proficiency and gain insight into their respective backgrounds. MBR's efforts foster an environment of inclusivity and mutual respect, not only broadening personal horizons but strengthening unity among cadets. 
-- [ ]
-- [ ]
-*** TODO Accountability and Responsibility [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Workforce Management [0%]
-- [ ] MBR effectively manages, mentors, and directs assigned personnel in strict accordance with the Coast Guard and Coast Guard Academy policy.
-- [ ] 
-- [ ]
-*** TODO Effective Communication [0%]
-- [ ] MBR excels in utilizing all forms of communication, both up and down the chain of command, effectively communicating clear expectations and progress. MBR actively interacts with both third and fourth calss cadets, facilitating project organization and effective task delegation within the division. This proactive engagement not only streamlines operations, but serves to foster clear and effective communications within the Academy Community, showcasing MBR's commitment to enhancing teamwork and accomplishing shared goals. 
-- [ ]  
-- [ ]
-*** TODO Cadet Engagement and Participation [0%]
-- [ ] 
-- [ ]
-- [ ]
+*** DONE Military Bearing[100%]
+CLOSED: [2023-11-06 Mon 21:53]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-06 Mon 21:53]
+:END:
+- [X] MBR actively maintains uniform and grooming standards, striving to serve as a model of professionalism within the Academy community. This commitment ensures cadet readiness and motivates peers to uphold these standards, cultivating a culture of discipline and a strong professional image for the Academy.
+
+- [X]  MBR vigilantly enforced uniform standards among underclass cadets by providinf thorough guidance on proper wear, care, and storage; ensuring their comprehensive understanding of the standards. This unwavering commitment significantly enhanced the overall appearance and professionalism for the Corps of Cadets as a whole, setting a high standard for uniform excellence.
+  
+- [X] MBR provided uniform items to underclass cadets in need, setting an excellent example for the rest of the corps and reinforcing the importance of mutual support. This action not only facilitated the proper execution of military procedure, but helped ensure that the corps consistently presented a professional role to the Academy community.  
+*** DONE Customs, Courtesies, and Traditions [100%]
+CLOSED: [2023-11-07 Tue 14:10]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-07 Tue 14:10]
+:END:
+- [X] MBR actively engaged in corpswide events, facilitating meaningful dialogues among fellow cadets. MBR worked to engage peers in discussion about the speakers, their insights, and their relevance to cadets. This participation not only enriched the cadet community, but helped to strengthen the community's appreciation for military customs and traditions.
+  
+- [X] While serving as ACDO, MBR played an istrumental role in instructing several cadets on the proper execution of colors. This hand on guidance ensured that cadets were well prepared to meed the expected standards, reinforcing the significance of military customs. 
+  
+- [X] While on a trip with the Windjammers drum and bugle corps, MBR actively engaged with several individuals, providing information about the Coast Guard and the Academy. This outreach not only presented a positive image for the academyand the Coast Guard, but contributed to greater public awareness and understanding of the service, fostering a sense of goodwill and respect for its traditions and customs. 
+  
+*** DONE Quality of Work [100%]
+CLOSED: [2023-11-07 Tue 15:30]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-07 Tue 15:30]
+:END:
+- [X] MBR used pre-existing knowledge of linux and coding to assist classmates with Operating Systems homework and projects. This collaborative effort not only led to higher quality work, but significantly enhanced classmates' comprehension of material, enabling them to perform well on subsequent exams and projects. MBR's actions helped to promote a culture of academic excellence within the Academy Community. 
+  
+- [X] MBR provided valuable support to shipmates, helping them to compose compelling internship application memos. This assistance ensured that shipmates were able to improve the quality of their work, and ensured that they were able to advance their opportunities and get the most out of their opportunities. 
+  
+- [X] MBR actively worked with an underclass on MBR's sports team, providing guidance on essay formatting and effective writing techniques, assisting them in producing higher quality essays. This collaboration not only improved the quality of the teammate's work but also instilled valuable skills, enabling them to excel in their academic endeavors and contribute to the collective success of the Coast Guard Academy community.  
+
+*** DONE Technical Proficiency [100%]
+CLOSED: [2023-11-07 Tue 19:40]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-07 Tue 19:40]
+:END:
+- [X] Initially, MBR faced challenges utilizing technical equipment in certain major specific classes. Through dedicated effort and collaboration with instructors, MBR has successfully rectified these issues and now demonstrates significantly improved proficiency with this equipment. This commitment to self-improvement and technical competence has not only enhanced personal readiness but also sets a positive example for peers. 
+  
+- [X] MBR has excelled in MBR's Linear Circuits class, consistently serving as a resource for classmates. This proficiency not only contributes to personal academic success but also aids peers in their understanding and achievement, fostering a culture of mutual support and academic excellence within the Coast Guard Academy Community. 
+  
+- [X] Leveraging experience as an upper class within Windjammers, MBR actively mentors underclassmen, aiding them in developing their musical skills and finding their place within the ensemble. This contribution not only enhances their musical proficiency but also fosters a sense of unity and excellence within the Windjammers, demonstrating the importance of technical proficiency and leadership.  
+  
+*** DONE Initiative [100%]
+CLOSED: [2023-11-07 Tue 20:10]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-07 Tue 20:10]
+:END:
+- [X] MBR consistently goes above and beyond in MBR's Operating Systems class, taking the initiative to work closely with the teacher to delve into topics beyond the class's scope, working to expand MBR's understanding. This self-starting approach not only enriches personal knowledge but also inspires classmates to pursue deeper understanding, creating a culture of proactive learning within MBR's classes.
+  
+- [X] MBR took the initiative to compose music for the Windjammers, going beyond the typical responsibilities and making significant contribution to the ensemble. These compositions have been performed at various events, and have not only showcased MBR's dedication to the ensemble, but have served as a credit to the Academy. MBR's actions have helped to present a positive image of the Coast Guard to the general public.
+  
+- [X] MBR has consistently dedicated time to volunteer at church, actively participating in community service efforts that align with the Coast Guard's core values. These actions have contributed to the well-being of the local community, and underscored MBR's commitment to meaningful service, reinforcing the Academy's principles of duty and responsibility. 
+  
+*** DONE Critical/Strategic Thinking [100%]
+CLOSED: [2023-11-07 Tue 20:38]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-07 Tue 20:38]
+:END:
+- [X] While serving as ACDO, MBR demonstrated strategic thinking when confronted with a last minute issue within the colors squad. MBR's quick response and effective problem solving skills allowed MBR to identify individuals capable of solving the issue, ensuring the successful execution of colors and upholding the Academy's traditions, thereby presenting a positive image of the Academy to all present.
+  
+- [X] MBR has taken an active role in planning events and evolutions within the Windjammers ensemble, demonstrating strategic thinking in organizing and executing performances. Through MBR's involvement, the Windjammers have achieved successful presentations, fostering a culture of excellence within the ensemble and contributing to the Academy's image. 
+  
+- [X] During a challenging lab session, MBR encountered technical difficulties that impeded progress. Displaying critical and strategic thinking, MBR worked collaboratively with instructors and classmates to identify a solution, ultimately resolving the issue. In the process, MBR played an integral role in the revision of the lab document to prevent similar technical obstacles in the future. MBR's actions helped to contribute to the classes educational integrity, and ensured that future students will be able to learn from MBR's mistakes. 
+  
+*** DONE Decision Making and Problem Solving [100%]
+CLOSED: [2023-11-07 Tue 21:19]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-07 Tue 21:19]
+:END:
+- [X] While on liberty in Boston, MBR took charge of ensuring accountability for fellow cadets, demonstrating decision making and problem solving skills when MBR's group got lost. MBR was able to make sound decisions and decisive action to ensure safe and responsible conduct, helping to guide the group to the eventual destination. MBR's actions helped to ensure the safety of MBR's shipmates and prevented potential issues, ultimately helping to reinforce the importance of personal responsibility within the Academy community.
+  
+- [X] During an Antennas and Propagation lab, MBR's soldering technique inadvertently caused a near-fire incident while constructing an antenna. MBR's quick reaction to disconnect the soldering iron and promptly address the smoldering plastic demonstrated critical decision making and problem solving skills. This proactive response prevented a potential safety hazard and ensured the successful completion of the lab.  
+  
+- [X] While working on solidifying a potential change to the regulations for the corps of cadets, MBR discovered an irregularity within the existing regulations. MBR took action to seek immediate clarification and identify the necessary changes, showcasing sound decision making and problem solving skills. Collaborating with other members of MBR's division, MBR worked to rectify the mistake and ensure that the correct information was incorporated into the regulations.
+  
+*** DONE Military Readiness [100%]
+CLOSED: [2023-11-07 Tue 21:56]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-07 Tue 21:56]
+:END:
+- [X] MBR has worked on maintaining an effective schedule, helping to maximize productivity and minimize stress. Through careful planning and time management, MBR ensure readiness for both academic and military responsibilities. MBR has also helped shipmates develop similar time management strategies, helping to promote a productive environment. 
+  
+- [X] MBR actively supports friends by recognizing signs of stress and offering guidance in stress management techniques. MBR seeks to contribute to their overall emotional well-being and readiness. By encouraging effective responses to stressors and promoting a healthy community environment, MBR has helped reinforce the importance of personal readiness standards and emotional well-being.
+  
+- [X] To manage stress effectively, MBR has established a regular practice of running with friends, integrating this habit into MBR's study schedule to provide a valuable break from academic demands. This consistent habit has proven instrumental in enhancing MBR's ability to handle substantial workloads, ultimately contributing to an improved military readiness by ensuring a balanced approach to academic and physical well-being. 
+  
+*** DONE Self Awareness and Learning [100%] 
+CLOSED: [2023-11-07 Tue 22:38]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-07 Tue 22:38]
+:END:
+- [X] Following a suboptimal performance on the PFE, MBR began following a workout plan in addition to MBR's mandated RPTII workouts. MBR committed MBR's self to going above the requirements in an effort to improve MBR's fitness and ability to meet academy standards. MBR actively identified areas for personal development, and worked to achieve those goals, helping to set the standard for continuous growth at the academy while improving MBR's PFE score by almost 15 points.
+
+- [X] MBR encountered initial academic challenges, but demonstrated self-awareness and a commitment to improvement. Identifying MBR's areas of difficulty, MBR proactively sought assistance from instructors and collaborated with classmates to enhance understanding. Through this process of self-assessment and learning, MBR overcame academic obstacles, fostering a continuous growth and helping to promote a collaborative academic environment. 
+  
+- [X] MBR has undertaken several personal coding projects in an effort to supplement, and provide practical applications for, the material MBR is learning in class. MBR's efforts are supported by several of MBR's teachers, who are helping position MBR to succeed in future classes and during an upcoming internship. This commitment to continuous learning underscored MBR's dedication to improving MBR's existing skills and enhancing MBR's readiness for future academic and professional opportunities.
+  
+*** DONE Partnering [100%]
+CLOSED: [2023-11-08 Wed 07:18]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-08 Wed 07:18]
+:END:
+- [X] Within the Windjammers, MBR actively collaborates with leadership to ensure the efficient and effective accomplishment of the ensembles goals. By working closely with both leadership and fellow members, MBR contributes to the successful planning and execution of musical performances, fostering a culture of collaboration and excellence within the Windjammers and Academy.
+  
+- [X] MBR has actively engaged with members of the cyber major in several of MBR's classes, collaborating on innovative approaches for presenting academic material. These ideas have been presented to department leadership and instructors, contributing to ongoing efforts to enhance teaching methods and create a more effective learning environment at the Academy. MBR's commitment to collaboration and educational improvement demonstrates dedication to partnering with peers and stakeholders to strengthen the Academy's educational programs. 
+
+- [X] MBR has actively partnered with peers to collaboratively mentor underclass cadets, collectively providing guidance on navigating academy life, fostering effective habits, and supporting their overall development. This collaborative mentorship approach reinforces a culture of peer support and partnership within the Academy community, ensuring the successful adaptation of underclassmen to the Academy's challenges. 
+*** DONE Respect for Others [100%]
+CLOSED: [2023-11-08 Wed 07:32]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-08 Wed 07:32]
+:END:
+- [X] As part of a continuing initiative to improvce cross-cultural understanding, MBR has been learning spanish. MBR uses online resources to help develop a broader comprehension for the language and its culture, interacting with shipmates to enhance linguistic proficiency and gain insight into their respective backgrounds. MBR's efforts foster an environment of inclusivity and mutual respect, not only broadening personal horizons but strengthening unity among cadets.
+  
+- [X] MBR proactively engages with international cadets, seeking to understand their countries, cultures, and ways of life. By fostering these intercultural exchanges, MBR contributes to a more inclusive and diverse environment at the Academy, promoting mutual respect and a broader perspective among fellow cadet.
+  
+- [X] MBR has actively engaged with exchange cadets from other service academies, working to facilitate their integration into everyday Coast Guard Academy life. By seeking to provide a welcoming and inclusive environment, MBR promotes cross-service collaboration, respect for diverse perspectives, and unity among fellow cadets. 
+*** DONE Accountability and Responsibility [100%]
+CLOSED: [2023-11-08 Wed 10:10]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-08 Wed 10:10]
+:END:
+- [X] MBR takes an active role in holding underclass cadets accountable, ensuring their understanding and adherence to Coast Guard standards and Coast Guard Academy regulations. By fostering a culture of responsibility and compliance, MBR contributes to a disciplined and ethical learning environment, upholding the Academy's values and standards.
+  
+- [X] MBR has collaborated with peers to review and refine regimental band drill regulations, identifying areas for improvement and suggesting changes that enhance the effectiveness of drill routines. Through these efforts, MBR has demonstrated accountability and responsibility, actively contributing to the refinement of Academy regulations, ensuring a more efficient and cohesive drill experience for cadets.
+  
+- [X] When tasked with implementing a simple change to the cadet regulations, MBR identified a more significant underlying issue and took the initiative to address it. This action demonstrated a strong sense of accountability and responsibility, MBR going beyond the assigned task to rectify a larger problem, thereby contributing to the overall improvement of Academy regulations and standards.  
+*** DONE Workforce Management [100%]
+CLOSED: [2023-11-08 Wed 10:26]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-08 Wed 10:26]
+:END:
+- [X] MBR effectively manages, mentors, and directs assigned personnal in strict accordance with the Coast Guard and Coast Guard Academy policy. By consistently adhering to policy and regulations, MBR sets a reliable example for peers, ensuring that assigned personnel understand and follow established guidelines.
+  
+- [X] MBR worked closely with third class cadet in MBR's division in order to facilitate the successful adjustment of 4th class cadets to Academy life. MBR provided guidance and support to help them navigate the challenges of their new environment, fostering a positive atmosphere for personal and academic development and ensuring that they had the necessary resources to excel.
+
+- [X] MBR collaborated with leadership within Windjammers to establish a supportive environment for 4th class members within the ensemble. This initiative created a network of assistance and guidance for 4th class, enabling them to seek help, mentorship, and resources to ensure their successful integration into the group. MBR's efforts promoted unity and a sense of belonging within the ensemble.
+*** DONE Effective Communication [100%]
+CLOSED: [2023-11-08 Wed 10:34]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-08 Wed 10:34]
+:END:
+- [X] MBR excels in utilizing all forms of communication, both up and down the chain of command, effectively communicating clear expectations and progress. MBR actively interacts with both third and fourth class cadets, facilitating project organization and effective task delegation within the division. This proactive engagement not only streamlines operations, but serves to foster clear and effective communications within the Academy Community, showcasing MBR's commitment to enhancing teamwork and accomplishing shared goals. 
+
+- [X]  MBR skillfully applied conflict resolution techniques to mediate and successfully resolve interpersonal conflicts within MBR's friend group. By facilitating open and respectful communication among all parties involved, MBR ensures that differences are understood and addressed, ultimately leading to mutually agreeable solutions. This demonstrates MBR's commitment to maintaining healthy relationships and fostering an environment of cooperation and understanding.
+
+- [X] MBR leverages exceptional communication skills to regularly assist peers and classmates in comprehending complex technical concepts across multiple courses. MBR's ability to convey intricate information in a clear and accessible manner fosters a collaborative learning environment, ensuring that fellow cadets can better grasp challenging subject matter. This commitment to knowledge sharing exemplifies MBR's dedication to promoting academic excellence and facilitating the professional development of others.
+*** DONE Cadet Engagement and Participation [100%]
+CLOSED: [2023-11-08 Wed 10:47]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-11-08 Wed 10:47]
+:END:
+- [X] MBR is highly engaged with the Windjammers Drum and Bugle Corps, actively participating in rehearsals, performances, and leadership roles within the ensemble. MBR goes above and beyond expectations by taking on additional roles, such as composing music for the band. This dedicated inolvement not only enriches the cadet experience, but also helps promote the Coast Guard Academy through musical excellence and community outreach. MBR's passion, commitment, and willingness to take on extra responsibilities within Windjammers exemplify the highest standards of cadet engagement and participation.
+
+- [X] MBR is an active member of the church community, consistently volunteering time and participating in various church activities. MBR's involvement has involved serving as an usher, contributing to the church choir, and engaging in community events.This commitment to church service showcases MBR's dedication to personal and community values, fostering a sense of unity and shared purpose among churchgoers and the broader community.
+
+- [X] MBR actively participates in the Jiu Jitsu club, leveraging 12 years of personal experience to mentor and teach new members. MBR's dedication to both the sport and the growth of fellow cadets exemplifies MBR's commitment to fostering a supportive environment within the Academy community, contributing to personal and collective development.
   
   
+
+#  LocalWords:  MBR MBR's ACDO evolutions PFE

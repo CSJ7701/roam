@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6830ea2b-12a3-4713-b883-79743f8aa572
+:END:
+#+title: Chi-Square Density
+#+filetags: :ProbTheory:
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27OCT2023.png]]

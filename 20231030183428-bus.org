@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       c19b8f34-8fb2-443e-804c-d60235741185
+:END:
+#+title: Bus
+#+filetags: :OS:
+
+System Bus - provides access between components and shared memory. 
