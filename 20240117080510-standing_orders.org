@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       d1895e54-c27c-4e6f-9673-57b5a742d5cb
+:END:
+#+title: Standing Orders
+#+filetags: :MWO:
+
+[[id:0b7f10c3-f316-43a2-813e-498e6c6cb18d][Navigation Standards]]
+
+
+Requirements for CO Standing Order, from USCG Regs
+- CO shall keep night orders book at sea containing standing orders. In port, a similar book will be kept for all important orders by CO or XO.
+
+Cutter Org Manual
+- Standing orders contain amplifying info to existing regulations, specify action to be taken. CO Standing order shall be complied with, without exception, barring other CO instruction.
+
+
+* General Guidance
+- CO Standing orders are a unit level policy
+- Apply to all crew, but specifically useful for OOD on how CO wants ship to be run (in all scenarios/in their abscence)
+- All crewmember must sign signature page indicating that they have read and will comply
+
+
+* Content
+- How to relieve watch
+- Standing watch at sea
+- Policy for calling CO
+- Nav situations
+- Unusual Phenomenon
+- Anchor Watch
+- Low Vis.
+- Emergencies

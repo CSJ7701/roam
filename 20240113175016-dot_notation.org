@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9ee1538a-16ed-47b5-b602-be0a8ff9cb4a
+:END:
+#+title: Dot Notation
+#+filetags: :Python:
+

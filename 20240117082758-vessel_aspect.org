@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       50454511-3d2d-458b-a24e-6f9c47ce4280
+:END:
+#+title: Vessel Aspect
+#+filetags: :MWO:
+
+Aspect: the part of the vessel /you are seeing/
+
+There is no exact definition
+
+Bearing is always relative, use all 3 digits of the bearing (005 instead of 5).
+
+EX. Port quarter - 180R-225R

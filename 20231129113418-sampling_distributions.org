@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       9517b542-0f38-4c90-8b19-c918033ef583
+:END:
+#+title: Sampling Distributions
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-29NOV2023.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-29NOV2023-1.png]]
+
+We also discussed how to modify the [[id:93110d93-5591-47dd-9fa5-a8b9593454f5][Chebyshev's Theorem]] to accomodate sampling.

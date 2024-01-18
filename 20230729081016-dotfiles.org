@@ -7,6 +7,9 @@
 
 
 * Inbox
+
+** NEXT Add to new space menu
+
 ** SHORT-TERM Start EWW 
   [2023-05-17 Wed 17:52]
   [[file:~/.dotfiles/.config/hypr/hyprland.conf]]
@@ -39,7 +42,8 @@ Should be similar to my old search by tags function.
   [2023-07-02 Sun 13:30]
   [[file:~/roam/20230702131029-permanent_notes.org::- Structure notes (or MOC's)]]
 
-** TODO Fix Org Capture Templates 
+** NEXT Fix Org Capture Templates
+Biggest thing I know I'm missing is a way to capture a task to a project. That should let me select a project file (or alternately, run a new "create project" function(?) then capture to that project. 
   [2023-06-28 Wed 22:27]
 
 ** NEXT Start optimizing tab functions

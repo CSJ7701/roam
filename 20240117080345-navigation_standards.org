@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       0b7f10c3-f316-43a2-813e-498e6c6cb18d
+:END:
+#+title: Navigation Standards
+#+filetags: :MWO:
+
+[[id:d1895e54-c27c-4e6f-9673-57b5a742d5cb][Standing Orders]]
+
+Where does policy come from?
+- Requirements for safe navigation and nav standards come from USCG Regulations and CG Nav standards
+
+
+* Command responsibilities and training
+Command Nav standards - uniform standards and guidance to [[id:443717ee-6f70-4ccf-a41d-5bf573c04788][Deck Watch Officer]]
+CO must promulgate Command Nav Standards /within 90 days/
+
+*What's in Command Nav Standards?*
+- Nav draft
+- Nav zones
+- Fix intervals
+- Set and Drift
+- Electronic Nav Standards
+- Nav Brief Items
+- Navigation Modes
+- Cutter Boat Nav Requirements
+
+

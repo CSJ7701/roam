@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4e40b985-2fcd-4f4b-8e53-64f33e1f5f58
+:END:
+#+title: Series
+#+filetags: :Python:
+

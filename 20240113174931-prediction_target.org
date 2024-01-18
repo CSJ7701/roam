@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       6a678bf7-65b1-4460-bf49-527dbc10bbdf
+:END:
+#+title: Prediction Target
+#+filetags: :Python:AI:MachineLearning:
+

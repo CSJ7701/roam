@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       df374b08-f412-4d81-93a5-aba39646a660
+:ROAM_ALIASES: Training
+:END:
+#+title: Fitting
+#+filetags: :AI:MachineLearning:
+

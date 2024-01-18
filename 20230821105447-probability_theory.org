@@ -40,3 +40,4 @@
 [[id:e076efc1-4601-40b8-bfab-116c0a20ac87][Normal Distribution]]
 [[id:010a067f-65ef-4270-b04d-91f391e62852][Bivariate Normal Distribution]]
 [[id:ca416d19-3310-46b1-ba6e-978393c8fcd6][Transformation Techniques]]
+[[id:9517b542-0f38-4c90-8b19-c918033ef583][Sampling Distributions]]

@@ -15,3 +15,6 @@
 
 #+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
 [[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-27SEP2023-7.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/ProbTheoryLecture-29NOV2023-2.png]]

@@ -1,0 +1,345 @@
+:PROPERTIES:
+:ID:       a9221448-bfee-4bc6-b5d4-b1aa4db97be3
+:END:
+#+title: Kaggle: Intro to Machine Learning
+#+filetags: :Python:MachineLearning:AI:Coding:
+
+* How models work
+
+[[https://www.kaggle.com/code/dansbecker/how-models-work][Kaggle]]
+
+Models use past information to identify patterns and make similar decisions using new data.
+
+One model is a decision tree.
+These break options into relatively simplistic categories, and make decisions based on whether those categories are met.
+
+#+ATTR_LATEX: :caption \bicaption{---} :float multicolumn
+[[file:/home/csj7701/roam/Attachments/Kaggle.DecisionTree.png]]
+
+We identify a pattern, which is represented in a decision tree.
+That pattern is derived from a set of data - the process of capturing patterns from data is known as *[[id:df374b08-f412-4d81-93a5-aba39646a660][Fitting]]*, or *[[id:df374b08-f412-4d81-93a5-aba39646a660][Training]]* the model. The data used to train or fit the model is known as the *[[id:7f6fc21c-b38f-4902-a6c0-da2a7a2d6314][Training Data]]*.
+
+After the model has been fit, you can feed new data to the model and use it to predict new results.
+
+The decision tree shown above is limited in its use-case, since it can only represent a binary decision.
+Adding more layers to the tree can help improve the number of factors that the decision tree can take into account.
+These trees are called "Deeper", and contain more "Splits".
+
+* Exploring Data
+
+[[https://www.kaggle.com/code/dansbecker/basic-data-exploration/tutorial][Kaggle]]
+
+Here, we read a csv file and store it in a python object known as a [[id:82ee2a61-5703-4c15-a68c-67249ae94cd7][Dataframe]]
+
+#+begin_src python :results verbatim
+  import pandas as pd
+  melbourne_file_path = '/home/csj7701/roam/References/Kaggle-MelbourneHousingData.csv'
+  # Read data and store in DataFrame title melbourne_data
+  melbourne_data = pd.read_csv(melbourne_file_path)
+  # Print a summary of the data
+  table = melbourne_data.describe()
+  return table
+#+end_src
+
+#+RESULTS:
+#+begin_example
+              Rooms         Price  ...    Longtitude  Propertycount
+count  13580.000000  1.358000e+04  ...  13580.000000   13580.000000
+mean       2.937997  1.075684e+06  ...    144.995216    7454.417378
+std        0.955748  6.393107e+05  ...      0.103916    4378.581772
+min        1.000000  8.500000e+04  ...    144.431810     249.000000
+25%        2.000000  6.500000e+05  ...    144.929600    4380.000000
+50%        3.000000  9.030000e+05  ...    145.000100    6555.000000
+75%        3.000000  1.330000e+06  ...    145.058305   10331.000000
+max       10.000000  9.000000e+06  ...    145.526350   21650.000000
+
+[8 rows x 13 columns]
+#+end_example
+
+* Coding Exercise
+
+We just set up a dataset that contains home data from melbourne. This will be useful to train our model, but we need to set up a /different/ data set to actually use our model (results will always be perfect if we run the model on the data we train it on - not initially intuitive, but it makes sense)
+
+#+begin_src python :results verbatim :session ML_exercise
+  import pandas as pd
+
+  iowa_file_path = '/home/csj7701/roam/References/Kaggle-IowaHousingData.csv'
+  home_data = pd.read_csv(iowa_file_path)
+  iowa_table=home_data.describe()
+  # Get average lot size by looking at LotArea column, then checking the "mean" row
+  avg_lot_size = 10517 # Rounded to nearest Integer
+  # Get age of newest home by checking YearBuilt column, and subtracting from current data
+  newest_home_age = 14
+
+  iowa_table
+#+end_src
+
+#+RESULTS:
+#+begin_example
+                Id   MSSubClass  LotFrontage  ...       MoSold       YrSold      SalePrice
+count  1460.000000  1460.000000  1201.000000  ...  1460.000000  1460.000000    1460.000000
+mean    730.500000    56.897260    70.049958  ...     6.321918  2007.815753  180921.195890
+std     421.610009    42.300571    24.284752  ...     2.703626     1.328095   79442.502883
+min       1.000000    20.000000    21.000000  ...     1.000000  2006.000000   34900.000000
+25%     365.750000    20.000000    59.000000  ...     5.000000  2007.000000  129975.000000
+50%     730.500000    50.000000    69.000000  ...     6.000000  2008.000000  163000.000000
+75%    1095.250000    70.000000    80.000000  ...     8.000000  2009.000000  214000.000000
+max    1460.000000   190.000000   313.000000  ...    12.000000  2010.000000  755000.000000
+
+[8 rows x 38 columns]
+#+end_example
+
+When analyaing our data, its important to consider how applicable the dataset we are using will be.
+In this case, the newest house in the dataset is 14 years old. This may not be the best dataset to use, considering how old the data is. If we were constructing a model to, for instance, calculate how much a house is worth based on different factors, then this data will likely not be useful since it is largely outdated.
+
+* First Machine Learning Model
+
+Previously, our dataset had too many variables to actually use. They didn't even fit on my screen!
+We can pare this data down, choosing a few variables based on intuition.
+
+First, we want to see a list of all the columns in the dataset.
+
+#+begin_src python :results verbatim :session first_model
+
+  import pandas as pd
+
+  melbourne_file_path = '/home/csj7701/roam/References/Kaggle-MelbourneHousingData.csv'
+  melbourne_data=pd.read_csv(melbourne_file_path)
+  melbourne_data.columns
+  
+#+end_src
+
+#+RESULTS:
+: Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
+:        'Date', 'Distance', 'Postcode', 'Bedroom2', 'Bathroom', 'Car',
+:        'Landsize', 'BuildingArea', 'YearBuilt', 'CouncilArea', 'Lattitude',
+:        'Longtitude', 'Regionname', 'Propertycount'],
+:       dtype='object')
+
+_Note_: Our melbourne dataset contains some missing values (rows that contain no data). We can remove these with the =dropna= function
+
+#+begin_src python :result none :session first_model
+  melbourne_data=melbourne_data.dropna(axis=0)
+  melbourne_data
+#+end_src
+
+#+RESULTS:
+#+begin_example
+             Suburb          Address  Rooms  ... Longtitude             Regionname Propertycount
+1        Abbotsford  25 Bloomburg St      2  ...  144.99340  Northern Metropolitan        4019.0
+2        Abbotsford     5 Charles St      3  ...  144.99440  Northern Metropolitan        4019.0
+4        Abbotsford      55a Park St      4  ...  144.99410  Northern Metropolitan        4019.0
+6        Abbotsford     124 Yarra St      3  ...  144.99930  Northern Metropolitan        4019.0
+7        Abbotsford    98 Charles St      2  ...  144.99540  Northern Metropolitan        4019.0
+...             ...              ...    ...  ...        ...                    ...           ...
+12205    Whittlesea    30 Sherwin St      3  ...  145.13282      Northern Victoria        2170.0
+12206  Williamstown      75 Cecil St      3  ...  144.90474   Western Metropolitan        6380.0
+12207  Williamstown    2/29 Dover Rd      1  ...  144.89936   Western Metropolitan        6380.0
+12209       Windsor  201/152 Peel St      2  ...  144.99025  Southern Metropolitan        4380.0
+12212    Yarraville  54 Pentland Pde      6  ...  144.89389   Western Metropolitan        6543.0
+
+[6196 rows x 21 columns]
+#+end_example
+
+We can pull out an individual variable with [[id:9ee1538a-16ed-47b5-b602-be0a8ff9cb4a][Dot Notation]] (this is similar to C++ and other Obj. Oriented languages)
+Using this dot notation stores the data in a [[id:4e40b985-2fcd-4f4b-8e53-64f33e1f5f58][Series]], which is similar to a [[id:82ee2a61-5703-4c15-a68c-67249ae94cd7][Dataframe]], but with a single column of data.
+We use dot notation to select the column that we want to predict, or the [[id:6a678bf7-65b1-4460-bf49-527dbc10bbdf][Prediction Target]].
+(By convention, this target is called =y=)
+
+This means that, following the example of a model meant to predict housing prices, we should have:
+
+#+begin_src python :results verbatim :session first_model
+  y=melbourne_data.Price
+  y
+#+end_src
+
+#+RESULTS:
+#+begin_example
+1        1035000.0
+2        1465000.0
+4        1600000.0
+6        1876000.0
+7        1636000.0
+           ...    
+12205     601000.0
+12206    1050000.0
+12207     385000.0
+12209     560000.0
+12212    2450000.0
+Name: Price, Length: 6196, dtype: float64
+#+end_example
+
+Columns that we input into our model are known as [[id:474e981d-6b04-4447-ab74-8c7d296a9b5d][Features]].
+In our case, these would be the categories that we think will affect the home's price. We can select multiple features by organizing them in an array, then saving them to a variable. The data for these features is know as =X=.
+
+#+begin_src python :results verbatim :session first_model
+  melbourne_features=['Rooms', 'Bathroom', 'Landsize', 'Lattitude', 'Longtitude']
+  X=melbourne_data[melbourne_features]
+  X
+#+end_src
+
+#+RESULTS:
+#+begin_example
+       Rooms  Bathroom  Landsize  Lattitude  Longtitude
+1          2       1.0     156.0  -37.80790   144.99340
+2          3       2.0     134.0  -37.80930   144.99440
+4          4       1.0     120.0  -37.80720   144.99410
+6          3       2.0     245.0  -37.80240   144.99930
+7          2       1.0     256.0  -37.80600   144.99540
+...      ...       ...       ...        ...         ...
+12205      3       2.0     972.0  -37.51232   145.13282
+12206      3       1.0     179.0  -37.86558   144.90474
+12207      1       1.0       0.0  -37.85588   144.89936
+12209      2       1.0       0.0  -37.85581   144.99025
+12212      6       3.0    1087.0  -37.81038   144.89389
+
+[6196 rows x 5 columns]
+#+end_example
+
+#+begin_src python :resulte verbatim :session first_model
+  X.describe
+#+end_src
+
+#+RESULTS:
+#+begin_example
+<bound method NDFrame.describe of        Rooms  Bathroom  Landsize  Lattitude  Longtitude
+1          2       1.0     156.0  -37.80790   144.99340
+2          3       2.0     134.0  -37.80930   144.99440
+4          4       1.0     120.0  -37.80720   144.99410
+6          3       2.0     245.0  -37.80240   144.99930
+7          2       1.0     256.0  -37.80600   144.99540
+...      ...       ...       ...        ...         ...
+12205      3       2.0     972.0  -37.51232   145.13282
+12206      3       1.0     179.0  -37.86558   144.90474
+12207      1       1.0       0.0  -37.85588   144.89936
+12209      2       1.0       0.0  -37.85581   144.99025
+12212      6       3.0    1087.0  -37.81038   144.89389
+
+[6196 rows x 5 columns]>
+#+end_example
+
+#+begin_src python :results verbatim :session first_model
+  X.head()
+#+end_src
+
+#+RESULTS:
+:    Rooms  Bathroom  Landsize  Lattitude  Longtitude
+: 1      2       1.0     156.0   -37.8079    144.9934
+: 2      3       2.0     134.0   -37.8093    144.9944
+: 4      4       1.0     120.0   -37.8072    144.9941
+: 6      3       2.0     245.0   -37.8024    144.9993
+: 7      2       1.0     256.0   -37.8060    144.9954
+
+** Building the model
+
+We use the =scikit-learn= library to create our models. This is written as sklearn, and is popular for modeling data stored in dataframes.
+
+#+begin_src python :results verbatim :session first_model
+  from sklearn.tree import DecisionTreeRegressor
+
+  # Define a model. Specify a number for random_state to ensure same results each run.
+  melbourne_model=DecisionTreeRegressor()
+
+  # Fit the model
+  melbourne_model.fit(X, y)
+#+end_src
+
+#+RESULTS:
+
+Many machine learning models allow for randomness when training a model. Specifying =random_state= ensures that you get the exact same results every run.
+We now have a fitted model that we can use to make predictions.
+
+Typically, we want to make predictions for /new/ houses, coming on the market. We can use our traning data as an example for now.
+
+#+begin_src python :results verbatim :session first_model
+  melbourne_model.predict(X.head())
+#+end_src
+
+#+RESULTS:
+Not currently working. Think it's an emacs issue - getting lisp errors. 
+Answer should be: [1035000. 1465000. 1600000. 1876000. 1636000.]
+
+* Code Exercise
+
+Previously, we added the iowa home data.
+Check what columns this data set uses.
+#+begin_src python :results verbatim :session ML_exercise
+  home_data.columns
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Index(['Id', 'MSSubClass', 'MSZoning', 'LotFrontage', 'LotArea', 'Street',
+       'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig',
+       'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType',
+       'HouseStyle', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd',
+       'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrType',
+       'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual',
+       'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1',
+       'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating',
+       'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF',
+       'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath',
+       'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual',
+       'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'FireplaceQu', 'GarageType',
+       'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual',
+       'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF',
+       'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC',
+       'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType',
+       'SaleCondition', 'SalePrice'],
+      dtype='object')
+#+end_example
+
+Using these column names, we see that we want to predict the variable =SalePrice=. We can pull this variable out using [[id:9ee1538a-16ed-47b5-b602-be0a8ff9cb4a][Dot Notation]]
+#+begin_src python :results verbatim :session ML_exercise
+  y=home_data.SalePrice
+#+end_src
+
+#+RESULTS:
+: None
+
+Now we want to create a dataframe =X= with the features we want to evaluate the house based on.
+For our purposes, these will be =LotArea=, =YearBuilt=, =1srFlrSF=, =2ndFlrSF=, =FullBath=, =BedroomAbvGr=, =TotRmsAbvGrd=
+#+begin_src python :results verbatim :session ML_exercise
+  feature_names=["LotArea", "YearBuilt", "1stFlrSF", "2ndFlrSF", "FullBath", "BedroomAbvGr", "TotRmsAbvGrd"]
+  X=home_data[feature_names]
+  X
+#+end_src
+
+#+RESULTS:
+#+begin_example
+      LotArea  YearBuilt  1stFlrSF  2ndFlrSF  FullBath  BedroomAbvGr  TotRmsAbvGrd
+0        8450       2003       856       854         2             3             8
+1        9600       1976      1262         0         2             3             6
+2       11250       2001       920       866         2             3             6
+3        9550       1915       961       756         1             3             7
+4       14260       2000      1145      1053         2             4             9
+...       ...        ...       ...       ...       ...           ...           ...
+1455     7917       1999       953       694         2             3             7
+1456    13175       1978      2073         0         2             3             7
+1457     9042       1941      1188      1152         2             4             9
+1458     9717       1950      1078         0         1             2             5
+1459     9937       1965      1256         0         1             3             6
+
+[1460 rows x 7 columns]
+#+end_example
+
+Now we can specify the model, and fit using the data.
+
+#+begin_src python :results verbatim :session ML_exercise
+  from sklearn.tree import DecisionTreeRegressor
+  iowa_model=DecisionTreeRegressor(random_state=1)
+  iowa_model.fit(X,y)
+
+#+end_src
+
+#+RESULTS:
+: DecisionTreeRegressor(random_state=1)
+
+Finally, we can make predictions
+#+begin_src python :results verbatim :session ML_exercise
+  predictions=iowa_model.predict(X)
+  predictions
+#+end_src
+
+#+RESULTS:
+: [208500. 181500. 223500. ... 266500. 142125. 147500.]

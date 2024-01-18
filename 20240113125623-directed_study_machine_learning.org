@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       3c4b9bba-006a-46ed-8dfa-2a05d932c24b
+:END:
+#+title: Directed Study: Machine Learning
+#+filetags: :Class:
+
+[[id:a9221448-bfee-4bc6-b5d4-b1aa4db97be3][Kaggle: Intro to Machine Learning]]
+[[id:34108a3d-efff-43a3-9bab-e9b5fbb0fab8][Kaggle: Intermediate Machine Learning]]
+[[id:f040dd01-cc36-4173-aa18-4035718e7879][Kaggle: Intro to Deep Learning]]
+[[id:8ac9e5c9-234a-4121-8d87-111e443842dc][Kaggle: Computer Vision]]
+[[id:015f6619-1bfd-42ea-8ed9-8a49950e6bca][Kaggle: Intro to Game AI and Reinforcement Learning]]

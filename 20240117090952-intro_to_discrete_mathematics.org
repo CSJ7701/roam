@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       c4d25beb-0574-4761-a619-cd843f513509
+:END:
+#+title: Intro to Discrete Mathematics
+#+filetags: :Discrete:
+
+Discrete mathematics is inherently /Discrete/.
+- There is a countably finite sample space for everything we will cover
+- This is in contrast to calculus, where our focus was on continuous space over the set of all reals.
+
+Ex.
+Discrete - the number of cadets in this class
+Continuous - The temperature in S136 during the 0900-0950 block
+
+Within the discrete space, most of our time is spent /counting/, vs the continuous space, where we focus more on /measuring/.
+
+This class is also based on /intuition/.
+In classes like calculus, we have a given number of ways to solve the equation 
+
+$sec^{2}(x)tan(x)dx$.
+In this class, we will focus on more qualitative methods to solve problems like:
+
+How many integers are there between 1 and $\binom{100}{n}$  inclusive?
+
+
+
+
+
+
+
+
+

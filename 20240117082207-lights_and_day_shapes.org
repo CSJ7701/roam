@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       1e70c038-2496-44b3-827c-651486bd7e29
+:END:
+#+title: Lights and Day Shapes
+#+filetags: :MWO:
+
+Lights shall be known
+- Sunset to Sunrise, Lights that could be mistaken for Nav Lights cannot be shown (Only show nav lights)
+- Restricted Vis
+-
+
+
+* Arc of visibility
+
+Red sidelight (Port)
+- 112.5 degrees
+- 22.5 degrees abaft of beam
+
+
+Green sidelight (Starboard)
+- 112.5 degrees
+- 22.5 degrees abaft of beam
+  
+  
+White sternlight (Stern)
+- 135 degrees
+
+
+Mast Light
+- White
+- 225 degrees
+- 22.5 degrees abaft of beam
+
+
+* Definitions
+
+All-round light
+- Arc 360 degrees
+- white, red, green, yellow
+
+

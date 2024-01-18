@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       14be8ab7-f1d8-484e-bb4a-50795e1b2cb4
+:END:
+#+title: Target Angle
+ another vessel sees /you/
+The relative bearing at which another vessel sees us.
+
+"We are 225R to them" etc
+

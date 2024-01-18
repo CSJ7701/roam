@@ -1,0 +1,13 @@
+
+* ChatGPT
+    :PROPERTIES:
+    :Title:  ChatGPT
+    :Link:  https://chat.openai.com/c/cbd20c41-9205-4501-b697-016b9ce8ee5e
+    :END:
+
+    javascript:location.href='org-protocol://capture?' + new URLSearchParams({
+  template: 'is',
+  url: window.location.href,
+  title: document.title || '[untitled page]',
+  body: window.getSelection()
+});

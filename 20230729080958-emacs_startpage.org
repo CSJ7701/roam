@@ -5,6 +5,12 @@
 #+category: Emacs Startpage
 #+filetags:                                                                                                           :Emacs:Project:
 * Inbox
+** DONE test
+CLOSED: [2023-12-23 Sat 12:37]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-12-23 Sat 12:37]
+:END:
+
 * Thoughts
 
 - Look at using org-protocol. You can use the link syntax to assign javascript to html buttons, then write lisp functions to parse the desired commands. It also looks like you could use =org-protocol-protocol-alist= to assign a function directly to a protocol name. This might be easier.
