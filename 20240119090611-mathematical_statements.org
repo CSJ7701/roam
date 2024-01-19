@@ -1,0 +1,76 @@
+:PROPERTIES:
+:ID:       e9421f7c-bc43-4dfd-b5ac-65328e814112
+:END:
+#+title: Mathematical Statements
+#+filetags: :Discrete:
+
+A sentence which is either *TRUE* or *FALSE*
+
+- It is raining
+- A Project can run
+- \pi=3.14
+
+* Types of Mathematical Statements
+- Atomic (A single statement)
+- Compound (Combined statements)
+
+
+* Operations on Mathematical Statements
+
+To connect multiple statements - connectives
+- OR
+- AND
+
+
+How does either of these /connectives/ influence the "truth value" of a compound statement?
+
+Example:
+Let /P/ be the statement "My jacket is blue"
+Let /Q/ be the statement "Our classroom is pink".
+- P is true, Q is false.
+
+*Case 1*: =P OR Q=
+What is the truth value of the compound sentence in case 1?
+- My jacket is blue, or our classroom is pink.
+  One is true, the other is false, therefore the truth value is =true=.
+*Case 2*: =P AND Q=
+This is false.
+
+
+Example:
+Let /P/ be the statement "My jacket is blue"
+Let /Q/ be the statement "The floor is blue"
+=P OR Q= - true (Since both are true)
+=P AND Q= - true (Since both are true)
+
+*Truth Tables*
+| P | Q | P or Q | P and Q |
+| T | T | T      | T       |
+| T | F | T      | F       |
+| F | T | T      | F       |
+| F | F | F      | F       |
+
+=AND= represents a conjunction, and can be represented by: \land
+=OR= represents a disjunction, and can be represented by: \lor
+
+* Negation
+The most basic operation (unitary)
+
+Examples:
+A. The temperature is lower than yesterday
+- The temperature is /NOT/ lower than yesterday
+
+B. The temperature is higher than yesterday
+- The temperature is /GREATER THAN OR EQUAL TO/ yesterday
+  
+
+* Implication
+=IF P THEN Q=
+- p \implies q
+
+If hypothesis is true and conclusion is true, then TRUE.
+if hypothesis is false and conclusion is true, then TRUE
+If hypothesis is false and conclusion is false, then TRUE
+If hypothesis is true and conclusion is false, then FALSE
+
+Only way for an implication to be false is for a true hypothesis to lead to a false conclusion.
