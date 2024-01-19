@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       f3a0fc8c-8ec5-4663-8a3f-4d51e7bab2b9
+:END:
+#+title: Software Engineering Process Acativities
+#+filetags: :SoftwareEngineering:
+
+* Specification
+
+* Development
+
+* Validation
+
+* Evolution
