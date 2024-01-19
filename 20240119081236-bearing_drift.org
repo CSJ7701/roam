@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ccf76794-cb91-4418-be65-a4ffeac717a4
+:END:
+#+title: Bearing Drift
+#+filetags: :MWO:
+
+Bearing drift can be determined using:
+- An alidade (visual)
+- Radar (electronic)

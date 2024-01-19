@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       46989aeb-2959-483f-808e-def8435869d8
+:ROAM_ALIASES: ROC
+:END:
+#+title: Risk of Collision
+#+filetags: :MWO:
+
+Collisions and disasters - rarely the result of a single event
+
+* *Rule 7* - Risk of collision
+- Use *all* available means
+- Proper use shall be made of radar equipment... including long range scanning to obtain early warning of risk of collision and radar plotting... of detected objects
+- No appreciable bearing drift (*CBDR*)
+
+If you are fitted with radar, someone must be qualified to use it, and you must employ it.
+
+Risk of collision is often indicated by [[id:ccf76794-cb91-4418-be65-a4ffeac717a4][Bearing Drift]].
+
+If you're not sure whether ROC exists, you shall assume that it does exist.
+
+Risk of collision is not determined by a specific scenario, instead it is determined by the [[id:c3b2366a-178f-4d14-a92d-e54629536a21][OOD]] in accordance with rule 7.
+
+* *Rule 8* - Action to avoid collision
+- Polite, made in ample time, and "Due regards to the observation of /Good Seamanship/"
+- Action shall be large enough to be observable to the other vessel (Visually or electronically).
+- Pass at a safe distance. Action is not complete until the other vessel is *Past and Clear*.
+- Can /ALWAYS/ slow down to allow more time to assess.
+
+
+* *Rule 16* - Actions by a give-way vessel
+- The give-way vessel shall take /early/ and /substantial/ action to keep well clear (Rule 8)
+
+
+* *Rule 17* - Actions by the stand-on vessel
+- *SHALL* keep course and speed
+- *MAY* take action to avoid collision - if it becomes apparent that the vessel that is /supposed/ to give way is not taking appropriate action
+- *SHALL* take action if the give way vessels action /alone/ will NOT prevent collision.
+- *SHALL* never alter course towards a contact on her port side. 
+
+* Communication
+Consists of:
+- Type of vessel
+- Range and Bearing (relative to O/S)
+- Aspect
+- CPA
+- Recommendation
+- ETC
