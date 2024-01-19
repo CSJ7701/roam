@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       bcc70c7d-d37f-4ead-9796-23237b9bba42
+:END:
+#+title: Compensating
+

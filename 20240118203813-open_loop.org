@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       1817e95e-ce53-4090-a2a3-0663af0ce70d
+:END:
+#+title: Open Loop
+#+filetags: :Controls:
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-1-3.png]]
+
+Generic open loop systems begin with a subsystem called an [[id:4bb0c1a7-d32c-48a4-9fc4-c0174b1b961f][Input Transducer]]. These convert the form of the input so that they can be used by the [[id:680899f0-4cdf-48fe-b2ec-f1cfb55985e7][Controller]]. The controller drives a [[id:1ca741d9-998e-466e-8811-ba5ba48a1f2e][Process]].
+
+The input is sometimes known as the reference, while the output can be called the controlled variable.
+Other signals, like [[id:267097e9-97bf-45df-901b-efa69b840c5e][Disturbances]], are shown added to the controller and process outputs with /summing junctions/, which produce the algebraic sum of their input signals.
+
+The distinguishing charateristic of open-loop systems is that they are not able to compensate for any disturbances.
+Any additive input at the first summing junction in the figure above will drive the process along with the initial input, corrupting the output.
+Inputs or disturbances that occur after the process will corrupt the output as well, shown at the second summing junction in the diagram.
+
+Open loop systems do not correct for disturbances at all, and are commanded simply by their input. 

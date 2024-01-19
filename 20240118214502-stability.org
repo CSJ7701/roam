@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       6c95b3d1-294a-4be8-99e2-ad97af643fcd
+:ROAM_ALIASES: "Total Response"
+:END:
+#+title: Stability
+#+filetags: :Controls:
+
+Stability is the sum of [[id:602c3cc0-0013-46bd-b33a-88ecada1043e][Natural Response]] and [[id:41e76b0e-41cf-4a2b-9520-9c1ef0601065][Forced Response]]. 
+
+In order to useful, natural response must either approach zero or oscillate. 
+In some systems, the natural response grows without bound; a condition known as instability. 

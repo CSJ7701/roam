@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       11d38775-cc5d-490c-aaa3-f36f488e426e
+:END:
+#+title: Closed Loop
+#+filetags: :Controls:
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-1-4.png]]
+
+In a generic closed loop system, an [[id:9ba64c6f-6255-4a53-9ded-cde1f0a4392d][Output Transducer]] measures the output response and converts it to the form used by the controller.
+
+E.G. if the controller uses electrical signals to operate valves of a temperature control system, the input position and output temperature are converted to electrical signals. The input position can be converted to a voltage by a potentiometer, a variable resistor, and the output temperature can be converted to a voltage by a thermistor, a device whose electrical resistance changes with temperature.
+
+The first summing junction algebraically subtracts the signal from the input to the signal from the output. The result is generally known as the [[id:2ddf8d22-1278-461a-938c-03d142d309d7][Actuating Signal]].
+
+When both [[id:4bb0c1a7-d32c-48a4-9fc4-c0174b1b961f][Input]] and [[id:9ba64c6f-6255-4a53-9ded-cde1f0a4392d][Output Transducer]] have unity gain (transducer outputs the same as the input) the [[id:2ddf8d22-1278-461a-938c-03d142d309d7][Actuating Signal]]s value is equal to the actual difference between the input and output, in which case the actuating signal is known as [[id:2ddf8d22-1278-461a-938c-03d142d309d7][Error]].
+
+A closed loop system accounts for disturbances by measuring output response, feeding that through the feedback path, and comparing that response to the input at the summing junction.
+If there is a difference, the system drives the plant (via the [[id:2ddf8d22-1278-461a-938c-03d142d309d7][Actuating Signal]]) to make a correction. If there is no difference, than the input remains the same and the system does not drive the plant.
+
+Closed loop systems are, in general, less sensitive to noise/[[id:267097e9-97bf-45df-901b-efa69b840c5e][Disturbances]] and changes in the environment, and are almost always more accurate.
+[[id:b5dd9b48-bffe-4026-a69b-e8bb8a14fd0d][Transient Response]] and [[id:7a4483a8-cea7-4122-bc77-0a4755419f23][Steady-State Error]] can be controlled more conveniently and with greater flexibility simply by modifying the gain. We refer to this adjustment as [[id:bcc70c7d-d37f-4ead-9796-23237b9bba42][Compensating]] and the hardware as the [[id:0b90dd1d-5eb8-49a1-a1a4-31aa05ada661][Compensator]].
+These systems are, however, more complex and expensive. There is a trade-off between the simplicity and low-cost of an open loop system, and the accuracy and higher cost of a closed loop system. 

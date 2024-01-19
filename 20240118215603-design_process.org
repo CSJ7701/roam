@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       7cb6bb72-92e2-4ecf-9757-4eb7124762d3
+:END:
+#+title: Design Process
+#+filetags: :Controls:
+
+* Step 1
+*Determine a physical system and specifications from the requirements*
+
+* Step 2
+*Draw a functional Block Diagram*
+
+* Step 3
+*Transform the physical system into a schematic*
+
+* Step 4
+*Use the schematic to obtain a block diagram, signal-flow diagram, or state-space representation.*
+
+* Step 5
+*If multiple blocks, reduce diagram to a single block or [[id:11d38775-cc5d-490c-aaa3-f36f488e426e][Closed Loop]] system*
+
+* Step 6
+*Analyze, design, and test to see that requirements and specifications are met*

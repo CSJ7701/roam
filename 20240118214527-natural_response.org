@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       602c3cc0-0013-46bd-b33a-88ecada1043e
+:END:
+#+title: Natural Response
+#+filetags: :Controls:
+
+Natural response refers to the way the system dissipates or acquires enerfy. The nature of this response is dependent on the system, not the input. 
+
+Ideally, natural response either oscillates or approaches 0.

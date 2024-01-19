@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       b5dd9b48-bffe-4026-a69b-e8bb8a14fd0d
+:END:
+#+title: Transient Response
+#+filetags: :Controls:
+
+Transient response can be fast or slow, which can directly affect the result of the system.
+
+In an elevator, a slow transient response can make passengers impatient, but an excessively fast response can injure them.
+
+Many systems cannot handle transient response that is too fast, like a computer. There is a maximum read/write speed that a computer can handle and if you exceed this limit, the best case scenario is lost data. 

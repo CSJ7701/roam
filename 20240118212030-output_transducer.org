@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9ba64c6f-6255-4a53-9ded-cde1f0a4392d
+:ROAM_ALIASES: Sensor
+:END:
+#+title: Output Transducer
+

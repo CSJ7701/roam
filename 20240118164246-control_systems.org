@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       9f6b8185-a633-40f5-bccb-fe4236c400f6
+:END:
+#+title: Control Systems
+#+filetags: :Controls:
+
+Control Systems consist of [[id:e2fc3bd3-f6e3-4241-a2f6-cc9e8d441bac][Subsystems]] and [[id:1ca741d9-998e-466e-8811-ba5ba48a1f2e][Processes]] assembled in order to produce an /output/ and /performance/, given a specific /input/.
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-1-2.png]]
+
+There are 2 general ways to measure a control system's performance:
+[[id:b5dd9b48-bffe-4026-a69b-e8bb8a14fd0d][Transient Response]] and [[id:7a4483a8-cea7-4122-bc77-0a4755419f23][Steady-State Error]]
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-1-1.png]]
+
+We build control systems for 4 main reasons:
+- Power amplification
+- Remote control
+- Input form convenience
+- Disturbance compensation
+
+
+Example:
+
+In a temperature control system, the input is a /position/ on thermostat. The output is /heat/.
+
+Typically, output will be things such as temperature, position, velocity, voltage, current, or frequency.
+A system must be able to control these variables accurately even through a disturbance.
+If wind shifts an antenna or noise enters the antenna from an external system, the antenna must be able to detect the disturbance and correct for it.
+
+Control systems can be configured in several different ways, but two of the most common are [[id:1817e95e-ce53-4090-a2a3-0663af0ce70d][Open Loop]] and [[id:11d38775-cc5d-490c-aaa3-f36f488e426e][Closed Loop]].
+
+Control systems are /dynamic/. They respond to an input by undergoing [[id:b5dd9b48-bffe-4026-a69b-e8bb8a14fd0d][Transient Response]], before reaching a [[id:592f54a4-3fa6-454a-88e0-7a736edcce25][Steady-State Response]] that generally resembles the input (with the difference between the two being [[id:7a4483a8-cea7-4122-bc77-0a4755419f23][Steady-State Error]]). 
+Another factor to consider is the systems [[id:6c95b3d1-294a-4be8-99e2-ad97af643fcd][Stability]]. 
+
+In order to design effective control systems, we must follow a consistant [[id:7cb6bb72-92e2-4ecf-9757-4eb7124762d3][Design Process]].

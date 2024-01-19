@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       0b90dd1d-5eb8-49a1-a1a4-31aa05ada661
+:END:
+#+title: Compensator
+

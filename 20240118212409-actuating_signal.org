@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2ddf8d22-1278-461a-938c-03d142d309d7
+:ROAM_ALIASES: Error
+:END:
+#+title: Actuating Signal
+#+filetags: :Controls:
+

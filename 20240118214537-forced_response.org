@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       41e76b0e-41cf-4a2b-9520-9c1ef0601065
+:END:
+#+title: Forced Response
+#+filetags: :Controls:
+
+This dependent on the input. 

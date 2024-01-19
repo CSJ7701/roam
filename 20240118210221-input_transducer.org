@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       4bb0c1a7-d32c-48a4-9fc4-c0174b1b961f
+:END:
+#+title: Input Transducer
+

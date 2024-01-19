@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       592f54a4-3fa6-454a-88e0-7a736edcce25
+:END:
+#+title: Steady-State Response
+#+filetags: :Controls:
+
+
+Steady State Response refers to the condition that the system is in once the transients have decayed to zero.
+Once the system comes to a rest, where is it?
+
+E.G. once the elevator stops moving, is it on the correct floor? Is it close enough to level for the passengers to get out?
+
+We are primarily concerned with the accuracy of the steady state response, and how close it is to the input or desired result. 
