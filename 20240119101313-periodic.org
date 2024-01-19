@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       ebee6a91-9556-4bb6-abc9-98f27fd664a2
+:END:
+#+title: Periodic
+#+filetags: :DSP:
+
+
+For continuous time signals:
+We can say that x(t) is periodic if $x(t)=x(t+T)$ where $T$ is as small as possible
+For a sinusoid this is $\omega=2\pi f$ and $f=\frac{1}{T} \therefore T=\frac{2\pi}{\omega}$
+As f increases, the oscillations increase in rate
+
+For discrete time signals:
+a sinusoid is periodic only if frequency $f$ is a rational number.
+$x(n+N)=x(n)$, with N as small as possible.
+The smallest value for N is called the fundamental period, $f_0=\frac{k}{N}$ where N is the period and $K\in\mathbb{Z}$
+
+Example:
+Determine if x(n) is periodic, and if so find the fundamental period.
+$x(n)=sin(\frac{15\pi}{2}n)$
+
+$\Omega=\frac{15\pi}{2}=2\pi f_0$
+$f_0=\frac{15}{4}\therefore\text{periodic}=\frac{K}{N}$
+When $K=15$, $N=4\rightarrow$fundamental period.
+
+The highest rate of oscillation in a DT sinusoid occurs when $\omega=\pi$ or $-\pi$ OR $f=\frac{1}{2}$ or $-\frac{1}{2}$
+
+

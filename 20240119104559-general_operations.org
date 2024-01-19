@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       ced1b19e-1168-4ed8-b084-4142b531ba1d
+:END:
+#+title: General Operations
+#+filetags: :DSP:
+
+Let $x_1(n)={3,2,1,0,1,2,3}$
+Let $x_2(n)={0,0,0,1,1,1,1}$
+
+$x_1(n)+x_2(n)$ - element-wise
+$x_1(n)*x_2(n)$ - element-wise
+
+* Time Shifting
+$x(n-n_0)$ - delay
+$x(n+n_0)$ - advance
+
+* Time Reversal (Folding)
+$x(-n)$ - flips over $n=0$
+
+/note/:
+$x(n)\rightarrow x(n-n_0)\rightarrow x(-n-n_0)$
+- Shift then fold
+
+$x(n)\rightarrow x(-n)\rightarrow x(-n+x_0)$
+- Fold then shift

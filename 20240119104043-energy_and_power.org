@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       9dfebd56-e574-4879-b925-4bfb8451036f
+:END:
+#+title: Energy and Power
+#+filetags: :DSP:
+
+Energy:
+$E_{x}=\sum_{n=-\infty}^{\infty}{|x(n)|^2$
+
+Power:
+$P_{x}=\lim\limits{N\to\infty}\frac{1}{2N+1}\sum^{N}_{n=-N}|x(n)|^2$
+
+

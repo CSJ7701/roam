@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       fae6ebbc-678e-40e5-be44-b2b7daa0104a
+:END:
+#+title: Analog and Digital Signals
+#+filetags: :DSP:
+
+Most practical signals are analog.
+We convert them to digital so that we can better interact with them.
+
+We take an analog input, convert to a digital signal, use our /system/ to interact with that signal, convert it back to analog, then output that analog signal.
+
+Systems perform operations on signals, and can be physical or logical.
+
+Analog systems (linear circuits) can be intractable and imprecise. Digital systems are much easier to work with.
+
+* Types of signals
+- Continuous vs. Discrete
+- Deterministic vs. Random
+- Analog vs. Digital
+
+
+It' important to recognise whether a signal is [[id:ebee6a91-9556-4bb6-abc9-98f27fd664a2][Periodic]] or not. 
+
+
+[[id:7c00103b-9cfb-4e1f-9ced-3baee053f3d2][Common Discrete Time Signals]]

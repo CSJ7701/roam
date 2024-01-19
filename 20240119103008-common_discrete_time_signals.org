@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       7c00103b-9cfb-4e1f-9ced-3baee053f3d2
+:END:
+#+title: Common Discrete Time Signals
+#+filetags: :DSP:
+
+* Impulse
+$\gamma(n)$
+- 1 when $n=0$
+- 0 when $n\ne0$
+
+  #+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-1-1.png]]
+
+* Step
+$u(n)$
+- 1 when $n\ge0$
+- 0 otherwise
+
+  #+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-1-2.png]]
+
+* R.V. Exponential
+$x(n)=a^{n}$
+$\all n\in\mathbb{Z}; a\in\mathbb{R}$
+
+a=10
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-1-3.png]]
+
+a=1
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-1-4.png]]
+
+a=-1
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-1-5.png]]
+
+
+* Complex Exponential
+$z=re^{j\theta}=r\angle\theta=rcos(\theta)+jrsin(\theta)$

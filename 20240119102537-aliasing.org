@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       eabfb736-a682-4d3f-b28e-b326281b6354
+:END:
+#+title: Aliasing
+#+filetags: :DSP:
+
+If we let $\omega_1=\omega_0$ and $\omega_2=2\pi-\omega_0$, we can vary $\omega_0\in[\pi,2\pi)$
+
+$\omega_1: \pi\rightarrow 2\pi$ and $\omega_2: \pi\rightarrow 0$ - Identical
+
+$x_1(n)=Acos(\omega_{1}n)=Acos(\omega_{0}n)$
+$x_{2}(n)=Acos(\omega_{2}n)=Acos[(2\pi-\omega_0)n]=Acos(-\omega_0)=x_1(n)$
+
+/Note/: $x(n)=Acos(\omega n+\theta)=\frac{A}{2}e^{j(\omega n+\theta)}+\frac{A}{2}e^{-j(\omega n+\theta)}$
