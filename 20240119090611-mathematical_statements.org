@@ -53,24 +53,6 @@ Let /Q/ be the statement "The floor is blue"
 =AND= represents a conjunction, and can be represented by: \land
 =OR= represents a disjunction, and can be represented by: \lor
 
-* Negation
-The most basic operation (unitary)
-
-Examples:
-A. The temperature is lower than yesterday
-- The temperature is /NOT/ lower than yesterday
-
-B. The temperature is higher than yesterday
-- The temperature is /GREATER THAN OR EQUAL TO/ yesterday
   
 
-* Implication
-=IF P THEN Q=
-- p \implies q
-
-If hypothesis is true and conclusion is true, then TRUE.
-if hypothesis is false and conclusion is true, then TRUE
-If hypothesis is false and conclusion is false, then TRUE
-If hypothesis is true and conclusion is false, then FALSE
-
-Only way for an implication to be false is for a true hypothesis to lead to a false conclusion.
+Also [[id:76420d08-3412-42d6-b7fd-1d3d1e301d77][Negation]], [[id:97d301ee-5c6e-4fd4-b18f-ab38b72ad918][Implication]],[[id:79dc34a1-9050-4695-909b-559e59debbbc][ Double Implication]]

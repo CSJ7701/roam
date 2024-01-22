@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       79ed05e1-f7b9-4276-954e-6903add09ba8
+:END:
+#+title: Converse
+#+filetags: :Discrete:
+
+Converse of an implication:
+The converse of =If p then q= is =If q then p=.
+
+This is useful with [[id:79dc34a1-9050-4695-909b-559e59debbbc][Double Implication]], which states that both an implication and its converse must be true.
+
+Ex. 1
+Converse of:
+- =If 4 is even, then 2 is an even number= - =If 2 is an even number, then 4 is even=
+- =Whenever a real number is positive, its square root is positive= - =Whenever a numbers square root is positive, the number is positive=
+  We can rewrite this as an if then statement: =If a real number is positive, its square root is positive= - =If a numbers square root is positive, the number is positive=
+

@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       79dc34a1-9050-4695-909b-559e59debbbc
+:ROAM_ALIASES: Iff "Double Implication"
+:END:
+#+title: Biconditional
+#+filetags: :Discrete:
+
+Double implication
+Denoted by \longleftrightarrow or "Iff"
+
+Iff is used for:
+- Equivalence
+- The same as
+- Characterization
+
+  Double implications state that an implication and its [[id:79ed05e1-f7b9-4276-954e-6903add09ba8][Converse]] must be true
+
+Ex. 1
+=N is odd iff n=2k+1 for some integer k=
+
+Ex. 2
+Is the double implication =2^2=5 iff 3^2=9= true?
+- Implication 1: If $2^2=5$ then $3^2=9$ (Recall from the definition of an [[id:97d301ee-5c6e-4fd4-b18f-ab38b72ad918][Implication]], this is true, since the hypothesis is FALSE but the conclusion is TRUE)
+- Implication 2: If $3^2=9$ then $2^2=5$ (This is false, since the hypothesis is TRUE but the conclusion is FALSE)
+- Therefore, the double implication is false because one of its implications is false.
+
+
+Ex. 3
+=An integer N is odd iff n is divisible by 2=. Find the truth value of this statement
+- If N is odd, then it is divisible by 2 (This is false, since the hypothesis is TRUE and the conclusion is FALSE)
+- If N is divisible by 2, then it is odd (This is false, since the hypothesis is TRUE but the conclusion is FALSE)
+- Therefore, the double implication is false. 

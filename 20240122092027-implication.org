@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       97d301ee-5c6e-4fd4-b18f-ab38b72ad918
+:ROAM_ALIASES: If Conditional
+:END:
+#+title: Implication
+#+filetags: :Discrete:
+
+=IF P THEN Q=
+- p \implies q
+
+If hypothesis is true and conclusion is true, then TRUE.
+if hypothesis is false and conclusion is true, then TRUE
+If hypothesis is false and conclusion is false, then TRUE
+If hypothesis is true and conclusion is false, then FALSE
+
+Only way for an implication to be false is for a true hypothesis to lead to a false conclusion.
+

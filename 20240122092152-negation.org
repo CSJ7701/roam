@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       76420d08-3412-42d6-b7fd-1d3d1e301d77
+:END:
+#+title: Negation
+#+filetags: :Discrete:
+
+The most basic operation (unitary)
+
+Examples:
+A. The temperature is lower than yesterday
+- The temperature is /NOT/ lower than yesterday
+
+B. The temperature is higher than yesterday
+- The temperature is /GREATER THAN OR EQUAL TO/ yesterday
