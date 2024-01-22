@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       fbfccfab-9b82-4b7d-9df3-4bda6ec31b99
+:END:
+#+title: Ethical Software Engineering
+#+filetags: :SoftwareEngineering:
+
+Three of the most important aspects to remember are:
+
+- Confidentiality
+- Competence
+- Intellectual Property Rights
+- Computer Misuse
+
+
+Three of the institutions who determine rules for Software Ethics are thr ACM, the IEEE, and the British Computer Society
+

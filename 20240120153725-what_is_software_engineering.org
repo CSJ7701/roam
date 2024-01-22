@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       07e9a2dd-1fad-43e6-a799-cb975eba29dc
+:END:
+#+title: What is Software Engineering
+#+filetags: :SoftwareEngineering:
+
+Software engineering is intended to support professional software development, rather than individuals.
+
+In order to create [[id:aeca9c3d-9f3b-4297-bf47-8c07b42fde3d][Software]], you must be familiar with the 4 [[id:f3a0fc8c-8ec5-4663-8a3f-4d51e7bab2b9][Software Engineering Process Activities]].
+
+These activities are part of what is known as the /Software Process/ - the systematic approach that is used in software engineering.
+
+There are 4 major issues that have become increasingly common:
+- Heterogeneity
+  Systems run on a wide variety of architectures, so software must be compatible with that same range of architectures in order to properly function.
+- Business and Social Change
+  As society and the economy develops, their needs change, which leads to the need for new and ever evolving software.
+- Security and Trust
+  Malicious users are everywhere, and its important to integrate software with methods to prevent the misuse of a system or its software.
+- Scale
+  Software can be very small scale, or very large scale. Self explanatory.
+
+
+One of the most important decisions as a software engineer is the type of application you will be developing
+
+- Stand alone applications
+- Interactive transaction-based applications
+  These execute on a remote device based on interactions from a local client device. The most common use-case for this application-type is an e-commerce website.
+- Embedded control systems
+  Software which controls hardware devices
+- Batch processing systems
+  Process data in large batches. Examples include billing systems, salary, and phone systems.
+- Entertainment systems
+- Systems for modeling and simulation
+- Data collection and analysis systems
+- systems of systems
+
+  In general, there is a standard code that programmers follow in order to practice [[id:fbfccfab-9b82-4b7d-9df3-4bda6ec31b99][Ethical Software Engineering]].

@@ -1,6 +1,97 @@
 :PROPERTIES:
 :ID:       51717d52-93f0-42cf-8255-588cfa88bb36
+:ROAM_ALIASES: SDLC "Software Development Life Cycle"
 :END:
 #+title: Software Process Models
 #+filetags: :SoftwareEngineering:
+
+A Software Process Model is a simplified representation of a [[file:20240120153725-what_is_software_engineering.org::11][Software Process]].
+
+There are a variety of very simple process models, often referred to as process paradigms.
+
+- Waterfall Model: Takes [[id:f3a0fc8c-8ec5-4663-8a3f-4d51e7bab2b9][Software Engineering Process Activities]] and represents them as seperate process phases.
+- Incremental Development: Interleaves the activities of specification, development and validation. The system is developed as a series of versions, with each version adding functionality to the previous version. 
+- Integration and Configuration: Relies on the availability of reusable components or systems. The system development process focuses on configuring these components for use in a new setting and integrating them into a system. 
+
+  For larger systems, developers typically combine several of these paradigms to use elements of each.
+
+* Waterfall
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-1.png]]
+
+The waterfall model consists of stages that directly reflect the fundamental development activities.
+1. Requirements and definitions
+   Systems services, constraints, and goals are established by consulting with the system users. They are then defined in detail and serve as a system specification.
+2. System and software design
+   Allocates requirements to either hardware or software systems. Establishes an overall architecture. Involves identifying and describing the fundamental software abstractions and their relationships.
+3. Implementation and unit testing
+   Software design is realised as a set of programs or program units. Testing involves verifying that each unit meets its specification.
+4. Integration and system testing
+   Individual units or programs are "integrated" and tested as a complete system to ensure that the software system is delivered to the customer.
+5. Operation and maintenance
+   Typically the longest life cycle phase. System is installed and put into practical use. Maintenance involves correcting errors that were not discovered in earlier stages of the life cycle, and pushing updates to enhance the system as new requirements are discovered.
+
+   The waterfall model should /ideally/ result in one or more documents that are "/approved/" or signed off after every stage is completed. The subsequent phase should not begin until the previous one completes.
+   This often becomes complicated when working with software however, and can result in problems and design errors getting ignored until later. When the implementation stage comes around, if these errors have not been dealt with, they can cause larger issues.
+
+   This means that the waterfall method is only realistically appropriate for certain types of systems.
+   - Embedded systems, where software has no hardware interface (Hardware is inflexible, and makes it difficult to delayt or adjust software requirements)
+
+   - Critical systems where there is a need for extensive safety measures.
+     
+   - Large software systems that are part of joint efforts by several development companies.  
+
+
+The waterfall method is generally ineffective in environments where informal team communication is possible and softwre requirements change quickly.
+
+* Incremental
+
+ #+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-2.png]]
+
+ Incremental development is the most common process model.
+It can be plan driven, agile, or a mixture of the two.
+
+Incremental development is better than the waterfall approach for systems whose requirements are likely to change during the development process.
+Cheaper and easier to make changes at later stages.
+Each increment or version implements some of the functionality that the customer needs, with earlier increments typically focusing on more urgent functionality.
+In practice, this means that the customer can "check in" and see whether the system meets their needs at an early stage.
+
+This model has three major advantages over the waterfall model:
+- The cost of changing requirements is reduced. Requires less analysis and documentation than the waterfall model.
+- Easier to get customer feedback. Early delivery and deployment of useful software is sometimes possible.
+
+There are drawvbacks however:
+- The process is not visible. Managers need regular deliverables to measure progress.
+- System structure tends to degrade as new increments are added. Regular change leads to messy code.
+
+
+These issues become particularly relevant on large, complex projects, particularly when there are several teams that will work on the project over its lifespan. 
+
+* Integration and Configuration
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-3.png]]
+
+In the majority of software projects, there is some software reuse. This typically happens informally, regardless of the process model in question, but recently a new process model has evolved that is based almost entirely around the reuse of existing software.
+
+Three types of software are typically re-used:
+- Stand alone systems - configured for use in a particular environment, then adapted to serve another environment
+- Collections of objects that are developed as a component or as a package to be integrated with a component framework.
+- Web services
+
+
+The general stages to this process:
+1. Requirements Specification
+   Initial requirements are proposed. Do not have to be detailed, but should include brief descriptions of essential requirements and desirable system features.
+2. Software discovery and evaluation
+   Search for components and systems based on outlined requirements. Candidates are evaluated to see if they are suitable.
+3. Requirements Refinement
+   Requirements are refined using information about the components that have been found. Modified to reflect available software.
+4. Application system configuration
+   If an off-the-shelf system that meets requirements is available, it may be configured to create the new system.
+5. Component adaptation and integration
+   If there is no off-the-shelf solution, existing components may be modified and new ones may be created, which are then integrated into the system.
+
+
 

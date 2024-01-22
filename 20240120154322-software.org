@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       aeca9c3d-9f3b-4297-bf47-8c07b42fde3d
+:END:
+#+title: Software
+#+filetags: :SoftwareEngineering:
+
+Software is more then just a computer program.
+It also includes system documentation, proper structure, User documentation, and other supplementary information. 
+
+Good software should be able to deliver the required functionality and performance to the user.
+Should be maintainable, dependable, and usable. 
+
+* Acceptability
+Software must be acceptable to the type of users for which it is designed. Must be understandable, usable, and compatible with other systems that they use. 
+
+* Dependability and Security
+Dependable software should not cause physical or eceonomic damage in the event of failure. 
+
+* Efficiency
+Software should not make wasteful use of system resources, such as memory and processor cycles. 
+
+* Maintanability
+Software should be written in such a way that it can evolve to meet customers' changing needs.

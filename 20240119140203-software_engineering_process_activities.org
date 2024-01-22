@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       f3a0fc8c-8ec5-4663-8a3f-4d51e7bab2b9
+:END:
+#+title: Software Engineering Process Activities
+#+filetags: :SoftwareEngineering:
+
+* Specification
+Specification, or requirements engineering involves understanding and defining what services are required from the system, then identifying the constraints on the systems operation and development.
+The end goal of this process is to produce an agreed requirements document the specifies a system satisfying stakeholder requirements.
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-4.png]]
+
+3 main activities in the requirements engineering process:
+1. Requirements elicitation and analysis
+   Deriving system requirements through observations of existing systems, discussions with potential users, etc.
+2. Requirements specification
+   Translating information from requirements analysis to a document that defines a set of requirements. Two types of requirements may be specified. User (abstract statements of requirements for the customer/end-user) or System (more detailed description of the actual functionality).
+3. Requirement validation
+   Check the requirements for realism, consistenct, and completeness.
+* Development
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-5.png]]
+
+The development stage is where the actual system is created and put together.
+This can involve seperate stages of development, programming, and implementation.
+
+A software design is a description of the software to be implemented, the data models and structures used by the system, the interfaces, and any other components that go into creating a finished product.
+The actual activities involved in this design process may vary based on the type of system being developed, but typically consist of 4 central activities:
+1. Architectural design - identifying the overall structure of the system, principal components, their relationships, and how they are distributed.
+2. Database design - design data structures and how they should be represented in a database.
+3. Interface design - define the interfaces between system components. Must be unambiguous.
+4. Component selection and design - search for reusable components, if none available design new ones.
+
+* Validation
+Software validation is intended to show that a system both conforms to specifications, and meets the customers expectations.
+We can validate the system using program testing, where the system is executed with simulated test data.
+
+Aside from small programs, systems should almost never be tested as a single, monolithic unit.
+Instead they should follow a simple 3 stage testing process.
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-6.png]]
+
+1. Component testing - the components that make up the system are tested by the developers who made the system.
+2. System testing - system components are integrated to create a complete system. This is intended to find errors in communication and integration between components. For larger systems, this can consist of multiple stages where subsystems are integrated and tested seperately before being joined themselves into the larger system.
+3. Customer testing - final stage of testing before the system is accepted for operational use. System is tested by the actual customer rather than with simulated data. 
+
+   #+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-7.png]]
+
+* Evolution
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-8.png]]
+
+As time goes on, fewer and fewer software systems are actually new. Most are simply existing software that is constantly updated and maintained in order to ensure that it is up to date and provides the most current features. 
