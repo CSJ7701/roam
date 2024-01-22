@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       5883739c-6c59-4f78-90eb-fb5800dbbd41
+:END:
+#+title: Overtaking
+#+filetags: :MWO:
+
+Approach from 22.5 degrees abaft of beam.
+Sternlight is the /only/ visible light.
+
+If in doubt, assume you are overtaking
+
+There is no action that can make it a crossing situation - i.e. once you begin overtaking someone, you obligate yourself to be the give-way vessel.
+NOTHING relieves the overtaking vessel from their obligation to keep clear. 

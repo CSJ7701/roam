@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       377c912b-b491-4c10-8927-02561cc2b778
+:END:
+#+title: Hierarchy Rule
+#+filetags: :MWO:
+
+- Only - overtaken
+- Non - NUC
+- Rates - RAM
+- Can - CBD
+- Fool - Fishing Vessel
+- Senior - Sailing Vessel
+- People - PDV
+- Sometimes - Seaplane
+- WOW! - Wing in Ground
+
+  Exceptions are: Narrow Channel, TSS, Overtaking
+

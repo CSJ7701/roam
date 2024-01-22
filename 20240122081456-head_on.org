@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       6cc3ce8a-cea0-47c3-baf1-3ccc8119a940
+:END:
+#+title: Head On
+#+filetags: :MWO:
+
+2 PDV on a "reciprocal or nearly reciprocal" course.
+Mast Head Lights will appear in or near to a line (or corresponding aspect by day)
+When in doubt, assume head on.
+
+/Inland only/: When proceeding with a following current
+- Only valid on western rivers
+- Has right of way over the vessel proceeding upriver.
+- This is because the vessel travelling upriver has more water passing over their rudder; they have greater steerageway.
+
+Must alter course to starboard and pass port to port.
+
