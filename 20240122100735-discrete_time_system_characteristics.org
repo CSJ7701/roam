@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       1eef7a56-5ab8-49ae-8c8f-14e67c4b3063
+:END:
+#+title: Discrete Time System Characteristics
+#+filetags: :DSP:
+
+* Stable vs Unstable
+1. Poles in stable region
+2. BIBO (Via analysis)
+
+   Absolute summability
+   $\sum_{n=-\infty}^{\infty}{|h(n)|\lt\infty}$
+
+
+Example:
+Determine what values of 'a' makes h(n) BIBO Stable.
+$H(n)=a^{n}u(n)$
+
+By definition, we apply $\sum_{n=-\infty}^{\infty}{|a^{n}u(n)|}$
+$\sum_{n=-\infty}^{\infty}{|a^n|*|u(n)|} = \sum_{n=0}^{\infty}{|a^n|}$
+This is an infinite geometric series.
+$=\frac{1}{1-|a|}$ iff $a\in (-1,1)$
+
+
+* Linear vs Nonlinear
+
+Linear iff
+$\tau[a_{1}x_{1}(n)+a_{1}x_{2}(n)]=a_{1}\tau[x_{1}(n)]+a_{2}\tau[x_{2}(n)]$
+
+* Causal vs Noncausal
+Output of the system can never rely on future inputs
+
+* Time Invariant vs Time Varying
+$x(n)\rightarrow\tau\rightarrow y(n)$
+$x(n-k)\rightarrow\tau\rightarrow y(n-k)$

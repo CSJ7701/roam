@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       4f60c4a9-3084-4381-9f47-9f84f0df21bd
+:END:
+#+title: Convolution
+#+filetags: :DSP:
+
+Several ways to solve
+1. Ticker Tape
+2. Analytically
+3. Graphically
+4. Transforms
+
+
+* Ticker Tape
+let $h(n)=(1,2,1,-2)$ and $x(n)=(1,2,3,1)$
+Flip h(n)
+$h(n-k)=(-1,1,2,1)$ and convolute with x(k)
+Iterate over each value and multiply.
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-2-1.png]]
+
+* Analytical
+Find the impulse response of 2 systems in cascade
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-2-2.png]]
+
+$h_{1}(n)=(\frac{1}{2})^{n}u(n)$
+$h_{2}(n)=(\frac{1}{4})^{n}u(n)$
+
+$y(n)=\sum_{k=-\infty}^{\infty}
+FINISH THIS LATER FROM LECTURE NOTES
