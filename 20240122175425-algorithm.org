@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       d2b1f1c2-bc8d-4d0d-bd75-e5696a4edfdc
+:END:
+#+title: Algorithm
+#+filetags: :DSP:
+
+The method or set of rules for implementing the [[id:53c1025a-8da7-48c9-9a4c-c7f199b68c4e][System]] by a program that performs the correspondig mathematical operations. 

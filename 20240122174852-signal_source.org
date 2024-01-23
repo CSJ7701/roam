@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d8a25c0c-319d-4271-8422-0b95e1610179
+:END:
+#+title: Signal Source
+#+filetags: :DSP:
+

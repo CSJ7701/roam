@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       1ffb2e88-f6e3-4a86-9522-44e6823e1d62
+:END:
+#+title: Frequency in Continuous and Discrete time signals
+#+filetags: :DSP:
+
+Simple harmonic oscillation can be represented by:
+$x_{a}(t)=Acos(\Omega t+\theta)$
+$\Omega=2\pi F$
+
+Sinusoids are periodic, with the fundamental period given by: $T_{p}=1/F$
+
+We can describe these sinusoids with complex exponential functions
+$x_{a}(t)=Ae^{j(\Omega t+\theta)}$
+This can be applied to the generic formula:
+$x_{a}(t)=Acos(\Omega t+\theta)=\frac{A}{2}e^{j(\Omega t+\theta)}+\frac{A}{2}e^{-j(\Omega t+\theta)}$
+
+
+
+This is slightly different for discrete time signals
+$x(n)=Acos(\omega n+\theta)$ where again, $\omega=2\pi f$
+
+Discrete time sinusoids are periodic only if their frequency is a rational number.
+If periodic, the fundamental period can be represented by: $f_{0}=\frac{k}{N}$
+
+Discrete time signals whose frequencies are seperated by an integer multiple of $2\pi$ are identical.
+
+The highest rate of oscilation that a DT sinusoid can achieve occurs when $\omega=\pi$ or $\omega=-\pi$

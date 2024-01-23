@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       53c1025a-8da7-48c9-9a4c-c7f199b68c4e
+:END:
+#+title: System
+#+filetags: :DSP:
+
+Physical device which performs an operation on a signal.
+
+Passing a signal through a system, as we do when filtering, is known as /processing/ the signal.
+In general, a system is characterized by the type of operation that it performs on a signal.
+E.G. if the operation a system performs is linear, the system can be described as linear.
+
+Such operations are known as /signal processing/.
+
+Systems also include digital operations, where software operates on the signal instead of a physical device.
+In digital processing, the operations that the system performs are a series of mathematical operations.
+Whenever we implement a system in software, there are a set of rules that we must specify to ensure that it performs the correct mathematical operations in the correct order. These rules are known as an [[id:d2b1f1c2-bc8d-4d0d-bd75-e5696a4edfdc][Algorithm]]. 
+
+
+Most signals that we have dealt with in the past have been analog signals. These were relatively simple to handle, since an analog input signal can be processed using an analog signal processor, and produce and analog signal output.
+
+Digital signal processing provides an alternative to this however, using what is known as an /Analog to Digital Converter/. The output from the A/D Converter is a digital signal that can be fed to a digital signal processor.
+This provides several advantages.
+- Digitally programmable systems are more flexible, and more easily reconfigurable
+- Digital systems can be much more accurate. Analog systems are constructed with tolerances in mind, essentially allowable error, whereas the designer can configure the tolerance in a digital system to make it much more precise.
+- Once converted to a digital format, signals can be stored on magnetic media - making them much easier to transport and store. There is some loss introduced in the conversion to a digital format, but beyond this magnetic storage does not detereorate noticeably.
+- It is much easier to perform complex mathematical operations on a digital signal than on an analog signal.
