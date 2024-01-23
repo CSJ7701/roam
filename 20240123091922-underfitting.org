@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0dafc639-6812-4205-b2bd-4f0b5d57c9d0
+:END:
+#+title: Underfitting
+#+filetags: :AI:NeuralNetworks:MachineLearning:
+
+Failing to capture relevant patterns, leading to less accurate predictions

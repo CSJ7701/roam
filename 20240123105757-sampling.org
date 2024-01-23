@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       11a52d86-dd38-4961-8581-38de101787d4
+:END:
+#+title: Sampling
+#+filetags: :DSP:
+
+Discrete time signals are created by sampling a continuous time signal.
+This is done using an [[id:298353ab-649d-499e-a92c-35c79f626c43][Analog to Digital Converter]].
+
+* Periodic Sampling
+
+Typically, discrete time signals are formed by /periodically sampling/ a continuous time signal
+$$x(n)=x_{a}(nT_{s})$$
+
+The sample spacing $T_s$ is the sampling period, and $f_s=1/T_s$ is the sampling frequency in samples per second.
+
+The continuous timesignal is multiplied by a periodic sequence of impulses:
+$s_{a}(t)=\sum_{n=-\infty}^{\infty}\delta(t-nT_{s})$
+to form the samples signal:
+$x_{s}(t)=x_{a}(t)s_{a}(t)=\sum_{n=-\infty}^{\infty}{x_{a}(nT_{s})\delta(t-nT_{s})}$
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-S-2.png]]
+
+
+The fourier transform of $\delta(t-nT_{s})$ is $e^{-jn\Omega T_{s}}$
+We can use this definition to find the fourier transform for $x_{s}(t)$:
+$$X_{s}(j\Omega)=\sum_{n=-\infty}^{\infty}x_{a}(nT_{s})e^{-jn\Omega T_{s}}$$
+
+We also know that the fourier transform of $s_{a}(t)$ is:
+$$S_{a}(j\Omega)=\frac{2\pi}{T_{s}}\sum_{k=-\infty}^{\infty}\delta(\Omega-k\Omega_{s})$$
+Therefore:
+$$X_{s}(j\Omega)=\frac{1}{2\pi}X_{a}(j\Omega)*S_{a}(j\Omega)=\frac{1}{T_{s}}\sum_{k=-\infty}^{\infty}X_{a}(j\Omega-jk\Omega_{s}$$
+
+Finally, we can derive the fourier transform of $x(n)$:
+$X(e^{j\omega})=\sum_{n=-\infty}^{\infty}x(n)e^{-jn\omega} = \sum_{n=-\infty}^{\infty}x_{a}(nT_{s})e^{-jn\omega}$
+
+We can compare this with out initial formula for the fourier transform of the sampled signal:
+$$X(e^{j\omega})=X_{s}(j\Omega)|_{\Omega=\omega/T_{s}}=\frac{1}{T_{s}}\sum_{k=-\infty}^{\infty}X_{a}(j\frac{\omega}{T_{s}}-j\frac{2\pi k}{T_{s}})$$
+
+This means that we now know $X(e^{j\omega})$ is a frequency-scaled version of $X_{s}(j\Omega)$, with scaling defined by $\omega=\Omega T_{s}$.
+
+* Quantization and Encoding
+
+A quantizer is a [[id:1eef7a56-5ab8-49ae-8c8f-14e67c4b3063][nonlinear]] and noninvertible system. Transforms an input sequence $x(n)$ with a continuous range of amplitudes to assume a finite number of posibilities.
+This is defined by $\hat{x}(n)=Q[x(n)]$.\
+The quentizer has L+1 edcision level, ($x_1, x_2, x_3, ..., x_{L+1}$) that divide the amplitude range for x(n) into L intervals.
+$$I_{k}=[x_{k},x_{k+1}];\\\\k=1,2,...,L$$
+
+For an input that falls within the interval $I_{k}$, the quantizer assigns a value within this interval, $\hat{x}_{k}$ to x(n).
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-S-3.png]]
+
+Quantizers may have quantization levels that aren'y uniformly spaced. When they /are/ uniformly spaced, $\Delta=x_{k+1}-x_{k}$.
+$\Delta$ is called the /quantization step size/ or /resolution/, and the quantizer is said to be /uniform/. The number of levels is typically $L=2^{B+1}$
+In regard to a B+1 bit binary code word.
+The /range/ of the quantizer is $R=2^{B+1}*\Delta$, and if the quantizer input is bounded, $|x(n)|\le X_{max}$
+The range of possible values can be covered with a step size $\Delta=\frac{X_{max}}{2^B}$.
+
+If |x(n)| exceeds Xmax, then x(n) will be clipped and the quantization error could be large.
+
+We can calculate error: $Q|x(n)|-x(n)$
+and the signal-to-quantization-noise ration: $10log\frac{\sigma_{x}^{2}}{\sigma_{e}^{2}}$ where $\sigma_{x}^{2}$ is the signal power. 
+
+

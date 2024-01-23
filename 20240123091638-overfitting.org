@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       527fdb29-067d-4122-b89b-f98ec08d4ef6
+:END:
+#+title: Overfitting
+#+filetags: :AI:NeuralNetworks:MachineLearning:
+
+capturing spurious patterns that won't recur in the future, leading to less accurate predictions

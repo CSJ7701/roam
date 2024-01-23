@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       298353ab-649d-499e-a92c-35c79f626c43
+:END:
+#+title: Analog to Digital Converter
+#+filetags: :DSP:
+
+An A/D converter transforms an analog signal into a digital sequence.
+
+The input to the converter $x_{a}(t)$ is a real valued function of a continuous variable t.
+For each value of t, the function $x_{a}(t)$ may be any real number.
+
+The output of the A/D converter is a /bit stream/ that corresponds to a discrete time sequence $x(n)$, with an amplitude that is quantized for each value of n to one of a finite number of possibilities.
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-S-1.png]]
+
+Shown in the image above, the first element of an A/D converted is the /sampler/, also known as the /continuous-to-discrete (C/D) converter/, or /ideal A/D converter/.
+This converts the continuous time signal $x_{a}(t)$ into a discrete-time sequence by extracting its values at integer multiples of the sampling period $T_{s}$
+$$x(n)=x_{a}(nT_s)$$
+
+Since the samples have a continuous range of possible amplitudes, the second comopnent of the A/D converter is the /quantizer/, which maps the continuous amplitude into a discrete set of amplitudes. For a uniform quantizer, this process is defined by the number of bits and the quantization interval $\delta$.
+
+The last component is the encoder, which takes the digital signal $\hat{x}(n)$ and produces a series of binary codewords. 

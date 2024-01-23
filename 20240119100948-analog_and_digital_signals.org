@@ -5,7 +5,7 @@
 #+filetags: :DSP:
 
 Most practical signals are analog.
-We convert them to digital so that we can better interact with them.
+We convert them to digital (via [[id:11a52d86-dd38-4961-8581-38de101787d4][Sampling]]) so that we can better interact with them.
 
 We take an analog input, convert to a digital signal, use our /system/ to interact with that signal, convert it back to analog, then output that analog signal.
 

@@ -76,15 +76,15 @@ We just set up a dataset that contains home data from melbourne. This will be us
 
 #+RESULTS:
 #+begin_example
-                Id   MSSubClass  LotFrontage  ...       MoSold       YrSold      SalePrice
-count  1460.000000  1460.000000  1201.000000  ...  1460.000000  1460.000000    1460.000000
-mean    730.500000    56.897260    70.049958  ...     6.321918  2007.815753  180921.195890
-std     421.610009    42.300571    24.284752  ...     2.703626     1.328095   79442.502883
-min       1.000000    20.000000    21.000000  ...     1.000000  2006.000000   34900.000000
-25%     365.750000    20.000000    59.000000  ...     5.000000  2007.000000  129975.000000
-50%     730.500000    50.000000    69.000000  ...     6.000000  2008.000000  163000.000000
-75%    1095.250000    70.000000    80.000000  ...     8.000000  2009.000000  214000.000000
-max    1460.000000   190.000000   313.000000  ...    12.000000  2010.000000  755000.000000
+                Id   MSSubClass  LotFrontage        LotArea  OverallQual  OverallCond  ...  ScreenPorch     PoolArea       MiscVal       MoSold       YrSold      SalePrice
+count  1460.000000  1460.000000  1201.000000    1460.000000  1460.000000  1460.000000  ...  1460.000000  1460.000000   1460.000000  1460.000000  1460.000000    1460.000000
+mean    730.500000    56.897260    70.049958   10516.828082     6.099315     5.575342  ...    15.060959     2.758904     43.489041     6.321918  2007.815753  180921.195890
+std     421.610009    42.300571    24.284752    9981.264932     1.382997     1.112799  ...    55.757415    40.177307    496.123024     2.703626     1.328095   79442.502883
+min       1.000000    20.000000    21.000000    1300.000000     1.000000     1.000000  ...     0.000000     0.000000      0.000000     1.000000  2006.000000   34900.000000
+25%     365.750000    20.000000    59.000000    7553.500000     5.000000     5.000000  ...     0.000000     0.000000      0.000000     5.000000  2007.000000  129975.000000
+50%     730.500000    50.000000    69.000000    9478.500000     6.000000     5.000000  ...     0.000000     0.000000      0.000000     6.000000  2008.000000  163000.000000
+75%    1095.250000    70.000000    80.000000   11601.500000     7.000000     6.000000  ...     0.000000     0.000000      0.000000     8.000000  2009.000000  214000.000000
+max    1460.000000   190.000000   313.000000  215245.000000    10.000000     9.000000  ...   480.000000   738.000000  15500.000000    12.000000  2010.000000  755000.000000
 
 [8 rows x 38 columns]
 #+end_example
@@ -259,7 +259,7 @@ Typically, we want to make predictions for /new/ houses, coming on the market. W
 Not currently working. Think it's an emacs issue - getting lisp errors. 
 Answer should be: [1035000. 1465000. 1600000. 1876000. 1636000.]
 
-* Code Exercise
+* Coding Exercise
 
 Previously, we added the iowa home data.
 Check what columns this data set uses.
@@ -343,3 +343,229 @@ Finally, we can make predictions
 
 #+RESULTS:
 : [208500. 181500. 223500. ... 266500. 142125. 147500.]
+
+* Model Validation
+Whenever we create a model, its important to /validate/ it. This is essentially an evalutation of how accurate the models predictions are; how close they come to reality.
+
+It's important to remember not to evaluate a model based on its training data.
+Checking to see how accurately a model predicts data that it was trained on is circular - it will almost always do well.
+
+There are many ways to check a models accuracy.
+One of them is known as *Mean Absolute Error* - =error=actual-predicted=
+When we use this calculation, we can say that "On average, our predictions were off by about X" where X is the calculated error.
+
+Using this in code is relatively simple:
+#+begin_src python
+  from sklearn.metrics import mean_absolute_error
+
+  predicted_home_prices = melbourne_model.predict(X)
+  mean_absolute_error(y, predicted_home_prices)
+#+end_src
+
+ However, in practice what we have just done is use the same sample of data for both building the model and evaluating it - this is known as 'in-sample' validation.
+ Typically the best way to ensure that you get the best results when evaluating your model is to seperate a section of data before you build the model and use that as /validation data/ that is used only for error calculation.
+ This is also relatively easy to automate in our code.
+ #+begin_src python
+   from sklearn.model_selection import train_test_split
+   # This will split the data into a training section and a validation section.
+   # This split is based on a random number, but supplying a numeric value will ensure that we get the same split every time we run this code.
+   train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=0)
+   # Define model
+   melbourne_model = DecisionTreeRegressor()
+   # Fit model
+   melbourne_model.fit(train_X, train_y)
+
+   # Get predicted prices on validation data
+   val_predictions = melbourne_model.predict(val_X)
+   print(mean_absolute_error(val_y, val_predictions))
+ #+end_src
+
+ Earlier, the in-sample calculation should have given us $434.72, whereas the /out/ of sample validation resulted in $265,806.91.
+ This is the difference between a model that is almost exactly right, and one that is almost unusable for any practical purpose. 
+
+* Coding Exercise
+
+#+begin_src python :results value verbatim :session ML_exercise
+  from sklearn.model_selection import train_test_split
+  train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=1)
+
+  iowa_model=DecisionTreeRegressor(random_state=1)
+  iowa_model.fit(train_X, train_y)
+  val_predictions=iowa_model.predict(val_X)
+  predict_head=iowa_model.predict(X.head())
+  actual_head=y.head().tolist()
+  predict_head, actual_head
+#+end_src
+
+#+RESULTS:
+: (array([208500., 181500., 223500., 128000., 250000.]), [208500, 181500, 223500, 140000, 250000])
+
+Calculate the mean absolute error
+#+begin_src python :results verbatim :session ML_exercise
+  from sklearn.metrics import mean_absolute_error
+  val_mae=mean_absolute_error(val_y, val_predictions)
+  val_mae
+
+#+end_src
+
+#+RESULTS:
+: 29652.931506849316
+
+* Underfitting and Overfitting
+
+Now that we have the ability to check how accurate a model is, we can start experimenting with different models to see which gives us better results.
+The [[http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html][Sci-Kit Documentation]] lists options for the regression tree model that we have been using. One of these options allows us to specify the decision tree's /depth/ or number of splits.
+
+As we introduce more layers, we create more "leaves", or end nodes. As we create more of these nodes, they become more granular and there are fewer results that fall into each node (For example, there will be more houses that fit into the node specifying $0-$200,000 than the more granular node that specifies $0-$5000).
+
+If we add too many layers, we may start to see a near perfect match to the training data, but any new data will likely see poor results. This is because we have [[id:527fdb29-067d-4122-b89b-f98ec08d4ef6][Overfit]] the model.
+Conversely, if the model doesn't enough layers it will be nonspecific, and while it may classify the data well into the layers it has, there aren't enough layers (not enough specificity) for this data to actually be useful. This is known as [[id:0dafc639-6812-4205-b2bd-4f0b5d57c9d0][Underfitting]].
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle.Fitting.png]]
+
+There are several ways to control the depth in python, but one of the simplest is to use the =max_leaf_nodes= variable.
+We can define a utility function to help compare MAE scores from different max_node values.
+#+begin_src python :results value verbatim
+  from sklearn.metrics import mean_absolute_error
+  from sklearn.tree import DecisionTreeRegressor
+
+  def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+    model=DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+    model.fit(train_X, train_y)
+    preds_val=model.predict(val_X)
+    mae=mean_absolute_error(val_y, preds_val)
+    return(mae)
+
+  
+  # We can use this new function with a for-loop to compare MAE values
+  for max_leaf_nodes in [5, 50, 500, 5000]:
+    my_mae=get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+    print("Max leaf nodes: %d  \t\t Mean Absolute Error:  %d" %(max_leaf_nodes, my_mae))
+#+end_src
+
+#+RESULTS:
+: None
+
+* Code Exercise
+Time to optimize the model that we've constructed so far. 
+
+#+begin_src python :results verbatim :session ML_exercise
+  def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+    model=DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+    model.fit(train_X, train_y)
+    preds_val=model.predict(val_X)
+    mae=mean_absolute_error(val_y, preds_val)
+    return(mae)
+
+  candidate_max_leaf_nodes=[5, 25, 50, 100, 250, 500]
+
+  min_mae=float('inf') # initialize with positive infinity, everything will be less than this.
+  min_nodes=None
+  for num in candidate_max_leaf_nodes:
+    mae=get_mae(num, train_X, val_X, train_y, val_y)
+    print("Max nodes: %d \t\t MAE: %d" %(num, mae))
+    if mae < min_mae:
+      min_mae=mae
+      print("less")
+      min_nodes=num
+
+  min_nodes
+#+end_src
+
+#+RESULTS:
+: 100
+
+Now we can fit the model using our optimized depth
+
+#+begin_src python :results verbatim :session ML_exercise
+  final_model=DecisionTreeRegressor(max_leaf_nodes=100, random_state=0)
+  final_model.fit(X, y)
+#+end_src
+
+#+RESULTS:
+: DecisionTreeRegressor(max_leaf_nodes=100, random_state=0)
+
+* Random Forests
+
+Decision trees involve some difficult decisions. Going to deep can quickly overfit our model, and too shallow can underfit.
+
+Several models use clever implementation to achieve better performance. One of these is a random forest.
+This model uses many trees and makes a prediction by averaging the prefictions of each component tree. Generally, it gives better accuracy than a single tree, and works well with default parameters.
+There are models that give much better performance, but they are often sensitive to their input parameters.
+
+We can implement this in a manner similar to the decision tree regressor. 
+#+begin_src python :results verbatim
+  from sklearn.ensemble import RandomForestRegressor
+  from sklearn.metrics import mean_absolute_error
+
+  forest_model=RandomForestRegressor(random_state=1)
+  forest_model.fit(train_X, train_y)
+  melb_preds=forest_model.predict(val_X)
+  mean_absolute_error(val_y, melb_preds)
+
+#+end_src
+
+* Coding Exercise
+
+#+begin_src python :results verbatim :session ML_exercise
+  from sklearn.ensemble import RandomForestRegressor
+
+  rf_model=RandomForestRegressor(random_state=1)
+  rf_model.fit(train_X, train_y)
+
+  # Calculate the MAE of our model based on the validation data
+  rf_val_mae=mean_absolute_error(val_y, rf_model.predict(val_X))
+  rf_val_mae
+#+end_src
+
+#+RESULTS:
+: 21857.15912981083
+
+* Machine Learning Competition
+
+Competition - [[https://www.kaggle.com/c/home-data-for-ml-course][Link]]
+
+#+begin_src python :results verbatim :session ML_comp
+  import pandas as pd
+  from sklearn.ensemble import RandomForestRegressor
+  from sklearn.metrics import mean_absolute_error
+  from sklearn.model_selection import train_test_split
+
+  iowa_file_path = '/home/csj7701/roam/References/Kaggle-HousingCompetition-Train.csv'
+  home_data=pd.read_csv(iowa_file_path)
+  y=home_data.SalePrice
+
+  # Create X - MODIFY ME LATER
+  features = ['LotArea', 'YearBuilt', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
+
+  # Select columns corresponding to features, preview
+  X=home_data[features]
+  # X.head()
+
+  # Split into validation and training data
+  train_X, val_X, train_y, val_y = train_test_split(X,y,random_state=1)
+
+  # Define a random forest model
+  rf_model=RandomForestRegressor(random_state=1)
+  rf_model.fit(train_X, train_y)
+  rf_val_predictions=rf_model.predict(val_X)
+  rf_val_mae=mean_absolute_error(rf_val_predictions, val_y)
+
+  rf_val_mae
+#+end_src
+
+#+RESULTS:
+: 21857.15912981083
+
+Now we train a model on /all/ the data, then run that model on the testing data to get an actual value for the competition.
+#+begin_src python :results verbatim :session ML_comp
+  rf_full=RandomForestRegressor(random_state=1)
+  rf_full.fit(X, y)
+
+  test_data_path='/home/csj7701/roam/References/Kaggle-HousingCompetition-Test.csv'
+  test_data=pd.read_csv(test_data_path)
+
+  test_X=test_data[features]
+  test_preds=rf_full.predict(test_X)
+#+end_src
