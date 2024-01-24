@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       bdfe91a7-0dc7-4599-b48e-56d937e7aa96
+:END:
+#+title: Correlation
+#+filetags: :DSP:
+
+Answering the question: How similar are two [[id:aecae854-00c5-4708-a18a-97d4386a4070][Signals]]?
+
+* Cross-Correlation
+$r_{xy}(l)=\sum_{n=-\infty}^{\infty}(x(n)y(n-l)=\sum_{n=-\infty}^{\infty}x(n+l)y(n)$
+Similar to [[id:4f60c4a9-3084-4381-9f47-9f84f0df21bd][Convolution]].
+Correlation is /NOT/ commutative - meaning that $r_{xy}(l)\ne r_{yx}(l)$
+We can say however, that $r_{xy}(l)-r_{xy}(-l)$
+
+Example:
+
+Let x(n)={...0,2,-1,3,7,*1*,2,-3,0,0,...}
+y(n)={...0,1,-1,2,-2,*4*,1,-2,5,0,0,...}
+
+Find $r_{xy}(l)$
+Similar to convolution, we shift by one each time, with l representing the shift.
+
+$r_{xy}(-2)=(2*2)+(-1*-2)+(3*4)+(7*1)+(1*-2)+(2*5)=33$
+$r_{xy}(-1)=0$
+$r_{xy}(0)=7$
+$r_{xy}(1)=13$
+$r_{xy}(2)=18$
+...
+
+* Auto Correlation
+Corellate a signal with itself
+$r_{xx}(l)\sum_{n=-\infty}^{\infty}x(n)x(n-l)=\sum_{n=-\infty}^{\infty}x(n+l)x(n)$
+
+
+Max values in autocorrelation
+$|r_{xy}(l)|\le\sqrt{r_{xx}(0)*r_{yy}(0)}=\sqrt{E_{x}*E_{y}}$
+$|r_{xx}(l)\le r_{xx}(0)=E_{x}$
+
+Normalize
+
+$\rho_{xy}(l)=\frac{r_{xy}(l)}{\sqrt{r_{xx}(0)r_{yy}(0)}\in[-1,1]$
+$\rho_{xx}(l)=\frac{r_{xx}(l)}{r_{xx}(0)}\in[-1,1]$

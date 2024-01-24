@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       e341a14e-5676-485f-9b22-b4b4580bd695
+:END:
+#+title: Solving Discrete Time IVP
+#+filetags: :Discrete:
+
+Method of undetermined coefficients
+
+Ex:
+Find the response y(a) for n=0 of the system
+$y(n)-3y(n-1)-4y(n-2)=x(n)+2x(n-1)$ let $x(n)=4^{n}u(n)$
+
+Steps:
+1. find $y_{n}$
+2. determine $y_{p} from table
+3. plug $y_{p}$ into system and solve for coeff
+4. find ICs recursively
+5. plug into y to find $y_{n}$ coeff
+
+
+-- *1* --
+
+Let $y_{n}(n)=\gamma^{n}$
+$\gamma=e^{\lambda}$
+$\gamma^{n}-3\gamma^{n-1}-4\gamme^{n-2}=0$
+$\gamma^{n-2}(\gamma^{2}-3\gamma-4)=0$
+$\gamma_{1}=4;\\\gamma_{2}=-1$
+Therefore $y_{n}(n)=C_{1}(-1)^n +C_{2}(4)^n$
+
+-- *2* --
+
+Our input is $x(n)=4^{n}u(n)$
+From the table, we see A=1, M=4
+$\therefore y_{p}=kn(4)^{n}$
+
+-- *3* --
+
+$kn(4)^{n}u(n)-3k(n-1)(4)^{n-1}u(n-1)-4k(n-2)4^{n-2}u(n-2)=4^{n}u(n)+2(4)^{n-1}u(n-1)$
+Factor $4^n$ from both sides and cancel.
+Let $n\ge2$
+$kn-\frac{3}{4}k-\frac{1}{4}kn+\frac{1}{2}k=\frac{3}{2}$
+$k=\frac{6}{5}
+$y_{p}(n)=\frac{6}{5}n(4)^{n}$
+We know $y=y_{n}+y_{p}$
+$\therefore y=c_{1}(-1)^{n}+c_{2}(4)^{n}+\frac{6}{5}n(4)^{n}$
+
+-- *4* --
+Let n=0
+$y(0)-3y(-1)-4y(-2)=x(0)+2x(-1)$
+$y(0)=x(0)=4^{0}u(0)=1$
+Let n=1
+$y(1)-3y(0)-4y(-1)=x(1)+2x(0)$
