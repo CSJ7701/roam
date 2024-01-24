@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       839e30e5-fcf3-47dd-a70b-6f3324720dc6
+:ROAM_ALIASES: GPS
+:END:
+#+title: Global Positioning System
+#+filetags: :MWO:
+
+
+3 segments
+- Space
+- Control
+- User
+
+
+Space Segment
+- At least 24 operational satellites operational 95% of the time.
+- US Air Force/Space Force maintains over 30 satellites so that they have spares.
+
+GPS Control Segment
+- On the actual planet
+- How we steer the satellites.
+- Calibrating
+- Master control station: Schriever AFB Colorado
+- Consists of one master, 1 alternate master, 11 Command Control Antennas, 16 monitoring sites
+- Monitor telemetry, correct - allows for precise orbits
+
+User segment
+- Receiver, processors, antennas.
+- Allows other components to receive GPS information
+- One way communication - User segment can /only/ receive information
+
+
+
+On a paper chart, we need 3 fixes to /triangulate/.
+With GPS, we need 4 fixes to /trilaterate/.
+
+Congress mandates a global user range error - less than 7.8 meters with 95% probability
+We actually have about 0.7 meters. (We're more accurate than congress mandates)
+This is different from actual /accuracy/, which can be affected by signal strength, interference, etc.
+
+Other things that influence signals:
+- physical obstructions
+- Multipath
+- spoofing
+- jamming
+- solar storm
+- maintenance/maneuvers creating temporary downtime
+
+
+Wide Area Augmentation System
+- Network of Satellite Based Augmentation Systems to correct GPS
+- Operated by FAA
+- Primarily for aviation, but now available to maritime industry to replace DGPS (Differential GPS)
+- Predictable accuracy - 1-4 meters.
+- Only available within the continental US
+
+
+
+
