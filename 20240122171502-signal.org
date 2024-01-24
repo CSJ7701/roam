@@ -30,7 +30,7 @@ $\begin{bmatrix}s_{1}(t)\\ s_{2}(t)\\ s_{3}(t)\end{bmatrix}$
 We refer to such vectors as /multichannel signals/. Each component depends on a certain number of independent variables. This number of variables is known as the signals /dimension/. The following example consists of a 3 channel, 3 dimensional signal.
 $\begin{bmatrix}I_{r}(x,y,t)\\ I_{g}(x,y,t)\\ I_{b}(x,y,t)\end{bmatrix}$
 ** Continuous Time vs Discrete Time Signals
-Signals can either be continuous (otherwise known as analog) or discrete.
+Signals can either be continuous (otherwise known as analog) or [[id:4c08afb3-7075-4b7d-8887-8086c534a61c][Discrete]].
 Continuous signals are defined for every value of time, and take on values in the continuous interval.
 Discrete time signals are defined only at specific moments in time. These time instants do not need to be spaced evenly, but in practice usually are. 
 ** Continuous-Valued vs Discrete-Values signals

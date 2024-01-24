@@ -8,6 +8,13 @@ Energy:
 $E_{x}=\sum_{n=-\infty}^{\infty}{|x(n)|^2$
 
 Power:
-$P_{x}=\lim\limits{N\to\infty}\frac{1}{2N+1}\sum^{N}_{n=-N}|x(n)|^2$
+P_{x}=\lim\limits{N\to\infty}\frac{1}{2N+1}\sum^{N}_{n=-N}|x(n)|^2$
 
+Energy of a signal can be finite or infinite. If finite, it is known as an energy signal.
+
+Average power:
+$P=lim_{n\rightarrow\infty}\frac{1}{2N+1}\sum_{n=-N}^{N}{|x(n)|^{2}}$
+
+If E is infinite, Power is 0. Average power on the otherhand could be finite.
+If E is infinite and Average Power is both finite and nonzero, the signal is called a power signal.
 

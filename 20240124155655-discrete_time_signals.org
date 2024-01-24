@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       4c08afb3-7075-4b7d-8887-8086c534a61c
+:END:
+#+title: Discrete Time Signals
+#+filetags: :DSP:
+
+Discrete Time Signal - x(n) - a function of an independent variable that is an integer.
+discrete signals are not defined for non integer values of n.
+
+It's important to recognize some [[id:7c00103b-9cfb-4e1f-9ced-3baee053f3d2][Common Discrete Time Signals]].
+These play an integral role in our understanding and analysis of signals.
+
+When working with DT signals, its important to understand the /type/ of signal we are working with.
+
+* Power and Energy signals
+We can find the [[id:9dfebd56-e574-4879-b925-4bfb8451036f][Energy and Power]] of a signal, which allows us to determine whether the signal is a power signal, an energy signal, or neither.
+
+* Periodic Signals
