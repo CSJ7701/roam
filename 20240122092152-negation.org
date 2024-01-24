@@ -12,3 +12,12 @@ A. The temperature is lower than yesterday
 
 B. The temperature is higher than yesterday
 - The temperature is /GREATER THAN OR EQUAL TO/ yesterday
+
+
+Negation of compound statements
+
+$(x+y\gt0$ and $x\lt y)$
+To negate: $(x+y\le0$ or $x\ge y)$
+
+$(x+y\gt0$ or $x\lt y)$
+to negate: $(x+y\le0$ and $x\ge y)$
