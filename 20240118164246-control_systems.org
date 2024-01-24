@@ -36,3 +36,10 @@ Control systems are /dynamic/. They respond to an input by undergoing [[id:b5dd9
 Another factor to consider is the systems [[id:6c95b3d1-294a-4be8-99e2-ad97af643fcd][Stability]]. 
 
 In order to design effective control systems, we must follow a consistant [[id:7cb6bb72-92e2-4ecf-9757-4eb7124762d3][Design Process]].
+
+In general, we examine systems in block diagram format, but we must be able to examine them mathematically as well.
+To do this, we change the block diagram into either:
+- a transfer function in the frequency domain
+- a state equation in the time domain
+
+  In order to use either of these forms however, we must use [[id:8867a1a8-8c12-4bcf-97a5-d144ab070a20][Laplace Transforms]]

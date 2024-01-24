@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       8867a1a8-8c12-4bcf-97a5-d144ab070a20
+:END:
+#+title: Laplace Transforms
+#+filetags: :Controls:DSP:SST:
+
+The Laplace Transform:
+$\mathscr{L}[f(t)]=F(s)=\int_{0-}^{\infty}f(t)e^{-st}dt$
+Where $s=\sigma+j\omega$ is a complex variable.
+
+$F(s)$ is denoted as the /Laplace transform/ of $f(t)$
+
+The /Inverse Laplace Transform/, which allows is to find $f(t)$ from $F(s)$:
+$\mathscr{L}^{-1}[F(s)]=\frac{1}{2\pi j}\int_{\sigma-j\infty}^{\sigma+j\infty}F(s)e^{st}ds=f(t)u(t)$
+
+We can derive a table for common laplace transforms:
+| f(t)              | F(s)                       |
+| $\sigma(t)$       | 1                          |
+| u(t)              | 1/s                        |
+| t*u(t)            | $1/s^2$                    |
+| $t^{n}u(t)$       | $n!/s^{n+1}$               |
+| $e^{-at}u(t)$     | $1/{s+a}$                  |
+| $sin\omega tu(t)$ | $\omega/{s^{s}+\omega^{2}$ |
+| $cos\omega tu(t)$ | $s/{s^{2}+\omega^{2}$      |
+
+An important aspect of Laplace transforms is [[id:30cc2e7a-2258-4e40-aa11-3e514e41cf05][Partial Fraction Expansion]]

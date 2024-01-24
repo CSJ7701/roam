@@ -1,0 +1,60 @@
+:PROPERTIES:
+:ID:       30cc2e7a-2258-4e40-aa11-3e514e41cf05
+:END:
+#+title: Partial Fraction Expansion
+#+filetags: :Controls:SST:DSP:
+
+This is particularly useful when we are attempting to find the [[id:8867a1a8-8c12-4bcf-97a5-d144ab070a20][Laplace Transforms]] of a complicated function. 
+We can convert the function to a sum of simpler terms where we know the laplace transforms for each.
+
+We can only perform a partial fraction expansion when we have a function of the form
+$$F_{1}(s)=N(s)/D(s)$$, where the order of N(s) is less than the order of D(s).
+If the order of D(s) is less than that of N(s), we must divide N(s) repeatedly by D(s) until that is no longer the case.
+
+Ex.
+
+$F_{1}(s)=\frac{s^3+2s^2+6s+7}{s^2+s+5}$
+Must perform division: $F_{1}(s)=s+1+\frac{2}{s^2+s+5}$
+Now we can take the inverse laplace transform:
+$f_{1}(t)=\frac{d\sigma(t)}{dt}+\sigma(t)+\mathscr{L}^{-1}[\frac{2}{s^2+s+5}]$
+We can now expand the inverse laplace transform into a sum of terms and solve.
+There are 3 general cases.
+1. Roots of the denominator of F(s) are real and distinct
+  $F(s)=\frac{2}{(s+1)(s+2)}$
+  $F(s)=\frac{K_1}{(s+1)}+\frac{K_2}{(s+2)}$
+  Multiply by (s+1) to isolatio K1:
+  $\frac{2}{s+1}=K_{1}+\frac{(s+1)K_{2}}{(s+2)}$
+  Now we can take the laplace transform of the result to get: $f(t)=(2e^{-t}-2e^{-2t})u(t)$
+  We can thus construct a formula for the general case:
+  #+ATTR_LATEX: :caption \bicaption{---}
+  [[file:/home/csj7701/roam/Attachments/Controls-2-1.png]]
+
+2. Roots of the denomiunator of F(s) are real and repeated
+   $F(s)=\frac{2}{(s+1)(s+2)^2}$
+   Break this up with partial fraction decomposition:
+   $F(s)=\frac{2}{(s+1)(s+2)^2}=\frac{K_1}{(s+1)}+\frac{K_2}{(s+2)^2}+\frac{K_3}{(s+2)}$
+   Here, we can finish solving the partial fraction decomposition to find K1=2, K2=-2, K3=-2
+   Thus we take the inverse laplace transform, yielding
+   $f(t)=2e^{-t}-2te^{-2t}-2e^{-2t}$
+   This yields the general case:
+   #+ATTR_LATEX: :caption \bicaption{---}
+   [[file:/home/csj7701/roam/Attachments/Controls-2-2.png]]
+
+3. Roots of the denominator of F(s) are complex or imaginary
+   $F(s)=\frac{3}{s(s^{2}+2s+5)}$
+   Expand: $\frac{3}{s(s^{2}+2s+5)}\frac{K_1}{s}+\frac{K_{2}s+K_{3}}{s^{2}+2s+5}$
+   Solve the partial fraction decomposition to get K1=3/5, K2=-3/5, K3=-6/5
+   $F(s)=\frac{3}{s(s^{2}+2s+5)}=\frac{3/5}{s}-\frac{3}{5}\frac{s+2}{s^{2}+2s+5}$
+
+   The last component of the formula is a little complicated. Its the sum of an exponentially damped cos and sin.
+   This, $\mathscr{L}[Ae^{-at}cos(\omega t)]=\frac{A(s+a)}{(s+a)^{2}+\omega^{2}}$
+   and $\mathscr{L}[Be^{-at}sing(\omega t)]=\frac{B\omega}{(s+a)^{2}+\omega^{2}}$
+   Adding them we get $\mathscr{L}[Ae^{-at}cos(\omega t)+Be^{-at}sin(\omega t)]=\frac{A(s+a)+B\omega}{(s+a)^{2}+\omega^{2}}$
+
+   We can use this to simplify our original function:
+   $F(s)=\frac{3/5}{s}-\frac{3}{5}\frac{(s+1)+(1/2)(2)}{(s+1)^{2}+2^2}$
+   Then take the inverse laplace transform
+   $f(t)=\frac{3}{5}-\frac{3}{5}e^{-t}(cos(2t)+\frac{1}{2}sin(2t))$
+   And we can use the general form:
+   #+ATTR_LATEX: :caption \bicaption{---}
+   [[file:/home/csj7701/roam/Attachments/Controls-2-3.png]]
