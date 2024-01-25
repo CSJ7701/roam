@@ -16,3 +16,16 @@ When working with DT signals, its important to understand the /type/ of signal w
 We can find the [[id:9dfebd56-e574-4879-b925-4bfb8451036f][Energy and Power]] of a signal, which allows us to determine whether the signal is a power signal, an energy signal, or neither.
 
 * Periodic Signals
+
+Frequency must be rational
+$f_{0}=\frac{k}{N}$
+
+If periodic, power $P=\frac{1}{N}\sum_{n=0}^{N-1}{|x(n)|^2$
+
+* Symmetric and Assymetric signals
+Symmetric signals are even, assymetric are odd.
+
+Symmetric if $x(-n)=x(n)$
+Assymetric if $x(-n)=-x(n)$
+
+

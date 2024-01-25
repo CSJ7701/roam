@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       8bf05fd3-6e1d-4def-b66a-ac158250975e
+:END:
+#+title: Discrete Time Systems
+#+filetags: :DSP:
+
+Discrete Time System - a device or algorithm that operates on a [[id:4c08afb3-7075-4b7d-8887-8086c534a61c][Discrete Time Signals]] to produce another signal. 

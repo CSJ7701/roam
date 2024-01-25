@@ -28,8 +28,12 @@ Linear iff
 $\tau[a_{1}x_{1}(n)+a_{1}x_{2}(n)]=a_{1}\tau[x_{1}(n)]+a_{2}\tau[x_{2}(n)]$
 
 * Causal vs Noncausal
-Output of the system can never rely on future inputs
+causal - Output of the system can never rely on future inputs
 
 * Time Invariant vs Time Varying
 $x(n)\rightarrow\tau\rightarrow y(n)$
 $x(n-k)\rightarrow\tau\rightarrow y(n-k)$
+
+* Static vs Dynamic
+Static or memoryless if input does not depend on past or future inputs
+Dynamic of has memory if it depends on past of future inputs
