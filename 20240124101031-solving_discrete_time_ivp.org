@@ -2,7 +2,7 @@
 :ID:       e341a14e-5676-485f-9b22-b4b4580bd695
 :END:
 #+title: Solving Discrete Time IVP
-#+filetags: :Discrete:
+#+filetags: :DSP:
 
 Method of undetermined coefficients
 
