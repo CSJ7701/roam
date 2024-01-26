@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       a91397bf-197b-479f-848a-21a918d8cdc3
+:END:
+#+title: Z Transforms
+#+filetags: :DSP:SST:
+
+
+By Definition: $x(z)=\sum_{n=-\infty}^{\infty}x(n)z^{-n}$ where $z\in\mathbb{C}$
+
+Ex.
+Find $x(z)$
+$x[n]=[...,2,4,5,7,0,1,...]$ Center is 5.
+$x(z)=2z^{2}+4z^{1}+5z^{0}+7z^{-1}+z^{-3}$ where $z\ne0$
+
+Ex.
+Find $x(z)$
+$x(n)=a^{n}$ for $0\le n\le m$ and 0 otherwise.
+$x(z)=\sum_{n=0}^{M}a^{n}z^{-n}=\sum_{n=0}^{M}(az^{-1})^{n}=\frac{1=(az^{-1})^{M+1}}{1=az^{-1}}$
+
+Ex.
+Find x(z)
+$x(n)=a^{n}u(n)$
+$\sum_{n=0}^{\infty}{a^{n}z^{-n}}=lim\lim_{m\rightarrow\infty}\sum_{n=0}^{M}a^{n}z^{-n}=\frac{1}{1=az^{-1}}=\frac{z}{z-a}$
