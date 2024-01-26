@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       5624e542-d3da-4e85-9177-b6304bdfd157
+:END:
+#+title: Proofs
+#+filetags: :Discrete:
+
+* Direct Proofs
+- Take the hypothesis and travel a sequence of implications leading to the final conclusion
