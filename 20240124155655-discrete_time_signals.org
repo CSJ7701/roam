@@ -6,9 +6,18 @@
 
 Discrete Time Signal - x(n) - a function of an independent variable that is an integer.
 discrete signals are not defined for non integer values of n.
+We can also define it as an indexed sequence of real or complex numbers. 
 
 It's important to recognize some [[id:7c00103b-9cfb-4e1f-9ced-3baee053f3d2][Common Discrete Time Signals]].
 These play an integral role in our understanding and analysis of signals.
+
+Discrete time signals are often complex valued.
+These *Complex Discrete Time Signals* are represented by the form
+$z(n)=|z(n)|exp[j*arg(z(n))]$
+The magnitude may be derived using the formula: $|z(n)|^{2}=Re^{2}(z(n))+Im^{2}(z(n))$
+And phase can be found with: $arg(z(n))=tan^{-1}\frac{Im(z(n))}{Re(z(n))}$
+If z(n) is a complex sequence, the complex conjugate is denoted by $z^{*}(n)$, which we can find by changing the sign on the imaginary part of z(n).
+
 
 When working with DT signals, its important to understand the /type/ of signal we are working with.
 
