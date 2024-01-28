@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       db0db8b3-7e0c-436d-840d-910a8d7058c8
+:END:
+#+title: Transfer Functions of Electrical Systems
+#+filetags: :SST:Controls:
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-3-1.png]]
+
+We can find transfer functions for most circuits using [[id:f4300bc9-c360-4c3d-b1d9-0ce3d6510b22][Mesh Analysis]].
+
+In general, we first transform all variables of /t/ to /s/ using the [[id:8867a1a8-8c12-4bcf-97a5-d144ab070a20][Laplace Transform]].
+We then replace each component with its equivalent impedance, and add.
+
+We can scale this up to solve for more complex circuits as well:
+- Replace passive elements with their impedances
+- Replace all sources and time variables with their laplace transform
+- Assume a transform current and a current direction in each mesh
+- Write out Kirchoffs voltage law around each mesh
+- Solve simultaneous equations to find output
+- Form the transfer function from the output.
+
+  Ex.
+  #+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-3-2.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-3-3.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-3-4.png]]

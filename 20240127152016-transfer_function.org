@@ -8,3 +8,5 @@ Transfer Functions represent a system, and are characterized by the function $G(
 Transfer functions are evaluated with initial conditions of 0. 
 
 Transfer Functions can be represented as block diagrams, with input on the left and output on the right. 
+
+Transfer functions are especially useful when representing physical systems. These can either be [[id:db0db8b3-7e0c-436d-840d-910a8d7058c8][Electrical Systems]] or mechanical.
