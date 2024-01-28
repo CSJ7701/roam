@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       9acce1db-0a12-455d-a3d1-4853dab5d7af
+:END:
+#+title: Transfer Function
+#+filetags: :Controls:DSP:SST:
+
+Transfer Functions represent a system, and are characterized by the function $G(s)=\frac{C(s)}{R(s)}$, where C is the output and R is the input.
+Transfer functions are evaluated with initial conditions of 0. 
+
+Transfer Functions can be represented as block diagrams, with input on the left and output on the right. 
