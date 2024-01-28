@@ -1,0 +1,62 @@
+:PROPERTIES:
+:ID:       489c29bd-194b-4115-a8b6-47ff5a521dbd
+:END:
+#+title: Requirements Engineering
+#+filetags: :SoftwareEngineering:
+
+Requirements - descriptions of the services that a system should provide and the constraints on its operations.
+The process of finding, documenting, and checking these services is called requirements engineering.
+
+There are several levels of requirements:
+- User Level, the services the system is expected to provide to users and constraints under which it operates
+- System Level, detailed description of the software system's functions, services, and operational constraints. Should define exactly what will be implemented.
+
+
+Requirement engineering is usually seen as the first step of the software development process, and is often integral to the proposal which will decide whether the project enters the development phase at all.
+
+Software requirements are often classified as /functional/ or /non-functional/.
+- Functional Requirements
+  Statements of services that the system should provide, how it should react to certain inputs, how it should behave under certain conditions.
+  In general, define what a system is to /do/. 
+- Non Functional Requirements
+  Constraints on the services or functions offered by the system. Includes timing restraints, standards, etc. Typically apply to the system as a whole rather than features or services.
+  Are generally more important to general system function than individual functionality requirements.
+
+
+Requirements engineering involves 3 key processes.
+- Discovering Requirements
+- Standardising and Specifying these requirements
+- Validating the requirements
+
+
+* Requirements Elicidation
+In order to discover what the requirements for a piece of ssoftware are, you should typically start with the customer.
+Stakeholders typically don't actually know what they want however, outside of general terms. It is therefore up to the developer to determine what the customer actually needs and what this will entail.
+They will also express their needs in terms of their own expertise, which means that the developer may have to interpret specific phrasology and terms of art from the users field.
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-9.png]]
+
+1. Discovery and understanding - interact with the customer to see what they need.
+2. Classification and Organzation - group related requirements and structure into coherent clusters to start forming features and subsystems.
+3. Prioritization and negotiation - identify conflicting requirements, identify unachievable or unrelated requirements. Discuss with client, compromise, and resolve issues.
+4. Documentation - document requirements, input into next step. Early draft of requirements document may be started.
+
+
+
+* Requirements Specification
+The process of recording user and system requirements in a requirements document.
+Ideally, should be unambiguous, easy to read, and consistent (practically, this is impossible).
+User requirements should be clear to those without technical knowledge.
+
+* Requirement Validation
+Checking that requirements define the system that the user actually wants.
+- Validity - checking that requirements reflect users real needs.
+- Consistency - requirements should not conflict
+- Completeness - Should include requirements that define all functions and intended constraints
+- Realism - using knowledge of existing technologies, check that requirements can be implemented within the proposed budget.
+- Verifiability - requirements should always be written so that they are verifiable. Should be able to test each requirement to determine if it is met.
+
+
+
+
