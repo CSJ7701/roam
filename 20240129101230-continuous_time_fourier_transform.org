@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       76251ef4-8b27-4712-8f17-772684b597b6
+:END:
+#+title: Continuous Time Fourier Transform
+#+filetags: :DSP:
+
+$x(t)=\int_{-\infty}^{\infty}X(F)e^{j2\pi Ft}df$
+$X(F)=\int_{-\infty}^{\infty}x(t)e^{-j2\pi Ft}dt$
+_Aperiodic x(t)_
+
+The majority of the techniques for solving are discussed in [[id:b492867b-a6a0-4a28-8720-3aecbfe766a4][Continuous Time Fourier Series]]
+
+* Example
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-3-2.png]]
+
+This is aperiodic.
+
+We can make a periodic extension however
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-3-3.png]]
+
+Find the Continuous Time Fourier Transform
+
+$X(F)=\int_{-\tau/2}^{\tau/2}Ae^{-j2\pi Ft}dt=A\tau\frac{sin(\pi Ft)}{\pi Ft}, t\ne0$
+Thus:
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-3-4.png]]
+
+

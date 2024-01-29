@@ -18,3 +18,10 @@ $P=lim_{n\rightarrow\infty}\frac{1}{2N+1}\sum_{n=-N}^{N}{|x(n)|^{2}}$
 If E is infinite, Power is 0. Average power on the otherhand could be finite.
 If E is infinite and Average Power is both finite and nonzero, the signal is called a power signal.
 
+* Energy and Power Density Spectra
+
+[[id:b492867b-a6a0-4a28-8720-3aecbfe766a4][Continuous Time Fourier Series]]
+$P_{x}=\frac{1}{T_{p}}\int_{T_{p}}|x(t)|^{2}dt=\sum_{k=-\infty}^{\infty}|C_{k}|^{2}$
+
+[[id:76251ef4-8b27-4712-8f17-772684b597b6][Continuous Time Fourier Transform]]
+$E_{x}=\int_{-\infty}^{\infty}|x(t)|^{2}dt=\int_{-\infty}^{\infty}|X(F)|^{2}dF$

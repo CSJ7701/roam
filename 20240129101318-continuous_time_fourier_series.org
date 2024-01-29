@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       b492867b-a6a0-4a28-8720-3aecbfe766a4
+:END:
+#+title: Continuous Time Fourier Series
+#+filetags: :DSP:
+
+* Continuous Time Fourier Series
+
+Synthesis and Analysis equations:
+
+$x(t)=\sum_{k=-\infty}^{\infty}C_{k}e^{j2\pi kF_{0}t}$
+$C_{k}=\frac{1}{T_{p}}\int_{T_{p}}x(t)e^{-j2\pi kF_{0}t}dt
+_Periodic x(t)_
+
+This is related to the [[id:76251ef4-8b27-4712-8f17-772684b597b6][Continuous Time Fourier Transform]]
+
+
+Linear expansion of complex exponentials
+Period $T_{p}=\frac{1}{F_0}$
+$e^{k2\pi kF_{0}t}$ forms the basis for our vector space
+
+* Finding $C_{k}$
+$\int_{t_{0}}^{t_{0}+T_{p}}x(t)e^{-j2\pi lF_{0}t}=\int_{t_{0}}^{t_{0}+T_{p}}x^{-j2\pi lF_{0}t}(\sum_{k=-\infty}^{\infty}C_{k}e^{j2\pi kF_{0}t})dt$
+Integrals and Summations are linear operators, so we can switch them here (sum of an integral is the same as the integral of a sum)
+$\sum_{k=-\infty}^{\infty}C_{k}\int_{t_{0}}^{t_{0}+T_{p}}e^{j2\pi f_{0}(k-l)t}dt=\sum_{k=-\infty}^{\infty}C_{k}[\frac{e^{j2\pi F_{0}(k-l)t}}{j2\pi F_{0}(k-l)}]|_{t_0}^{t_{0}+T_{p}}$
+
+If $k\ne l$, then this goes to 0, but for $k=l$, $\sum_{k=-\infty}^{\infty}C_{k}T_{p} = C_{l}T_{p}$
+
+* Dirichlet Conditions
+1. x(t) has finite # of discontinuations
+2. x(t) has finite # of minima and maxima
+3. x(t) has to be absolutely integrable
+
+
+* Example
+Find the Continuous Time Fourier Series of the pulse train
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/DSP-3-1.png]]
+
+1. Plug into Definition
+   $C_{k}=\frac{1}{T_{p}}\int_{-\tau/2}^{\tau/2}Ae^{-j2\pi kF_{0}t}dt=\frac{A}{T_{p}}[\frac{e^{-j2\pi kF_{0}t}}{-j2\pi kF_{0}}_{-\tau/2}^{\tau/2}$
+   Clearly k=0
+
+   For k=0, cant plug into the fraction, so plug into the initial function.
+   $\therefore C_{k}=$
+
+   *GET FROM LECTURE NOTES*
+
+   

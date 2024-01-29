@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       4ebb0211-c2a8-4e7e-840f-0d125afdbbeb
+:END:
+#+title: Fourier Series
+#+filetags: :DSP:
+
+* Continuous Time Fourier Series
+
+Synthesis and Analysis equations:
+
+$x(t)=\sum_{k=-\infty}^{\infty}C_{k}e^{j2\pi kF_{0}t}$
+$C_{k}=\frac{1}{T_{p}}\int_{T_{p}}x(t)e^{-j2\pi kF_{0}t}dt
+_Periodic x(t)_
+
+This is related to the 
