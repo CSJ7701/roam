@@ -7,3 +7,6 @@
 Reversal of implication with negation
 
 Contrapositive of =If p then q= is =If not q then not p=
+
+* Proof by contrapositive
+
