@@ -142,3 +142,46 @@ Linear models. like the one we created above, produce a "linear" curve (a line).
 #+RESULTS:
 #+ATTR_LATEX: :caption \bicaption{---}
 [[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-1.png]]
+* Deep Neural Networks
+We will be adding hidden layers to network, which will allow us to explore more complex relationships.
+
+Neural Networks typically organize their neurons into *layers*.
+When we collect sets of linear units which share a common set of inputs, we get a *dense layer*.
+
+If each layer in a network performs a simple operation, as we add more and more layers, we can achieve more and more complexity.
+
+Since dense layers are comprised of linear operations, placing two of them together with nothing in between performs no differently from a single dense layer.
+Because of this, we need to add a /nonlinear/ component - this is called the *activation function*.
+
+An activation function is simply a function that we apply to each of the layers outputs (also called its *activations*).
+The most common is the /rectifier function/, =max(0,x)=.
+When we attach the rectifier to a linear unit,we get something known as the rectified linear unit, or ReLU.
+Thus, the rectifier function is often known as the "ReLU function".
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-2.png]]
+
+
+The layers between the input and output are often called "hidden", since we can't directly see their output.
+The final (output) layer is always a linear unit when we are approaching a regression problem (solving for some arbitrary number).
+
+#+begin_src python :results verbatim
+
+   from tensorflow import keras
+   from tensorflow.keras import layers
+
+   model=keras.Sequential([
+  # Hidden ReLU Layers
+  layers.Dense(units=4, activation='relu', input_shape=[2]),
+  layers.Dense(units=3, activation='relu'),
+  # Linear Output Layer
+  layers.Dense(units=1),
+  ])
+
+#+end_src
+
+#+RESULTS:
+: None
+
+* Coding Exercise
+
