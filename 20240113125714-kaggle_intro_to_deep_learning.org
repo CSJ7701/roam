@@ -52,12 +52,14 @@ Set up Plotting
 #+end_src
 
 #+RESULTS:
-:    fixed acidity  volatile acidity  citric acid  residual sugar  chlorides  free sulfur dioxide  total sulfur dioxide  density    pH  sulphates  alcohol  quality
-: 0            7.4              0.70         0.00             1.9      0.076                 11.0                  34.0   0.9978  3.51       0.56      9.4        5
-: 1            7.8              0.88         0.00             2.6      0.098                 25.0                  67.0   0.9968  3.20       0.68      9.8        5
-: 2            7.8              0.76         0.04             2.3      0.092                 15.0                  54.0   0.9970  3.26       0.65      9.8        5
-: 3           11.2              0.28         0.56             1.9      0.075                 17.0                  60.0   0.9980  3.16       0.58      9.8        6
-: 4            7.4              0.70         0.00             1.9      0.076                 11.0                  34.0   0.9978  3.51       0.56      9.4        5
+:    fixed acidity  volatile acidity  citric acid  ...  sulphates  alcohol  quality
+: 0            7.4              0.70         0.00  ...       0.56      9.4        5
+: 1            7.8              0.88         0.00  ...       0.68      9.8        5
+: 2            7.8              0.76         0.04  ...       0.65      9.8        5
+: 3           11.2              0.28         0.56  ...       0.58      9.8        6
+: 4            7.4              0.70         0.00  ...       0.56      9.4        5
+: 
+: [5 rows x 12 columns]
 
 Get the /shape/ - number of rows and columns
 #+begin_src python :results verbatim :session Kaggle-DL
@@ -89,6 +91,22 @@ A models weights are stored in its =weights= attribute as a list of tensors.
 #+begin_src python :results verbatim :session Kaggle-DL
   model.weights
 #+end_src
+
+#+RESULTS:
+#+begin_example
+[<tf.Variable 'dense/kernel:0' shape=(11, 1) dtype=float32, numpy=
+array([[ 0.26382798],
+       [-0.49166387],
+       [-0.38165185],
+       [ 0.00448996],
+       [ 0.42288262],
+       [ 0.32784933],
+       [-0.2744874 ],
+       [-0.5374677 ],
+       [-0.44155195],
+       [ 0.26299298],
+       [ 0.32698447]], dtype=float32)>, <tf.Variable 'dense/bias:0' shape=(1,) dtype=float32, numpy=array([0.], dtype=float32)>]
+#+end_example
 
 Result should be:
 
@@ -185,3 +203,39 @@ The final (output) layer is always a linear unit when we are approaching a regre
 
 * Coding Exercise
 
+#+begin_src python :results verbatim :session Kaggle-DL-2
+  import tensorflow as tf
+  import matplotlib.pyplot as plt
+  import pandas as pd
+  from tensorflow import keras
+  from tensorflow.keras import layers
+
+  # plt.style.use('seaborn-whitegrid')
+  plt.rc('figure', autolayout=True)
+  plt.rc('axes',labelweight='bold',labelsize='large',titleweight='bold',titlesize='18',titlepad=10)
+
+  concrete=pd.read_csv('/home/csj7701/roam/References/Kaggle-ConcreteData.csv')
+  concrete.head()
+#+end_src
+
+#+RESULTS:
+:    Cement  BlastFurnaceSlag  FlyAsh  ...  FineAggregate  Age  CompressiveStrength
+: 0   540.0               0.0     0.0  ...          676.0   28                79.99
+: 1   540.0               0.0     0.0  ...          676.0   28                61.89
+: 2   332.5             142.5     0.0  ...          594.0  270                40.27
+: 3   332.5             142.5     0.0  ...          594.0  365                41.05
+: 4   198.6             132.4     0.0  ...          825.5  360                44.30
+: 
+: [5 rows x 9 columns]
+
+We want to target this model for 'CompressiveStrength'. There are 8 other columns, so we will set our input shape to 8 when we define our model.
+We will create a model with 3 hidden layers, each with 512 units and the ReLU activation. 
+#+begin_src python :results verbatim :session Kaggle-DL-2
+  model=keras.Sequential([
+  layers.Dense(units=512, activation='relu', input_shape=[8]),
+  layers.Dense(units=512, activation='relu'),
+  layers.Dense(units=512, activation='relu'),
+  layers.Dense(units=1)])
+#+end_src
+
+We can also define activation layers as their own layers - this is useful if we want to place anythin between
