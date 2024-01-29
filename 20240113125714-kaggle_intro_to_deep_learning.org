@@ -14,3 +14,81 @@ This depth is what enable deep learning models to disentangle and interpret comp
 Nerual Networks are recognized as the defining model of deep learning. They are composed of *Neurons*, where each neuron performs a single computation.
 Neurons, or /units/, with one input are defined by the equation $y=wx+b$, where the input is x. Its connection to the neuron has a multiplicative weight /w/.
 A neuron learns by modifying the weights attached to each neuron. /b/ represents the neurons bias - which is an additive constant that allows the neuron to modify its output independent of its input. 
+
+We can expand our neurons to take more inputs as well, in this case we would add multiple weights and keep our individual bias. This would create an equation that looked like this: $y=w_{0}x_{0}+w_{1}x_{1}+w_{2}x_{2}+b$ where each x is our input, like before, and each w is its corresponding weight.
+
+In python, we can use a tensorflow module called /keras/ to create deep learning models.
+
+#+begin_src python
+  from tensorflow import keras
+  from tensorflow.keras import layers
+
+  # Create a model with 1 linear unit
+  model=keras.Sequential([
+  layers.Dense(units=1, input_shape=[3])
+  ])
+#+end_src
+
+Here, =units= defines how many outputs we want.
+=input_shape= specifies the input dimensions, setting =input_shape = [3]= ensures the model will take input from 3 features.
+
+* Coding Exercise
+Set up Plotting
+#+begin_src python :results verbatim :session Kaggle-DL
+  import matplotlib.pyplot as plt
+
+  plt.style.use('seaborn-whitegrid')
+  plt.rc('figure', autolayout=True)
+  plt.rc('axes', labelweight='bold', labelsize='large', titleweight='bold', titlesize=18, titlepad=10)
+#+end_src
+
+#+RESULTS:
+
+#+begin_src python :results verbatim :session Kaggle-DL
+  import pandas as pd
+
+  red_wine=pd.read_csv('/home/csj7701/roam/References/Kaggle-WineData.csv')
+  red_wine.head()
+#+end_src
+
+#+RESULTS:
+:    fixed acidity  volatile acidity  citric acid  ...  sulphates  alcohol  quality
+: 0            7.4              0.70         0.00  ...       0.56      9.4        5
+: 1            7.8              0.88         0.00  ...       0.68      9.8        5
+: 2            7.8              0.76         0.04  ...       0.65      9.8        5
+: 3           11.2              0.28         0.56  ...       0.58      9.8        6
+: 4            7.4              0.70         0.00  ...       0.56      9.4        5
+: 
+: [5 rows x 12 columns]
+
+Get the /shape/ - number of rows and columns
+#+begin_src python :results verbatim :session Kaggle-DL
+  red_wine.shape
+#+end_src
+
+#+RESULTS:
+: (1599, 12)
+
+Defining a Linear Model, where the target is quality and the remaining columns are features.
+#+begin_src python :results verbatim :session Kaggle-DL
+  from tensorflow import keras
+  from tensorflow.keras import layers
+
+  model=keras.Sequential([
+  layers.Dense(units=1, input_shape=[11])
+  ])
+
+#+end_src
+
+#+RESULTS:
+
+Here, we know that there are 12 total columns, and since we are looking for quality, the remaining 11 will be inputs to our model. Thus, we have to ensure that the model takes 11 inputs.
+
+
+Keras represents weight with something called a *Tensor*, which is effectively an array that is treated specially by the tensorflow module. The main difference is that tensors are compatible with GPU and TPU acceleration.
+A models weights are stored in its =weights= attribute as a list of tensors.
+#+begin_src python :results verbatim :session Kaggle-DL
+  model.weights
+#+end_src
+
+#+RESULTS:
