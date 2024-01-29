@@ -52,14 +52,12 @@ Set up Plotting
 #+end_src
 
 #+RESULTS:
-:    fixed acidity  volatile acidity  citric acid  ...  sulphates  alcohol  quality
-: 0            7.4              0.70         0.00  ...       0.56      9.4        5
-: 1            7.8              0.88         0.00  ...       0.68      9.8        5
-: 2            7.8              0.76         0.04  ...       0.65      9.8        5
-: 3           11.2              0.28         0.56  ...       0.58      9.8        6
-: 4            7.4              0.70         0.00  ...       0.56      9.4        5
-: 
-: [5 rows x 12 columns]
+:    fixed acidity  volatile acidity  citric acid  residual sugar  chlorides  free sulfur dioxide  total sulfur dioxide  density    pH  sulphates  alcohol  quality
+: 0            7.4              0.70         0.00             1.9      0.076                 11.0                  34.0   0.9978  3.51       0.56      9.4        5
+: 1            7.8              0.88         0.00             2.6      0.098                 25.0                  67.0   0.9968  3.20       0.68      9.8        5
+: 2            7.8              0.76         0.04             2.3      0.092                 15.0                  54.0   0.9970  3.26       0.65      9.8        5
+: 3           11.2              0.28         0.56             1.9      0.075                 17.0                  60.0   0.9980  3.16       0.58      9.8        6
+: 4            7.4              0.70         0.00             1.9      0.076                 11.0                  34.0   0.9978  3.51       0.56      9.4        5
 
 Get the /shape/ - number of rows and columns
 #+begin_src python :results verbatim :session Kaggle-DL
@@ -81,6 +79,7 @@ Defining a Linear Model, where the target is quality and the remaining columns a
 #+end_src
 
 #+RESULTS:
+: None
 
 Here, we know that there are 12 total columns, and since we are looking for quality, the remaining 11 will be inputs to our model. Thus, we have to ensure that the model takes 11 inputs.
 
@@ -91,4 +90,55 @@ A models weights are stored in its =weights= attribute as a list of tensors.
   model.weights
 #+end_src
 
+Result should be:
+
+Weights
+<tf.Variable 'dense/kernel:0' shape=(11, 1) dtype=float32, numpy =
+array([[-0.5920056 ],
+       [-0.4777234 ],
+       [-0.16399086],
+       [ 0.3738181 ],
+       [-0.31306443],
+       [-0.3832509 ],
+       [ 0.52106875],
+       [ 0.14226216],
+       [-0.08233064],
+       [ 0.10293877],
+       [-0.1660847 ]], dtype=float32)>
+
+Bias
+<tf.Variable 'dense/bias:0' shape=(1,) dtype=float32, numpy=array([0.], dtype=float32)>
+
+We can see that there is one weight per input here, plus a single bias.
+There doesn't seem to be a pattern to the weight value - this is because the model is untrained. An untrained model will produce random weights, and a bias of 0.0
+The model /learns/ by finding better values for these weights.
+
+** Supplemental - plotting
+The examples we work with will primarily be /regression/ models - the goal is to predict some numeric target. These are essentially "curve-fitting" problems, where we try to find a curve that fits the data as closely as possible.
+Linear models. like the one we created above, produce a "linear" curve (a line).
+#+begin_src python :output verbatim image
+  import tensorflow as tf
+  from tensorflow import keras
+  from tensorflow.keras import layers
+  import matplotlib.pyplot as plt
+
+  model=keras.Sequential([layers.Dense(1, input_shape=[1]),])
+
+  x=tf.linspace(-1.0, 1.0, 100)
+  y=model.predict(x)
+
+  plt.figure(dpi=100)
+  plt.plot(x,y,'k')
+  plt.xlim(-1,1)
+  plt.ylim(-1,1)
+  plt.xlabel("Input: x")
+  plt.ylabel("Target y")
+  w, b = model.weights
+  plt.title("Weight: {:0.2f}\nBias: {:0.2f}".format(w[0][0], b[0]))
+  #plt.show()
+
+#+end_src
+
 #+RESULTS:
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-1.png]]
