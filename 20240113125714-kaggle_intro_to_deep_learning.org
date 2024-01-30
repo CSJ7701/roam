@@ -238,4 +238,253 @@ We will create a model with 3 hidden layers, each with 512 units and the ReLU ac
   layers.Dense(units=1)])
 #+end_src
 
-We can also define activation layers as their own layers - this is useful if we want to place anythin between
+We can also define activation layers as their own layers - this is useful if we want to place anything between a layer and its activation function.
+We can rewrite the block above like this:
+#+begin_src python
+  model=keras.Sequential([
+  layers.Dense(units=512, input_shape=[8]),
+  layers.Activation('relu')
+  layers.Dense(units=512),
+  layers.Activation('relu'),
+  layers.Dense(units=512),
+  layers.Activation('relu'),
+  layers.Dense(units=1)])
+#+end_src
+
+** Alternatives to ReLU
+There is a whole family of activation functions that are similar to ReLU. These include elu, selu, swish, and others.
+Below are shown graphs of several of these, determining which function to use is largely trial and error.
+
+ReLU:
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-relu-graph.png]]
+
+ELU:
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-elu-graph.png]]
+
+SeLU:
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-selu-graph.png]]
+
+Swish:
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-swish-graph.png]]
+
+* Stochastic Gradient Descent
+
+When we start 'training' our models, the most important component is a set of training data.
+This is the information that the model uses to 'learn' and base its weights and biases off of.
+In addition, we use a *loss function* to measure the network's prediction accuracy, and an *optimizer* to tell the network /how/ to change its weights.
+
+The loss function's primary job is to tell the network what problem to solve. It measures the disparity between the target's true value and the models prediction.
+Different problems require different loss functions. In what we've done so far, and in the [[id:a9221448-bfee-4bc6-b5d4-b1aa4db97be3][Kaggle: Intro to Machine Learning]] lesson, we've used primarily *regression*, where the goal is to predict some numerical value.
+A common loss function for these types of problems is *mean absolute error*, or [[file:20240113125509-kaggle_intro_to_machine_learning.org::*Model Validation][MAE]].
+For each prediction the model makes, =y_pred=, the model measures the distance from the target, =y_true= using an absolute difference =abs(y_true-y_pred)=.
+Besides these, other functions useful for regression include the mean-squared error (MSE) or the Huber loss functions.
+
+We've now identified the problem for the model to solve, but we need to identify /how/ to solve it. This is what the optimizer does - adjusts the weights to minimize loss.
+Almost all optimization functions used for deep learning are part of a family of functions called *Stochastic Gradient Descent*.
+They train a network in steps, where one iteration consists of the following:
+- Sample training data and run through model to get predictions
+- Measure the loss between the predictions and the true values
+- Adjust the weights in a direction that makes the loss smaller.
+- Repeat until you reach an acceptable amount of loss.
+
+
+Each individual sample is known as a /minibatch/, while a full iteration is called an /epoch/.
+These epochs make small sequential changes - where the amount of change is determined by the /learning rate/.
+A smaller learning rate means that the model will need to see more batches of training data before it accomplishes its goal.
+This learning rate, combined with the size of the minibatches, are the two most influential variables in model training.
+
+In most cases however, there is no need to adjust these in much depth. There are algorithms and functions that are designed to be adaptable and adjust both learning rate and/or batch size in order to improve performance.
+=Adam= is one of these.
+
+Adding a loss function and optimizer is relatively simple using the model's =compile= method.
+#+begin_src python
+  model.compile(
+      optimizer="adam",
+      loss="mae",
+      )
+#+end_src
+
+** Example
+#+begin_src python :results verbatim :session Kaggle-DL-3
+
+  import pandas as pd
+  
+  red_wine=pd.read_csv('/home/csj7701/roam/References/Kaggle-WineData.csv')
+
+  # Training and Validation Splits
+  df_train=red_wine.sample(frac=0.7, random_state=0)
+  df_valid=red_wine.drop(df_train.index)
+  df_train.head(4)
+
+#+end_src
+
+#+RESULTS:
+:       fixed acidity  volatile acidity  citric acid  residual sugar  chlorides  free sulfur dioxide  total sulfur dioxide  density    pH  sulphates  alcohol  quality
+: 1109           10.8             0.470         0.43            2.10      0.171                 27.0                  66.0  0.99820  3.17       0.76     10.8        6
+: 1032            8.1             0.820         0.00            4.10      0.095                  5.0                  14.0  0.99854  3.36       0.53      9.6        5
+: 1002            9.1             0.290         0.33            2.05      0.063                 13.0                  27.0  0.99516  3.26       0.84     11.7        7
+: 487            10.2             0.645         0.36            1.80      0.053                  5.0                  14.0  0.99820  3.17       0.42     10.0        6
+
+#+begin_src python :results verbatim :session Kaggle-DL-3
+
+  # Scale to [0,1]
+  max_=df_train.max(axis=0)
+  min_=df_train.min(axis=0)
+  df_train=(df_train-min_)/(max_-min_)
+  df_valid=(df_valid-min_)/(max_-min_)
+
+  # Split features and target
+  X_train=df_train.drop('quality',axis=1)
+  X_valid=df_valid.drop('quality',axis=1)
+  Y_train=df_train['quality']
+  Y_valid=df_valid['quality']
+
+#+end_src
+
+#+RESULTS:
+: None
+
+Now we need to determine the number of inputs that the network should have. To see the size of the dataset, we can run the following, then exclude our goal (quality) from the total.
+#+begin_src python :results verbatim :session Kaggle-DL-3
+  X_train.shape
+#+end_src
+
+#+RESULTS:
+: (1119, 11)
+This means that the number of inputs will be 11, since we have already excluded the 'quality' column. in the block above this one.
+
+Now we can start building our model. We will use 3 layers with 512 neurons each.
+#+begin_src python :results file :session Kaggle-DL-3
+
+  from tensorflow import keras
+  from tensorflow.keras import layers
+  import matplotlib.pyplot as plt
+
+  model=keras.Sequential([
+      layers.Dense(512, activation='relu', input_shape=[11]),
+      layers.Dense(512, activation='relu'),
+      layers.Dense(512, activation='relu'),
+      layers.Dense(1),
+   ])
+
+  model.compile(
+      optimizer='adam',
+      loss='mae',
+  )
+
+  history=model.fit(
+      X_train, Y_train,
+      validation_data=(X_valid, Y_valid),
+      batch_size=256,
+      epochs=10,
+  )
+
+  import pandas as pd
+
+  history_df=pd.DataFrame(history.history)
+  history_df['loss'].plot();
+  plt.savefig('/home/csj7701/roam/Attachments/Kaggle-DLExample.png')
+  '/home/csj7701/roam/Attachments/Kaggle-DLExample.png'
+#+end_src
+
+#+RESULTS:
+[[file:/home/csj7701/roam/Attachments/Kaggle-DLExample.png]]
+
+The plot levels out as the model runs through more epochs - when the loss curve becomes horizontal it indicates that the model has learned all it can and their is no benefit to additional epochs.
+
+* Coding Exercise
+#+begin_src python :session Kaggle-DL4
+
+  import matplotlib.pyplot as plt
+  import numpy as np
+  import pandas as pd
+  from sklearn.preprocessing import StandardScaler, OneHotEncoder
+  from sklearn.compose import make_column_transformer, make_column_selector
+  from sklearn.model_selection import train_test_split
+
+  plt.rc('figure', autolayout=True)
+  plt.rc('axes', labelweight='bold', labelsize='large',titleweight='bold',titlesize=18,titlepad=10)
+  plt.rc('animation',html='html5')
+
+  fuel=pd.read_csv('/home/csj7701/roam/References/Kaggle-FuelData.csv')
+
+  X=fuel.copy()
+  # Remove the target
+  Y=X.pop('FE')
+
+  preprocessor=make_column_transformer(
+      (StandardScaler(),
+       make_column_selector(dtype_include=np.number)),
+      (OneHotEncoder(sparse_output=False),
+       make_column_selector(dtype_include=object)),
+  )
+
+  X=preprocessor.fit_transform(X)
+  Y=np.log(Y) # Log transform target instead of standardising
+
+  input_shape=[X.shape[1]]
+  input_shape
+    
+#+end_src
+
+#+RESULTS:
+| 50 |
+
+#+begin_src python :results verbatim :session Kaggle-DL4
+
+  from tensorflow import keras
+  from tensorflow.keras import layers
+
+  model=keras.Sequential([
+      layers.Dense(128, activation='relu', input_shape=input_shape),
+      layers.Dense(128, activation='relu'),
+      layers.Dense(64, activation='relu'),
+      layers.Dense(1),
+      ])
+
+  model.compile(
+      optimizer='adam',
+      loss='mae',
+  )
+
+  history=model.fit(
+      X, Y,
+      batch_size=128,
+      epochs=200,
+  )
+
+#+end_src
+
+#+RESULTS:
+: None
+
+Now we can start looking at loss curves and evaluating performance.
+
+#+begin_src python :results file :session Kaggle-DL4
+
+  history_df=pd.DataFrame(history.history)
+  history_df.loc[5:, ['loss']].plot()
+  plt.savefig('/home/csj7701/roam/Attachments/Kaggle-DLFuel.png')
+  '/home/csj7701/roam/Attachments/Kaggle-DLFuel.png'
+
+#+end_src
+
+#+RESULTS:
+[[file:/home/csj7701/roam/Attachments/Kaggle-DLFuel.png]]
+
+Using the table below, we can experiment with different values for =learning_rate=, =batch_size=, =num_examples=
+
+| learning_rate | batch_size | num_examples |
+|          0.05 |         32 |          256 |
+|          0.05 |          2 |          256 |
+|          0.05 |        128 |          256 |
+|          0.02 |         32 |          256 |
+|           0.2 |         32 |          256 |
+|           1.0 |         32 |          256 |
+|           0.9 |       4096 |         8192 |
+|          0.99 |       4096 |         8192 |
+
