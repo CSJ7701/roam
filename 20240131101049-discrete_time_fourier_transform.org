@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       f9208e13-6c4c-4992-82bb-2e1a87e01040
+:END:
+#+title: Discrete Time Fourier Transform
+#+filetags: :DSP:
+
+$x(n)=\frac{1}{2\pi}\int_{2\pi}X(w)e^{jwn}dw$
+$X(w)=\sum_{n=-\infty}^{\infty}x(n)e^{-jwn}$
