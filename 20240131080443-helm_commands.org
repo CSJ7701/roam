@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       6d4f269d-b418-4680-947e-d226f41f86d0
+:END:
+#+title: Helm Commands
+#+filetags: :MWO:
+
+Orders given from the Conning Officer to the helmsman
+
+Generic Formula:
+- Direction (Left or Right)
+- Magnitude (Degrees)
+- "Rudder"
+
+
+Standard, Full, Hard. Hard requires confirmation
+Amidships
+Ease - half
+Equal Magnitude other side - shift
+Hows your rudder
+
+We can indicate specific directions using ships heading
+Steady as she goes
+Come left/right steer...
+
+
+Responses should be issued for every command
+Left standard rudder aye...
+Sir/Maam my rudder is __ degrees...
