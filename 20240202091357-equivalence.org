@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       689f1db9-f0be-4a6c-92d0-389bdff9ef37
+:END:
+#+title: Equivalence
+#+filetags: :Discrete:
+
+Two Statements with the same [[id:9fe544a4-897f-488f-bfd5-121266f687b6][Truth Tables]]
+
+
