@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       d4252113-bf9d-48c9-a063-4180e8e5e8bf
+:END:
+#+title: Transfer Functions of Translational Mechanical Systems
+#+filetags: :Controls:
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-4-1.png]]
+
+In mechanical systems, a spring is analogous to a capacitor, mass to an inductor, and a damper to a resistor.  
+We begin be using the relationships in the table to rewrite mechanical components into a transfer function.
+
+The sum of forces written in terms of velocity in a translational mechanical system is equivalent to the sum of voltages in terms of current in an electrical one.
+
+We can find the sum of forces using the equation $F(s)=Z_{m}(s)*X(s)$ where each component is written in the laplace domain. F(s) represents the forces, and Z(s) represents the transfer function that we create from the components, in terms of their impedance. 
