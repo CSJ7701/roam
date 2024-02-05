@@ -3,19 +3,23 @@
 :END:
 #+title: Music Server
 
-| Artist       | Album                    | Song            | Downloaded | Picarded |
-| 3 Doors Down | 3 Doors Down             |                 | y          | y        |
-| 3 Doors Down | Acoustic Back Porch Jam  |                 | y          | y        |
-| 3 Doors Down | Away From the Sun        |                 | y          | y        |
-| 3 Doors Down | Another 700 Mile         |                 | y          | y        |
-| 3 Doors Down | Seventeen Days           |                 | y          | y        |
-| 3 Doors Down | The Better Life          |                 | y          | y        |
-| 3 Doors Down | The Better Life (Deluxe) |                 | y          | y        |
-| 3 Doors Down | The Better Life (rare)   |                 | y          | y        |
-| 3 Doors Down | The Better Life (11)     |                 | y          | y        |
-| 3 Doors Down | Time of my Life (Deluxe) |                 | y          | y        |
-| 3 Doors Down | Us and the Night         |                 | y          | y        |
-| 3 Doors Down | Where my Christmas Lives |                 | y          | y        |
-| 3 Doors Down |                          | Shine           | y          | y        |
-| 3 Doors Down |                          | Champion In Me  | y          | y        |
-| 3 Doors Down |                          | Citizen Soldier | y          | y        |
+| Artist            | Album                    | Song            | Downloaded | Picarded |
+| 3 Doors Down      | 3 Doors Down             |                 | y          | y        |
+| 3 Doors Down      | Acoustic Back Porch Jam  |                 | y          | y        |
+| 3 Doors Down      | Away From the Sun        |                 | y          | y        |
+| 3 Doors Down      | Another 700 Mile         |                 | y          | y        |
+| 3 Doors Down      | Seventeen Days           |                 | y          | y        |
+| 3 Doors Down      | The Better Life          |                 | y          | y        |
+| 3 Doors Down      | The Better Life (Deluxe) |                 | y          | y        |
+| 3 Doors Down      | The Better Life (rare)   |                 | y          | y        |
+| 3 Doors Down      | The Better Life (11)     |                 | y          | y        |
+| 3 Doors Down      | Time of my Life (Deluxe) |                 | y          | y        |
+| 3 Doors Down      | Us and the Night         |                 | y          | y        |
+| 3 Doors Down      | Where my Christmas Lives |                 | y          | y        |
+| 3 Doors Down      |                          | Shine           | y          | y        |
+| 3 Doors Down      |                          | Champion In Me  | y          | y        |
+| 3 Doors Down      |                          | Citizen Soldier | y          | y        |
+| Avenged Sevenfold | Avenged Sevenfold        |                 | y          | y        |
+| Avenged Sevenfold | Black Reign              |                 | y          | y        |
+| Avenged Sevenfold | City of Evil             |                 | y          | y        |
+| Avenged Sevenfold | Diamonds in the Rough    |                 | y          | y        |
