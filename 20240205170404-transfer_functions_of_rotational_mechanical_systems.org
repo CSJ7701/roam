@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       4f923bb5-8a2c-462b-bb5d-e6fb0838dd4a
+:END:
+#+title: Transfer Functions of Rotational Mechanical Systems
+#+filetags: :Controls:
+
+We handle these systems similar to how we approached [[id:d4252113-bf9d-48c9-a063-4180e8e5e8bf][Transfer Functions of Translational Mechanical Systems]].
+In this case however, we replace force with torque and translational displacement with angular displacement.
+
+We use variables /K/, /D/, and /J/ to represent spring constant, coefficient of viscous friction, and moment of inertia.
+Writing the equations for these systems is much the same as for translational, except that we use torques instead of forces.
+We find these torques with superposition; rotating a body while holding all other points still.
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-4-2.png]]
+
+
