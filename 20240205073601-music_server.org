@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       9923b63d-e68d-4a32-a3b7-7f015e581ef2
+:END:
+#+title: Music Server
+
+| Artist       | Album                    | Song | Downloaded | Picarded |
+| 3 Doors Down | 3 Doors Down             |      | y          | y        |
+| 3 Doors Down | Acoustic Back Porch Jam  |      | y          | y        |
+| 3 Doors Down | Away From the Sun        |      | y          | y        |
+| 3 Doors Down | Another 700 Mile         |      | y          | y        |
+| 3 Doors Down | Seventeen Days           |      | y          | y        |
+| 3 Doors Down | The Better Life          |      | y          | n       |
+| 3 Doors Down | The Better Life (20th)   |      | y          | n        |
+| 3 Doors Down | The Better Life (Deluxe) |      | y          | n        |
+| 3 Doors Down | The Better Life (rare)   |      | y          | n        |
+| 3 Doors Down | The Better Life (11)     |      | y          | n        |
+| 3 Doors Down | Time of my Life (Deluxe) |      | y          | n        |
+| 3 Doors Down | Us and the Night         |      | y          | n        |
+| 3 Doors Down | Wasted Me                |      | y          | n        |
+| 3 Doors Down | Where my Christmas Lives |      | y          | n        |
