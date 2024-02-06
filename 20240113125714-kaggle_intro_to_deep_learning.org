@@ -488,3 +488,201 @@ Using the table below, we can experiment with different values for =learning_rat
 |           0.9 |       4096 |         8192 |
 |          0.99 |       4096 |         8192 |
 
+* Overfitting and Underfitting
+As we discussed in the [[id:a9221448-bfee-4bc6-b5d4-b1aa4db97be3][Kaggle: Intro to Machine Learning]] lesson, its possible to tune a model too close to the desired output. This is called overfitting. Similarly, if a model isn't fitted close enough to the desired result it won't achieve reasonable results.
+
+We can use the keras library to examing learning curves and see whether we are under or over fitting our model.
+These learning curves are essentially a representation of loss per epoch, and we compare the curve produced by the training data to that produced by the validation data in order to see how the model actually performs.
+
+When fitting a model, its important to understand the difference between *signal* and *noise*. The signal is the part of the data that carries actual useful information - information that can help our model make predictions. Anything else is known as noise. Ideally, a model learns from the signal and not noise, but if the model is too closely fitted to the training data it will take in more noise.
+Conversely, if it is fitted too loosely, it will not take in enough signal. This is shown in the graph below.
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-3.png]]
+
+Underfitting the training set occurs when the loss is not as low as it could be (because the model hasn't learned enough signal)
+Overfitting the training set occurs when the loss is not as low as it could be (because the model has learned too much noise)
+
+We can measure the size and complexity of patterns a model can learn through a variable called *complexity*.
+In general, this is determined by the number of neurons and how they are connected. If a network is underfitting, try increasing its capacity.
+You can do this by making it /wider/ (add more units to existing layers) or deeper (adding more layers).
+Wider networks generally learn linear relationships more easily, while deeper networks tend to perform better on non-linear ones.
+
+Sometimes, a model might learn noise to readily during training - this will result in an increase in loss in the training curve. To fix this, we can use a process called *Early Stopping*, where we end the training wherever the validation loss stops decreasing. This can help prevent overfitting.
+We can implement this early stop using a function known as a callback
+
+#+BEGIN_SRC python :results none
+  from tensorflow.keras.callbacks import EarlyStopping
+
+  early_stopping=EarlyStopping(
+      min_delta=0.001, # minimum amount of change to count as an improvement
+      patience=20, # how many epochs to wait before stopping
+      restore_best_weights=True,
+  )
+#+END_SRC
+
+We then add this callback function as an argument to the fit function, formatting our callbacks as a list
+
+#+begin_src python :results none
+
+  model.fit(
+      ...
+      epochs=500,
+      callbacks=[early_stopping],
+  )
+
+#+end_src
+
+When we use the early stop function, typically we want to choose a number of epochs larger than what we need.
+
+* Coding exercise
+#+begin_src python :results verbatim :session Kaggle-Dl-Spot
+  import matplotlib.pyplot as plt
+  import pandas as pd
+  from sklearn.preprocessing import StandardScaler, OneHotEncoder
+  from sklearn.compose import make_column_transformer
+  from sklearn.model_selection import GroupShuffleSplit
+  from tensorflow import keras
+  from tensorflow.keras import layers, callbacks
+
+  plt.rc('figure', autolayout=True)
+  plt.rc('axes', labelweight='bold', labelsize='large', titleweight='bold', titlesize=18, titlepad=10)
+
+  spotify=pd.read_csv('/home/csj7701/roam/References/Kaggle-SpotifyData.csv')
+
+  X=spotify.copy().dropna()
+  Y=X.pop('track_popularity')
+  artists=X['track_artist']
+
+  features_num=['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms']
+  features_cat=['playlist_genre']
+
+  preprocessor=make_column_transformer(
+      (StandardScaler(), features_num),
+      (OneHotEncoder(), features_cat),
+      )
+
+  # We use a grouped split here to keep artist songs in one group or another
+  def group_split(X, Y, group, train_size=0.75):
+      splitter= GroupShuffleSplit(train_size=train_size)
+      train, test=next(splitter.split(X,Y,groups=group))
+      return (X.iloc[train], X.iloc[test], Y.iloc[train], Y.iloc[test])
+
+  X_train, X_valid, Y_train, Y_valid=group_split(X,Y,artists)
+
+  X_train=preprocessor.fit_transform(X_train)
+  X_valid=preprocessor.transform(X_valid)
+  Y_train=Y_train/100 # Popularity is on a 0-100 scale. Rescales to 0-1
+  Y_valid=Y_valid/100
+
+  input_shape=[X_train.shape[1]]
+  input_shape
+
+#+end_src
+
+#+RESULTS:
+: [18]
+
+
+#+begin_src python :results verbatim :session Kaggle-Dl-Spot
+  model=keras.Sequential([
+      layers.Dense(1, input_shape=input_shape),
+      ])
+  model.compile(
+      optimizer='adam',
+      loss='mae',
+      )
+  history=model.fit(
+      X_train, Y_train,
+      validation_data=(X_valid, Y_valid),
+      batch_size=512,
+      epochs=50,
+      verbose=0,
+      )
+  history_df=pd.DataFrame(history.history)
+  history_df.loc[0:, ['loss', 'val_loss']].plot()
+
+  history_df['val_loss'].min()
+#+end_src
+
+#+RESULTS:
+: 0.19460612535476685
+
+We get the following graph from this model:
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-4.png]]
+
+If we zoom in we see:
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-5.png]]
+
+The gap here is quite small, and validation loss never increases, so its likely that the model is underfitting.
+Next, we will increase the models capacity to see if we can improve this performance.
+
+#+begin_src python :results verbatim :session Kaggle-Dl-Spot
+
+  model=keras.Sequential([
+      layers.Dense(128, activation='relu', input_shape=input_shape),
+      layers.Dense(64, activation='relu'),
+      layers.Dense(1)
+      ])
+  model.compile(
+      optimizer='adam',
+      loss='mae',
+      )
+  history=model.fit(
+      X_train, Y_train,
+      validation_data=(X_valid, Y_valid),
+      batch_size=512,
+      epochs=50,
+      )
+  history_df=pd.DataFrame(history.history)
+  history_df.loc[:, ['loss', 'val_loss']].plot()
+  history_df['val_loss'].min()
+
+#+end_src
+
+#+RESULTS:
+: 0.1932375431060791
+
+This model produces the following graph:
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-6.png]]
+
+This shows the validation loss rising early, while training loss continues to decrease; which indicates that the model has begun to overfit. To prevent this, we must either reduce the number of units, or try early stopping. We will try early stopping.
+
+#+begin_src python :results verbatim :session Kaggle-Dl-Spot
+
+  early_stopping=callbacks.EarlyStopping(
+      patience=5,
+      min_delta=0.001,
+      restore_best_weights=True,
+      )
+
+  model=keras.Sequential([
+      layers.Dense(128, activation='relu', input_shape=input_shape),
+      layers.Dense(64, activation='relu'),
+      layers.Dense(1)])
+
+  model.compile(
+      optimizer='adam',
+      loss='mae')
+
+  history=model.fit(
+      X_train, Y_train, validation_data=(X_valid, Y_valid),
+      batch_size=512, epochs=50, callbacks=[early_stopping])
+
+  history_df=pd.DataFrame(history.history)
+  history_df.loc[:, ['loss', 'val_loss']].plot()
+  history_df['val_loss'].min()
+#+end_src
+
+#+RESULTS:
+: 0.1936691850423813
+
+This trial returns:
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-7.png]]
+
+This is an improvement . We can see that the model stops once it began overfitting. 
