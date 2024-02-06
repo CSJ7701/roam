@@ -605,7 +605,7 @@ When we use the early stop function, typically we want to choose a number of epo
 #+end_src
 
 #+RESULTS:
-: 0.19460612535476685
+: 0.19785484671592712
 
 We get the following graph from this model:
 #+ATTR_LATEX: :caption \bicaption{---}
@@ -643,7 +643,7 @@ Next, we will increase the models capacity to see if we can improve this perform
 #+end_src
 
 #+RESULTS:
-: 0.1932375431060791
+: 0.1985759139060974
 
 This model produces the following graph:
 #+ATTR_LATEX: :caption \bicaption{---}
@@ -678,7 +678,7 @@ This shows the validation loss rising early, while training loss continues to de
 #+end_src
 
 #+RESULTS:
-: 0.1936691850423813
+: 0.1996046006679535
 
 This trial returns:
 
@@ -686,3 +686,183 @@ This trial returns:
 [[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-7.png]]
 
 This is an improvement . We can see that the model stops once it began overfitting. 
+
+* Dropout and Batch Normalization
+So far, we have used primarily /Dense Layers/. There are other kinds however.
+The first of these is known a the *Dropout Layer*.
+We use this layer to help correct overfitting. The dropout layer will randomly /drop/ some fraction of a layer's input units on every step of training.
+This serves to vary the training data and make it more difficult for the model to adhere to closely to any incidental patterns in the training data that might not be indicative of the actual data.
+Similar to adding Dense layers, we specify Dropout layers inside our model definition immediately before the layer that we want the drop to apply to. These layers take a /rate/ argument, that defines what percentage of the input to remove.
+
+Another special layer is the batch normalization, or 'batchnorm' layer. This is used to help correct data that is slow or unstable.
+Its generally helpful to apply the same scale to all of the data that we feed into a model.
+_This is because weight shifts proportionally to the size of an inputs activation. If there are differences in activation size, the network can become unstable as it trains._
+If we normalize the data that we input into the network, it may make more sense to normalize inside of the network. This is what the batch normalization layer is for.
+The batch normalization layer takes each batch and normalizes according to mean and standard deviation, scaling this data with 2 parameters that are each 'trainable'.
+Typically, this is added in order to help with the optimization process; although it can help with prediction.
+Batch normalization layers can be added at almost any point within a network; this includes after a layer, or between a layer and its activation function.
+It can also be added as the first layer of the network where it can replace other forms of input processors.
+
+** Example
+#+begin_src python :results none
+
+  from tensorflow import keras
+  from tensorflow.keras import layers
+
+  model=keras.Sequential([
+      layers.Dense(1024, activation='relu', input_shape=[11]),
+      layers.Dropout(0.3),
+      layers.BatchNormalization(),
+      layers.Dense(1024, activation='relu'),
+      layers.Dropout(0.3),
+      layers.BatchNormalization(),
+      layers.Dense(1024, activation='relu'),
+      layers.Dropout(0.3),
+      layers.BatchNormalization(),
+      layers.Dense(1),
+      ])
+
+  model.compile(
+      optimizer='adam',
+      loss='mae',
+      )
+
+  history=model.fit(
+      X_train, Y_train,
+      validation_data=(X_valid, Y_valid),
+      batch_size=256,
+      epochs=100,
+      verbose=0,
+      )
+
+#+end_src
+
+* Coding Exercise
+
+We use the same session as the last exercise, working with spotify data.
+
+#+begin_src python :results verbatim :session Kaggle-Dl-Spot
+
+  model=keras.Sequential([
+      layers.Dense(128, activation='relu', input_shape=input_shape),
+      layers.Dropout(0.3),
+      layers.Dense(64, activation='relu'),
+      layers.Dropout(0.3),
+      layers.Dense(1)])
+
+#+end_src
+
+#+RESULTS:
+: None
+
+Now we compile and train the model, comparing it to the previous results in order to check the impact of our new dropout layers.
+
+#+begin_src python :results verbatim :session Kaggle-Dl-Spot
+
+  model.compile(
+      optimizer='adam',
+      loss='mae',
+      )
+  history=model.fit(
+      X_train, Y_train,
+      validation_data=(X_valid, Y_valid),
+      batch_size=512,
+      epochs=50,
+      verbose=0,
+      )
+  history_df=pd.DataFrame(history.history)
+  history_df.loc[:, ['loss', 'val_loss']].plot()
+  "Minimum Validation Loss: {:0.4f}".format(history_df['val_loss'].min())
+
+#+end_src
+
+#+RESULTS:
+: Minimum Validation Loss: 0.1942
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-8.png]]
+
+Here, we see that validation loss remains near a constant minimum, even though training loss continues to decrease. This indicates that adding dropout layers did seem to help prevent overfitting this time, which previousy occured around epoch 5.
+
+Now we switch gears to examine batch normalization
+#+begin_src python :results verbatim :session Kaggle-Dl-Spot
+
+  import pandas as pd
+
+  concrete=pd.read_csv('/home/csj7701/roam/References/Kaggle-ConcreteData.csv')
+  df=concrete.copy()
+    
+  df_train=df.sample(frac=0.7, random_state=0)
+  df_valid=df.drop(df_train.index)
+
+  X_train=df_train.drop('CompressiveStrength', axis=1)
+  X_valid=df_valid.drop('CompressiveStrength', axis=1)
+  Y_train=df_train['CompressiveStrength']
+  Y_valid=df_valid['CompressiveStrength']
+
+  input_shape=[X_train.shape[1]]
+
+  model=keras.Sequential([
+      layers.Dense(512, activation='relu', input_shape=input_shape),
+      layers.Dense(512, activation='relu'),
+      layers.Dense(512, activation='relu'),
+      layers.Dense(1),
+      ])
+  model.compile(
+      optimizer='sgd', # SGD is more sensitive to changes in scale
+      loss='mae',
+      metrics=['mae'],
+      )
+  history=model.fit(
+      X_train, Y_train,
+      validation_data=(X_valid, Y_valid),
+      batch_size=64,
+      epochs=100,
+      verbose=0,
+      )
+  history_df=pd.DataFrame(history.history)
+  history_df.loc[0:, ['loss', 'val_loss']].plot()
+  "Minimum Validation Loss: {:0.4f}".format(history_df['val_loss'].min())
+#+end_src
+
+#+RESULTS:
+: Minimum Validation Loss: nan
+
+We got an invalid result - we can use normalization to help correct this.
+
+#+begin_src python :results verbatim :session Kaggle-Dl-Spot
+
+  model=keras.Sequential([
+      layers.BatchNormalization(),
+      layers.Dense(512, activation='relu', input_shape=input_shape),
+      layers.BatchNormalization(),
+      layers.Dense(512, activation='relu'),
+      layers.BatchNormalization(),
+      layers.Dense(512, activation='relu'),
+      layers.BatchNormalization(),
+      layers.Dense(1),
+      ])
+  model.compile(
+      optimizer='sgd',
+      loss='mae',
+      metrics=['mae'])
+  EPOCHS=100
+  history=model.fit(
+      X_train, Y_train,
+      validation_data=(X_valid, Y_valid),
+      batch_size=64,
+      epochs=EPOCHS,
+      verbose=0)
+  history_df=pd.DataFrame(history.history)
+  history_df.loc[0:, ['loss', 'val_loss']].plot()
+  "Minimum Validation Loss: {:0.4f}".format(history_df['val_loss'].min())
+
+#+end_src
+
+#+RESULTS:
+: Minimum Validation Loss: 3.9999
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-9.png]]
+
+Here, we can see that adding batch normalization was a significant improvement on the first attempt (We actually got a result). 
