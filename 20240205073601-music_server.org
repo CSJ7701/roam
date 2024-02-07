@@ -65,4 +65,11 @@
 | Chevelle             | Hats Off to the Bull         |                     | y          | y           |
 | Chevelle             | La Gargola                   |                     | y          | y           |
 | Chevelle             | Live From the Road           |                     | y          | y           |
-| Chevelle             |                              |                     |            |             |
+| Chevelle             | NIRATIAS                     |                     | y          | y           |
+| Chevelle             | Point #1                     |                     | y          | y           |
+| Chevelle             | Sci-Fi Crimes                |                     | y          | y           |
+| Chevelle             |                              | Self Destructor     | y          | y           |
+| Chevelle             | The North Corridor           |                     | y          | y           |
+| Chevelle             | This Type Of Thinking        |                     | y          | y           |
+| Chevelle             | Vena Sera                    |                     | y          | y           |
+| Chevelle             | Wonder What's Next           |                     | y          | y           |
