@@ -910,7 +910,6 @@ The following example shows how we can implement our new activation and loss fun
 
 #+end_src
 
-
 * Coding Exercise
 
 #+begin_src python :results verbatim :session Kaggle-DL-Hotel
@@ -934,10 +933,10 @@ The following example shows how we can implement our new activation and loss fun
               {'January':1, 'February':2, 'March':3, 'April':4, 'May':5, 'June':6, 'July':7, 'August':8, 'September':9, 'October':10, 'November':11, 'December':12})
 
   features_num=[
-      "lead_time", "arrival_date_week_number", "arrival_data_day_of_month", "stays_in_weekend_nights", "stays_in_week_nights", "adults", "children", "babies", "is_repeated_guest", "previous_cancellations", "previous_bookings_not_cancelled", "required_car_parking_spaces", "total_of_special_requests", "adr"]
+      "lead_time", "arrival_date_week_number", "arrival_date_day_of_month", "stays_in_weekend_nights", "stays_in_week_nights", "adults", "children", "babies", "is_repeated_guest", "previous_cancellations", "previous_bookings_not_canceled", "required_car_parking_spaces", "total_of_special_requests", "adr"]
 
   features_cat=[
-      "hotel", "arrival_date_month", "meal", "market_segment", "distribution_channel", "reserver_room_type", "deposit_type", "customer_type"]
+      "hotel", "arrival_date_month", "meal", "market_segment", "distribution_channel", "reserved_room_type", "deposit_type", "customer_type"]
 
   transformer_cat=make_pipeline(
       SimpleImputer(strategy="constant", fill_value="NA"),
@@ -952,20 +951,20 @@ The following example shows how we can implement our new activation and loss fun
       (transformer_cat, features_cat))
 
   X_train, X_valid, Y_train, Y_valid = \
-          train_test_split(X,Y,stratify=y,train_size=0.75)
+          train_test_split(X,Y,stratify=Y,train_size=0.75)
   X_train=preprocessor.fit_transform(X_train)
   X_valid=preprocessor.transform(X_valid)
 
   input_shape=[X_train.shape[1]]
 
-  model.keras=keras.Sequential([
+  model=keras.Sequential([
       layers.BatchNormalization(input_shape=input_shape),
       layers.Dense(256, activation='relu'),
       layers.BatchNormalization(),
-      layers.Droput(0.3),
+      layers.Dropout(0.3),
       layers.Dense(256, activation='relu'),
       layers.BatchNormalization(),
-      layers.Droput(0.3),
+      layers.Dropout(0.3),
       layers.Dense(1, activation='sigmoid')])
 
 
@@ -975,7 +974,31 @@ The following example shows how we can implement our new activation and loss fun
       metrics=['binary_accuracy'],
       )
 
+  early_stopping=keras.callbacks.EarlyStopping(
+      patience=5,
+      min_delta=0.001,
+      restore_best_weights=True)
+  history=model.fit(
+      X_train, Y_train,
+      validation_data=(X_valid, Y_valid),
+      batch_size=512,
+      epochs=200,
+      callbacks=[early_stopping])
+  history_df=pd.DataFrame(history.history)
+
 #+end_src
 
 #+RESULTS:
+: None
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-11.png]]
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-12.png]]
+
+
+We can see the training loss continuing to fall, but the early stopping callback prevents overfitting.
+The accuracy rises at the same rate as the cross-entropy fell, so it appears that this training worked well.
+
 
