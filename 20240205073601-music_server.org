@@ -60,3 +60,9 @@
 | Breaking Benjamin    | So Cold                      |                     | y          | y           |
 | Breaking Benjamin    | We are Not Alone             |                     | y          | y           |
 | Breaking Benjamin    |                              | Blow Me Away        | y          | y           |
+| Chevelle             | 12 Bloody Spies              |                     | y          | y           |
+| Chevelle             | Any Last Words               |                     | y          | y           |
+| Chevelle             | Hats Off to the Bull         |                     | y          | y           |
+| Chevelle             | La Gargola                   |                     | y          | y           |
+| Chevelle             | Live From the Road           |                     | y          | y           |
+| Chevelle             |                              |                     |            |             |
