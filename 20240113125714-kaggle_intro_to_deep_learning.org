@@ -866,3 +866,116 @@ We got an invalid result - we can use normalization to help correct this.
 [[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-9.png]]
 
 Here, we can see that adding batch normalization was a significant improvement on the first attempt (We actually got a result). 
+
+* Binary Classification 
+So far, we have approached /regression/ problems. These are situations where we seek to find some number or variable. Now, we are going to approach /classification/.
+
+The main difference is the loss function we use and the types of outputs that we are looking for.
+
+One of the simplest cases is /binary classification/, where we divide objects into one of two classes.
+We can represent the class with strings like "yes" and "no", or "dog" and "cat", etcetera in our raw data.
+
+Probably the most important metric for applications like this is *Accuracy* - a measurement of classification success.
+In general, accuracy=number_correct / total. A model that /always/ predicts correctly will have a rate of 1.0
+This can't be used as a loss function however.
+
+Loss functions are meant to define the /objective/ of a network. For classification problems, we want to measure the /distance between probabilities/. *Cross Entropy* approximates this.
+In essense, we want our network to predict the correct class with probability 1.0. The further the probability is from 1.0, the greater out cross entropy loss will be.
+
+Since we are using cross-entropy as our loss function (which measures the distance between two probabiilty distributions), we need to ensure that our input is a probability (meaning on the scale from 0 to 1).
+To convert the output of our Dense layers into probabilities, we use the *sigmoid activation*, which looks like this:
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Kaggle-Deep-Learning-10.png]]
+
+In order to get a class prediction, we also define a /threshold probability/, which is typically 0.5.
+
+The following example shows how we can implement our new activation and loss functions.
+
+#+begin_src python :results none
+
+  from tensorflow import keras
+  from tensorflow.keras import layers
+
+  model=keras.Sequential([
+      layers.Dense(4, activation='relu', input_shape=[33]),
+      layers.Dense(4, activation='relu'),
+      layers.Dense(1, activation='sigmoid'),
+      ])
+
+  model.compile(
+      optimizer='adam',
+      loss='binary_crossentropy',
+      metrics=['binary_accuracy'],
+      )
+
+#+end_src
+
+
+* Coding Exercise
+
+#+begin_src python :results verbatim :session Kaggle-DL-Hotel
+
+  import pandas as pd
+  from tensorflow import keras
+  from tensorflow.keras import layers
+  from sklearn.model_selection import train_test_split
+  from sklearn.preprocessing import StandardScaler, OneHotEncoder
+  from sklearn.impute import SimpleImputer
+  from sklearn.pipeline import make_pipeline
+  from sklearn.compose import make_column_transformer
+
+  hotel=pd.read_csv('/home/csj7701/roam/References/Kaggle-HotelData.csv')
+
+  X=hotel.copy()
+  Y=X.pop('is_canceled')
+
+  X['arrival_date_month'] = \
+          X['arrival_date_month'].map(
+              {'January':1, 'February':2, 'March':3, 'April':4, 'May':5, 'June':6, 'July':7, 'August':8, 'September':9, 'October':10, 'November':11, 'December':12})
+
+  features_num=[
+      "lead_time", "arrival_date_week_number", "arrival_data_day_of_month", "stays_in_weekend_nights", "stays_in_week_nights", "adults", "children", "babies", "is_repeated_guest", "previous_cancellations", "previous_bookings_not_cancelled", "required_car_parking_spaces", "total_of_special_requests", "adr"]
+
+  features_cat=[
+      "hotel", "arrival_date_month", "meal", "market_segment", "distribution_channel", "reserver_room_type", "deposit_type", "customer_type"]
+
+  transformer_cat=make_pipeline(
+      SimpleImputer(strategy="constant", fill_value="NA"),
+      OneHotEncoder(handle_unknown='ignore'))
+
+  transformer_num=make_pipeline(
+      SimpleImputer(strategy="constant"),
+      StandardScaler())
+
+  preprocessor=make_column_transformer(
+      (transformer_num, features_num),
+      (transformer_cat, features_cat))
+
+  X_train, X_valid, Y_train, Y_valid = \
+          train_test_split(X,Y,stratify=y,train_size=0.75)
+  X_train=preprocessor.fit_transform(X_train)
+  X_valid=preprocessor.transform(X_valid)
+
+  input_shape=[X_train.shape[1]]
+
+  model.keras=keras.Sequential([
+      layers.BatchNormalization(input_shape=input_shape),
+      layers.Dense(256, activation='relu'),
+      layers.BatchNormalization(),
+      layers.Droput(0.3),
+      layers.Dense(256, activation='relu'),
+      layers.BatchNormalization(),
+      layers.Droput(0.3),
+      layers.Dense(1, activation='sigmoid')])
+
+
+  model.compile(
+      optimizer='adam',
+      loss='binary_crossentropy',
+      metrics=['binary_accuracy'],
+      )
+
+#+end_src
+
+#+RESULTS:
+
