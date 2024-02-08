@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       33b76017-a072-4621-b8ea-4b54c793103d
+:END:
+#+title: Transfer Functions of Gear Systems
+#+filetags: :Controls:
+
+Having discussed [[id:4f923bb5-8a2c-462b-bb5d-e6fb0838dd4a][Transfer Functions of Rotational Mechanical Systems]], we see that these types of systems are rarely present without gears of some form.
+Gears provide mechanical advantage to rotational systems, adjusting both speed and torque based on the size ratio between the two gears.
+
+The ratio between gears is calculated based on the number of teeth in each gear.
+Since we know that two connected gears will rotate with the same angular velocity, we can say that $r_{1}\Theta_{1}=r_{2}\Theta_{2}$, and from this we derive the equation $\frac{\Theta_{2}}{\Theta_{1}}=\frac{r_{1}}{r_{2}}=\frac{N_{1}}{N_{2}}$
+
+Since we assume the gears are lossless, we generalize the same relationship with torque - $\frac{T_{2}}{T_{1}}=\frac{\Theta_{1}}{\Theta_{2}}=\frac{N_{2}}{N_{1}}$
+
+
