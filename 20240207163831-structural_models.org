@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       f60251b1-6a38-4fb4-8d33-53c233737337
+:END:
+#+title: Structural Models
+#+filetags: :SoftwareEngineering:
+
+Structural Models display the organization of a system in terms of the components that make up the system and their relationships. These are a type of [[id:67b49bb0-5ed4-4f37-a5bd-e8d291fd1eb8][UML]] model.
+These are particularly useful when organizing and designing system architecture. The most common structural model is the [[id:41e6c4ca-5f0f-416a-a583-896689e857d9][Class Diagram]], which is primarily what we will be discussing. 

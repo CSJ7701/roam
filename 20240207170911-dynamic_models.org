@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       9021b0eb-b11b-4fde-b014-eb5847157633
+:END:
+#+title: Dynamic Models
+#+filetags: :SoftwareEngineering:
+
+Describe the dynamic structure of the system and show the expected interactions between a system and its objects. 

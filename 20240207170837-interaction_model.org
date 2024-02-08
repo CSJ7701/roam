@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       cb4cb33b-84ec-40cb-b935-c3e1fb3964a1
+:END:
+#+title: Interaction Model
+#+filetags: :SoftwareEngineering:
+
+A type of [[id:9021b0eb-b11b-4fde-b014-eb5847157633][Dynamic Models]].
+Shows how a systems interacts with its environment as it is used. 

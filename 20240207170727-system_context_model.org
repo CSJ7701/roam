@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       96cfff2e-2ce2-4b87-80ec-e80158f06dc6
+:END:
+#+title: System Context Model
+#+filetags: :SoftwareEngineering:
+
+A type of [[id:f60251b1-6a38-4fb4-8d33-53c233737337][Structural Models]] used to demonstrate the other systems that operate in the same environment of a system that is being developed. 

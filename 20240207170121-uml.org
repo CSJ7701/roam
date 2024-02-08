@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       67b49bb0-5ed4-4f37-a5bd-e8d291fd1eb8
+:ROAM_ALIASES: "Unified Modeling Language"
+:END:
+#+title: UML
+#+filetags: :SoftwareEngineering:
+
+UML Models are useful for visualizing and describing various aspects of a systems architecture. Typically used during the development process, they can be used to analyze a system from a high level, or to analyze a specific function within a system.
+
+They are particularly useful when developing Object Oriented Systems. While design is not a well defined process, typically the goal is to:
+1. Understand/Define context and external interactions
+2. Design the architecture
+3. Identify principal objects within the system
+4. Develop models
+5. Specify interfaces
+
+UML is useful for each of these steps.
+
+A type of model called a [[id:96cfff2e-2ce2-4b87-80ec-e80158f06dc6][System Context Model]] is a type of structural model. It helps to visualize external interactions.
+An [[id:cb4cb33b-84ec-40cb-b935-c3e1fb3964a1][Interaction Model]] helps to show how a system interacts with its environment as it is used. 
+[[id:694fe1cd-7dc8-437c-b702-ee3a673e4bff][Use Case Models]] help to visualize how a system will be used and the actors to which these actions will be applied.
+
+[[id:a52bd9ae-708e-4152-9e5e-a507604ab7c7][Architectural Design Models]] are an example of a higher level diagram, these are similar to [[id:41e6c4ca-5f0f-416a-a583-896689e857d9][Class Diagram]]s. 

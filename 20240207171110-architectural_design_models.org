@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       a52bd9ae-708e-4152-9e5e-a507604ab7c7
+:END:
+#+title: Architectural Design Models
+

@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       41e6c4ca-5f0f-416a-a583-896689e857d9
+:END:
+#+title: Class Diagram
+#+filetags: :SoftwareEngineering:
+
+
+Class Diagrams are used to develop object oriented systems, and help to show the classes that make up that system and the associations between them. They are a type of [[id:67b49bb0-5ed4-4f37-a5bd-e8d291fd1eb8][UML]] model. 
+
+In the early stages of this process, the objects in a diagram likely consist of "real-world" objects.
+As methods and implementations are developed however, you will have more and more objects that consist of intangible concepts and processes.
+
+When developing these diagrams, one of the most important concepts is the relationships between classes. These are represented by the types of lines that connect them.
+In most general cases, you can represent these relationships using /multiplicities/.
+These designate quantity - =1= indicates a single object, =1..*= indicates one or many, =1..0= indicates one or zero, etc.
+
+After you designate basic classes and the relationships between them, you can start to indicate the attributes and methods that are associated with these classes.
+
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/SoftwareEngineering-10.png]]
+
+Here, the name of the object is shown at the very top, the class attributes are in the middle section (including attribute name and optionally, their type), and operations (or methods) in the section at the bottom.
+
+When indicating relationship, we can specify a /generalization/ instead of a simple numerical relationship, specified by an arrow at the end of the connecting line.
+Generalization indicates something that we can assume all classes posses. For example, if we have a class "rodent" that has attributes like "teeth" and "fur", then we can generalize two classes "rats" and "squirrels" into that class that will share the attributes of the rodent class.
+Practically, this is the same as attribution but at a lower level - this would likely be where we start to form ideas and create the base arhitecture for a system before moving to the next step where we define multiplicity.
+
+We can also designate aggregation, which indicates that an object possesses or is made up of /multiple/ of another object.
+We add a diamond shape at the end of the connecting line. 

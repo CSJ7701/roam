@@ -7,7 +7,7 @@
 
 A Software Process Model is a simplified representation of a [[file:20240120153725-what_is_software_engineering.org::11][Software Process]].
 
-There are a variety of very simple process models, often referred to as process paradigms.
+There are a variety of very simple process models, often referred to as process paradigms. These are typically all types of [[id:67b49bb0-5ed4-4f37-a5bd-e8d291fd1eb8][UML]] or Unified Modeling Language models. 
 
 - Waterfall Model: Takes [[id:f3a0fc8c-8ec5-4663-8a3f-4d51e7bab2b9][Software Engineering Process Activities]] and represents them as seperate process phases.
 - Incremental Development: Interleaves the activities of specification, development and validation. The system is developed as a series of versions, with each version adding functionality to the previous version. 
