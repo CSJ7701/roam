@@ -1,0 +1,101 @@
+:PROPERTIES:
+:ID:       105f9a39-d98f-483a-bdc4-d3533c4cc3ae
+:END:
+#+title: Exam 1 Review
+#+filetags: :MWO:
+
+Standing Orders
+- 4 things to do before assuming watch
+- Reasons to call CO for contact reporting ##
+- Calling the CO for weather ##
+- Any other reasons (Not including weather or contacts) ##
+
+3 Min Rule
+D(yds)/100=S(kts)
+S(kts)*100=D(yds)
+
+6 Min Rule
+D(nm)*10=S(kts)
+S(kts)/10=D(nm)
+
+Radar
+- Information you can get from relative vectors
+  (CPA, TCPA, etc)
+- Getting Aspect from true vectors
+- Risk of Collision (traffic, maneuverability for both boats, speed, course)
+
+
+Situations
+- Dayshapes
+- Hierarchy, Crossing, Head On, Overtaking
+- Proper actions (Give-way vs. Stand On)
+- Narrow Channels
+- Seperation Schemes
+
+
+| Crossing                  | Head on              | Hierarchy       | Overtaking                                        |
+| Two PDV                   | Two PDV              | Different Types | Two Vessels (any type)                            |
+| ROC                       | ROC                  | ROC             | ROC                                               |
+| In-Sight                  | In-Sight             | In-sight        | In-Sight                                          |
+| Not Head on or overtaking | Reciprocal or nearly | Not Overtaking  | One vessel Overtaking (22.5 degrees abaft of beam |
+
+N - not under command
+R - RAM
+C - constrained by draft
+F - fishing/trawling
+S - sailing
+P - PDV
+S - seaplanes
+W - WIG's
+
+Know Light Angles
+
+ 
+Components of GPS
+- Space
+- Control
+- User
+
+
+4 satellites to a fix
+
+
+GPS Limitations
+
+
+ENAV
+- ENC
+- DNC
+- RNC
+- Comm. Vector
+- Comm. Raster
+
+
+ECDIS sensor inputs
+ - GPS
+ - AIS
+ - Fathometer
+ - Anemometer
+ - Gyro
+ - Radar
+ - Speed Log
+
+
+ SAR
+
+ Drifting Vs Presision
+- Drifting - expanding square and sector search
+- Precision - 
+
+
+Different parts of a pattern
+- Will have to draw and label a search pattern (Probably parallel, will need 7 different labels)
+
+
+How we choose what patterns to use
+- Search Area Size
+- Datum Accuracy
+- Conditions
+- Size of object
+
+ICS Roles (SMC, OSC, ETC)
