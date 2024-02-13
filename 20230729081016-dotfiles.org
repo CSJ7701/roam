@@ -10,7 +10,11 @@
 
 ** NEXT Add to new space menu
 
-** SHORT-TERM Start EWW 
+** DONE Start EWW 
+CLOSED: [2024-02-13 Tue 12:47]
+:LOGBOOK:
+- State "DONE"       from "SHORT-TERM" [2024-02-13 Tue 12:47]
+:END:
   [2023-05-17 Wed 17:52]
   [[file:~/.dotfiles/.config/hypr/hyprland.conf]]
 
@@ -30,7 +34,11 @@
   [2023-05-19 Fri 13:22]
   [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
 
-** NEXT Make a "find file in XXX tab" function
+** DEFER Make a "find file in XXX tab" function
+:LOGBOOK:
+- State "DEFER"      from "NEXT"       [2024-02-13 Tue 12:45] \\
+  No longer using the tab functionality. Need to revisit later and either discontinue this task or consider using tabs again.
+:END:
 Should let me limit my tab layout to directly specified.
 I want Startpage tab, Roam tab, and general (plus any others I decide to add)
   [2023-06-28 Wed 20:28]
@@ -46,7 +54,11 @@ Should be similar to my old search by tags function.
 Biggest thing I know I'm missing is a way to capture a task to a project. That should let me select a project file (or alternately, run a new "create project" function(?) then capture to that project. 
   [2023-06-28 Wed 22:27]
 
-** NEXT Start optimizing tab functions
+** DEFER Start optimizing tab functions
+:LOGBOOK:
+- State "DEFER"      from "NEXT"       [2024-02-13 Tue 12:46] \\
+  No longer using tab functionality. May revisit tabs in the future, but for now not relevant.
+:END:
 There are a few things I'm missing, as i use the setup I'll find them.
 First one I can think of is a more robust switching command
   [2023-06-28 Wed 20:30]
