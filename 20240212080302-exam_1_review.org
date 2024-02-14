@@ -6,9 +6,30 @@
 
 Standing Orders
 - 4 things to do before assuming watch
-- Reasons to call CO for contact reporting ##
-- Calling the CO for weather ##
-- Any other reasons (Not including weather or contacts) ##
+  - Ensure all watchstanders are rested
+  - Study Charts. plot a fix
+  - Confirm weather
+  - Read and initial night orders
+  - Confirm guarded radio frequencies.
+  - Verify ships course and speed
+  - Assess risk of collision with all visual and RADAR contacts
+- Reasons to call CO for contact reporting
+  - Contacts first detected visually/on RADAR at a distance of less than 4 NM
+  - Contacts with a CPA less than 2 NM
+- Calling the CO for weather
+  - Change in wind direction - 20 degrees or more in an hour
+  - change in wind velocity - 10kts or more in  an hour
+  - Change in barometric pressure or 0.03 inches or more in an hour
+  - visibility less than 2 NM
+- Any other reasons (Not including weather or contacts)
+  - Uncorrelated sound signal from a vessel forward of beam in restricted vis
+  - when further than 0.5 NM from the trackline
+  - when in doubt of ships position or safety
+  - To report equipment casualty
+  - To report personnel injury or casualty
+  - If unsure of orders to watch
+  - if there is any reason you cannot relieve the watch
+  - if you are overwhelmed.
 
 3 Min Rule
 D(yds)/100=S(kts)
@@ -49,6 +70,9 @@ S - seaplanes
 W - WIG's
 
 Know Light Angles
+- Mast head light is 225
+- Stern Light is 360-225 = 135
+- Side lights are 1/2*225 = 112.5
 
  
 Components of GPS
@@ -61,6 +85,11 @@ Components of GPS
 
 
 GPS Limitations
+- Signal blockage
+- Multipath interference
+- Spoofing/Jamming
+- Solar Storms
+- Maintenance or Maneuvers creating coverage gaps
 
 
 ENAV
@@ -69,6 +98,9 @@ ENAV
 - RNC
 - Comm. Vector
 - Comm. Raster
+
+Raster - photograph of a paper chart
+Vector - electronic representation with digital 'layers'
 
 
 ECDIS sensor inputs
@@ -83,13 +115,26 @@ ECDIS sensor inputs
 
  SAR
 
+SAR objectives
+- Minimize loss of life, injury, and property; minimize damage to maritime environment
+- Minimize crew risk during operations
+- Optimize resource usage
+- Maintain a world leadership position in SAR
+ 
  Drifting Vs Presision
 - Drifting - expanding square and sector search
-- Precision - 
+- Precision - parallel search, creeping search, trackline search
 
 
 Different parts of a pattern
 - Will have to draw and label a search pattern (Probably parallel, will need 7 different labels)
+  - Commence Search Point
+  - SRU Course
+  - Track Spacing
+  - Search Legs
+  - Cross Legs
+  - Sweep Width
+  - Search Endpoint
 
 
 How we choose what patterns to use
@@ -97,5 +142,19 @@ How we choose what patterns to use
 - Datum Accuracy
 - Conditions
 - Size of object
+
+
+Trackline - route is known. Rapid track coverage
+Parallel - longer legs, fewer turns. Large search areas where initial positions is approximately known. Uniform Coverage
+Creeping Line - like parallel. Shorter legs, more turns. Creep is along major axis. Used to cover one end of a search area where the object is more likely.
+Sector - reasonable certainty about datum. high coverage in immediate vicinity (covers same area multiple times / overlap).
+Expanding Square - small area, some doubt about distress position. More uniform coverage than sector, can expand.
+
+Initial Questions
+- Position
+- Number of persons
+- nature of distress
+- Description
+- Adequate PFD's?
 
 ICS Roles (SMC, OSC, ETC)
