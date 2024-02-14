@@ -3,117 +3,144 @@
 :END:
 #+title: Music Server
 
-| Artist               | Album                            | Song                | Downloaded | Picarded    |
-| 3 Doors Down         | 3 Doors Down                     |                     | y          | y           |
-| 3 Doors Down         | Acoustic Back Porch Jam          |                     | y          | y           |
-| 3 Doors Down         | Away From the Sun                |                     | y          | y           |
-| 3 Doors Down         | Another 700 Mile                 |                     | y          | y           |
-| 3 Doors Down         | Seventeen Days                   |                     | y          | y           |
-| 3 Doors Down         | The Better Life                  |                     | y          | y           |
-| 3 Doors Down         | The Better Life (Deluxe)         |                     | y          | y           |
-| 3 Doors Down         | The Better Life (rare)           |                     | y          | y           |
-| 3 Doors Down         | The Better Life (11)             |                     | y          | y           |
-| 3 Doors Down         | Time of my Life (Deluxe)         |                     | y          | y           |
-| 3 Doors Down         | Us and the Night                 |                     | y          | y           |
-| 3 Doors Down         | Where my Christmas Lives         |                     | y          | y           |
-| 3 Doors Down         |                                  | Shine               | y          | y           |
-| 3 Doors Down         |                                  | Champion In Me      | y          | y           |
-| 3 Doors Down         |                                  | Citizen Soldier     | y          | y           |
-| Avenged Sevenfold    | Avenged Sevenfold                |                     | y          | y           |
-| Avenged Sevenfold    | Black Reign                      |                     | y          | y           |
-| Avenged Sevenfold    | City of Evil                     |                     | y          | y           |
-| Avenged Sevenfold    | Diamonds in the Rough            |                     | y          | y           |
-| Avenged Sevenfold    | Deathbat                         |                     | y          | y           |
-| Avenged Sevenfold    | Hail to the King                 |                     | y          | y           |
-| Avenged Sevenfold    | Life is but a dream              |                     | y          | y           |
-| Avenged Sevenfold    | Live at the GRAMMY Museum        |                     | y          | y           |
-| Avenged Sevenfold    | Live in the LBC                  |                     | y          | y           |
-| Avenged Sevenfold    | Nightmare                        |                     | y          | y           |
-| Avenged Sevenfold    | Sounding the Seventh Trumpet     |                     | y          | y           |
-| Avenged Sevenfold    | The Stage                        |                     | y          | y           |
-| Avenged Sevenfold    | Waking the Fallen                |                     | y          | y           |
-| Avenged Sevenfold    | We Love You Moar                 |                     | y          | y           |
-| Avenged Sevenfold    |                                  | Set Me Free         | y          | y           |
-| Avenged Sevenfold    |                                  | Mad Hatter          | y          | y           |
-| Avenged Sevenfold    |                                  | Nobody              | y          | n (Spotify) |
-| Bad Wolves           | Dear Monsters                    |                     | y          | y           |
-| Bad Wolves           | Die About It                     |                     | y          | y           |
-| Bad Wolves           | Disobey                          |                     | y          | y           |
-| Bad Wolves           | If Tomorrow Never Comes          |                     | y          | y           |
-| Bad Wolves           | Knife                            |                     | y          | y           |
-| Bad Wolves           | Legends Never Die                |                     | y          | y           |
-| Bad Wolves           | N.A.T.I.O.N.                     |                     | y          | y           |
-| Bad Wolves           | Sacred Kiss                      |                     | y          | y           |
-| Bad Wolves           |                                  | Sober               | y          | y           |
-| Bad Wolves           |                                  | Carol of the Bells  | y          | y           |
-| Bad Wolves           |                                  | Hear Me Now         | y          | y           |
-| Bad Wolves           |                                  | Killing Me Slowly   | y          | y           |
-| Bad Wolves           |                                  | Learn to Walk Again | y          | y           |
-| Bad Wolves           |                                  | The Body            | y          | y           |
-| Billie Joe Armstrong | No Fun Mondays                   |                     | y          | y           |
-| Breaking Benjamin    | Aurora                           |                     | y          | y           |
-| Breaking Benjamin    | Dark Before Dawn                 |                     | y          | y           |
-| Breaking Benjamin    | Dear Agony                       |                     | y          | y           |
-| Breaking Benjamin    | Ember                            |                     | y          | y           |
-| Breaking Benjamin    | Phobia                           |                     | y          | y           |
-| Breaking Benjamin    | Saturate                         |                     | y          | y           |
-| Breaking Benjamin    | So Cold                          |                     | y          | y           |
-| Breaking Benjamin    | We are Not Alone                 |                     | y          | y           |
-| Breaking Benjamin    |                                  | Blow Me Away        | y          | y           |
-| Chevelle             | 12 Bloody Spies                  |                     | y          | y           |
-| Chevelle             | Any Last Words                   |                     | y          | y           |
-| Chevelle             | Hats Off to the Bull             |                     | y          | y           |
-| Chevelle             | La Gargola                       |                     | y          | y           |
-| Chevelle             | Live From the Road               |                     | y          | y           |
-| Chevelle             | NIRATIAS                         |                     | y          | y           |
-| Chevelle             | Point #1                         |                     | y          | y           |
-| Chevelle             | Sci-Fi Crimes                    |                     | y          | y           |
-| Chevelle             |                                  | Self Destructor     | y          | y           |
-| Chevelle             | The North Corridor               |                     | y          | y           |
-| Chevelle             | This Type Of Thinking            |                     | y          | y           |
-| Chevelle             | Vena Sera                        |                     | y          | y           |
-| Chevelle             | Wonder What's Next               |                     | y          | y           |
-| Chris Stapleton      | Traveller                        |                     | y          | y           |
-| Chris Stapleton      | Starting Over                    |                     | y          | y           |
-| Chris Stapleton      | Nothin Else Matters              |                     | y          | y           |
-| Chris Stapleton      |                                  | Im a ram            | y          | y           |
-| Chris Stapleton      | Higher                           |                     | y          | y           |
-| Chris Stapleton      | From a room (vol 1 & 2)          |                     | y          | y           |
-| Chris Stapleton      | Fantasies                        |                     | y          | n           |
-| Colter Wall          | Western Swings & Waltzes         |                     | y          | y           |
-| Colter Wall          | Songs of the Plains              |                     | y          | y           |
-| Colter Wall          | Little Songs                     |                     | y          | y           |
-| Colter Wall          | Imaginary Appalachia             |                     | y          | y           |
-| Colter Wall          | Cypress Hills                    |                     | y          | y           |
-| Colter Wall          | C W and the S P Boys (2 singles) |                     | y          | y           |
-| Colter Wall          | Colter Wall                      |                     | y          | y           |
-| Diamante             | When im not around               |                     | y          | y           |
-| Diamante             | The Diamond COvers               |                     | y          | y           |
-| Diamante             | Serves You Right                 |                     | y          | y           |
-| Diamante             | Running Up That Hill             |                     | y          | y           |
-| Diamante             |                                  | Obvious             | y          | y           |
-| Diamante             | Obvious                          |                     | y          | y           |
-| DIamante             | Like a Prayer                    |                     | y          | y           |
-| Diamante             |                                  | Iris                | y          | y           |
-| Diamante             | I Love Myself For Hating You     |                     | y          | y           |
-| Diamante             | Ghost Myself                     |                     | y          | y           |
-| Diamante             | Coming In Hot                    |                     | y          | y           |
-| Diamante             |                                  | Bite Your Kiss      | y          | y           |
-| Diamante             |                                  | Auld Lang Syne      | y          | y           |
-| Diamante             | American Dream                   |                     | y          | y           |
-| Diamante             |                                  | 1987                | y          | y           |
-| Disturbed            | The Sickness                     |                     | y          | y           |
-| Disturbed            | The Lost Children                |                     | y          | y           |
-| Disturbed            | Ten Thousand Fists               |                     | y          | y           |
-| Disturbed            | Music As A Weapon II             |                     | y          | y           |
-| Disturbed            | Indestructible                   |                     | y          | y           |
-| Disturbed            | Immortalized                     |                     | y          | y           |
-| Disturbed            | If Ever I lose..                 |                     | y          | y           |
-| Disturbed            | Evolution                        |                     | y          | y           |
-| Disturbed            | Divisive                         |                     | y          | y           |
-| Disturbed            | Live at Red Rocks                |                     | y          | y           |
-| Disturbed            | Dead Inside                      |                     | y          | y           |
-| Disturbed            | Believe                          |                     | y          | y           |
-| Disturbed            | Bad Man                          |                     | y          | y           |
-| Disturbed            | Asylum                           |                     | y          | y           |
-|                      |                                  |                     |            |             |
+| Artist               | Album                            | Song                   | Downloaded | Picarded    |
+| 3 Doors Down         | 3 Doors Down                     |                        | y          | y           |
+| 3 Doors Down         | Acoustic Back Porch Jam          |                        | y          | y           |
+| 3 Doors Down         | Away From the Sun                |                        | y          | y           |
+| 3 Doors Down         | Another 700 Mile                 |                        | y          | y           |
+| 3 Doors Down         | Seventeen Days                   |                        | y          | y           |
+| 3 Doors Down         | The Better Life                  |                        | y          | y           |
+| 3 Doors Down         | The Better Life (Deluxe)         |                        | y          | y           |
+| 3 Doors Down         | The Better Life (rare)           |                        | y          | y           |
+| 3 Doors Down         | The Better Life (11)             |                        | y          | y           |
+| 3 Doors Down         | Time of my Life (Deluxe)         |                        | y          | y           |
+| 3 Doors Down         | Us and the Night                 |                        | y          | y           |
+| 3 Doors Down         | Where my Christmas Lives         |                        | y          | y           |
+| 3 Doors Down         |                                  | Shine                  | y          | y           |
+| 3 Doors Down         |                                  | Champion In Me         | y          | y           |
+| 3 Doors Down         |                                  | Citizen Soldier        | y          | y           |
+| Avenged Sevenfold    | Avenged Sevenfold                |                        | y          | y           |
+| Avenged Sevenfold    | Black Reign                      |                        | y          | y           |
+| Avenged Sevenfold    | City of Evil                     |                        | y          | y           |
+| Avenged Sevenfold    | Diamonds in the Rough            |                        | y          | y           |
+| Avenged Sevenfold    | Deathbat                         |                        | y          | y           |
+| Avenged Sevenfold    | Hail to the King                 |                        | y          | y           |
+| Avenged Sevenfold    | Life is but a dream              |                        | y          | y           |
+| Avenged Sevenfold    | Live at the GRAMMY Museum        |                        | y          | y           |
+| Avenged Sevenfold    | Live in the LBC                  |                        | y          | y           |
+| Avenged Sevenfold    | Nightmare                        |                        | y          | y           |
+| Avenged Sevenfold    | Sounding the Seventh Trumpet     |                        | y          | y           |
+| Avenged Sevenfold    | The Stage                        |                        | y          | y           |
+| Avenged Sevenfold    | Waking the Fallen                |                        | y          | y           |
+| Avenged Sevenfold    | We Love You Moar                 |                        | y          | y           |
+| Avenged Sevenfold    |                                  | Set Me Free            | y          | y           |
+| Avenged Sevenfold    |                                  | Mad Hatter             | y          | y           |
+| Avenged Sevenfold    |                                  | Nobody                 | y          | n (Spotify) |
+| Bad Wolves           | Dear Monsters                    |                        | y          | y           |
+| Bad Wolves           | Die About It                     |                        | y          | y           |
+| Bad Wolves           | Disobey                          |                        | y          | y           |
+| Bad Wolves           | If Tomorrow Never Comes          |                        | y          | y           |
+| Bad Wolves           | Knife                            |                        | y          | y           |
+| Bad Wolves           | Legends Never Die                |                        | y          | y           |
+| Bad Wolves           | N.A.T.I.O.N.                     |                        | y          | y           |
+| Bad Wolves           | Sacred Kiss                      |                        | y          | y           |
+| Bad Wolves           |                                  | Sober                  | y          | y           |
+| Bad Wolves           |                                  | Carol of the Bells     | y          | y           |
+| Bad Wolves           |                                  | Hear Me Now            | y          | y           |
+| Bad Wolves           |                                  | Killing Me Slowly      | y          | y           |
+| Bad Wolves           |                                  | Learn to Walk Again    | y          | y           |
+| Bad Wolves           |                                  | The Body               | y          | y           |
+| Billie Joe Armstrong | No Fun Mondays                   |                        | y          | y           |
+| Breaking Benjamin    | Aurora                           |                        | y          | y           |
+| Breaking Benjamin    | Dark Before Dawn                 |                        | y          | y           |
+| Breaking Benjamin    | Dear Agony                       |                        | y          | y           |
+| Breaking Benjamin    | Ember                            |                        | y          | y           |
+| Breaking Benjamin    | Phobia                           |                        | y          | y           |
+| Breaking Benjamin    | Saturate                         |                        | y          | y           |
+| Breaking Benjamin    | So Cold                          |                        | y          | y           |
+| Breaking Benjamin    | We are Not Alone                 |                        | y          | y           |
+| Breaking Benjamin    |                                  | Blow Me Away           | y          | y           |
+| Chevelle             | 12 Bloody Spies                  |                        | y          | y           |
+| Chevelle             | Any Last Words                   |                        | y          | y           |
+| Chevelle             | Hats Off to the Bull             |                        | y          | y           |
+| Chevelle             | La Gargola                       |                        | y          | y           |
+| Chevelle             | Live From the Road               |                        | y          | y           |
+| Chevelle             | NIRATIAS                         |                        | y          | y           |
+| Chevelle             | Point #1                         |                        | y          | y           |
+| Chevelle             | Sci-Fi Crimes                    |                        | y          | y           |
+| Chevelle             |                                  | Self Destructor        | y          | y           |
+| Chevelle             | The North Corridor               |                        | y          | y           |
+| Chevelle             | This Type Of Thinking            |                        | y          | y           |
+| Chevelle             | Vena Sera                        |                        | y          | y           |
+| Chevelle             | Wonder What's Next               |                        | y          | y           |
+| Chris Stapleton      | Traveller                        |                        | y          | y           |
+| Chris Stapleton      | Starting Over                    |                        | y          | y           |
+| Chris Stapleton      | Nothin Else Matters              |                        | y          | y           |
+| Chris Stapleton      |                                  | Im a ram               | y          | y           |
+| Chris Stapleton      | Higher                           |                        | y          | y           |
+| Chris Stapleton      | From a room (vol 1 & 2)          |                        | y          | y           |
+| Chris Stapleton      | Fantasies                        |                        | y          | n           |
+| Colter Wall          | Western Swings & Waltzes         |                        | y          | y           |
+| Colter Wall          | Songs of the Plains              |                        | y          | y           |
+| Colter Wall          | Little Songs                     |                        | y          | y           |
+| Colter Wall          | Imaginary Appalachia             |                        | y          | y           |
+| Colter Wall          | Cypress Hills                    |                        | y          | y           |
+| Colter Wall          | C W and the S P Boys (2 singles) |                        | y          | y           |
+| Colter Wall          | Colter Wall                      |                        | y          | y           |
+| Diamante             | When im not around               |                        | y          | y           |
+| Diamante             | The Diamond COvers               |                        | y          | y           |
+| Diamante             | Serves You Right                 |                        | y          | y           |
+| Diamante             | Running Up That Hill             |                        | y          | y           |
+| Diamante             |                                  | Obvious                | y          | y           |
+| Diamante             | Obvious                          |                        | y          | y           |
+| DIamante             | Like a Prayer                    |                        | y          | y           |
+| Diamante             |                                  | Iris                   | y          | y           |
+| Diamante             | I Love Myself For Hating You     |                        | y          | y           |
+| Diamante             | Ghost Myself                     |                        | y          | y           |
+| Diamante             | Coming In Hot                    |                        | y          | y           |
+| Diamante             |                                  | Bite Your Kiss         | y          | y           |
+| Diamante             |                                  | Auld Lang Syne         | y          | y           |
+| Diamante             | American Dream                   |                        | y          | y           |
+| Diamante             |                                  | 1987                   | y          | y           |
+| Disturbed            | The Sickness                     |                        | y          | y           |
+| Disturbed            | The Lost Children                |                        | y          | y           |
+| Disturbed            | Ten Thousand Fists               |                        | y          | y           |
+| Disturbed            | Music As A Weapon II             |                        | y          | y           |
+| Disturbed            | Indestructible                   |                        | y          | y           |
+| Disturbed            | Immortalized                     |                        | y          | y           |
+| Disturbed            | If Ever I lose..                 |                        | y          | y           |
+| Disturbed            | Evolution                        |                        | y          | y           |
+| Disturbed            | Divisive                         |                        | y          | y           |
+| Disturbed            | Live at Red Rocks                |                        | y          | y           |
+| Disturbed            | Dead Inside                      |                        | y          | y           |
+| Disturbed            | Believe                          |                        | y          | y           |
+| Disturbed            | Bad Man                          |                        | y          | y           |
+| Disturbed            | Asylum                           |                        | y          | y           |
+| Escape the Fate      | Ungrateful                       |                        | y          | y           |
+| Escape the Fate      | This War is Ours                 |                        | y          | y           |
+| Escape the Fate      | Theres no sympathy for the dead  |                        | y          | y           |
+| Escape the Fate      | Out of the Shadows               |                        | y          | y           |
+| Escape the Fate      | Issues                           |                        | y          | y           |
+| Escape the Fate      | I am Human                       |                        | y          | y           |
+| Escape the Fate      | Hate Me                          |                        | y          | y           |
+| Escape the Fate      | Escape the Fate                  |                        | y          | y           |
+| Escape the Fate      | Dying is your latest fashion     |                        | y          | y           |
+| Escape the Fate      | Chemical Warfare                 |                        | y          | y           |
+| Escape the Fate      | Chemical Warfare: B sides        |                        | y          | y           |
+| Escape the Fate      | Acoustic                         |                        | y          | y           |
+| Falling in Reverse   | Zombified                        |                        | y          | y           |
+| Falling in Reverse   | Watch the World Burn             |                        | y          | y           |
+| Falling in Reverse   | Voices in my Head                |                        | y          | y           |
+| Falling in Reverse   | The drug in my is you            |                        | y          | y           |
+| Falling in Reverse   |                                  | The drug in me (re...) | y          | y           |
+| Falling in Reverse   |                                  | Pop.Monst.(galantis)   | y          | y           |
+| Falling in Reverse   | Popular Monster                  |                        | y          | y           |
+| Falling in Reverse   | Losing my mind                   |                        | y          | y           |
+| Falling in Reverse   | Losing my life                   |                        | y          | y           |
+| Falling in reverse   |                                  | Last Resort (re..)     | y          | y           |
+| Falling in Reverse   | Just like you                    |                        | y          | y           |
+| Falling in reverse   |                                  | Im not a vam (re..)    | y          | y           |
+| Falling in Reverse   | Fashionably Late                 |                        | y          | y           |
+| Falling in Reverse   | Drugs                            |                        | y          | y           |
+| Falling in Reverse   | Coming Home                      |                        | y          | y           |
+| Falling in Reverse   | Carry on                         |                        | y          | y           |

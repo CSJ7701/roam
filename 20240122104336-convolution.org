@@ -31,3 +31,6 @@ $h_{2}(n)=(\frac{1}{4})^{n}u(n)$
 
 $y(n)=\sum_{k=-\infty}^{\infty}
 FINISH THIS LATER FROM LECTURE NOTES
+
+
+We can also use [[id:5505e99b-f627-43a0-8e7a-3181ed3a0628][Circular Convolution]].
