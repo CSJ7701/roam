@@ -19,3 +19,6 @@ $=(1*4)+(2*1)+(3*2)+(4*3)=24$
 $x(1)=\sum_{n=0}^{3}x_{1}(n)x_{2}(1-n)_{4}=x_{1}(0)x_{2}(1)_{4}+x_{1}(1)x_{2}(0)_{4}+x_{1}(2)x_{2}(-1)_{4}+x_{1}(3)x_{2}(-2)_{4}$
 $=(1*3)+(2*4)+(3*1)+(4*2)=22$
 
+The key to circular convolution is the fact that you can choose the length of the result. So if you take the 8 point circular convolution, your result will be 8 points. If you choose a value that is too low, you will end up with an aliased result.
+
+Choosing N, N should be greater than equal to L+M-1, where L and M are the lengths of the signals.

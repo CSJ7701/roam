@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       cfe1c00c-b5fc-498b-a9ad-60922dc18feb
+:END:
+#+title: Reconstructing Spectra
+#+filetags: :DSP:
+
+Lecture 10
