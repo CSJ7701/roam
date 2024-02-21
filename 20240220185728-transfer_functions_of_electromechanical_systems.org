@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       0b24e43d-a4f4-4410-9f7d-07ada122740f
+:END:
+#+title: Transfer Functions of Electromechanical Systems
+#+filetags: :Controls:
+
+Electromechanical systems are those that take electrical input and transform them into mechanical impulse.
+These typically include elements like motors, which yield a displacement output for voltage input.
+The figure below shows the schematic for a motor.
+#+ATTR_LATEX: :caption \bicaption{---}
+[[file:/home/csj7701/roam/Attachments/Controls-4-3.png]]
+
+
+The voltage carrying armature rotates in a magnetic field, which means that the voltage is proportional to the speed.
+$v_{b}(t)=K_{b}\frac{d\Theta_{m}(t)}{dt}$
+$v_b$ is the electromotive force, or back emf.
+K is a constant known as the back emf constant
+The fraction represents omega, or the angular velocity of the motor.
