@@ -9,7 +9,7 @@
 Synthesis and Analysis equations:
 
 $x(t)=\sum_{k=-\infty}^{\infty}C_{k}e^{j2\pi kF_{0}t}$
-$C_{k}=\frac{1}{T_{p}}\int_{T_{p}}x(t)e^{-j2\pi kF_{0}t}dt
+$C_{k}=\frac{1}{T_{p}}\int_{T_{p}}x(t)e^{-j2\pi kF_{0}t}dt$
 _Periodic x(t)_
 
 This is related to the [[id:76251ef4-8b27-4712-8f17-772684b597b6][Continuous Time Fourier Transform]]

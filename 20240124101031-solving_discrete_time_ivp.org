@@ -12,7 +12,7 @@ $y(n)-3y(n-1)-4y(n-2)=x(n)+2x(n-1)$ let $x(n)=4^{n}u(n)$
 
 Steps:
 1. find $y_{n}$
-2. determine $y_{p} from table
+2. determine $y_{p}$ from table
 3. plug $y_{p}$ into system and solve for coeff
 4. find ICs recursively
 5. plug into y to find $y_{n}$ coeff
@@ -39,7 +39,7 @@ $kn(4)^{n}u(n)-3k(n-1)(4)^{n-1}u(n-1)-4k(n-2)4^{n-2}u(n-2)=4^{n}u(n)+2(4)^{n-1}u
 Factor $4^n$ from both sides and cancel.
 Let $n\ge2$
 $kn-\frac{3}{4}k-\frac{1}{4}kn+\frac{1}{2}k=\frac{3}{2}$
-$k=\frac{6}{5}
+$k=\frac{6}{5}$
 $y_{p}(n)=\frac{6}{5}n(4)^{n}$
 We know $y=y_{n}+y_{p}$
 $\therefore y=c_{1}(-1)^{n}+c_{2}(4)^{n}+\frac{6}{5}n(4)^{n}$

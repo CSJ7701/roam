@@ -10,6 +10,8 @@ Gears provide mechanical advantage to rotational systems, adjusting both speed a
 The ratio between gears is calculated based on the number of teeth in each gear.
 Since we know that two connected gears will rotate with the same angular velocity, we can say that $r_{1}\Theta_{1}=r_{2}\Theta_{2}$, and from this we derive the equation $\frac{\Theta_{2}}{\Theta_{1}}=\frac{r_{1}}{r_{2}}=\frac{N_{1}}{N_{2}}$
 
+
+
 Since we assume the gears are lossless, we generalize the same relationship with torque - $\frac{T_{2}}{T_{1}}=\frac{\Theta_{1}}{\Theta_{2}}=\frac{N_{2}}{N_{1}}$
 
 
