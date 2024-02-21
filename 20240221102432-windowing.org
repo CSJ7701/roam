@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       e83f1894-03ab-495f-8d6d-ddcd663504aa
+:END:
+#+title: Windowing
+#+filetags: :DSP:
+
+In practice, signal sements will always be finite, however many datasets are not finite.
+
+If we want to analyze a continuous/infinite dataset using the [[id:f9208e13-6c4c-4992-82bb-2e1a87e01040][Discrete Time Fourier Transform]], we need the signal to be finite.
+
+We /could/ take some segment that we want to analyze of the signal, and repeat that segment in order to make it periodic.
+If we did that, we have essentially created infinite discontinuities wherever each segment joins.
+
+We refer to these "segments" as _Windows_.
+
+For a window containing signal $x(n)$, our window is $\hat{x(n)}=x(n)w(n)$ where $w(n)=u(n)-u(n-N-1)$, N is the number of points.
+This is known as a _Rectangular Window_
+
+
+
