@@ -9,7 +9,7 @@ The N-point DFT of a finite signal (x(n)) with a length $L\le N$ is /equivalent/
 $X_{p}(n)=\sum_{l=\infty}^{\infty}x(n-lN)$
 
 If we shift this in time - $x'_{p}(n)=x_{p}(n-k)=\sum_{l=\infty}^{\infty}x(n-k-lN)$
-We get $x'(n)=x'_{p}(n)$ from $0\le n\le N-1$, and 0 otherwise.
+We get $x'(n)=x'_{p}(n)$ from $0 \le n\le N-1$, and 0 otherwise.
 Or: $x'(n)=x[n-k, mod(n)]=x[(n-k)]_{N}$
 
 
@@ -21,7 +21,7 @@ $x(N-n)=x(n)$ where $1\le n\le N-1$
 
 Odd: if x(n) is antisymmetric around the point 0 on a circle
 $x(N-n)=-x(n)$ where $1\le n\le N-1$
-
+ 
 Time reversal: $x[(-n)]_{N}=x(N-n)$
 
 #+ATTR_LATEX: :caption \bicaption{---}
