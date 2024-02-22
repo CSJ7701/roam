@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       14f6c203-445e-4a61-b108-c68ce7b46c7d
+:END:
+#+title: Nyquist Rate
+

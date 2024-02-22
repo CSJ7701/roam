@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       85b3e0f2-fa13-4aac-aed4-61956a1a1a69
+:END:
+#+title: Folding Frequency
+

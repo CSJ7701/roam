@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       ad28054d-fef9-4a68-ba70-7fe9c03604a7
+:END:
+#+title: Reconstructing Continuous Time Signals
+#+filetags: :DSP:
+
+
+After [[id:11a52d86-dd38-4961-8581-38de101787d4][Sampling]] a continuous time signal, we are left with a [[id:4c08afb3-7075-4b7d-8887-8086c534a61c][Discrete Time Signal]], which is just a sequence of numbers.
+This is typically done by sampling in the time domain, representing the continuous time signal as discrete with $x(n)=x_{a}(nT)$. As usual, the sampling frequency (Inverse of the period) must be large enough to prevent [[id:eabfb736-a682-4d3f-b28e-b326281b6354][Aliasing]].
+
+With a continuous time signal $x(t)$, we can find the voltage spectrum with the fourier transform
+$X_{a}(F)=\int_{-\infty}^{\infty}x_{a}(t)e^{-j2\pi Ft}dt$
+and the frequency can be reconstructed with no data loss using the inverse fourier transform
+$x_{a}(t)=\int_{-\infty}^{\infty}X_{a}(F)e^{j2\pi Ft}dF$
+/Note/ - here, we use the infinite frequency range $(-\infty<F<\infty)$. This is necessary if the signal is not band limited in the time domain.
+
+With a discrete time signal, we perform the fourier transform and inverse fourier transform as before.
+$X(\omega)=\sum_{n=\infty}^{\infty}x(n)e^{-j\omega n}$ OR $X(f)=\sum_{n=-\infty}^{\infty}x(n)e^{-j2\pi fn}$
+$x(n)=\frac{1}{2\pi}\int_{-\pi}^{\pi}X(\omega)e^{j2\pi}d\omega$ OR $x(n)=\int_{-1/2}^{1/2}X(f)e^{j2\pi fn}df$
+
+After doing some manipulation of these formulae, we can see that there is a relationship between f in time domain and F in th frequency domain.
+$f=\frac{F}{F_{s}}$
+
+This leads eventually to the idea that, when $F_{s}\ge R_{n}$ where $R_{n}$ is the [[id:14f6c203-445e-4a61-b108-c68ce7b46c7d][Nyquist Rate]], then $X(F)=F_{s}X_{a}(F)$
+
+This allows us to define the sampling theorem:
+- A band liomited continuous signal with highest frequency *B* hertz can be recovered from samples, provided that the sampling rate $F_{s}\ge 2B$ samples per second.
+
+
+In other words, we must ensure that our sampling rate is higher than the Nyquist rate of 2B samples per second in order to prevent aliasing.
+If our signal /does/ alias however, we can identify the frequency around which the aliasing is centered, known as the [[id:85b3e0f2-fa13-4aac-aed4-61956a1a1a69][Folding Frequency]], equal to $F_{s}/2$
+
+In practice, the simplest way to prevent aliasing is to simply filter the signal and remove any frequencies lower than the nyquist rate.
+
+
