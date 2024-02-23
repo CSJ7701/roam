@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       ed5ba5a8-7cd4-4992-bfdf-2d620de62689
+:END:
+#+title: Reconstructing Discrete Time Signals
+#+filetags: :DSP:
+
+We know that, given periodic samples of the spectrum $X(\omega)$ of a periodic discrete signal $x(n)$, we can reconstruct a periodic signal $x_{p}(n)$.
+We don't, however, know whether we can recover $X(\omega)$ or $x(n)$ from these periodic samples.
+
+$x_{p}(n)$ is the periodic extension of $x(n)$, so we can recover $x(n)$ from this signal, provided there is no aliasing in the time domain.
+For discrete signals, this means that $x(n)$ must be band-limited to less than N (the period of $x_{p}(n)$).
+
