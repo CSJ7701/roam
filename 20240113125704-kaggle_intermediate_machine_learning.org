@@ -109,3 +109,123 @@ Here, we can see that the best performing model is model_3 with the lowest MAE.
 
 [1459 rows x 2 columns]
 #+end_example
+
+* Handling Missing Values
+
+Most machine learning libraries will throw an error if you try to build a model with missing values.
+
+There are typically 3 options to handle these missing values:
+- Drop columns with missing values
+  This removes any data column that is missing information. This could result in the model losing significant amounts of information however, so it should not be the first choice.
+- Imputation
+  This is a better option than dropping columns. Imputation fills in missing values with a number. This likely won't be 100% accurate, but it will allow the model to retain much more information than it would if we removed columns.
+- Extension to imputation
+  When we use imputation, there is always the chance that the data we fill in to the missing slot will differ from what /should/ be there. The model would likely improve by taking into consideration whether a value was imputed, or whether it was part of the original dataset. Therefore, we can add a new column that contains boolean values indicating whether a value was imputed or not.
+
+
+* Code Exercise
+#+begin_src python :results verbatim :session Kaggle-IML-2
+
+  import pandas as pd
+  from sklearn.model_selection import train_test_split
+
+  X_full=pd.read_csv('/home/csj7701/roam/References/Kaggle-Train.csv', index_col='Id')
+  X_test_full=pd.read_csv('/home/csj7701/roam/References/Kaggle-Test.csv', index_col='Id')
+
+  X_full.dropna(axis=0, subset=['SalePrice'], inplace=True)
+  Y=X_full.SalePrice
+  X_full.drop(['SalePrice'], axis=1, inplace=True)
+
+  X=X_full.select_dtypes(exclude=['object'])
+  X_test=X_test_full.select_dtypes(exclude=['object'])
+
+  X_train, X_valid, Y_train, Y_valid=train_test_split(X,Y,train_size=0.8, test_size=0.2, random_state=0)
+
+  X_train.shape
+#+end_src
+
+#+RESULTS:
+: (1168, 36)
+
+
+Now we can see the number of missing values in each column of the training data.
+#+begin_src python :results verbatim :session Kaggle-IML-2
+
+  missing_val_count_by_column=(X_train.isnull().sum())
+  missing_val_count_by_column[missing_val_count_by_column > 0]
+
+#+end_src
+
+#+RESULTS:
+: LotFrontage    212
+: MasVnrArea       6
+: GarageYrBlt     58
+: dtype: int64
+
+
+We can see that we have 1168 rows in our dataset.
+3 Columns in our dataset are missing values, with a total of 276 missing values.
+The column with the /most/ missing values is =LotFrontage=, missing 212 of its 1168 values. This is around 20%, which would indicate that dropping columns will not be particularly effective, since there is still a good deal of useful information in the offending columns.
+
+We will now use a =score_dataset= function to evaluate different datasets based on the MAE from a forest regression model.
+
+#+begin_src python :results verbatim :session Kaggle-IML-2
+
+  from sklearn.ensemble import RandomForestRegressor
+  from sklearn.metrics import mean_absolute_error
+
+  def score_dataset(X_train, X_valid, Y_train, Y_valid):
+      model=RandomForestRegressor(n_estimators=100, random_state=0)
+      model.fit(X_train, Y_train)
+      preds=model.predict(X_valid)
+      return mean_absolute_error(Y_valid, preds)
+
+#+end_src
+
+#+RESULTS:
+
+Lets check the MAE from dropping values
+#+begin_src python :results verbatim :session Kaggle-IML-2
+
+  cols_with_missing_values=[col for col in X_train.columns if X_train[col].isnull().any()]
+
+  reduced_X_train=X_train.drop(cols_with_missing_values, axis=1)
+  reduced_X_valid=X_valid.drop(cols_with_missing_values, axis=1)
+
+  string=(f"MAE (Drop columns with missing values):\n{score_dataset(reduced_X_train, reduced_X_valid, Y_train, Y_valid)}")
+
+  string
+#+end_src
+
+#+RESULTS:
+: MAE (Drop columns with missing values):
+: 17837.82570776256
+
+Now lets check Imputation
+#+begin_src python :results verbatim :session Kaggle-IML-2
+
+  from sklearn.impute import SimpleImputer
+
+  my_imputer=SimpleImputer()
+  imputed_X_train=pd.DataFrame(my_imputer.fit_transform(X_train))
+  imputed_X_valid=pd.DataFrame(my_imputer.fit_transform(X_valid))
+
+  # Imputation removed some column names. We need to put them back.
+  imputed_X_train.columns=X_train.columns
+  imputed_X_valid.columns=X_valid.columns
+
+  string=(f"MAE (Imputation):\n{score_dataset(imputed_X_train, imputed_X_valid, Y_train, Y_valid)})")
+  string
+
+#+end_src
+
+#+RESULTS:
+: MAE (Imputation):
+: 18056.85163242009)
+
+
+We see here that imputation performed slightly worse than dropping values. This is surprising, given how few missing values there were compared to the actual size of the dataset. We can attribute this to a few things. "Noise" in the dataset - not clear on that this exactly refers to. Or, (more likely) the fact that imputation might not be a great fit for this dataset. We might have fared better by looking for a common or repeated value in the data and inserting that, or simply inserting 0, etc. Imputation just inserts the mean value, so that may not make the most sense. 
+
+
+
+
