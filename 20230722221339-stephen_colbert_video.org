@@ -4,4 +4,4 @@
 #+title: Stephen Colbert Video
 #+filetags: :Video:
 
-[[yt:YB46h1koicQ]]
+[[yt:YB46h1koicQ]
