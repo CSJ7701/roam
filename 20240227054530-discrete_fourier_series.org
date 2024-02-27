@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       50f3eb91-447b-4f67-a6f5-69bbfa14abfd
+:END:
+#+title: Discrete Fourier Series
+#+filetags: :DSP:
+
+Useful for finding the fourier series of a finite length sequence.
+Functionally similar to the [[id:31b06303-a668-4e40-8e14-6e27d21158bb][Discrete Time Fourier Series]].
+
+$x(n)=\frac{1}{N}\sum_{k=0}^{N-1}X(k)e^{j2\pi nk/N}$
+$X(k)=\sum_{n=0}^{N-1}x(n)e^{-j2\pi nk/N}$
+
+
+For periodic sequence x(n) with period N, $x(n)=x(n+N)$
+We can find the Discrete Fourier Series of x(n):
+$X(k)=\sum_{n=0}^{N-1}x(n)e^{-j2\pi nk/N}$
+which is also periodic with period N.

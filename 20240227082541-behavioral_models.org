@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       4286b854-5722-42f2-bfcd-44b91649440b
+:END:
+#+title: Behavioral Models
+#+filetags: :SoftwareEngineering:
+
+Bahavioral Models model the dynamic bahavior of a system as it is executing.
+
+They show what happens (or what is supposed to happen) when a system responds to a stimulus from its environment.
+These stimuli can either be data or events:
+- Data becomes available, and it is this availability that triggers processing
+- An event happens, these events may have associated data, but that is not always true.
+
+* Data Driven Modeling
+Data driven models show the sequence of actions involved in processing input data and generating output.
+
+Data flow is typically modeled using the "activity diagram", but sequence diagrams are also useful. 
+
+* Event Driven Modeling
+Event driven modeling shows how asystem responds to external and internal events. Based on the assumption that a system has a finite number of states, and that events or stimuli can cause a transition from one state to another.
+This type of system is typically modeled using state diagrams. 
+
+* Model Driven Engineering
+This is an approach to software engineering where models, rather than programs, are the primary output of the development process.
+Programs that execute on hardware would be generated from the models rather than written directly. 
+
+* Model Driven Architecture
+This is a model focused approach to software design and implementation that used UML models to describe a system.
+Here, we use models to start at a low level system definition, and slowly shift to a finer focus as we use higher level models.
+There are 3 different "levels" that are typically used:
+- Computation Independent Models
+  focus on the important domain abstractions in a system. Also known as domain models.
+- Platform Independent Model
+  model the operation of the system without reference to its implementation
+  Usually described using UML models that show the static system structure and how it responds to external and internal events
+- Platform Specific Models
+  Transformations of the platform independent model with a seperate PSM for each appliation platform. 

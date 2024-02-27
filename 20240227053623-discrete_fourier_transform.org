@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       43b1bd5b-5ab0-4191-8cec-1ab2db013fa2
+:END:
+#+title: Discrete Fourier Transform
+#+filetags: :DSP:
+
+Previously, we have looked at the [[id:f9208e13-6c4c-4992-82bb-2e1a87e01040][Discrete Time Fourier Transform]], which represents a sequence in terms of the sum of complex exponentials.
+
+For finite length sequences, there is another option, known as the DFT or Discrete Time Transform
+
+The DTFT is a mapping from a sequence to a /function/ with ocntinuous variabe $\omega$, the DFT maps from a sequence $x(n)$ to another sequence $X(k)$
+We develop this DFT from the discrete fourier series representation for periodic sequences.
+
+x(n) is a sequence with finite length N, equal to 0 outside the interval $[0, N-1]$
+We can make x(n) periodic: $\sum_{k=-\infty}^{\infty}x(n+kN)$ which we can also express as $x(n\ mod\ N)= x((n))_{N}$
+This notation means "/n modulo n/". If n is written in the form $n=kN+l$, then: $(n\ mod\ N)=((n))_{N}=l$
+mod is essentially the remainder: $((13))_{8} \implies 13=k*8 +l\implies k=1,l=5\therefore ((13))_{8}=5$
+
+We can take the [[id:50f3eb91-447b-4f67-a6f5-69bbfa14abfd][Discrete Fourier Series]] of x(n), and we get $x(n)=\frac{1}{N}\sum_{k=0}^{N-1}X(k)e^{j2\pi kn/N}$
+Solving for X(k), $X(k)=\sum_{n=0}^{N-1}x(n)e^{-j2\pi nk/N}$
+
+This is the "N-point DFT of x(n)".
+
+Comparing the definition of the DFT to the definition of the DTFT, we see that the DFT is simply the sampled DTFT.
+We can also say that the DFT corresponds to N samples of X(z) taken at N equally spaced points around the unit circle. 
+This is closely related to [[id:5505e99b-f627-43a0-8e7a-3181ed3a0628][Circular Convolution]].
