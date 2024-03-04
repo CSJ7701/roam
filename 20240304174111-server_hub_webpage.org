@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       5700528b-6d3b-4a07-82c6-56dde66153e2
+:END:
+#+title: Server Hub Webpage
+#+category: Server Hub Webpage
+#+filetags: :Python:Project:
+* Goal
+
+
+
+* Inbox
+
+** TODO Add initial tasks
+
+** TODO State Diagram
+
+** TODO List prospective pages, and ideal functionality
+
+
+
