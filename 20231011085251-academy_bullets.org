@@ -137,9 +137,6 @@ Absolutely, here are the slightly expanded bullet points with an additional sent
 - roactively guided Swabs during their transition from Summer training to CAP week, offering practical assistance such as locating rooms, explaining duty rotations, and providing insights on maintaining proper brace throughout the academic year. This personalized engagement contributed to a smooth adaptation to academy life, equipping Swabs with essential knowledge and tools for confident navigation within the Coast Guard cadet experience.
 
 ** Fall Semester
-:PROPERTIES:
-:VISIBILITY: children
-:END:
 
 *** DONE Military Bearing[100%]
 CLOSED: [2023-11-06 Mon 21:53]
@@ -302,4 +299,73 @@ CLOSED: [2023-11-08 Wed 10:47]
   
   
 
+#  LocalWords:  MBR MBR's ACDO evolutions PFE USCGA
+
+** Spring Semester
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+*** TODO Military Bearing[0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Customs, Courtesies, and Traditions [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Quality of Work [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Technical Proficiency [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Initiative [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Critical/Strategic Thinking [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Decision Making and Problem Solving [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Military Readiness [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Self Awareness and Learning [0%] 
+- [ ]
+- [ ]
+- [ ]
+*** TODO Partnering [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Respect for Others [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Accountability and Responsibility [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Workforce Management [0%]
+- [ ]
+- [ ]
+- [ ]
+*** TODO Effective Communication [0%]
+- [-] MBR excels in utilizing all forms of communication, both up and down the chain of command, effectively communicating clear expectations and progress. MBR actively interacts with both third and fourth class cadets, facilitating project organization and effective task delegation within the division. This proactive engagement not only streamlines operations, but serves to foster clear and effective communications within the Academy Community, showcasing MBR's commitment to enhancing teamwork and accomplishing shared goals.
+- [ ]
+- [ ]
+*** TODO Cadet Engagement and Participation [0%]
+- [-] MBR is highly engaged with the USCGA Windjammers Drum and Bugle Corps, working with the group during off-season to plan events, organize next year's show, provide feedback on performance, and engage with leadership. MBR has gone above and beyond expectations, taking on additional responsibilities such as composing and arranging pieces for the band to perform. This dedicated involvement not only enriches the cadet experience, but also helps promote the Coast Guard Academy through musical excellence and community outreach. MBR's passion, commitment, and willingness to take on extra responsibilities within Windjammers exemplify the highest standards of cadet engagement and participation.   
+- [ ] 
+- [ ]  
+  
+
 #  LocalWords:  MBR MBR's ACDO evolutions PFE
+
