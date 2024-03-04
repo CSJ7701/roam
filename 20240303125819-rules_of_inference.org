@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       7f6192cc-54c6-4eee-a64d-8dfa3693493e
+:END:
+#+title: Rules of Inference
+#+filetags: :Discrete:
+
+* Modus Ponens
+
+$\begin{array}{ }
+&p & p\implies q \cline{2-2} q
+\end{array}$
+
+* Modus Tollens
+
+$\begin{array}{ }
+&p\implies q &\lnot q \cline{2-2} \lnot p\end{array}$
+
+* Disjunctive Syllogism
+$\begin{array}{ }
+& p \lor\ q
+& \lnot p
+\cline{2-2}
+q\end{array}$
+
+
+* Chain Rule
+$\begin{array}
+&p\implies q
+&q\implies r
+\cline{2-2}
+p\implies r
+\end{array}$
+
+* Resolution
+$\begin{array}
+&p\lor r
+&q\lor(\lnot r)
+\cline{2-2}
+p\lor q
+\end{array}$

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       9da1f11a-f379-4c13-b8af-d25ffded2b35
+:END:
+#+title: Tautology
+#+filetags: :Discrete:
+
+A result of general truth.
+This is a compound statement that is always true, regardless of the truth values that are assigned to its variables. 

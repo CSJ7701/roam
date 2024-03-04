@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       232b409c-6d9f-4503-8ebf-84ddfa631056
+:END:
+#+title: Binary Relationships
+#+filetags: :Discrete:
+
+Binary Relations, or Relationships form a cartesian set where the two components share some "relationship"
+
+e.g.
+For the relationship: $R=\{(a,b)|a\in A, b\in B, \text{ player a had b career home runs }\}$
+Valid entries would be: $(\text{Hank Aaron }, 755)$ or $(\text{Mickey Mantle },536)$
+
+These relationships are defined by certain properties.
+A relationship is *Reflexive* iff $(a,a)\in R\ \ \forall a\in A$
+
+It is *Symmetric* iff $(((a,b)\in A)\land ((a,b)\in R))\implies ((b,a)\in R)$
+It is *AntiSymmetric* iff $((a,b)\in A\land[(a,b)\land(b,a)\in R])\implies (a=b)$
+
+It is *Transitive* iff $((a,b,c)\in A\land[(a,b)\land(b,c)\in R])\implies ((a,c)\in R)$

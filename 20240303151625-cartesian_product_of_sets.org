@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       9db07836-7cdc-4845-bb9f-52215993544b
+:END:
+#+title: Cartesian Product of Sets
+#+filetags: :Discrete:
+
+$A\times B=\{(a,b)|a\in A,b\in B\}$
+
+E.g.
+
+$A=\{1,2\}$
+$B=\{3,4\}$
+$A\times B=\{(1,3),(1,4),(2,3),(2,4)\}$
+
+We can expand on these Cartesian Sets using [[id:232b409c-6d9f-4503-8ebf-84ddfa631056][Binary Relationships]]

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       13602baf-dea1-43a6-80d5-d36ee827b00b
+:ROAM_REFS: https://www.youtube.com/watch?v=dam0GPOAvVI
+:END:
+#+title: Python Website Full Tutorial - Flask, Authentication, Databases & More - YouTube
+#+filetags: :Python:Video:
+
+[[yt:dam0GPOAvVI]]

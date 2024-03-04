@@ -6,10 +6,15 @@
 
 * Direct Proofs
 - Take the hypothesis and travel a sequence of implications leading to the final conclusion
-
+Essentially, we are "directly" proving a hypothesis using implications and nothing more.
+Obviously we can prove those implications any way we choose, but the general proof will look like:
+$A\implies B\implies C\implies D,\ \therefore\ A\implies D, \text{ given } A\therefore D$ 
 
 
 * Proof by Cases
+We can sometimes make a direct argument simpler by breaking it into a series of "cases".
+One of these cases must hold true, and each should lead to the desired conclusion
+
 
 * Proof by Example
 Only useful when proving the /existance/ of something, or /displroving/ something.
@@ -23,7 +28,7 @@ a. State converse
 b. Which is true, the original or its converse?
 - Converse
   Why?
-  X and Y both rational numbers, $x=\frac{p_{1}}{q_{1}};\\ q_{1}\ne0;\\ p_{1},q_{1}\in\mathbb{Z}$ Same for y.
+  X and Y both rational numbers, $x=\frac{p_{1}}{q_{1}};\ q_{1}\ne0;\ p_{1},q_{1}\in\mathbb{Z}$ Same for y.
   $\therefore xy=\frac{p_{1}p_{2}}{q_{1}q_{2}}$ and $p_{1}p_{2}\in\mathbb{Z}$, so xy is rational.
 
 
@@ -38,6 +43,11 @@ Ex.
 If x and y are rational, is $\frac{x}{y}$ rational?
 
 This is false for any case where y=0. 
+
+* Proof by Contra-positive
+$A\implies B$ is only true if $\lnot B\implies \lnot A$ is true as well.
+This is the idea that we use to prove a hypothesis with the contra-positive.
+
 
 * Proof by Contradiction
 Assume ~p and find a contradiction

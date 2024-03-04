@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       efdd3fed-7f24-49dd-81c4-7f3c552250c9
+:END:
+#+title: Contradiction
+#+filetags: :Discrete:
+
+A compound statement that is always false, regardless of the truth values assigned to its variables

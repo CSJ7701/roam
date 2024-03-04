@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       91cb327c-8a62-41a7-b016-4423745cbd61
+:END:
+#+title: Discrete Logic
+#+filetags: :Discrete:
+
+Logic is represented at a fundamental level by truth tables.
+These are a representation of binary values, otherwise called truth values.
+
+Any given variable can have two values, 1/0, true/false, etc.
+This means that the number of rows in a truth table will always be $2^{\text{\# of variables}}$.
+
+| x |
+| 1 |
+| 0 |
+
+
+| x | y |
+| 1 | 1 |
+| 0 | 1 |
+| 1 | 0 |
+| 0 | 0 |
+
+There are 2 general results when evaluating truth tables:
+- [[id:9da1f11a-f379-4c13-b8af-d25ffded2b35][Tautology]]
+- [[id:efdd3fed-7f24-49dd-81c4-7f3c552250c9][Contradiction]]
+
+
+Typically we apply these terms to prove some sort of "argument", which is usually structured like so:
+$$\[\begin{array}{ }
+& p\implies q
+& p
+\cline{2-2}
+\therefore q
+\end{array}\]$$
+
+Where $p\implies q$ and $p$ are known as the hypotheses or arguments, and $q$ is known as the conclusion.
+The goal in this situation is to examine whether $q$ is true given that all of the hypotheses are true.
+
+As part of this process, we must /infer/ certain information, and exactly _what_ we can infer is determined by several [[id:7f6192cc-54c6-4eee-a64d-8dfa3693493e][Rules of Inference]]
