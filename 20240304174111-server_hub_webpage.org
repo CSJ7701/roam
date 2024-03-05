@@ -5,22 +5,34 @@
 #+category: Server Hub Webpage
 #+filetags: :Python:Project:
 * Project Description
-** State Diagram [[elisp:(org-toggle-inline-images)][View]] [[https://excalidraw.com][Open]]
+** State Diagram  [[https://excalidraw.com][Open]]
 :PROPERTIES:
 :VISIBILITY: folded
 :END:
 #+ATTR_LATEX: :caption \bicaption{---}
-#+ATTR_ORG: :width 900px
-[[file:/home/csj7701/Projects/Server-Hub/Webflow Diagram.svg]]
+[[file:/home/csj7701/Projects/Server-Hub/Resized.jpg]]
 
 * Components
 ** Login
 - Username
 - Password
-- Request Access
-- Forgot Password
-- Database for Current [[*Users][Users]] and [[*User Requests][User Requests]].
-
+- [[*Request Access][Request Access]]
+- [[*Forgot Password][Forgot Password]]
+- Database for [[*Users][Users]] and [[*User Requests][User Requests]].
+** Request Access
+- Name
+- Email
+- Username
+- Password
+- Security Questions (3)
+- Security Answers (3)
+- Will add information to [[*User Requests][User Requests]]
+- Will send email to admin with name and user name for request
+- Admin will correspond with requesting user, and add entries to [[*Users][Users]]
+** Forgot Password 
+- Email
+- Will allow user to either "request old password" or "reset password"
+- 
 
 ** Databases
 *** Users
