@@ -4,7 +4,42 @@
 #+title: Server Hub Webpage
 #+category: Server Hub Webpage
 #+filetags: :Python:Project:
-* Goal
+* Project Description
+** State Diagram [[elisp:(org-toggle-inline-images)][View]] [[https://excalidraw.com][Open]]
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+ATTR_LATEX: :caption \bicaption{---}
+#+ATTR_ORG: :width 900px
+[[file:/home/csj7701/Projects/Server-Hub/Webflow Diagram.svg]]
+
+* Components
+** Login
+- Username
+- Password
+- Request Access
+- Forgot Password
+- Database for Current [[*Users][Users]] and [[*User Requests][User Requests]].
+
+
+** Databases
+*** Users
+- Name (First Last)
+- Email
+- Username
+- Password
+- Security Question (3)
+- Security Answer (3)
+- Admin Access (0 or 1)
+*** User Requests 
+- Name (First Last)
+- Email
+- Username
+- Password
+- Security Questions (3)
+- Approved (0 or 1)
+
+On approval, delete from User Requests, move to [[*Users][Users]].
 
 
 
