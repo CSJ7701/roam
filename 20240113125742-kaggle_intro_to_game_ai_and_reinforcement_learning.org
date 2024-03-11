@@ -3,3 +3,103 @@
 :END:
 #+title: Kaggle: Intro to Game AI and Reinforcement Learning
 
+
+
+* Intro
+
+For this exercise, we will be using one of Kaggles libraries, so that we don't have to implement the basics from scratch.
+
+We will be creating an agent to play connect 4, and kaggle has two models for this.
+
+#+begin_src python :results none
+
+  from kaggle_environments import make, evaluate
+
+  # Create the game environment
+  # Set debug=True to see the errors if your agent refuses to run
+  env = make("connectx", debug=True)
+
+  # List of available default agents
+  print(list(env.agents))
+
+#+end_src
+
+This code lists kaggle's two connect 4 agents - "random" and "negamax".
+
+The random agent will select uniformly from a list of valid moves. In terms of connect 4, a valid move is any move where the column isn't already full.
+There are seven spaces in a column, so if a column has less than seven pieces in it, the model can place a piece in that column.
+
+We can simulate a game with the following code, which will make two random agents play against each other.
+
+#+begin_src python :results none
+
+  env.run(["random", "random"])
+
+  end.render(mode="ipython")
+
+#+end_src
+
+The above code is an example where we run 2 "random" agents to play against each other.
+The =env.render= line is a piece of code from kaggle to render a gui board so we can watch the game.
+
+This example uses premade models, but how can we make our own?
+
+We can create agents as python functions that take two arguments, =obs= and =config=.
+In terms of connect 4, we want these functions to return an integer 0-6 to represent the index of the column in which we place our piece.
+
+Some examples are below:
+#+begin_src python :results none
+
+  # Selects a random column
+  def agent_random(obs, config):
+      valid_moves = [col for col in range(config.columns) if obs.board[col] == 0]
+      return random.choice(valid_moves)
+
+  # Selects middle column
+  def agent_middle(obs, config):
+      return config.columns//2
+
+  # Selects leftmost valid column
+  def agent_leftmost(obs, config):
+      valid_moves = [col for col in range(config.columns) if obs.board[col] == 0]
+      return valid_moves[0]
+
+#+end_src
+
+What are =obs= and =config=?
+
+Obs contains 2 attributes:
+- obs.board
+- obs.mark
+
+obs.board is a python list that represents every space on the board. The value is a 0 is the space is unoccupied, and either a 1 or 2 (which "team" the piece belongs to).
+The list is organized in rows, meaning that if the first row of the connect 4 board is empty, the first 7 entries in the list will be 0.
+obs.mark is either a 1 or a 2, and represents the team that the agent belongs to.
+
+Config contains 3 pieces of information:
+- config.columns, or the number of columns in the board (for connect 4, 7)
+- config.rows, or the number of rows in the board (for connect 4, 6)
+- config.inarow, or the number of pieces that the agent must place in a row in order to win.
+
+
+If we want to compare how well agents perform compared to each other, we must run them against each other multiple times, alternating which will go first.
+We use another python function to get the win percentages from these trials and average them.
+
+#+begin_src python :results none
+
+
+  def get_win_percentages(agent1, agent2, n_rounds=100):
+      # Use default Connect Four setup
+      config = {'rows': 6, 'columns': 7, 'inarow': 4}
+      # Agent 1 goes first (roughly) half the time          
+      outcomes = evaluate("connectx", [agent1, agent2], config, [], n_rounds//2)
+      # Agent 2 goes first (roughly) half the time      
+      outcomes += [[b,a] for [a,b] in evaluate("connectx", [agent2, agent1], config, [], n_rounds-n_rounds//2)]
+      print("Agent 1 Win Percentage:", np.round(outcomes.count([1,-1])/len(outcomes), 2))
+      print("Agent 2 Win Percentage:", np.round(outcomes.count([-1,1])/len(outcomes), 2))
+      print("Number of Invalid Plays by Agent 1:", outcomes.count([None, 0]))
+      print("Number of Invalid Plays by Agent 2:", outcomes.count([0, None]))
+
+  
+#+end_src
+
