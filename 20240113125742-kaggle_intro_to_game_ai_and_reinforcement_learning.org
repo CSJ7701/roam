@@ -103,3 +103,124 @@ We use another python function to get the win percentages from these trials and 
   
 #+end_src
 
+* Code Exercise
+
+In this exercise, we are going to improve our agents performance.
+
+Rather than attempting to come up with a complicated strategy, we can instruct our model to choose a winning move, if it is available.
+
+Our goal is to create an agent that:
+- selects a winning move, if available (if there are multiple it picks one)
+- If there is no winning move, makes a random move.
+
+#+begin_src python :results verbatim :session Kaggle-Reinf
+
+  import numpy as np
+
+  # Gets board at next step, if the agent drops piece in the selected column.
+  def drop_piece(gric, col, piece, config):
+      next_grid=grid.copy()
+      for row in range(config.rows-1, -1, -1):
+          if next_grid[row][col]==0:
+              break
+      next_grid[row][col]=piece
+      return next_grid
+
+  # Returns true if dropping piece in the selected column results in a game win
+  def check_winning_move(obs, config, col, piece):
+      # Convert the board to a 2D grid
+      grid=np.asarray(obs.board).reshape(config.rows, config.columns)
+      next_grid=drop_piece(grid, col, piece, config)
+      # Horizontal
+      for row in range(config.rows):
+          for col in range(config.columns-(config.inarow-1)):
+              window=list(next_grid[row,col:col+config.inarow])
+              if window.count(piece)==config.inarow:
+                  return True
+      # Vertical
+      for row in range(config.rows-(config.inarow-1)):
+          for col in range(config.columns):
+              window=list(next_grid[row:row+config.inarow,col])
+              if window.count(piece)==config.inarow:
+                  return True
+      # Positive Diagonal
+      for row in range(config.rows-(config.inarow-1)):
+          for col in range(config.columns-(config.inarow-1)):
+              window=list(next_grid[range(row, row+config.inarow), range(col, col+config.inarow)])
+              if window.count(piece)==config.inarow:
+                  return True
+      # Negative Diagonal
+      for row in range(config.inarow-1, config.rows):
+          for col in range(config.columns-(config.inarow-1)):
+              window=list(next_grid[range(row, row-config.inarow, -1), range(col, col+config.inarow)])
+              if window.count(piece)==config.inarow:
+                  return True
+      return False
+
+#+end_src
+
+#+RESULTS:
+
+
+The =check_winning_move= function takes 4 arguments. =obs= and =config= are defined in the previous section, =col= represents any valid move, and piece is either the agents mark or that of the agent's opponent.
+
+The function returns true if dropping the piece in the provided column wins the game (for either the agent or its opponent), and otherwise returns false.
+To check if the agent can win in the next move, you canset =piece=obs.mark=
+
+Now, we need to define a new agent to utilize the functions we have written.
+
+#+begin_src python :results verbatim :session Kaggle-Reinf
+
+  import random
+
+  def agent_q1(obs, config):
+      valid_moves=[col for col in range(config.columns) if obs.board[col]==0]
+
+      for move in valid_moves:
+          if check_winning_move(obs, config, move, obs.mark):
+              return move
+
+      return random.choice(valid_moves)
+
+
+#+end_src
+
+#+RESULTS:
+
+We now have an agent that can select winning moves.
+How can we improve this further?
+
+We can make the agent block the opponents potential winning moves, if it cannot win in the next move.
+
+This means that the agent will:
+- Select a winning move, if it is available.
+- Select a move to block the opponent from winning, if it cannot win
+- If neither option is possible, make a random move.
+
+  We can do this by extending the logic from the previous example:
+
+  #+begin_src python :results verbatim :session Kaggle-Reinf
+
+    def agent_q2(obs, config):
+        valid_moves=[col for col in range(config.columns) if obs.board[col]==0]
+
+        # Select winning moves
+        for move in valid_moves:
+            if check_winning_move(obs, config, move, obs.mark):
+                return move
+
+        # Block opponents move
+        if obs.mark == 1:
+            opp_mark=2
+        elif obs.mark ==2:
+            opp_mark=1
+
+        for move in valid_moves:
+            if check_winning_move(obs, config, move, opp_mark):
+                return move
+
+        return random.choice(valid_moves)
+
+  #+end_src
+
+  #+RESULTS:
