@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       d68838dd-e58d-41c3-9f7c-cd512dcaaeaf
+:END:
+#+title: Sequences
+#+filetags: :Discrete:
+
+A sequence is a function $f:\mathbb{N}\rightarrow A$.
+(a well defined way of ordering the elements of A)
+
+Closed form:
+a rule for finding the nth term of A ($a_n$), simply by knowing n.
+
+Recursive form:
+Rules for finding the next term based on the current term (or vice-versa)
+
+
+
+Example: given recursive sequence can be written as $a_n=3^{n-1}+\frac{3^{n-1}-1}{2}=\frac{1}{2}(3^{n}-1)$
+
+sequence - $a_1=1$,   $a_{k+1}=3a_{k}+1$
+
+Proof: 
+
+Based on the recursive definition, $a_n=3(a_{n-1})+1$, and $a_{n-1}=3(a_{n-2})+1$
+Therefore, $a_{n}=3(3(a_{n-2})+1)+1$, which simplifies to $3^2(a_{n+2})+(1+3)$
+We can continue writing subsequent terms:
+$3^3(a_{n+3})+(9+3+1)$
+
+This establishes the pattern: $a_n=3^{n}(a_n)+(\sum_{i=0}^{n-1}3^i)$
+The summation is a geometric series, and can be simplied into $\frac{1(1-3^k)}{1-3}$
+
+Thus, $a_n=3^n(a_n)+(\frac{1(1-3^k)}{1-3})\ \rightarrow\ a_{n-1}=3^{n-1}+a_{n-1}+\frac{1-3^{n-1}}{-2}$
+
+*NOTE* - she did something to establish that n=n-1 (she used k), then $a_{n-1}$ simplifies to 1?

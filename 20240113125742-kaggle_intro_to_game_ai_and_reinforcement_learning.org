@@ -225,7 +225,6 @@ This means that the agent will:
 
   #+RESULTS:
 
-
 * One Step Lookahead
 
 Someone who has played a game before typically develops strategies that they use when they next play the game.
@@ -320,3 +319,41 @@ What does this code look like?
     # Select at random from the maximizing columns
     return random.choice(max_cols)
 #+end_src
+* Code Exercise
+In the previous section, we defined a heuristic that would examine each set of 4 adjacent spots, counting occupied spaces in each set.
+
+We will expand this heuristic to divide sets of 4 into 4 occupied spaces, 3 occupied spaces (agent), 2 occupied spaces (agent), 2 occupied spaces (opponent), and 3 occupied spaces (opponent).
+We will also choose the point values to apply to each situation.
+
+#+begin_src python :results none
+
+  A=1000000
+  B=100
+  C=1
+  D=-1
+  E=-100
+
+  def get_heuristic_q1(grid, col, mark, config):
+  num_twos=count_windows(grid,2,mark,config)
+  num_threes=count_windows(grid,3,mark,config)
+  num_fours=count_windows(grid,4,mark,config)
+  num_twos_opp=count_windows(grid,2,mark%2+1,config)
+  num_threes_opp=count_windows(grid,3,mark%2+1,config)
+  score=A*num_fours + B*num_threes + C*num_twos + D*num_twos_opp + E*num_threes_opp
+  return score
+
+#+end_src
+
+#+RESULTS:
+
+With A=100000, B=100, C=1, D=-1, and E=-100; the agent's win percentage (in 50 games) is 0.58, and the opponents is 0.48.
+
+Increasing D to -100 and E to -10000 increases the agent's win pecentage to 0.74.
+Further adjusting our parameters so that A=10000000000, B=100, C=1, D=-10, and E=-1000 improves our win percentage to 0.86.
+
+This would indicate that increasing the point loss when opponents make good moves is an important aspect, but that increasing the score achieved on an agent win is the most influential factor.
+/Note/ that all of these changes are relative to the other multipliers - if all numbers are 1000 and A is 10000, this will not be effective, since A is small compared to the other numbers.
+
+
+
+
