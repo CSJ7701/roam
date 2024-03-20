@@ -224,3 +224,99 @@ This means that the agent will:
   #+end_src
 
   #+RESULTS:
+
+
+* One Step Lookahead
+
+Someone who has played a game before typically develops strategies that they use when they next play the game.
+
+We can use *heuristics* to share our strategies for connect four with our agent.
+
+As a human player, we usually view a game like connect four as a series of possible moves. For each possible move, we predict what our opponent might do in response, and how that may affect the outcome of the game.
+This idea is known as a "game tree" - a diagram which represents every single possible move starting with an empty board.
+
+A complete game of connect 4 has over 4 trillion different board configurations, so in practice our agent will work with only a small subset of these possibilities.
+To ensure that this incomplete tree is useful to our agent, we use a *heuristic* or *heuristic function*.
+This function assigns a score to the different game boards, estimating that boards with higher scores will result in a more likely victory for the agent.
+
+One example of a possible heuristic could look at each group of four adjacent coordinates in a horizontal, diagonal, or vertical line. It could assign 1000000 points if the agent has four disks in a row (the agent won), 1 point if the agent filled 3 spots and the remaining spot was empty, and -100 points if the opponent filled 3 spots and the last was empty.
+
+How exactly would our agent use this heuristic function?
+Consider it's the agents turn, and it is trying to plan a move for a specific game board. There are 7 possible moves - one for each column. We record the resulting board for each move.
+We can then use the heuristic function to assign a score to each board. The board with the highest score defines the move that the agent will make.
+
+What does this code look like?
+
+#+begin_src python :results none
+
+  import numpy as np
+  import random
+
+  def score_move(grid, col, mark, config):
+      next_grid=drop_piece(grid, col, mark, config)
+      score=get_heuristic(next_grid, mark, config)
+      return score
+
+  def drop_piece(grid, col, mark, config):
+      next_grid=grid.copy()
+      for row in range(config.rows-1,-1,-1):
+          if next_grid[row][col]==0:
+              break
+      next_grid[row][col]=mark
+      return next_grid
+
+  # Helper function for score_move: calculates value of heuristic for grid
+  def get_heuristic(grid, mark, config):
+      num_threes = count_windows(grid, 3, mark, config)
+      num_fours = count_windows(grid, 4, mark, config)
+      num_threes_opp = count_windows(grid, 3, mark%2+1, config)
+      score = num_threes - 1e2*num_threes_opp + 1e6*num_fours
+      return score
+
+  # Helper function for get_heuristic: checks if window satisfies heuristic conditions
+  def check_window(window, num_discs, piece, config):
+      return (window.count(piece) == num_discs and window.count(0) == config.inarow-num_discs)
+
+  # Helper function for get_heuristic: counts number of windows satisfying specified heuristic conditions
+  def count_windows(grid, num_discs, piece, config):
+      num_windows = 0
+      # horizontal
+      for row in range(config.rows):
+          for col in range(config.columns-(config.inarow-1)):
+              window = list(grid[row, col:col+config.inarow])
+              if check_window(window, num_discs, piece, config):
+                  num_windows += 1
+                  # vertical
+          for row in range(config.rows-(config.inarow-1)):
+              for col in range(config.columns):
+                  window = list(grid[row:row+config.inarow, col])
+                  if check_window(window, num_discs, piece, config):
+                  num_windows += 1
+      # positive diagonal
+      for row in range(config.rows-(config.inarow-1)):
+          for col in range(config.columns-(config.inarow-1)):
+              window = list(grid[range(row, row+config.inarow), range(col, col+config.inarow)])
+              if check_window(window, num_discs, piece, config):
+                  num_windows += 1
+          # negative diagonal
+          for row in range(config.inarow-1, config.rows):
+              for col in range(config.columns-(config.inarow-1)):
+                  window = list(grid[range(row, row-config.inarow, -1), range(col, col+config.inarow)])
+                  if check_window(window, num_discs, piece, config):
+                      num_windows += 1
+      return num_windows
+
+  # The actual Agent
+
+  def agent(obs, config):
+    # Get list of valid moves
+    valid_moves = [c for c in range(config.columns) if obs.board[c] == 0]
+    # Convert the board to a 2D grid
+    grid = np.asarray(obs.board).reshape(config.rows, config.columns)
+    # Use the heuristic to assign a score to each possible board in the next turn
+    scores = dict(zip(valid_moves, [score_move(grid, col, obs.mark, config) for col in valid_moves]))
+    # Get a list of columns (moves) that maximize the heuristic
+    max_cols = [key for key in scores.keys() if scores[key] == max(scores.values())]
+    # Select at random from the maximizing columns
+    return random.choice(max_cols)
+#+end_src
