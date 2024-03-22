@@ -1,0 +1,145 @@
+:PROPERTIES:
+:ID:       c648dc29-540f-4b89-ad59-3082371572bd
+:END:
+#+title: Exam 3 Review
+#+filetags: :MWO:
+
+
+Given a radar screen with true and relative radar lines.
+Fill out shipping officer contact report.
+(If there's a picture, visual. If not, no)
+Will have to estimate CPA bearing in degrees relative.
+
+Nav eval report
+Given an ecdis screen, fill out a nav eval report.
+(Always a GPS FIX)
+TTT - time to turn
+DTT - Distance to turn
+XTD - Cross track distance
+
+Calling the CO script
+Write down info for a contact.
+Same as we did in lab.
+
+Elements of human factors: (know AT LEAST 2, be able to define)
+- VOyage Planning
+Standardized procedures
+Situational awareness and voyage monitoring
+Stress complacency and distraction
+Communication
+fatigue
+teamwork
+- erorr chains
+
+Human factors:
+75-90 percent of accidents caused by hum.fact.
+
+
+5 steps of RM process: (know these correctly, in order)
+- Identify Hazards
+- Assess hazards
+- Develop controls make decisions
+- Implement COntrols
+- ...
+
+Deliberate RM - key aspects (know 2)
+- AMple time to complete
+- Strategic planning at all levels
+- Well suited for complex events
+
+Real time RM - key aspects (know)
+This is basically GAR
+- Time is often constrained
+- Makes real time necessary updates to original risk assessment
+
+Four key principles of RM (KNOW)
+- Integrate rm into all phases of operations
+- accept no unnecessary risk
+- accept necessary risk when benefits outweigh costs
+- make risk decision at the appropriate level
+
+Voyage planning - guidelines for plan:
+- Reasonable
+- Done in advance
+- Considers all pertinent info
+- Must account for risks or changes
+
+Shared mental model
+- Everyone involved must have a /shared mental model/
+- Mutially agreed understanding
+- Pre voyage briefing
+- Helps prevent "one person" error.
+
+Situational Awareness (know percentage)
+40% of all nav mishaps are due to loss of situational awareness
+72% collisions from head on, 9% from crossing/overtaking
+
+VOyage monitoring (know 2 and define)
+- cross reference
+- managing resources
+- continuous review of plan
+- seaman's eye
+
+Managing resources (know these)
+- equiment
+- information
+- people
+
+Type of comms from least to most effective (know order and why f2f is best)
+- face to face
+- non face to face (verbal) (phone, radio)
+- written
+- non verbal
+
+F2F is best: inflection, tone, body language
+
+Communication barriers: (know 4)
+- Stress
+- fatigue
+- attitude
+- language
+- distractions
+- ...
+
+
+Know tuckmans model
+
+Pilots:
+can be compulsory or voluntary
+comp: required by a gov. authority
+vol: based on perceived need for pilot's expertise
+
+Types of stress: (prolly know chronic)
+acute: response to immediate perceived threat
+chronic: develops over a prolonged period of time
+
+Causes of complacency (know at least 2)
+- sels satisfaction
+- not correcting behavior
+- supervisor not paying attention
+- losing drive and ambition
+- ...
+
+Battling complacency (know 2)
+
+At risk behaviors:
+*Intentional at risk behavior* (come up with at elast 2  examples)
+- operateing high speed in fog
+- deviate form nav rules
+- disobey standing orders
+- disregarding safety practices.
+
+*Unintentional* (define habitual at risk behaviors)
+Can BS this.
+- Repeatedly engaging... at risk behavior... intentioanlly or unintentionally
+
+Types of issues (know each type)
+ - slip - miscommunications (usually stress)
+ - errors - Poor execution, poor planning
+ - mistakes - failure in planning
+
+Choose an element of bridge resource management
+Explain why you think it matters most
+Defend opinion.
+
+- COmmunication, looking at the exxon valdez, issue could ahve been averted if crew had communicated better 
