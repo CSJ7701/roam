@@ -22,14 +22,14 @@ Write down info for a contact.
 Same as we did in lab.
 
 Elements of human factors: (know AT LEAST 2, be able to define)
-- VOyage Planning
-Standardized procedures
-Situational awareness and voyage monitoring
-Stress complacency and distraction
-Communication
-fatigue
-teamwork
-- erorr chains
+- Voyage Planning
+- Standardized procedures
+- Situational awareness and voyage monitoring
+- Stress complacency and distraction
+- Communication
+- fatigue
+- teamwork
+- error chains
 
 Human factors:
 75-90 percent of accidents caused by hum.fact.
@@ -40,7 +40,7 @@ Human factors:
 - Assess hazards
 - Develop controls make decisions
 - Implement COntrols
-- ...
+- Supervise and Evaluate
 
 Deliberate RM - key aspects (know 2)
 - AMple time to complete
