@@ -1,0 +1,210 @@
+:PROPERTIES:
+:ID:       fa657b96-e628-4cc3-a4e6-beae92d669a3
+:VISIBILITY: folded
+:END:
+#+title: Music Classification Project
+#+category: Music Classification Project
+#+filetags: :DSP:Project:
+#+STARTUP: shrink
+
+* Project Description
+Using signal analysis techniques learned in Digital Signal Processing to recognize music and generate similar playlists.
+** Goals
+- Learn about different approaches to music similarity scoring and recommendations; derive main results
+- Develop program that determines how similar songs are to each other; make code modular and able to accept new music files.
+- Build a recommender system that runs on a loop playing audio files most similar to each other.
+- Incorporate a live music feature into the program, allowing a user to record a live snippet of audio. System will check if audio file is already present.
+- Determine how the system should work in production and what resources are required vs number of users.
+
+** Advanced Goals
+- extend code base to incorporate another recommendation system based off a specific feature or features of the music files (dance tempo, etc)
+- Improve your program, eg: faster runtime, recording robustness to noise, lower false positive rate, etc.
+- Build a simple ML based recommender system and compare it to your other results.
+
+* Project Components
+
+** Characterize Song
+We need to choose a method with which to represent a song's characteristics.
+Right now, it looks as though we have 4 logical choices with which we could proceed:
+- Frequency Distribution (This is found with the FFT and prob theory)
+- MFCC (This represents the general "texture" of the song - still a little unclear what that actually means)
+- Rhythm (Would need to find a more generalized method of representing this - [[*Fluctuation Patterns][Fluctuation Patterns]] and [[*"Penny" Features]["Penny" Features]] could be promising)
+- Melody (Chromagrams)
+
+The best decision would likely be to combine several of these options - perhaps we calculate all of them and assign each a "weight" value to indicate how much we care about similarity in each category?
+
+Whatever method we choose should represent the track in some standardized format - perhaps a sequence?
+/Note/ - would the sequence need to maintain a common length?
+
+** Compare Songs
+Before we can generate recommendations from a large collection of music, we must first be able to calculate how similar two tracks are to each other.
+
+At an early stage, this will involve taking two songs as an input, calculating our chosen characteristics, and comparing the two results.
+It will make much more sense to compare the /distribution/ of each result, rather than attempting to compare the raw values. This likely means that the length of the original sequence for each result is arbitrary.
+If we choose to base our comparison off of multiple characteristics, we will need to compare the difference between each characteristic, then we have a choice.
+We could either multiply each difference by a scale factor that represents the weight we choose for a characteristic, OR we could store all the values in an array.
+/Note/ - whichever we choose, we will most likely want to arrive at a single scalar value to represent similarity (value will reside in a range - i.e. will be normalized)
+
+** Apply Comparisons
+The end goal of this project is to recommend a "playlist" of songs that are similar to some starting point.
+Presumably, we will only be able to work with songs for which we have access to .mp3 or .wav files for (I can supply, I've got a moderate collection of local music).
+
+I can see two logical ways to approach this.
+
+1. Live scanning
+   User will input a song (list of songs?) and the system will calculate its list of characteristics.
+   System will then calculate list of characteristics for every other song in a given directory.
+   System will skip/break loop if any of the newly scanned characteristics are further than a pre-defined threshold.
+   Will progressively gather list of songs that are not outside that threshold, and this will become the playlist.
+   Pros:
+   - Data is in standard format
+   - No need to compress data
+   Cons:
+   - Will likely be slow
+   - Heavily resource intensive - probably won't be able to run on issued laptops.
+
+2. Compression and Database
+   User will point system at a directory containing music files. System will scan each file, calculate its characteristic values.
+
+   Depending on the format in which we output characteristic values, this step may differ.
+   The system should somehow compress/hash the characteristic values in order to store them in a database (I don't believe there's an efficient way to store array data types in a database, unless we convert the array to a string... which is dumb.)
+   We can figure out database structure later if we choose this route.
+   Alternatively, there may be a more efficient method than a database for storing this type of data - I'm unsure.
+
+   User will input a song, system will calculate its list of characteristics.
+   System will query database to find values within the threshold compared to the input song.
+   Output from this query will become the playlist.
+   Pros:
+   - Should be significantly faster, depending on data structure
+   - Will scale easily for larger collections of music
+  Cons:
+  - Will need to figure out some efficient database scheme to store characteristic data
+  - Will likely need to convert raw characteristic data in order to store in database
+
+This step will likely require some sort of FOR loop to check multiple items and calculate successive similarities - it's worth looking into a way to optimize this "stepping" rather than simply iterating through every single item.
+Look into [[*LSH][LSH]] and [[*Ball Trees][Ball Trees]].
+
+* References
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+
+| Title                                                                                          | Link                                                                                                                                                        | Abstract | Conclusion | Thorough | Done |
+|------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+----------+------|
+| <50>                                                                                           | <5>                                                                                                                                                         | <4>      | <4>        | <4>      | <4>  |
+| An Industrial Strength Audio Search Algorithm                                                  | [[file:~/Projects/Music-Classification/References/An_Industrial_Strength_Audio_Search_Algorithm.pdf][Link]]                                                 | X        |            |          |      |
+| A Music Similarity Function Based on Signal Analysis                                           | [[file:~/Projects/Music-Classification/References/Music_Similarity_Function_Based_on_Signal_Analysis.pdf][Link]]                                            | X        |            |          |      |
+| Signal Processing for Music Analysis                                                           | [[file:~/Projects/Music-Classification/References/Signal_Processing_for_Music_Analysis.pdf][Link]]                                                          | X        |            |          |      |
+| Music Similarity Measures - What's the Use                                                     | [[file:~/Projects/Music-Classification/References/Music-similarity-measures-whats-the-use.pdf][Link]]                                                       | X        |            |          |      |
+| Find Similar Music Using FFT Spectrums (StackExchange)                                         | [[https://dsp.stackexchange.com/questions/1370/find-similar-music-using-fft-spectrums][Link]]                                                               | X        | X          | X        | X    |
+| Shazam Music Processing: Fingerprinting and Recognition (Website)                              | [[https://www.toptal.com/algorithms/shazam-it-music-processing-fingerprinting-and-recognition][Link]]                                                       | X        |            |          |      |
+| Contextual Personalized Re-Ranking of Music Recommendations through Audio Features             | [[file:~/Projects/Music-Classification/References/contextualized-personal-reranking-of-music.pdf][Link]]                                                    | X        |            |          |      |
+| Computational Models of Music Similarity and their Applications in Music Information Retrieval | [[file:~/Projects/Music-Classification/References/Computational-Models-of-Music-Similarity-and-their-Application-in-Music-Information-Retrieval.pdf][Link]] | X        |            |          |      |
+| Beat Tracking by Dynamic Programming                                                           | [[file:~/Projects/Music-Classification/References/beat-tracking-by-dynamic-programming.pdf][Link]]                                                          | X        |            |          |      |
+
+** An Industrial Strength Audio Search Algorithm
+*Abstract*
+Flexible audio search engine. Noise and distortion resistant, compute efficient, scalable.
+Takes snippet of sound, and identifies it against database of "millions" of tracks.
+/Detail/: Combinatorially hashed time-frequency constellation
+** A Music Similarity Function Based on Signal Analysis
+*Abstract*
+Method to compare songs on "audio content".
+Creates signature for each song based on "K-means" clustering of "special features".
+Handles simple corruption well.
+Method is about 50% effective.
+** Signal Processing for Music Analysis
+*Abstract*
+Overview of signal analysis techniques to address dimensions like harmony, melody, rhythym, timbre.
+Impact of certain characteristics. Implications of these techniques. 
+** Music Similarity Measures - What's the Use
+*Abstract*
+Measures to compare music titles based on timbre.
+Timbre extractor and timbral similarity relation.
+Describes experiments to measure quality of relations.
+** Find Similar Music Using FFT Spectrums (StackExchange)
+*Initial Post*
+Attempt to match similar songs in large library.
+Attempts to use FFT to calculate spectrum of a song, comparing spectra to determine similarity.
+Seeks advice.
+
+*First Read*
+Commenter believes that, since music is recorded with the goal of maximizing spectral spread, a full spectrum may not be effective.
+Suggests looking into a spectrogram.
+
+There are many dimensions in which to measure music (timbre/texture/genre, rhythmic pattern, melody/chord progression ... etc).
+Comparing these dimensions will find similarities in different ways, and produce different results.
+*Mel Frequency Cepstrum Coefficients* will help analyze timbre/texture/genre
+- "Somehow" capture the way human hearing works (frequency warping, log scale)
+*Fluctuation Patterns* or *"Penny" features* will help analyze rhythmic pattern
+- fluctuation patterns - Pampalk(?), "autocorrelation of the signal in the 0.1-10 Hz range over a few bands"
+- Whitman's "Penny" features - FFT of the MFCC along the time axis
+*Chromagrams* will help analyze melody and chord progression
+- Start with "Ellis" chromagram code - [[http://labrosa.ee.columbia.edu/matlab/chroma-ansyn/][Link]]
+- Mauch's implementation (more robust?) - [[http://isophonics.net/nnls-chroma][Link]]
+
+The methods above help represent music as a sequence of features.
+Will have to find a method for comparing two such sequences.
+/Note/ - As LT mentioned, comparing these sequences pairwise is not smart - if there is a second or two delay in one of two otherwise identical tracks, the two sequences will be different. Should instead compare the /Distribution/ of the two sequences.
+One method - computing the mean and standard deviation of the features over song A, then over song B, and taking the probalistic distance between the two (mentioned KL, Bhattacharyya)
+
+Mentions that it will be relatively ineffective to find the distance between a single song and the rest of the music collection.
+Suggests using something like "LSH" or "Ball trees" - allows queries to be performed on near neighbors without explicit comparison with the entire library.
+** Shazam Music Processing: Fingerprinting and Recognition (Website)
+*Abstract*
+Describes how Shazam works.
+Walks through code implementation for identifying a song based on a snippet.
+** Contextual Personalized Re-Ranking of Music Recommendations through Audio Features
+*Abstract*
+Presents "contextual" ranking algorithm.
+Represents user preferences based on high-level audio features, like tempo and valence.
+Global and user specific models. 
+** Computational Models of Music Similarity and their Applications in Music Information Retrieval
+*Abstract*
+Describes computational models of music similarity, and their efficacy.
+Goes on to outline applications of these models and techniques.
+Describes 3 features:
+- organize and visualize music collections - control "similarity aspects"
+- Organize collection into overlapping hierarchy based on artist
+- Generate playlists with minimal user input.
+** Beat Tracking by Dynamic Programming
+*Abstract*
+Defines beat tracking - sequence of "beat instants" (when a human listener might "tap their foot").
+Two constraints - actual tempo of the music, and reflects a locally-constant inter-beat-interval.
+Uses dynamic programming to find a match between tempo and moments of high "onset strength". 
+
+
+* Topics
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+** Spectrogram
+** Chromagrams
+** Mel Frequency Cepstrum Coefficients (MFCC)
+** Fluctuation Patterns
+** "Penny" Features
+** LSH
+** Ball Trees
+* Inbox
+
+** TODO Review References [11%]
+- [ ] An Industrial Strength Audio Search Algorithm
+- [ ] A Music Similarity Function Based on Signal Analysis
+- [ ] Signal Processing for Music Analysis
+- [ ] Music Similarity Measures - What's the Use
+- [X] Find Similar Music Using FFT Spectrums (StackExchange)
+- [ ] Shazam Music Processing: Fingerprinting and Recognition (Website)
+- [ ] Contextual Personalized Re-Ranking of Music Recommendations through Audio Features
+- [ ] Computational Models of Music Similarity and their Applications in Music Information Retrieval
+- [ ] Beat Tracking by Dynamic Programming
+
+
+** TODO Research Spectrogram
+
+** TODO Research Chromagrams
+
+** TODO Research Mel Frequency Cepstrum Coefficients (MFCC)
+
+** TODO Research Fluctuation Patterns, "Penny" Features
+
+** TODO Research LSH, Ball trees
