@@ -210,3 +210,12 @@ Uses dynamic programming to find a match between tempo and moments of high "onse
 ** TODO Research Fluctuation Patterns, "Penny" Features
 
 ** TODO Research LSH, Ball trees
+* Weekly Reflection
+** Week 1
+:PROPERTIES:
+:EXPORT_FILE_NAME: /home/csj7701/Projects/Music-Classification/Class-Documents/Week-1-Reflection
+:END:
+- This week, I focused on familiarizing myself with the scope of our project and beginning to dive into the provided research material. I began reading through each of the papers, and have focused primarily on increasing my understanding of the general topics that we will be working with.
+- I have fully read through one of the papers, made my way through the introductory material and about half the content on another, and examined abstract and conclusion on all others. I did not have time for much work past that this week, as I had classwork and several examinations.
+- My biggest challenge this week was a general lack of understanding. As I read through the material, I was faced with terms with which I was unfamiliar, and concepts that I had not been introduced to previously. I made an effort to gain a loose understanding for all the concepts in the sections I read, and have compiled a list of topics that I will need to research more in-depth at a later date.
+- From my readings, I have determined that there are 3 primary sections to this project - "Characterizing" a song, which will be based on one of several methods, or a combination of these (FFT, MFCC, "Penny" Features, or Chromagrams); Comparing these characterizations, likely using some form of distribution; and Applying those characterizations, which I anticipate as the most difficult portion of the project since it will involve a series of design decisions in order to create a working product.
