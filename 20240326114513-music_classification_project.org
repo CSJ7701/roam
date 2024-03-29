@@ -38,6 +38,8 @@ The best decision would likely be to combine several of these options - perhaps 
 Whatever method we choose should represent the track in some standardized format - perhaps a sequence?
 /Note/ - would the sequence need to maintain a common length?
 
+Song 1 = [(12,14,15),(25.5 bpm), (12,13,14), (14,15,16)]
+
 ** Compare Songs
 Before we can generate recommendations from a large collection of music, we must first be able to calculate how similar two tracks are to each other.
 
@@ -210,6 +212,9 @@ Uses dynamic programming to find a match between tempo and moments of high "onse
 ** TODO Research Fluctuation Patterns, "Penny" Features
 
 ** TODO Research LSH, Ball trees
+
+** TODO Look into similarity Metrics
+
 * Weekly Reflection
 ** Week 1
 :PROPERTIES:
