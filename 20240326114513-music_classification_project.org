@@ -158,6 +158,202 @@ Suggests using something like "LSH" or "Ball trees" - allows queries to be perfo
 *Abstract*
 Describes how Shazam works.
 Walks through code implementation for identifying a song based on a snippet.
+
+*First Read*
+Defines the basic process of capturing an  analog sound signal to a digital representation.
+Human hearing range is 20 Hz to 20,000 Hz, so we should sample at a rate of 44,100 Hz.
+
+Describes general process for reading a song in code. Uses java, but process is translatable to python.
+This data is currently stored in time-domain. Use the DFT (FFT really) to transform the list of time domain samples into a finite combination of complex sinusoids, ordered by frequency.
+Interestingly, the implementation of the FFT that this article describes chooses to break the signal into even and odd indices, perform the FFT on the even and odd components seperately, then combine.
+They choose to do this because they appear to be following something known as the "Cooley-Turkey Algorithm". This is simply a method to simplify computation.
+
+A downside of the FFT that the article points out is the lack of context. The FFT tells you information about every frequency that appears in a signal, but it doesn't tell you anything about /when/ in that signal those frequencies occur.
+The article proposes implementing a sliding window, and only performing the FFT on that window.This will result in an array of arrays instead of the typical single complex array that the FFT outputs.
+From this array, we can start to form a "fingerprint".
+
+Our biggest issue at this stage is that we have /too much/ information. In order to reduce the complexity of the operations we need to perform, we can pare down the number of signals by focusing on specific "bins" where the most significant frequencies will reside. One way to divide our frequencies is to identify "bins" of specific frequency ranges, then within each bin, identify the individual frequency with the highest amplitude.
+This article chooses to hash the frequency results, which is apparently useful for data compression.
+The process essentially looks like this:
+ Window 1 -- Bin 1 -- Max Freq -- Hash
+ Window 1 -- Bin 2 -- Max Freq -- Hash
+ ...
+ Window 1 -- Concatenate Hashes
+ Window 2 -- Bin 1 -- Max Freq -- Hash
+...
+Window 2 -- Concatenate Hashes
+The result should be an array of hashes.
+
+When recording audio, it's important to note that the recording is subject to noise and disruption. In order to account for this, we include something called a "fuzz factor", which is a sort of tolerance for noise.
+
+In order to identify a song, we must frst construct a database. This data base should not correlate the different "window" sections of a song - in order to allow the system to identify a song based on theoretically "any" portion of the song.
+The database will look something like this:
+| Hash              | time (seconds) | Song ID            |
+| 30 51 99 121 195  |          53.52 | Song A by Artist A |
+| 33 56 92 151 185  |          12.32 | Song B by Artist B |
+| 39 26 89 141 251  |          15.34 | Song C by Artist C |
+| 32 67 100 128 195 |          78.43 | Song D by Artist D |
+| 34 57 95 111 200  |          54.52 | Song A by Artist A |
+
+Here, this table contains tag values for different portions of songs. There are two entries for Song A by Artist A, because they represent different windows of the same song. The hash is the "key" for the table, that is, when the system starts to analyze a new snippet of a song, it will find the hash of the newly recorded snippet and compare it to those already stored in the database. When it finds a match, that is how it will associate a name to the snipped of audio.
+
+It's relatively common for a song to use motifs and riffs from other pieces however, which can mean that a search for a single hash will produce several matches. This is what the second column, time, is for. This is somewhat complicated - we can' match the exact time that a hash corresponds to in the song, because the same motif might happen several times throughout the recording. Instead, we compare relative timings. If we match two hash sequences, we can compare their relative timings, which enables us to differentiate between two songs with similar themes.
+
+*** Extracted Code
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+
+Returns an 'AudioFormat' object with specific settings for audio data - sample rate, sample size, number of channels.
+#+begin_src java
+private AudioFormat getFormat() {
+    float sampleRate = 44100;
+    int sampleSizeInBits = 16;
+    int channels = 1;          //mono
+    boolean signed = true;     //Indicates whether the data is signed or unsigned
+    boolean bigEndian = true;  //Indicates whether the audio data is stored in big-endian or little-endian order
+    return new AudioFormat(sampleRate, sampleSizeInBits, channels, signed, bigEndian);
+}
+
+final AudioFormat format = getFormat(); //Fill AudioFormat with the settings
+DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
+final TargetDataLine line = (TargetDataLine) AudioSystem.getLine(info);
+line.open(format);
+line.start();
+#+end_src
+
+Opens 'TargetDataLine' to capture audio data based on format. Reads data from line in a loop, writes to 'OutputStream'
+#+begin_src java
+OutputStream out = new ByteArrayOutputStream();
+running = true;
+
+try {
+    while (running) {
+        int count = line.read(buffer, 0, buffer.length);
+        if (count > 0) {
+            out.write(buffer, 0, count);
+        }
+    }
+    out.close();
+} catch (IOException e) {
+    System.err.println("I/O problems: " + e);
+    System.exit(-1);
+}
+#+end_src
+
+Implements Cooley-Turkey FFT algorithm to calculate the FFT of an input array of complex numbers.
+#+begin_src java
+public static Complex[] fft(Complex[] x) {
+    int N = x.length;
+    
+    // fft of even terms
+    Complex[] even = new Complex[N / 2];
+    for (int k = 0; k < N / 2; k++) {
+        even[k] = x[2 * k];
+    }
+    Complex[] q = fft(even);
+
+    // fft of odd terms
+    Complex[] odd = even; // reuse the array
+    for (int k = 0; k < N / 2; k++) {
+        odd[k] = x[2 * k + 1];
+    }
+    Complex[] r = fft(odd);
+
+    // combine
+    Complex[] y = new Complex[N];
+    for (int k = 0; k < N / 2; k++) {
+        double kth = -2 * k * Math.PI / N;
+        Complex wk = new Complex(Math.cos(kth), Math.sin(kth));
+        y[k] = q[k].plus(wk.times(r[k]));
+        y[k + N / 2] = q[k].minus(wk.times(r[k]));
+    }
+    return y;
+}
+#+end_src
+
+Applies the implemented FFT. Converts captured audio (from 'OutputStream', probably) to an array of complex numbers, and performs the FFT on each chunk of data.
+#+begin_src java
+byte audio [] = out.toByteArray()
+int totalSize = audio.length
+int sampledChunkSize = totalSize/chunkSize;
+Complex[][] result = ComplexMatrix[sampledChunkSize][];
+
+for(int j = 0;i < sampledChunkSize; j++) {
+  Complex[chunkSize] complexArray;
+
+  for(int i = 0; i < chunkSize; i++) {
+    complexArray[i] = Complex(audio[(j*chunkSize)+i], 0);
+  }
+
+  result[j] = FFT.fft(complexArray);
+}
+
+#+end_src
+
+Analyzes FFT results. Finds the highest magnitude within each of a set range of frequencies. Does so on several "windows" of data.
+#+begin_src java
+public final int[] RANGE = new int[] { 40, 80, 120, 180, 300 };
+
+// find out in which range is frequency
+public int getIndex(int freq) {
+    int i = 0;
+    while (RANGE[i] < freq)
+        i++;
+    return i;
+}
+    
+// result is complex matrix obtained in previous step
+for (int t = 0; t < result.length; t++) {
+    for (int freq = 40; freq < 300 ; freq++) {
+        // Get the magnitude:
+        double mag = Math.log(results[t][freq].abs() + 1);
+
+        // Find out which range we are in:
+        int index = getIndex(freq);
+
+        // Save the highest magnitude and corresponding frequency:
+        if (mag > highscores[t][index]) {
+            points[t][index] = freq;
+        }
+    }
+    
+    // form hash tag
+    long h = hash(points[t][0], points[t][1], points[t][2], points[t][3]);
+}
+
+private static final int FUZ_FACTOR = 2;
+
+private long hash(long p1, long p2, long p3, long p4) {
+    return (p4 - (p4 % FUZ_FACTOR)) * 100000000 + (p3 - (p3 % FUZ_FACTOR))
+            * 100000 + (p2 - (p2 % FUZ_FACTOR)) * 100
+            + (p1 - (p1 % FUZ_FACTOR));
+}
+
+#+end_src
+
+Defines a data point class that represents a specific moment in a song, with attributes for song ID and time.
+#+begin_src java
+// Class that represents specific moment in a song
+private class DataPoint {
+
+    private int time;
+    private int songId;
+
+    public DataPoint(int songId, int time) {
+        this.songId = songId;
+        this.time = time;
+    }
+    
+    public int getTime() {
+        return time;
+    }
+    public int getSongId() {
+        return songId;
+    }
+}
+#+end_src
+
 ** Contextual Personalized Re-Ranking of Music Recommendations through Audio Features
 *Abstract*
 Presents "contextual" ranking algorithm.

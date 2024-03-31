@@ -12,6 +12,7 @@
 #+ATTR_LATEX: :caption \bicaption{---}
 [[file:/home/csj7701/Projects/Server-Hub/Resized.jpg]]
 
+
 * Components
 ** Login
 - Username
