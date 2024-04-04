@@ -1,0 +1,70 @@
+:PROPERTIES:
+:ID:       dcb90805-3818-4a26-9009-175c73282fc9
+:END:
+#+title: Trash Picking Robot Project
+#+category: Trash Picking Robot Project
+#+filetags: Project
+* Project Description
+Project for LT Ledzian to implement a "Trash Picking Robot" using [[id:002765d7-9d44-4163-a1c4-1058ef0d128c][Genetic Algorithms]].
+Based on a segment of Melanie Mitchell's book - [[file:References/GeneticAlgorithms.pdf][[LINK]​]]
+
+* Implementation
+Robby's job is to clean up the world by collecting soda cans.
+Robby's world consists of a 10x10 square - a 100 square area.
+Robby starts at (0,0), and there is a wall around the boundary of the grid (he cannot leave)
+
+Robby can see one square to the north, south, east, and west.
+A site can be empty, contain a can, or be a wall.
+
+For each cleaning session, robby can perform 200 actions. Each action can be one of 7 choices:
+- Move north
+- Move south
+- Move east
+- Move west
+- Move in a random direction
+- Stay put
+- Bend down to pick up a can
+
+Each action can generate a reward or punishment.
+If Robby is in the same square as a can and chooses to bend down, he receives 10 points.
+If he bends down when there is no can, he is fined one point.
+If he crashes into a wall, he is fined 5 points and returned to the current square.
+This should reward Robby for picking up as many cans as possible and avoiding walls.
+
+We need to come up with a set of rules that govern the actions Robby will take in any given situation.
+Robby's "situation" is simply what he can see - the contents of his current square, plus those to his immediate N,S,E and W.
+To define a strategy, we can simply define a list of rules for which of his seven actions he should perform in a given situation.
+There would be somewhere around 243 unique conditions possible in this case.
+We could simply write a table that lists an action to take in each of those situations. The choices don't need to be "correct" or even logical  - that is what the genetic algorithm is for.
+
+Since our strategies need to be represented as numbers or some other "programatic" representation, we must encode these somehow.
+This can be done in the code.
+
+The general steps to take here (in terms of code) are as follows:
+1. Generate the initial population.
+   When we create our population, we have to encode the options.
+   We can do this as numbers. Each individual strategy will be a list of 243 'genes'.
+   Each gene is a number between 0 and 6 (0=move north, 1=move south, 2=move east, 3=move west, 4=stay put, 5=pick up, 6=random move)
+   Use code to fill these numbers in at random.
+   We do this 200 times to get 200 different lists of 243 genes.
+
+2. Calculate the fitness of each individual in the population
+   Assigns scores discussed above, given that Robby has a certain number of moves allowed.
+   Essentially run "Cleaning sessions", where Robby is placed at 0,0 and throwing down cans
+   (Each site can contain at most one can, and the probability of a can is 50%).
+   Robby is allowed 200 actions per session, and score is the sum of reward points minus the sum of fines.
+   The strategy's fitness is its average score over 100 cleaning sessions - each with a different configuration of cans.
+
+3. Apply evolution to the current population of strategies to create a new population.
+   Repeat the following until we have a new population of 200 individuals:
+   - Choose 2 parent individuals (strings of 243 numbers) from the current population probabilistically based on fitness. The higher a strategy's fitness, the more likely it is to be chosen as a parent.
+   - "Mate" the two parents to create 2 children. Randomly chose a position at which to split the two number strings, form one child by taking the beginning of parent A and end of parent B, and vice versa for the second.
+   - With a small probability, mutate the numbers in each child. Choose one or more numbers and replace them with a randomly generated number between 0 and 6.
+   - Put the two new children in the new population
+
+4. Once the new population has 200 members, return to step 2 with the new generation.
+ 
+
+* Inbox
+
+** TODO Add initial tasks

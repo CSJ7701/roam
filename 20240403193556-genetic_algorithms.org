@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       002765d7-9d44-4163-a1c4-1058ef0d128c
+:END:
+#+title: Genetic Algorithms
+#+filetags: :AI:MachineLearning:
+
+A genetic algorithm is, unsurprisingly, a type of [[id:d2b1f1c2-bc8d-4d0d-bd75-e5696a4edfdc][Algorithm]], or series of steps through which an input is transformed to an output.
+
+Genetic Algorithms in particular are algorithms which evolve themselves over time.
+The input to a GA has two parts: /population/ of candidate programs, and a /fitness function/.
+
+The fitness function is intended to take a candidate program and assign it a /fitness value/, or score/measurement of performance.
+
+Candidate programs can be represented as strings of bits, numbers, or symbols.
+
+The general steps for creating a Genetic Algorithm are as follows:
+- Create an initial population of candidate solutions. Simplest method is to create a series of random strings called "individuals".
+- Calculate the fitness of each individual in the current population
+- Select some number of the individuals with the highest fitness to be the /parents/ of the next generation
+- Pair up the selected parents. Each pair produces offspring be recombining parts of the parents, with some change of random mutations. The offspring enter the new population. Selected parents continue creating offspring until the new population is full (same number of individuals as the current population). The new population then becomes the current population.
+- Repeat back to step 2, continue.
+
+The purpose of genetic algorithms is to solve problems for us through iteration.
+Even though many example problems to which genetic algorithms are applied seem simple, these are also applicable (and incredibly useful for) much more complex situations.
+
+In order to properly apply a genetic algorithm, we need to figure out exactly /what/ we are evolving - that is, what is the strategy we want to take?
+In general this can be represented as the set of rules that tells you what action you should take in any given situation.
+
