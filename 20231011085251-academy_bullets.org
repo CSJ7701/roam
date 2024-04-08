@@ -306,8 +306,8 @@ CLOSED: [2023-11-08 Wed 10:47]
 :VISIBILITY: children
 :END:
 *** TODO Military Bearing[0%]
-- [ ]
-- [ ]
+- [ ] MBR participated in a public parade in Concord, MA with the Regimental Pipe and Drum Corps. MBR interacted with several individuals at this event, helping to introduce them to the Coast Guard and give them information about the Academy and its purpose. MBR's actions helped to present a positive image for the Academy and the Coast Guard as a whole. 
+- [ ] MBR performed with the Windjammers Drum and Bugle Corps at several events throughout the semester. MBR helped to promote the academy in a public setting, spreading awareness for the programs and activities available at the academy. MBR's actions presented a positive image for the academy to a variety of different communities. 
 - [ ]
 *** TODO Customs, Courtesies, and Traditions [0%]
 - [ ]
@@ -318,19 +318,19 @@ CLOSED: [2023-11-08 Wed 10:47]
 - [ ]
 - [ ]
 *** TODO Technical Proficiency [0%]
-- [ ]
+- [ ] Worked on several projects throughout the year outside of assigned schoolwork. Worked with teachers to produce well-constructed, functional results. Demonstrated MBR's technical proficiency, finishing these projects quickly in order to deliver the best results possible. MBR's work received compliments from several teachers, and accomplished the assigned goals efficiently and within design parameters. MBR's actions helped to lay the groundwork for potential classes that may be offered in the future within MBR's major, and helped to establish a potential teaching curriculum for other classes that may share the same scope. EDIT ME
 - [ ]
 - [ ]
 *** TODO Initiative [0%]
-- [ ]
+- [ ] MBR took the initiative during Health and Wellness Week to create a corps-wide event that would teach the corps about mental health and its importance. Supported by members of MBR's division, MBR was able to create a fully functioning final product in time for Health and Wellness Week. This product received compliments from members of the Center four Counseling and Development, fellow shipmates, and instructors. MBR's product was an integral part of Health and Wellness Week, and helped to spread information about mental health, its importance, and the resources that are available to cadets.
 - [ ]
 - [ ]
 *** TODO Critical/Strategic Thinking [0%]
 - [ ]
 - [ ]
 - [ ]
-*** TODO Decision Making and Problem Solving [0%]
-- [ ]
+*** TODO Decision Making and Problem Solving [33%]
+- [X] While working on a project for MBR's division, MBR was faced with the challenge of hosting a website which would be available to the entire corps. MBR worked with instructors to brainstorm possible solutions to this problem, and was able to develop a cheap, simple, and effective solution that allowed MBR to implement the requested functionality in a timely fashion. MBR's actions and the solution MBR found were integral to implementing an integral part of Health and Wellness Week.
 - [ ]
 - [ ]
 *** TODO Military Readiness [33%]
@@ -354,17 +354,17 @@ CLOSED: [2023-11-08 Wed 10:47]
 - [ ]
 - [ ]
 *** TODO Workforce Management [0%]
-- [ ]
-- [ ]
-- [ ]
-*** TODO Effective Communication [0%]
-- [-] MBR excels in utilizing all forms of communication, both up and down the chain of command, effectively communicating clear expectations and progress. MBR actively interacts with both third and fourth class cadets, facilitating project organization and effective task delegation within the division. This proactive engagement not only streamlines operations, but serves to foster clear and effective communications within the Academy Community, showcasing MBR's commitment to enhancing teamwork and accomplishing shared goals.
-- [ ]
-- [ ]
-*** TODO Cadet Engagement and Participation [0%]
-- [-] MBR is highly engaged with the USCGA Windjammers Drum and Bugle Corps, working with the group during off-season to plan events, organize next year's show, provide feedback on performance, and engage with leadership. MBR has gone above and beyond expectations, taking on additional responsibilities such as composing and arranging pieces for the band to perform. This dedicated involvement not only enriches the cadet experience, but also helps promote the Coast Guard Academy through musical excellence and community outreach. MBR's passion, commitment, and willingness to take on extra responsibilities within Windjammers exemplify the highest standards of cadet engagement and participation.   
 - [ ] 
-- [ ]  
+- [ ]
+- [ ]
+*** TODO Effective Communication [100%]
+- [X] MBR excels in utilizing all forms of communication, both up and down the chain of command, effectively communicating clear expectations and progress. MBR actively interacts with both third and fourth class cadets, facilitating project organization and effective task delegation within the division. This proactive engagement not only streamlines operations, but serves to foster clear and effective communications within the Academy Community, showcasing MBR's commitment to enhancing teamwork and accomplishing shared goals.
+- [X] MBR coordinates effectively among MBR's classmates, working to organize study sessions and group work. Utilizing MBR's communication skills, MBR determines areas that challenge the majority of the class, and works with teachers to clarify challenging topics, identify useful practice problems, then disseminate and explain this information to the group at large. MBR has helped to organize study sessions which, over the course of the semester, have helped improve exam scores nearly 150% in some cases.
+- [X] MBR has worked with several 4/c cadets who were struggling with their choice of major. MBR communicated effectively with these 4/c, ensuring that they had the information they needed in order to make sound decisions about their academic future, and were properly informed about potential alternatives. These 4/c were able to use the information that MBR presented them in order to vouch for themselves to their academic advisor and present a convincing argument for their case. MBR's actions helped ensure that these 4/c properly understood how to navigate the Academy's academic structure, and were able to convincingly advocate for themselves.
+*** TODO Cadet Engagement and Participation [66%]
+- [X] MBR is highly engaged with the USCGA Windjammers Drum and Bugle Corps, working with the group during off-season to plan events, organize next year's show, provide feedback on performance, and engage with leadership. MBR has gone above and beyond expectations, taking on additional responsibilities such as composing and arranging pieces for the band to perform. This dedicated involvement not only enriches the cadet experience, but also helps promote the Coast Guard Academy through musical excellence and community outreach. MBR's passion, commitment, and willingness to take on extra responsibilities within Windjammers exemplify the highest standards of cadet engagement and participation.   
+- [X] MBR volunteered with the cadet-led Pipe and Drum corps during a parade in Concord, Massachusets. MBR worked with the group's leadership to organize attendance and ensure that the group was able to excel at their performance. MBR's actions helped to present a positive image for the corps, spreading awareness of the Academy and the Coast Guard as a whole.  
+- [ ] 
   
 
 #  LocalWords:  MBR MBR's ACDO evolutions PFE
