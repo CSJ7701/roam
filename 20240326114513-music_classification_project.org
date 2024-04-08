@@ -408,7 +408,8 @@ Uses dynamic programming to find a match between tempo and moments of high "onse
 ** TODO Research LSH, Ball trees
 
 ** TODO Look into similarity Metrics
-
+** TODO Review CLustering ALgorithms
+Allows you to reduce the amount of data you process by only dealing with the clusters that are relevant to the original song.
 * Weekly Reflection
 ** Week 1
 :PROPERTIES:
