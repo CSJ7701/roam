@@ -8,7 +8,11 @@
 
 * Inbox
 
-** NEXT Add to new space menu
+** DONE Add to new space menu
+CLOSED: [2024-04-12 Fri 13:32]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2024-04-12 Fri 13:32]
+:END:
 
 ** DONE Start EWW 
 CLOSED: [2024-02-13 Tue 12:47]
@@ -18,24 +22,36 @@ CLOSED: [2024-02-13 Tue 12:47]
   [2023-05-17 Wed 17:52]
   [[file:~/.dotfiles/.config/hypr/hyprland.conf]]
 
-** DEFER Change Bar from Waybar to EWW 
+** DONE Change Bar from Waybar to EWW 
+CLOSED: [2024-04-12 Fri 13:32]
 :LOGBOOK:
+- State "DONE"       from "DEFER"      [2024-04-12 Fri 13:32]
 - State "DEFER"      from "INBOX"      [2023-06-23 Fri 19:20] \\
   Not sure EWW bar is what I'm looking for, might be better to stick to waybar but with entries that activate eww widgets
 :END:
   [2023-05-19 Fri 13:21]
   [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
 
-** LOW Add more bar configs to go with new wallpapers 
-  [2023-05-19 Fri 13:22]
-  [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
-
-** LOW Figure out how to add MPVPAPER to wallpaper script 
-  [2023-05-19 Fri 13:22]
-  [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
-
-** DEFER Make a "find file in XXX tab" function
+** CANC Add more bar configs to go with new wallpapers 
+CLOSED: [2024-04-12 Fri 13:33]
 :LOGBOOK:
+- State "CANC"       from "LOW"        [2024-04-12 Fri 13:33]
+:END:
+  [2023-05-19 Fri 13:22]
+  [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
+
+** CANC Figure out how to add MPVPAPER to wallpaper script 
+CLOSED: [2024-04-12 Fri 13:33]
+:LOGBOOK:
+- State "CANC"       from "LOW"        [2024-04-12 Fri 13:33]
+:END:
+  [2023-05-19 Fri 13:22]
+  [[file:~/.dotfiles/.config/scripts/hypr_wallpaper_switch::swww img ~/.dotfiles/.config/wallpaper/Animated_Circle.gif \\]]
+
+** CANC Make a "find file in XXX tab" function
+CLOSED: [2024-04-12 Fri 13:33]
+:LOGBOOK:
+- State "CANC"       from "DEFER"      [2024-04-12 Fri 13:33]
 - State "DEFER"      from "NEXT"       [2024-02-13 Tue 12:45] \\
   No longer using the tab functionality. Need to revisit later and either discontinue this task or consider using tabs again.
 :END:
@@ -50,12 +66,18 @@ Should be similar to my old search by tags function.
   [2023-07-02 Sun 13:30]
   [[file:~/roam/20230702131029-permanent_notes.org::- Structure notes (or MOC's)]]
 
-** NEXT Fix Org Capture Templates
+** DONE Fix Org Capture Templates
+CLOSED: [2024-04-12 Fri 13:32]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2024-04-12 Fri 13:32]
+:END:
 Biggest thing I know I'm missing is a way to capture a task to a project. That should let me select a project file (or alternately, run a new "create project" function(?) then capture to that project. 
   [2023-06-28 Wed 22:27]
 
-** DEFER Start optimizing tab functions
+** CANC Start optimizing tab functions
+CLOSED: [2024-04-12 Fri 13:33]
 :LOGBOOK:
+- State "CANC"       from "DEFER"      [2024-04-12 Fri 13:33]
 - State "DEFER"      from "NEXT"       [2024-02-13 Tue 12:46] \\
   No longer using tab functionality. May revisit tabs in the future, but for now not relevant.
 :END:
@@ -64,5 +86,14 @@ First one I can think of is a more robust switching command
   [2023-06-28 Wed 20:30]
   [[file:~/.dotfiles/.emacs.d/emacs.org::*Org Roam UI][Org Roam UI]]
 
-** TODO Fix Project TODOS
-** TODO Fix capture templates 
+** DONE Fix Project TODOS
+CLOSED: [2024-04-12 Fri 13:33]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-04-12 Fri 13:33]
+:END:
+
+** DONE Fix capture templates 
+CLOSED: [2024-04-12 Fri 13:32]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-04-12 Fri 13:32]
+:END:

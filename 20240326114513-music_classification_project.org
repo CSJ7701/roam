@@ -428,3 +428,13 @@ Allows you to reduce the amount of data you process by only dealing with the clu
 - I went through several iterations, weeding out decisions that shazam made which did not apply to our project. I removed the hashing algorithm, since hashing a value essentially strips much of the data from it. I chose not to implement the sliding window that shazam uses, because we likely don't care about timing information. I was left with an FFT that divided the X-axis into segments, taking the bin with the highest magnitude from each segment. After several misconceptions about the information represented by a non-normalized FFT, I found a way to segment the FFT by frequency.
 - My current approach is to take the FFT of a signal, segment that signal based on frequency breakpoints, then identify the bin with the highest magnitude in each segment. For each bin, I get a complex number. I save these complex numbers as an array, and use the arrays to compare songs. In order to compare, I find the linear distance between the complex numbers for Segment 1 of Song1 and Song2, the for Segment 2, and so on. I average those distances to find a single number. In order to sort songs, I use a for loop and write song names and distances to a dataframe.
 - This process has helped me gain a better understanding for how to examine and apply the information that the FFT represents. 
+
+
+**  Week 3
+:PROPERTIES:
+:EXPORT_FILE_NAME: /home/csj7701/Projects/Music-Classification/Class-Documents/Week-3-Reflection
+:END:
+- This week I focused primarily on reviewing the work that we have done so far. In order to make sure that we are as prepared for the draft paper due Wednesday, I have been focusing on making sure that we had a general understanding for the implementation of the FFT that we use, and the other design decisions we made.
+- I also finished implementing our audio player, so that we now have a CLI option to play the music recommendations we produce.
+- Through this research, I have gotten a much better understanding for how Numpy actually implements the FFT, and I think I have a more robust comprehension for how these concepts are applied to actual analysis of sound data.
+- The majority of this week I spent studying for the DSP exam on Friday, and reviewing work in preparation for exams in other classes. I only spent about 5 hours this week on the project, but I feel that those 5 hours were well spent, especially given how far along we already are.
