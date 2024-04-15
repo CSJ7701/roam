@@ -38,6 +38,13 @@ Whatever method we choose should represent the track in some standardized format
 
 Song 1 = [(12,14,15),(25.5 bpm), (12,13,14), (14,15,16)]
 
+After review, we now use a segmenting technique recommended by the shazam article.
+We compute the FFT of a song, then use an array of frequency breakpoints to segment the FFT base on lows, mids, highs, etc.
+Since the FFT is normalized, we have to do some math using sampling rate to convert the Hz frequencies to values on the X axis of the FFT.
+We find the bin with the highest magnitude within each segment, returning a complex number representing that bin.
+Need to do more research on precisely /what/ this complex number represents. From the complex number we create a point in polar coordinates.
+We end up with an array of polar coordinates for each song.
+
 ** Compare Songs
 Before we can generate recommendations from a large collection of music, we must first be able to calculate how similar two tracks are to each other.
 
@@ -46,6 +53,12 @@ It will make much more sense to compare the /distribution/ of each result, rathe
 If we choose to base our comparison off of multiple characteristics, we will need to compare the difference between each characteristic, then we have a choice.
 We could either multiply each difference by a scale factor that represents the weight we choose for a characteristic, OR we could store all the values in an array.
 /Note/ - whichever we choose, we will most likely want to arrive at a single scalar value to represent similarity (value will reside in a range - i.e. will be normalized)
+
+Using the array of polar coordinates described above, we can find a basic similarity.
+We know that polar coordinates simply represent a point. We can find the "Euclidean Distance", or linear space between 2 points, and use that.
+For each song, we know that the arrays will be the same size, since we use the same breakpoints to divide them all.
+This means that we can find the distance between the polar coordinates at each index for two songs.
+This will create an array of scalar values. Simplest solution to convert this to a single comparison factor seems to be taking the average of the array.
 
 ** Apply Comparisons
 The end goal of this project is to recommend a "playlist" of songs that are similar to some starting point.
@@ -85,6 +98,10 @@ I can see two logical ways to approach this.
 
 This step will likely require some sort of FOR loop to check multiple items and calculate successive similarities - it's worth looking into a way to optimize this "stepping" rather than simply iterating through every single item.
 Look into [[*LSH][LSH]] and [[*Ball Trees][Ball Trees]].
+
+We ended up using 2 different handmade solutions.
+I created a dictionary to store the raw data - keys are song basenames (may want to move to filepaths later) and values are the polar coordinate arrays.
+I created a list to store the comparison data - the list stores 3 element arrays, where the first two values are the songnames being compared, and the third is the distance. In order to retrieve a songs comparison, we simply search for the songs name to be present in a subarray, grabbing the other songname and value when we do.
 
 * References
 :PROPERTIES:
