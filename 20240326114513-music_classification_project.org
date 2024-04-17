@@ -427,6 +427,7 @@ Uses dynamic programming to find a match between tempo and moments of high "onse
 ** TODO Look into similarity Metrics
 ** TODO Review CLustering ALgorithms
 Allows you to reduce the amount of data you process by only dealing with the clusters that are relevant to the original song.
+** TODO dict.get()
 * Weekly Reflection
 ** Week 1
 :PROPERTIES:
