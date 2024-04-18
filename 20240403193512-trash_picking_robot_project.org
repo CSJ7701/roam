@@ -6,8 +6,7 @@
 #+filetags: Project
 * Project Description
 Project for LT Ledzian to implement a "Trash Picking Robot" using [[id:002765d7-9d44-4163-a1c4-1058ef0d128c][Genetic Algorithms]].
-Based on a segment of Melanie Mitchell's book - [[file:References/GeneticAlgorithms.pdf][[LINK]​]]
-
+Based on a segment of Melanie Mitchell's book - [[cite:&hollandRecipeGeneticAlgorithm]]
 * Implementation
 Robby's job is to clean up the world by collecting soda cans.
 Robby's world consists of a 10x10 square - a 100 square area.
