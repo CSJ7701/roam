@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       4b0cb3b1-97ff-48a6-81a0-2b7d4278a31c
+:END:
+#+title: Audio Response of Physical Space
+#+filetags: :DSP:
+
+Reverb - ambience/echoe
+
+Occurs because of:
+- material composition (physical space)
+- Geometry
+- Position
+
+
+Sound waves reflect or diffract off of physical materials in a space. Can affect the time that it takes for specific portions of an audio signal to return to a listener.
+
+Can apply artificial reverb to a signal to simulate echoes or a physical space.
+
+Can measure a space's impulse response using an 'impulse' (gunshot, baloon popping)
+Can also use a Sine Sweep, which has a higher signal to noise ratio, but is more sensitive and more difficult to implement because of equipment.
+
+

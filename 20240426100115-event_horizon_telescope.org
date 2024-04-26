@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       6060459b-7862-4109-a6a0-37bae17f43b3
+:END:
+#+title: Event Horizon Telescope
+#+filetags: :DSP:
+
+Reproduced images
+Used new algo to image black holes
+
+
+Signal of interest:
+Acretion? disk
+Illuminated by nearby stars
+Radio waves from radiation
+Light in visi spectr attenuated
+
+Telescope array records radio waves
+Signals cross correlated
+
+Visibilities/Mutual Spatial Coherence
+- Cross correlation of signals in 2 locations
+- Black hole from far distance represented as point source
+- Cross correlation represented as point in 3-dimensional space (DISTANCE)
+Phase difference plays a role in correlation - in-phase = higher corr., out-of-phase = lower corr.
+This phase difference is largely because of linear distance
+
+Can create peaks and troughs as linear distance periodically alters phase difference
+
+*Van Cittert-Zernike Theorem*
+- SImilar to fourier transform
+- Assumption - source occupies small span  of FOV.
+- Assumption simplifies math
+
+
+* Implementation
+Python - ehtim lib.
+Data
+HaystackObservatoryPost Processing (HOPS)
+CLEAN algorithm - convert from visibilities to image
+
+
+* Don't Understand
+
+'Visibility Plane' vs. 'Image Plane'
+- Are these actual domains, like frequency vs time?
