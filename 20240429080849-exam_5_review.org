@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       8e6732cc-8b46-468f-a012-22c50cdd5efa
+:END:
+#+title: Exam 5 Review
+#+filetags: :MWO:
+
+Casting: turning a single screw vessel in place alternating head and sternway.
+
+Pitch causes most stress on a vessel. Heavy impact on bow.
+
+Dip in a tow line - natural shock absorber. Catenary.
+
+Underway, OOD, Seaman on Fantail - not seen since an hour ago. Man overboard? Use a williamson turn (Teardrop)
+
+When is squat most pronounced - ship going fast in shallow water.
+
+3 things to maintain in heavy weather - buoyancy, stability, power.
+
+Shoreward of the COLREGS line (Inland) - communicate on channel 13. 16 for Hailing and Distress.
+
+Crossing Situation - 2 power driven, in sight, risk of collision, not a headon or overtaking.
+
+ECDIS - GPS/DGPS, Speedlog, Fathometer, Gyro, Radar - All inputs into ECDIS
+
+6 Minute and 3 minute rules
+- 6 Minute - ?
+- 3 Minute - ?
+
+BRM
+Fatigue, standardized procedures, voyage planning. *COntingency Planning* is *NOT* a thing.
+Using a checklist is a part of standardized procedures.
+
+Towing a vessel astern longer than 200 meters - dayshape is a diamond (Know Dayshapes)
+
+International/Inland - Headon situation at night - would see masthead light and sidelights.
+
+Bank effect/Bow cushion - Occurs when wedge of water builds in a narrow channel. High pressure forces bow away from bank, pulls stern in.
+Control with small rudder corrections, or lower speed.
+
+Twist a vessel to port - STBD engine ahead 1/3, Port back 1/2, Left full rudder.
+
+Wait in radio communications - DOES NOT mean 'I do not copy your last'
+
+Principles of BRM - know elements
+
+Single Screw Fixed Pitch
+
+ENC RNC Commercial Vector - RNC is effectively a scanned paper chart
+
+Right handed single screw vessel backs to port.
+
+Rudder force - rudder material does not matter. Angle, Size, Water all matter.
+
+INTL ONLY - Overtake a vessel along port side in a narrow channel. Sound Signal - 2 Prolonged, 2 Short.
+
+Sailboats show red/green, sidelights+sternlight OR combined lanter OR sidelights and a stern
+
+Centerline Offset - twin screw. Turn to port with only stbd rudder but want to stay straight, counter with right rudder.
