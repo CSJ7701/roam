@@ -456,3 +456,27 @@ Allows you to reduce the amount of data you process by only dealing with the clu
 - I also finished implementing our audio player, so that we now have a CLI option to play the music recommendations we produce.
 - Through this research, I have gotten a much better understanding for how Numpy actually implements the FFT, and I think I have a more robust comprehension for how these concepts are applied to actual analysis of sound data.
 - The majority of this week I spent studying for the DSP exam on Friday, and reviewing work in preparation for exams in other classes. I only spent about 5 hours this week on the project, but I feel that those 5 hours were well spent, especially given how far along we already are.
+
+
+** Week 4
+:PROPERTIES:
+:EXPORT_FILE_NAME: /home/csj7701/Projects/Music-Classification/Class-Documents/Week-4-Reflection
+:END:
+
+- This week I focused primarily on the essay. I finished the first draft and reviewed it with the other group members.
+- I worked with LT Ledzian and Mr. Gold to brainstorm potential methods for improving the runtime complexity of the codebase.
+- I explored potential options for improving the comparison algorithm.
+- Results on both fronts were limited. Much of the Computer Science side still confuses me, and I haven't found any other effective means to compare 2x5 arrays
+
+
+** Week 5
+:PROPERTIES:
+:EXPORT_FILE_NAME: /home/csj7701/Projects/Music-Classification/Class-Documents/Week-5-Reflection
+:END:
+- I improved the essay based on edits.
+- I worked more with LT and Mr. Gold to find ways to speed up the program's run time - results were still limited.
+- I may not have time to properly explore this avenue, as I need to start focusing on compiling the deliverables.
+- I worked more on finding alternate methods to calculate distance - I met with LT Ledzian, and Dr.  McLeod (in the math department) to discuss this
+- After discussion with LT Ledzian, I am now using the L2 Norm to calculate distance between 2 multidimensional complex vectors.
+
+
