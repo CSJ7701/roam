@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       21d3761e-617b-4542-bbf2-a2a53fe8580f
+:END:
+#+title: Capstone
+#+category: Capstone
+#+filetags: Project
+* Project Description
+What is this project?
+
+* References
+** Python Deep Flow Prediction
+https://github.com/thunil/Deep-Flow-Prediction\
+https://arxiv.org/abs/1810.08217
+Uses Deep Learning to predict velocity and pressure.
+
+** Using ML to predict Surface Currents
+https://www.frontiersin.org/articles/10.3389/fmars.2021.672477/full
+
+
+* Inbox
+
+** TODO Add initial tasks
