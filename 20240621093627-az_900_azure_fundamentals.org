@@ -1,0 +1,138 @@
+:PROPERTIES:
+:ID:       b1a8d451-fc98-409f-9287-9d56d8696495
+:ROAM_ALIASES: "Microsoft Azure"
+:END:
+#+title: AZ-900 Azure Fundamentals
+#+filetags: :Cloud:Azure:
+
+* What is Azure?
+
+[[https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-azure/][Microsoft Azure]] is a cloud platform with tools for building, hosting and running applications.
+It is a compilation of a large number of products and services.
+
+
+* Describe Cloud Concepts
+** Identify the Benefits of Cloud Computing - [[https://youtu.be/VaMdHKJQ15c&t=16m16s][video]]
+What is the cloud?
+- /There's no such thing as the clound, its just someone else's PC/
+
+"On Premises" or on location (On the physical hardware), there is a certain amount of capacity. This can refer to CPU, storage, RAM, or a variety of other factors that limit a computer's performance.
+That hardware runs [[id:b1295ee7-b785-4ee9-8b32-fa4541b05860][OS Services]], which are typically hosted on virtual machines or containers.
+Applications are run on top of those services.
+
+While the cloud technically is just someone else's computer that is hosting all of this information, it can more accurately be described as the set of management software and the user experience that helps the developer/user configure and setup the applications that are meant to run on the "cloud".
+
+Structurally, the cloud is nothing more than capacity hosted in datacenters, which host services and applications. These services and applications are diverse, from virtual machines, to artificial intelligence, to machine learning, to frontend applications. A defining feature of this cloud architecture is that the user pays for the services or applications that they use. As opposed to a local server, these resources are accessed via the internet (many enterprise companies use a VPN or a physical connection instead, for security).
+
+This allows easy, convenient access. There is no need to manage updates on the local end, since the cloud provider is constantly updating and 'innovating' for you. You essentially delegate the responsibility of software management to the cloud provider.
+
+Key Benefits:
+- Convenience (Constantly available, with minimal low-level management)
+- Agility (Easy to jump between a wide range of services quickly. Can drop services that are no longer useful and move to something completely different.)
+- High Availability/Disaster Recovery (This refers to the ability to spread multiple instances of your software across several physical locations easily, which improves the '[[id:359ecef5-d719-42c5-ad37-cb98c627a603][Availability Zones]]' that are available to you)
+- Scalability (It's easy to increase the resources available to you quickly, when you need them)
+- Adaptability (The load on your system will vary dynamically - the cloud allows your system to dynamically scale up or down based on the load)
+  
+** CapEx, OpEx and Consumption-based - [[https://youtu.be/WiwV9wb0GMo&t=7m13s][video]]
+Capital Expenditure vs Operational Expenditure
+
+Capital Expenditure - Purchasing an asset upfront. This can refer to buying a PC and using that to host things yourself. You make a purchase, and now need to use that item for a certain amount of time to make the purchase worthwile.
+Operational Expediture - Purchasing an asset as it is used. This is usually used in cloud services.
+
+OpEx enables corporations to exercise more flexibility in environments where technology is constantly evolving. It is dangerous to exercise CapEx; purchasing an item or asset; since that asset may be outdated before you have used it enough to earn your money back.
+
+OpEx is consumption based, which makes it more economic for small companies as they grow, rather than standing up a large amount of hardware/licenses/software in a companies infancy. This also allows a company to grow and expand, paying for more resources as they make more money and increase their volume.
+** Differences Between Cloud Service Categories - [[https://youtu.be/IqQC1EOQqeU&t=15m16s][video]]
+*** Shared Responsibility Model
+In any given situation, there are certain things that the company is responsible for, certain things that a user is responsible for, and certain things that Azure (or other cloud provider) is responsible for.
+These things can vary depending on the service in question.
+
+This is typically visualized with a stack, from low-level to high level:
+- Storage
+- Network
+- Compute
+- Hypervisor (Virtual Machine)
+- OS
+- Runtime (Program or language, think Java)
+- Application
+- Data
+
+  If you are running this stack yourself/on premises (so, on a local machine), then you are responsible for all of this.
+  
+  One cloud model is known as [[id:f63302e7-65b9-4fc0-a596-9ec269496756][Infrastructure as a Service]] or [[id:f63302e7-65b9-4fc0-a596-9ec269496756][IaaS]]. This model places Hypervisor, Compute, Network, and Storage under the cloud providers responsibility, while the customer takes responsibility for the rest. Even though the OS and the higher level tasks are the customers /responsibility/, there are extensions and tools within Azure to assist. For example, since the OS is the customer's responsibility, they are responsible for organizing regular backups. Azure has tools to set that up, and the storage to put it. This is the most flexible option (in the cloud), but includes the most responsibility for the user.
+
+  Another model is known as [[id:a5bba4de-a947-4102-ad96-d62c91f8cd0b][Platform as a Service]], or [[id:a5bba4de-a947-4102-ad96-d62c91f8cd0b][PaaS]]. This model /can/ include VM's (doesn't have to), but the user does not interact with them. In this model, Azure takes responsibility for everything except the Application and its Data. With this type of model, there are different "flavors" - since different applications will require different architecture to build upon. This is all a sort of "menu option" though - so the customer could choose a "Kubernetes based PaaS", or an "Web based PaaS" depending on what they need. This provides substantially limited options compared to IaaS - will only support a limited number of OS's, will not provide root access to the OS, etc.
+
+  The last model is known as [[id:7e8921c2-9444-48c0-b5e2-29f374674c44][Software as a Service]] or SaaS. This is less of an "Azure" function, and something much closer to Office365, where the service is the actual application. The customer can only /use/ the system that they pay for. They are responsible for absolutely nothing.
+** Identify the Right Service Type - [[https://youtu.be/KH8NH76h2vc&t=4m1s][video]]
+** Differences Between Types of Cloud Computing - [[https://youtu.be/7dlCrF2wmXU&t=12m41s][video]]
+** Reliability and Predictability - [[https://youtu.be/kD2YqdDaO1w&t=7m16s][video]]
+
+* Describe Core Azure Services
+** Benefits and Usage of Regions and Region Pairs - [[https://youtu.be/4RjPOAN54AE&t=13m8s][video]]
+** Benefits and Usage of Availability Zones - [[https://youtu.be/h0enGb17lnw&t=8m41s][video]]
+** Benefits and Usage of Resource Groups - [[https://youtu.be/g6thrYZhPZY&t=9m38s][video]]
+** Benefits and Usage of Subscriptions - [[https://youtu.be/9vKAYW_WkLo&t=8m19s][video]]
+** Benefits and Usage of Management Groups - [[https://youtu.be/bPdDiEtCVhM&t=6m30s][video]]
+** Benefits and Usage of Azure Resource Manager - [[https://youtu.be/g4u0NL2-3XM&t=9m57s][video]]
+** Describe the Purpose of Azure Arc - [[https://youtu.be/cW6_rvDYSHg&t=7m23s][video]]
+** Describe the Resources Required for Virtual Machines - [[https://youtu.be/PP5BWZ0cAJo&t=6m17s][video]]
+** Benefits and Usage of Core Compute Resources - [[https://youtu.be/yKDSAYDLGrI&t=34m32s][video]]
+** Benefits and Usage of Core Network Resources - [[https://youtu.be/aNK0C9Oj2sg&t=22m4s][video]]
+** Describe Public and Private Endpoints - [[https://youtu.be/bPNkXwRFsek&t=7m23s][video]]
+** Benefits and Usage of Storage Account Resources - [[https://youtu.be/b8BrfsxLSx8&t=18m4s][video]]
+** Benefits and Usage of Database Resources - [[https://youtu.be/4sQOF9fSOAU&t=13m29s][video]]
+** Data Movement and Migration Options - [[https://youtu.be/jNBcXnMTo9s&t=11m47s][video]]
+** Benefits and Usage of Azure Marketplace - [[https://youtu.be/b7RuB4Bymgc&t=3m12s][video]]
+
+* Describe Core Solutions and Management Tools on Azure
+** Benefits and Usage of Azure IoT Services - [[https://youtu.be/22z9ARaKlbU&t=21m8s][video]]
+** Benefits and Usage of Big Data and Analytics Services - [[https://youtu.be/LSVewE4mKfE&t=13m26s][video]]
+** Benefits and Usage of AI Services - [[https://youtu.be/lgcpRpV3HPc&t=9m21s][video]]
+** Benefits and Usage of Serverless Technologies - [[https://youtu.be/-xeJGiMw5OE&t=6m54s][video]]
+** Benefits and Usage of DevOps Technologies - [[https://youtu.be/-acpNiCa0qY&t=10m21s][video]]
+** Functionality of Azure Management Solutions - [[https://youtu.be/6xp-K60ChAk&t=9m23s][video]]
+** Functionality and Usage of Azure Advisor - [[https://youtu.be/nqH4NboyEl0&t=3m22s][video]]
+** Functionality and Usage of ARM Templates - [[https://youtu.be/loxcA5MUf-I&t=6m41s][video]]
+** Functionality and Usage of Azure Monitor - [[https://youtu.be/v68jL-l9Fww&t=10m20s][video]]
+** Functionality and Usage of Azure Service Health - [[https://youtu.be/M1xPK4T4Vls&t=2m58s][video]]
+
+* Describe General Security and Network Security Features
+** Functionality of Microsoft Defender for Cloud - [[https://youtu.be/eWcoMi_nQt4&t=9m47s][video]]
+** Functionality and Usage of Key Vault - [[https://youtu.be/ZBXVAD4S0Tc&t=7m37s][video]]
+** Functionality and Usage of Microsoft Sentinel - [[https://youtu.be/xaqiPXL6tz0&t=9m36s][video]]
+** Functionality and Usage of Azure Dedicated Hosts - [[https://youtu.be/RnNqmTH9xok&t=6m49s][video]]
+** Concept of Defense in Depth - [[https://youtu.be/CHKS2FcEMek&t=7m17s][video]]
+** Describe the Concept of Zero Trust - [[https://youtu.be/JX3w4to-qgo&t=8m13s][video]]
+** Functionality and Usage of NSGs - [[https://youtu.be/flCoRc1uv9o&t=8m32s][video]]
+** Functionality and Usage of Azure Firewall - [[https://youtu.be/1-_cqpUISg4&t=5m2s][video]]
+** Functionality and Usage of Azure DDoS Protection - [[https://youtu.be/6cv-wdo9TJw&t=6m30s][video]]
+
+* Describe Identity, Governance, Privacy, and Compliance Features
+** Explain Authentication and Authorization - [[https://youtu.be/GA-yNu6aFMk&t=3m52s][video]]
+** Describe Azure Directory Services - [[https://youtu.be/E4__JBVE25I&t=14m6s][video]]
+** Describe Azure External Identities - [[https://youtu.be/G5_z4PFgn2o&t=11m14s][video]]
+** Functionality of Conditional Access, MFA and SSO - [[https://youtu.be/DFwERh9Xxk0&t=12m29s][video]]
+** Overview of Microsoft Entra - [[https://youtu.be/bSIF_GjaCmo&t=11m34s][video]]
+** Functionality and Usage of RBAC - [[https://youtu.be/0iVyJBG06fM&t=9m19s][video]]
+** Functionality and Usage of Resource Locks - [[https://youtu.be/eF_KilJRxbE&t=6m16s][video]]
+** Functionality and Usage of Tags - [[https://youtu.be/eaf63hE_6SQ&t=5m6s][video]]
+** Functionality and Usage of Azure Policy - [[https://youtu.be/z7WMqHE3R8g&t=10m50s][video]]
+** Purpose of Microsoft Purview - [[https://youtu.be/mXjXcBr1ajY&t=10m47s][video]]
+** Governance Hierarchy Constructs - [[https://youtu.be/ge8r_Z0LKxM&t=6m13s][video]]
+** Functionality and Usage of Azure Blueprints - [[https://youtu.be/SJbDcvkySCY&t=5m22s][video]]
+** Describe Cloud Adoption Framework - [[https://youtu.be/VHQxbIynlN4&t=2m3s][video]]
+** Describe Microsoft Privacy Statement, OST and DPA - [[https://youtu.be/5mqroH3E3gw&t=3m28s][video]]
+** Purpose of Trust Center and Azure Compliance Documentation - [[https://youtu.be/QkVlogulVX4&t=5m42s][video]]
+** Purpose of Azure Sovereign Regions - [[https://youtu.be/PdAEPAnT2uI&t=5m15s][video]]
+
+* Describe Azure Cost Management and Service Level Agreements
+** Factors That Affect Costs - [[https://youtu.be/fMShW_RGcxY&t=6m32s][video]]
+** Factors to Reduce Cost - [[https://youtu.be/B5yiKE2DLH8&t=15m29s][video]]
+** Functionality and Usage of Pricing and TCO Calculators - [[https://youtu.be/pE-bf8i5blU&t=7m26s][video]]
+** Functionality and Usage of Azure Cost Management - [[https://youtu.be/FoBjC9CAF08&t=5m48s][video]]
+** Purpose of Service Level Agreements - [[https://youtu.be/3QIVbgnNrR0&t=13m42s][video]]
+** Describe Service Lifecycle in Azure - [[https://youtu.be/NJ9-S7C0pY4&t=7m0s][video]]
+
+
+

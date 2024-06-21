@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       f63302e7-65b9-4fc0-a596-9ec269496756
+:ROAM_ALIASES: IaaS
+:END:
+#+title: Infrastructure as a Service
+
+A Cloud-Based VM.

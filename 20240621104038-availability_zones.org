@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       359ecef5-d719-42c5-ad37-cb98c627a603
+:END:
+#+title: Availability Zones
+
+A term used by [[id:b1a8d451-fc98-409f-9287-9d56d8696495][Microsoft Azure]] to describe seperated groups of data centers within a region. They are close enough together to have low-latency connections to other zones; connected together with a round-trip latency of less than 2 milliseconds. They are spaced far enough apart to reduce the likelihood of some natural event compromising more than one - such as power failure, fire, etc. Each zone has independent power, cooling, networking, etc. 

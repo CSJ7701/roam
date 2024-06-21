@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       7e8921c2-9444-48c0-b5e2-29f374674c44
+:ROAM_ALIASES: SaaS
+:END:
+#+title: Software as a Service
+
