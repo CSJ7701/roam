@@ -10,7 +10,6 @@
 [[https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-azure/][Microsoft Azure]] is a cloud platform with tools for building, hosting and running applications.
 It is a compilation of a large number of products and services.
 
-
 * Describe Cloud Concepts
 ** Identify the Benefits of Cloud Computing - [[https://youtu.be/VaMdHKJQ15c&t=16m16s][video]]
 What is the cloud?
@@ -43,8 +42,8 @@ OpEx enables corporations to exercise more flexibility in environments where tec
 
 OpEx is consumption based, which makes it more economic for small companies as they grow, rather than standing up a large amount of hardware/licenses/software in a companies infancy. This also allows a company to grow and expand, paying for more resources as they make more money and increase their volume.
 ** Differences Between Cloud Service Categories - [[https://youtu.be/IqQC1EOQqeU&t=15m16s][video]]
-*** Shared Responsibility Model
 In any given situation, there are certain things that the company is responsible for, certain things that a user is responsible for, and certain things that Azure (or other cloud provider) is responsible for.
+This is known as Shared Responsibility.
 These things can vary depending on the service in question.
 
 This is typically visualized with a stack, from low-level to high level:
@@ -65,8 +64,53 @@ This is typically visualized with a stack, from low-level to high level:
 
   The last model is known as [[id:7e8921c2-9444-48c0-b5e2-29f374674c44][Software as a Service]] or SaaS. This is less of an "Azure" function, and something much closer to Office365, where the service is the actual application. The customer can only /use/ the system that they pay for. They are responsible for absolutely nothing.
 ** Identify the Right Service Type - [[https://youtu.be/KH8NH76h2vc&t=4m1s][video]]
+Recall from the [[*Differences Between Cloud Service Categories - \[\[https://youtu.be/IqQC1EOQqeU&t=15m16s\]\[video\]\]][previous lesson]] the idea of [[id:f63302e7-65b9-4fc0-a596-9ec269496756][IaaS]], [[id:a5bba4de-a947-4102-ad96-d62c91f8cd0b][PaaS]], and [[id:7e8921c2-9444-48c0-b5e2-29f374674c44][SaaS]]. How do we apply these ideas, and why?
+
+The idea would be to use "Software as a Service" as much as possible, because it significantly reduces the amount of responsibility (and therefore work, time and money) that are assigned to "you", as the company purchasing use of a service. If the client needs to create their own application or develop/host their own platform or solution, but doesn't have any particular requirements for a custom environment, then PaaS (Platform as a Service) would be most applicable. An example of this would be a web server or any other web based application. If the client needs to adjust certain parameters of the operating system or environment (such as a virtual machine), then they would likely need Iaas or Infrastructure as a Service. This would apply for a Docker Image or Kubernetes Cluster.
 ** Differences Between Types of Cloud Computing - [[https://youtu.be/7dlCrF2wmXU&t=12m41s][video]]
+Key Principles of the Cloud:
+- Pooling Resources: Capacity and Hardware capabilities are shared among different users. This is much more efficient for a variety of users. 
+- Self Service: There is a reduced need for administrator oversight on hardware resources. Reduces the technical overhead for accessing resources ("anyone" can now create a VM)
+- Visibility: Easy to access information like usage and telemetrics.
+
+
+*Public Cloud*
+- Azure would be an example of a public cloud.
+- This is true OPEX - only paying for what you use.
+- Offered over the internet
+  - Limitless
+  - Many different regions that are available
+  - Many different services
+
+
+*Private Cloud*
+- On Premises, located on physical servers
+- Typically will be based on some kind of private hypervisor
+- Software to manage access and expose content to the end user.
+- Business units may experience this as OPEX, where they have a quota and pay as they use, but the COMPANY that runs this private cloud experiences this as CAPEX, since they are in the hole for the cost of the services.
+- Azure provides the ability for a company/client to host Azure solutions on a local, private stack. This provides the benefits of Azure's public cloud with the security and configuration of a private cloud.
+
+
+*Hybrid Cloud*
+- This is a mix of private and public cloud.
+- Will typically operate as a private solution, but during periods of high traffic or extreme demand, may expand and reach out to the public cloud for resources and information.
+- Allows for a backup in the event of failure.
+- This is especially useful for companies with a solution or application that can't be hosted in the cloud. These companies may want to move the majority of their operations to Azure or some other cloud provider, but may be /anchored/ by that one applicaiton or service.
 ** Reliability and Predictability - [[https://youtu.be/kD2YqdDaO1w&t=7m16s][video]]
+*Reliability*
+- Auto-Heal - The cloud is still based off hardware. Nodes/Racks etc can fail and have issues. The cloud is configured to "auto-heal", where is a single drive or rack fails, then anything deployed on that drive is redeployed to a different node.
+- Storage - At any given time, there will always be 3 copies of a user's data.
+- Autoscaling - Azure provides the option to automatically scale your resources to match demand. This ensures that your application or service will not fail when placed under heavy load.
+- Service Level Aggreement - Commitment from azure to back up the service that it provides the user.
+- Design for Failure - Azure allows the user to choose certain options that can improve their recovery time and increase the security of the users data, such as spreading that data over multiple regions.
+- Monitor - Azure allows the user to set up alerts and monitors to watch the application, in case there is an issue in the actual application or service that the user is hosting.
+
+
+*Predictability*
+- SKU - Azure has various products that are categorized based on performance, dimensions, and capabilities. This makes it easy to choose the correct product.
+- Behavior - Azure provides a serious of predictable information and peripherals that make it easier to interact with azure services easily and consistantly. This includes predictable pricing, product templates, API's, etc.
+- Use Templates - on the user side to improve the consistancy of the products that the user deploys.
+- Automation - Can improve the consistancy of repeatable operations. Removes margin for human error.
 
 * Describe Core Azure Services
 ** Benefits and Usage of Regions and Region Pairs - [[https://youtu.be/4RjPOAN54AE&t=13m8s][video]]
