@@ -180,7 +180,21 @@ VM's, virtual networks, databases, cognitive services, etc - all resources.
 
 Resource groups are exactly what they sound like - groupings of resources.
 Whenever you create a resource, you are required to place it into a resource group. Groups can contain many resources, but a resource can only be placed in one group.
+Groups are primarily organizational, but provide some management features - when you apply an action to a group, it will be applied to all resources in that group, etc. 
 ** Benefits and Usage of Subscriptions - [[https://youtu.be/9vKAYW_WkLo&t=8m19s][video]]
+Subscriptions are a unit of management, billing, and scale. While resource groups allow you to logically organize resources, subscriptions allow you to logically organize resource groups and facilitate billing.
+In order to use Azure, you need a subscription. This authenticates your access to products and services. Subscriptions are directly associated with an account, which belongs to a microsoft Entra ID.
+One account can have multiple subscriptions, but it's only required to have one.
+
+In a multi-subscription account, you can organize different billing models based on subscription and apply different access policies. This is known as applying /subscription boundaries/.
+- Billing Boundary - This subscription type determines how an account is billed for using Azure. You can create multiple subscriptions for different types of billing requirements. Azure will generate separate billing reports and invoices for each account.
+- Access Control Boundary - Azure applies different access-management policies based on subscription. You can create multiple subscriptions based on the organizational structures that you need.
+
+
+You can use additional subscriptions to manage separate:
+- Environment - This allows separation for development, testing, security, or to isolate data.
+- Organizational Structures - Organizing different teams based on structure is something that additional subscriptions makes easy.
+- Billing - Especially useful for itemized tracking, and maintaining records of different expenses.
 ** Benefits and Usage of Management Groups - [[https://youtu.be/bPdDiEtCVhM&t=6m30s][video]]
 ** Benefits and Usage of Azure Resource Manager - [[https://youtu.be/g4u0NL2-3XM&t=9m57s][video]]
 ** Describe the Purpose of Azure Arc - [[https://youtu.be/cW6_rvDYSHg&t=7m23s][video]]
