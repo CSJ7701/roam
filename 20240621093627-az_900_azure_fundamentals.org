@@ -10,7 +10,10 @@
 [[https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-azure/][Microsoft Azure]] is a cloud platform with tools for building, hosting and running applications.
 It is a compilation of a large number of products and services.
 
+Provides web services, virtual machines, remote storage, database hosting, and centralized account management.
 * Describe Cloud Concepts
+Cloud computing is the delivery of computing services over the internet.
+This includes virtual machines, storage, databases, and networking. This also makes it easier to work with things like Machine Learning and Artificial Intelligence.
 ** Identify the Benefits of Cloud Computing - [[https://youtu.be/VaMdHKJQ15c&t=16m16s][video]]
 What is the cloud?
 - /There's no such thing as the clound, its just someone else's PC/
@@ -28,10 +31,11 @@ This allows easy, convenient access. There is no need to manage updates on the l
 Key Benefits:
 - Convenience (Constantly available, with minimal low-level management)
 - Agility (Easy to jump between a wide range of services quickly. Can drop services that are no longer useful and move to something completely different.)
-- High Availability/Disaster Recovery (This refers to the ability to spread multiple instances of your software across several physical locations easily, which improves the '[[id:359ecef5-d719-42c5-ad37-cb98c627a603][Availability Zones]]' that are available to you)
+- High Availability/Disaster Recovery (This refers to the ability to spread multiple instances of your software across several physical locations easily, which improves the '[[id:359ecef5-d719-42c5-ad37-cb98c627a603][Availability Zones]]' that are available to you. Resources are available when needed.)
 - Scalability (It's easy to increase the resources available to you quickly, when you need them)
+  Can scale vertically or horizontally. Vertical scaling - adding more CPU's to increase processing power. Horizontal Scaling - Creating more virtual machines or containers to meet increased demand.
 - Adaptability (The load on your system will vary dynamically - the cloud allows your system to dynamically scale up or down based on the load)
-  
+
 ** CapEx, OpEx and Consumption-based - [[https://youtu.be/WiwV9wb0GMo&t=7m13s][video]]
 Capital Expenditure vs Operational Expenditure
 
@@ -43,7 +47,9 @@ OpEx enables corporations to exercise more flexibility in environments where tec
 OpEx is consumption based, which makes it more economic for small companies as they grow, rather than standing up a large amount of hardware/licenses/software in a companies infancy. This also allows a company to grow and expand, paying for more resources as they make more money and increase their volume.
 ** Differences Between Cloud Service Categories - [[https://youtu.be/IqQC1EOQqeU&t=15m16s][video]]
 In any given situation, there are certain things that the company is responsible for, certain things that a user is responsible for, and certain things that Azure (or other cloud provider) is responsible for.
+
 This is known as Shared Responsibility.
+
 These things can vary depending on the service in question.
 
 This is typically visualized with a stack, from low-level to high level:
@@ -63,6 +69,24 @@ This is typically visualized with a stack, from low-level to high level:
   Another model is known as [[id:a5bba4de-a947-4102-ad96-d62c91f8cd0b][Platform as a Service]], or [[id:a5bba4de-a947-4102-ad96-d62c91f8cd0b][PaaS]]. This model /can/ include VM's (doesn't have to), but the user does not interact with them. In this model, Azure takes responsibility for everything except the Application and its Data. With this type of model, there are different "flavors" - since different applications will require different architecture to build upon. This is all a sort of "menu option" though - so the customer could choose a "Kubernetes based PaaS", or an "Web based PaaS" depending on what they need. This provides substantially limited options compared to IaaS - will only support a limited number of OS's, will not provide root access to the OS, etc.
 
   The last model is known as [[id:7e8921c2-9444-48c0-b5e2-29f374674c44][Software as a Service]] or SaaS. This is less of an "Azure" function, and something much closer to Office365, where the service is the actual application. The customer can only /use/ the system that they pay for. They are responsible for absolutely nothing.
+
+  When using a cloud provider, you will /always/ be responsible for:
+  - the information and data stored in the cloud
+  - Devices that are allowed to connect to your cloud
+  - Accounts and identities of the people/services/devices in your organization
+
+
+The provider is always responsible for:
+- The physical datacenter
+- The physical network
+- The physical hosts
+
+
+Your service model determines responsibility for:
+- Operating Systems
+- Network Controls
+- Applications
+- Identity and Infrastructure
 ** Identify the Right Service Type - [[https://youtu.be/KH8NH76h2vc&t=4m1s][video]]
 Recall from the [[*Differences Between Cloud Service Categories - \[\[https://youtu.be/IqQC1EOQqeU&t=15m16s\]\[video\]\]][previous lesson]] the idea of [[id:f63302e7-65b9-4fc0-a596-9ec269496756][IaaS]], [[id:a5bba4de-a947-4102-ad96-d62c91f8cd0b][PaaS]], and [[id:7e8921c2-9444-48c0-b5e2-29f374674c44][SaaS]]. How do we apply these ideas, and why?
 
@@ -96,8 +120,19 @@ Key Principles of the Cloud:
 - Will typically operate as a private solution, but during periods of high traffic or extreme demand, may expand and reach out to the public cloud for resources and information.
 - Allows for a backup in the event of failure.
 - This is especially useful for companies with a solution or application that can't be hosted in the cloud. These companies may want to move the majority of their operations to Azure or some other cloud provider, but may be /anchored/ by that one applicaiton or service.
+
+
+*Multi Cloud*
+- User employs multiple public cloud providers
+- This allows you to use different features from different providers
+
+
+Azure Arc is a set of technologies that helps manage your cloud environment.
+Azure VMware Solution can run VMware workloads in Azure.
 ** Reliability and Predictability - [[https://youtu.be/kD2YqdDaO1w&t=7m16s][video]]
 *Reliability*
+The ability of a system to recover from failure and continue to function.
+
 - Auto-Heal - The cloud is still based off hardware. Nodes/Racks etc can fail and have issues. The cloud is configured to "auto-heal", where is a single drive or rack fails, then anything deployed on that drive is redeployed to a different node.
 - Storage - At any given time, there will always be 3 copies of a user's data.
 - Autoscaling - Azure provides the option to automatically scale your resources to match demand. This ensures that your application or service will not fail when placed under heavy load.
@@ -107,15 +142,44 @@ Key Principles of the Cloud:
 
 
 *Predictability*
+
 - SKU - Azure has various products that are categorized based on performance, dimensions, and capabilities. This makes it easy to choose the correct product.
 - Behavior - Azure provides a serious of predictable information and peripherals that make it easier to interact with azure services easily and consistantly. This includes predictable pricing, product templates, API's, etc.
 - Use Templates - on the user side to improve the consistancy of the products that the user deploys.
 - Automation - Can improve the consistancy of repeatable operations. Removes margin for human error.
 
+
+Azure provides methods to manage a cloud environment and its resources in a secure, predictable manner using:
+- A web portal
+- A command line interface
+- API's
+- Powershell
 * Describe Core Azure Services
+In general, Azure consists of Physical Infrastructure, and Management Infrastructure. Azure's physical infrastructure consists of datacenters and the servers that they contain. Datacenters all have their own cooling, power, and networking. Datacenters themselves are not individually available, they are instead grouped into Azure Regions or Availability Zones that help the user access data.
 ** Benefits and Usage of Regions and Region Pairs - [[https://youtu.be/4RjPOAN54AE&t=13m8s][video]]
+A region - a geographical area that contains at least one but potentially multiple datacenters. These datacenters are located nearby and networked together with a low-latency network.
+
+Availability Zones provide a measure of extra security and resiliency.
+In the event of a multiple zone outage where an entire region is affected, Azure provides the option for Region Pairs.
+Most Azure Regions are matched/paired with another region at least 300 miles away. In the event of a region-wide catastrophe/outage, information from the affected zone can be accessed from the other member of the pair.
+Not all Azure services are available for this type of redundancy.
+
+Azure also provides "Sovereign Regions", which are isolated from the main instance of Azure. These include Government instances for the DoD and other countries like China.
 ** Benefits and Usage of Availability Zones - [[https://youtu.be/h0enGb17lnw&t=8m41s][video]]
+Availability Zones are physically separate datacenters within an Azure Region. Each availability zone is made up one or more datacenters, with independent power, cooling, and network. These availability zones are set up to be "isolation boundaries" - redundancies, so that if one goes down, the others can continue to function. Essentially, the country is broken into regions. These regions are made up of availability zones. Each availability zone contains one or more datacenters. There are at least 3 availability zones within each region.
+
+Azure allows you to duplicate your application across multiple availability zones. There may be an extra cost to this.
+Availability zones work best with self contained services, such as VM's, Databases, disks, etc. Azure services that support availability zones fall into three categories:
+- Zonal Services: Pin the resource to a specific zone (VM's, Disks, IP addresses)
+- Zone Redundant Services: The platform replicates automatically across zones. (Zone redundant storage, SQL database)
+- Non Regional Services: Services are always available.
+  
 ** Benefits and Usage of Resource Groups - [[https://youtu.be/g6thrYZhPZY&t=9m38s][video]]
+Resources are the basic building blocks of Azure. /Anything/ that you can create, provision, deploy, etc is a resource.
+VM's, virtual networks, databases, cognitive services, etc - all resources.
+
+Resource groups are exactly what they sound like - groupings of resources.
+Whenever you create a resource, you are required to place it into a resource group. Groups can contain many resources, but a resource can only be placed in one group.
 ** Benefits and Usage of Subscriptions - [[https://youtu.be/9vKAYW_WkLo&t=8m19s][video]]
 ** Benefits and Usage of Management Groups - [[https://youtu.be/bPdDiEtCVhM&t=6m30s][video]]
 ** Benefits and Usage of Azure Resource Manager - [[https://youtu.be/g4u0NL2-3XM&t=9m57s][video]]

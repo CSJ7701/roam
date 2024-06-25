@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       978dd04c-79e3-4153-9efc-54a03c0935ab
+:END:
+#+title: Microsoft Internship
+
+* Meeting Notes
+** Check-In with Robert Soligan and Navy Team - 06JUN2024
+
+*Intro*
+- Jadyn Dessalines - 2022 Naval Academy Grad. Cyber Grad, worked with Navy Cyber.
+- Christopher Neef - Chief. Worked in IT with the Navy since 2005. Just started moving into Cloud arena.
+
+*Meeting with Chief and Ma'am*
+Add their calendars in outlook, find a time that works for everyone for one-on-one mentorship meeting.
+
+*Training Material that works for them*
+Know the products and what they do.
+Work through provided training.
+ESI? (aka.ms/msi) - not sure what this is or how it is useful
+
+*Their Conversation*
+Trying to get Copilot/OpenAI for the Navy
+
+Azure Open AI (AOAI) - ChatGPT isolated to a tenant. Information stays local to the client and does not go back to OpenAI.
+There is an API for your AOAI Instance, allows you to create automations and feed information to the model.
+This specifically allows for some integration with Azure capabilities. Soligan showed an example where he had configured the Azure portal so that, for an actual organization, whenever there was an incident report (not sure what for) it made an API call so that the AOAI model could summarize the incident report. The model was able to assign a severity, a general description, and a "next action" (I think? I only managed to read about half.). The model also created tasks based on each report to indicate next steps that should be taken.
+
+* Notable Links
+aka.ms/discounts
+aka.ms/ESI
