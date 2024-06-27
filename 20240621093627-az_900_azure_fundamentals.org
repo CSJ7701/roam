@@ -196,10 +196,61 @@ You can use additional subscriptions to manage separate:
 - Organizational Structures - Organizing different teams based on structure is something that additional subscriptions makes easy.
 - Billing - Especially useful for itemized tracking, and maintaining records of different expenses.
 ** Benefits and Usage of Management Groups - [[https://youtu.be/bPdDiEtCVhM&t=6m30s][video]]
+Resources are compiled into resource groups, and resource groups are gathered into subscriptions. This provides a reasonable amount of compartimentalized organization, but for those who need to organize multiple applications, multiple development teams, across multiple parts of the world/country, Azure provides management groups.
+
+These allow the user to manage a scope above the subscription level, efficiently managing access, policies, and compliance for multiple subscriptions. They have the same relationship to subscription that resource groups do to resources - a management group contains multiple subscriptions, and allows the user to perform an action on multiple subscriptions at once. Unlike resource groups or subscriptions, management groups can be nested.
+
+Examples for using management groups:
+- Create a hierarchy that applies a policy
+  This would allow you to create a group called Production, for example. In this group, you could limit VM locations to the Western US, which will inherit onto all subscriptions managed by that group
+- Provide User access to multiple Subscriptions
+  By moving multiple subscriptions under a management group, you can create one Azure Role Based Access Control (Azure RBAC) assignment on the management group. This means that all resource groups, subscriptions, etc that are managed by the group inherit those permissions. This enables user to have access to everything they need, rather than repeating this setup across multiple subscriptions.
 ** Benefits and Usage of Azure Resource Manager - [[https://youtu.be/g4u0NL2-3XM&t=9m57s][video]]
+
 ** Describe the Purpose of Azure Arc - [[https://youtu.be/cW6_rvDYSHg&t=7m23s][video]]
+
 ** Describe the Resources Required for Virtual Machines - [[https://youtu.be/PP5BWZ0cAJo&t=6m17s][video]]
+Azure allows users to create and use [[id:61d1153b-3d2a-4e72-babc-1969c1849005][Virtual Machine]]s in the cloud. These VM's provide [[id:f63302e7-65b9-4fc0-a596-9ec269496756][IaaS]] in the form of a virtualized server.
+This is an ideal choice when you need to:
+- Take control of your OS
+- Run custom software
+- Use custom hosting configurations
+  
+Using a preconfigured VM image allows you to set up new VM's in minutes.
+
+You can choose to run a single VM for testing or development, or group VM's together to improve availability, scalability, and redundancy.
+
+*VM Resources*
+- Size - depends on the purpose, number of processor cores and RAM (On the hardware)
+- Storage - HDD, SSD, etc
+- Networking - Virtual Network, Public IP, port configuration
 ** Benefits and Usage of Core Compute Resources - [[https://youtu.be/yKDSAYDLGrI&t=34m32s][video]]
+*** Virtual Machines
+*Virtual Machine Scale Sets*
+Allows you to create/manage a group of identical, load-balanced VM's.
+Normally, achieving this would require individual configuration for each VM, which is complicated and time consuming.
+Using a scale set somplifies this process, since Azure does the majority of the configuration. This allows the user to manage, configure, and update a large number of VM's from a central location.
+The number of VM instances can automatically increase or decrease depending on demand, or can scale on a defined schedule.
+Scale sets also deploy a load balancer automatically, to ensure that resources are used efficiently.
+
+*Virtual Machine Availability Sets*
+Designed to ensure that VM's stagger updates and vary their power and network connectivity. This helps to prevent you from losing all of your VM's from a single power or network failure.
+They can group your VM's in two ways:
+- Update Domain: groups VM's that can be updated at the same time. Allows you to apply updates knowing that you won't experience downtime.
+- Fault Domain: groups VM's by common power source and network switch. This will split your VM's across three "fault domains".
+There is no cost for configuring an availability set - you only pay for VM's that you create.
+
+*When to use a VM*
+- Testing and Development - quick and easy way to create a different OS and application configuration. Easy to delete when no longer needed.
+- Running applications in the cloud
+- Extending your datacenter to the cloud - can extend the capabilities of OnPrem equipment
+- Disaster recovery - Can serve as a backup for a primary datacenter.
+
+
+
+*** Containers
+Virtual machines can only run one operating system at a time. If you want to reduce costs and run more than one operating system, you can use a [[id:fc405762-7673-4e69-9875-5241adcc1843][Container]].
+Containers are a virtualized environment, similar to a VM, but in a container you do not manage the operating system. Where virtual machines appear as an instance of an operating system that you can connect to and directly manage, containers are a higher level, /more/ virtualized solution. VM's virtualize hardware and allow the user to interact with an OS on this "fake" hardware. Containers virtualize an OS and allows users to interact with an application on this "fake" operating system.
 ** Benefits and Usage of Core Network Resources - [[https://youtu.be/aNK0C9Oj2sg&t=22m4s][video]]
 ** Describe Public and Private Endpoints - [[https://youtu.be/bPNkXwRFsek&t=7m23s][video]]
 ** Benefits and Usage of Storage Account Resources - [[https://youtu.be/b8BrfsxLSx8&t=18m4s][video]]

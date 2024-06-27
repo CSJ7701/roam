@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4446474d-a9c3-486e-88ce-1bc750f14778
+:END:
+#+title: Containers
+
+Virtualized Environments, similar to [[id:61d1153b-3d2a-4e72-babc-1969c1849005][Virtual Machine]]s.
+You can run multiple instances on a single host, but unlike virtual machines, 

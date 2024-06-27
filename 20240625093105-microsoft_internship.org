@@ -4,7 +4,7 @@
 #+title: Microsoft Internship
 
 * Meeting Notes
-** Check-In with Robert Soligan and Navy Team - 06JUN2024
+** Check-In with Robert Soligan and Navy Team - 25JUN2024
 
 *Intro*
 - Jadyn Dessalines - 2022 Naval Academy Grad. Cyber Grad, worked with Navy Cyber.
@@ -24,7 +24,23 @@ Trying to get Copilot/OpenAI for the Navy
 Azure Open AI (AOAI) - ChatGPT isolated to a tenant. Information stays local to the client and does not go back to OpenAI.
 There is an API for your AOAI Instance, allows you to create automations and feed information to the model.
 This specifically allows for some integration with Azure capabilities. Soligan showed an example where he had configured the Azure portal so that, for an actual organization, whenever there was an incident report (not sure what for) it made an API call so that the AOAI model could summarize the incident report. The model was able to assign a severity, a general description, and a "next action" (I think? I only managed to read about half.). The model also created tasks based on each report to indicate next steps that should be taken.
+** Navy Shadowing: Copilot for Security PG Conversation - 26JUN2024
 
+*In the Meeting*
+- Jadyn Dessalines
+- Robert Soligan
+- Kevin Friedemann
+- Daniel Huynh
+- Christopher Neef
+
+*Copilot for Security*
+Chat GPT, specifically for security issues. Has access to /your/ microsoft data.
+Works in a standalone and an embedded format.
+
+Standalone provides in-depth functionality and can perform some incredibly complex tasks.
+Embedded is much simpler to work with, and integrates with your daily workflow as part of the UX.
+
+Daniel Huynh mentioned a range of "Copilot Variations", it would be interesting to see how exactly those variations are implemented. They could be completely separate models, trained from scratch to fill different roles, or they could be the same model that is fine tuned based on a different set of information (This is the most likely method.) Alternatively, they could all be the same model which is being altered based on prompts and specific information fed into the model at runtime. If, as I suspect, the model is the same but fine tuned for a specific task, I wonder how that will affect the development cycle. Will there be a lag for the more specific copilot variations, as the central model is developed?
 * Notable Links
 aka.ms/discounts
 aka.ms/ESI

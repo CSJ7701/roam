@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       fc405762-7673-4e69-9875-5241adcc1843
+:END:
+#+title: Container
+
+Virtualization Environment, similar to [[id:61d1153b-3d2a-4e72-babc-1969c1849005][Virtual Machine]]s.
+Unlike virtual machines, containers are not an instance of an operating system that you can log into and manage directly.
+Containers are instead meant as headless instances that run independently.
