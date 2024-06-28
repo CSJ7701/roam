@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4f5147d7-5d15-4478-9567-dcd1b7ee1454
+:ROAM_ALIASES: NAT
+:END:
+#+title: Network Address Translation
+

@@ -251,7 +251,104 @@ There is no cost for configuring an availability set - you only pay for VM's tha
 *** Containers
 Virtual machines can only run one operating system at a time. If you want to reduce costs and run more than one operating system, you can use a [[id:fc405762-7673-4e69-9875-5241adcc1843][Container]].
 Containers are a virtualized environment, similar to a VM, but in a container you do not manage the operating system. Where virtual machines appear as an instance of an operating system that you can connect to and directly manage, containers are a higher level, /more/ virtualized solution. VM's virtualize hardware and allow the user to interact with an OS on this "fake" hardware. Containers virtualize an OS and allows users to interact with an application on this "fake" operating system.
+
+*Azure Container Instances*
+- Fastest and Simplest way to run a container in Azure.
+- No need to manage VM's or adopt additional services
+- PaaS service
+
+
+*Azure Container Apps*
+- Similar to a container instance
+- Running immediately, no need for container management
+- PaaS
+- Extra Benefits - load balancing and scaling
+
+
+*Azure Kubernetes Service*
+- Container orchestration service
+- Manages the lifecycle of containers
+- Makes deploying a fleet of containers much simpler
+
+
+Containers are useful for micro-service architectures, where the user divides solutions into smaller independent pieces.
+An example could be splitting a web-site into a container hosting the front-end, another hosting the back-end, and a third for storage.
+In a situation where the web-site reaches storage capacity, but neither front-end nor back-end are stressed, you could simply scale the storage container.
+
+*** Azure App Services
+App services are another hosting option that Azure provides .
+They allow you to build and host web apps, background jobs, mobile backends, and RESTful API's in the programming language of your choice without managing infrastructure (like you would have to with a VM).
+It offers automatic scaling and high availability, supporting both Windows and Linux. It enables automated deployment from Github, Azure DevOps, or any Git repo.
+
+Functionally, this is an HTTP-based service that can host web apps, REST APIs and mobile backends, supporting multiple languages (.NET, .NET Core, Java, Ruby, NodeJS, PHP, or Python) either Windows or Linux.
+
+You can host a variety of app service styles:
+
+*Web Apps*
+Host web apps using ASP.NET, ASP.NET Core, Java, Ruby, Node.js, PHP, or Python in either widows or Linux.
+
+*API Apps*
+Can build REST API's using choice of language and framework. Full swagger support and the ability to publish and package your API in Azure Marketplace. Produced apps can be consumed from any HTTP or HTTPS client.
+
+*WebJobs*
+Can run a program (.exe, Java, Python, or NodeJS) or script (.cmd, .bat, PowerShell,  Bash) in the same context as a web app, API app, or mobile app. Can be scheduled or run on a trigger. Typically used as background tasks in application logic.
+
+*Mobile Apps*
+Quickly build a backend for iOS or Android apps.
+- Store mobile app data in a cloud based SQL database
+- Authenticate customers against common social providers (MSA, Google, Twitter, Facebook)
+- Push notifications
+- Execute custom backend logic in C# or NodeJS.
+Includes SDK support for native iOS, Android, Xamarin, and React native apps.
+
 ** Benefits and Usage of Core Network Resources - [[https://youtu.be/aNK0C9Oj2sg&t=22m4s][video]]
+*** Virtual Networks
+Virtual networks and subnets allow Azure resourecs (VMs, web apps, databases, etc) to comunicate with each other, users on the internet, and with on-premises client computers. Think of an azure network as an extension of your on-premise network, with additional resources that allow it to connect to other azure resources.
+
+Provide key capabilities:
+- Isolation and segmentation
+- Internet communication
+- Communicate with azure resources
+- Communicate with on-premises resources
+- Route network traffic
+- Filter network traffic
+- Connect virtual networks
+
+Supports both public and private endpoints, enabling communication between external /and/ internal resources with other internal resources.
+- Public endpoints have public IP and can be accessed from anywhere in the world
+- Private endpoints exist within a virtual network and have a private IP from within the address space of that network.
+
+
+*Isolation and Segmentation*
+Azure Virtual Networks allow you to create multiple isolated virtual networks. The IP range you define at configuration exists only within the virtual network, and is not visible to external devices. Think of this as an enterprise level [[id:4f5147d7-5d15-4478-9567-dcd1b7ee1454][NAT]].
+Using this service creates ip address spaces that are divided into named subnets. For name resolution you can use the name resolution service built into Azure, or you can configure an external [[id:2d63cf7f-d5f0-44ce-a0c5-f277be13de71][DNS]] server.
+You can enable public internet connection by assigning a public IP address to an Azure resource, or putting the resource behind a public load balancer.
+
+*Communicate Across Azure Resources*
+Azure resources can communicate with virtual networks in one of two ways:
+- Virtual networks can connect to VMs and other Azure resources, such as the App Service Environment for Power Apps, [[*Containers][Azure Kubernetes Service]], or [[*Virtual Machines][Virtual Machines Scale Sets.]]
+- Service Endpoints can connect to other Azure resource types, such as Azure SQL Database and storage accounts. This approach enables you to link multiple azure resources to virtual networks to improve security and provide optimal routing among resources.
+
+
+*Communicate with On-Premises Resources*
+You can, in effect, create a network that spans both local and cloud environments. There are three ways to achieve this:
+- Point-to-Site VPN connections are from a computer outside your organization back into your corporate network. In this case, the client computer initiates an encrypted VPN connection to connect to the Azure virtual network.
+- Site-to-Site VPNs link your on-premises VPN device or gateway to the Azure VPN gateway in a virtual network. In effect, the devices on Azure can appear as being on the local network. The connection is encrypted add works over the Internet.
+- Azure ExpressRoute provides a dedicated private connection to Azure that doesn't travel over the internet. ExpressRoute is useful for environments where you need greater bandwidth and even higher levels of security.
+
+*Route Network Traffic*
+Azure routes traffic between subnets on any connected virtual networks, on-premises networks, and the internet. This is done by default, but you can manually control the routing and override default settings.
+- Routing Tables allow you to define rules about how traffic should be directed. You can create custom routing tables that control how packets are directed between subnets.
+- [[id:81e5cabc-1177-433a-8bfa-67f0cf6a2027][Border Gateway Protocol]] (BGP) works with Azure VPN gateways, Azure Route Server, or Azure ExpressRoute to propagate on-premises BGP routes to Azure virtual networks.
+
+*Filter Network Traffic*
+Azure Virtual Networks allow you to filter traffic between subnets (firewall) using the following approaches:
+- Network security groups are Azure resources that contain multiple inbound and outbound security rules. You can define these rules to allow or block traffic based on factors such as source/destination IP, port, and protocol.
+- Network virtual appliances are specialized VMs that can be compared to a hardened network appliance. A network virtual appliance carries out a particular network function, such as running a firewall or performing a wide area network (WAN) optimization.
+
+*Connect Virtual Networks*
+You can link virtual networks together using virtual network peering. Peering allows two virtual networks to connect directly to each other. Network traffic between two peered networks is private, and travels on the Microsoft backbone network, never entering the public internet. Peering enables resources in each virtual network to communicate with each other. These virtual networks can be in separate regions, which allows you to create a global interconnected network through Azure.
+User Defined Routes (UDR) allows you to control the routing tables between subnets within a virtual network or between virtual networks. 
 ** Describe Public and Private Endpoints - [[https://youtu.be/bPNkXwRFsek&t=7m23s][video]]
 ** Benefits and Usage of Storage Account Resources - [[https://youtu.be/b8BrfsxLSx8&t=18m4s][video]]
 ** Benefits and Usage of Database Resources - [[https://youtu.be/4sQOF9fSOAU&t=13m29s][video]]
@@ -263,6 +360,19 @@ Containers are a virtualized environment, similar to a VM, but in a container yo
 ** Benefits and Usage of Big Data and Analytics Services - [[https://youtu.be/LSVewE4mKfE&t=13m26s][video]]
 ** Benefits and Usage of AI Services - [[https://youtu.be/lgcpRpV3HPc&t=9m21s][video]]
 ** Benefits and Usage of Serverless Technologies - [[https://youtu.be/-xeJGiMw5OE&t=6m54s][video]]
+*** Azure Functions
+Azure functions is an event-driven, serverless compute option. It does not require virtual machines or containers.
+If you build an app with virtual machines or containers, those resources must be "running" in order to server your app.
+With Azure Functions, an event will wake the function, which prevents resources from being provisioned when there are no events.
+
+This is an ideal option when you are concerned /only/ with the code running your service and not with the underlying infrastructure. Functions are most commonly used to respond to an event (a REST request for instance, or timer, or a message from another azure service), and when that work can be completed quickly (a manner of seconds).
+
+Functions scale automatically based on demand, so they are a good choice when the demand is variable.
+When azure functions are finished running, they deallocate the resources that they used. You are only charged for the CPU time used while the function runs.
+
+Functions can be stateless or stateful. Stateless functions (default) behave as though they are restarted every time they respond to an event. Stateful functions (Durable functions) use a context that is passed through the function to track prior activity.
+
+These functions are a central component of serverless computing, but also server as a general compute platform for running any type of code. 
 ** Benefits and Usage of DevOps Technologies - [[https://youtu.be/-acpNiCa0qY&t=10m21s][video]]
 ** Functionality of Azure Management Solutions - [[https://youtu.be/6xp-K60ChAk&t=9m23s][video]]
 ** Functionality and Usage of Azure Advisor - [[https://youtu.be/nqH4NboyEl0&t=3m22s][video]]
@@ -309,3 +419,5 @@ Containers are a virtualized environment, similar to a VM, but in a container yo
 
 
 
+
+#  LocalWords:  deprovision stateful ExpressRoute
