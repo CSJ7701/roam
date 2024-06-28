@@ -348,12 +348,46 @@ Azure Virtual Networks allow you to filter traffic between subnets (firewall) us
 
 *Connect Virtual Networks*
 You can link virtual networks together using virtual network peering. Peering allows two virtual networks to connect directly to each other. Network traffic between two peered networks is private, and travels on the Microsoft backbone network, never entering the public internet. Peering enables resources in each virtual network to communicate with each other. These virtual networks can be in separate regions, which allows you to create a global interconnected network through Azure.
-User Defined Routes (UDR) allows you to control the routing tables between subnets within a virtual network or between virtual networks. 
+User Defined Routes (UDR) allows you to control the routing tables between subnets within a virtual network or between virtual networks.
+
+*** Virtual Private Networks
+[[id:5989050f-04aa-415c-b409-dd9aa1369c02][Virtual Private Network]]s use an encrypted tunnel within another network. VPN's are typically deployed to connect two or more trusted private networks together over an untrusted network. Traffic is encrypted while traveling over the untrusted network in order to prevent eavesdropping or other attacks. VPN's can enable networks to safely share sensitive information.
+
+*VPN Gateways*
+A VPN gateway is a type of virtual network gateway. Azure VPN Gateway instances are deployed in a dedicated subnet of the virtual network, and enable:
+- Connect on-premises datacenters to virtual networks (Site to Site)
+- Connect individual devices to virtual networks (Point to Site)
+- Connect virtual networks to other virtual networks (Network to Network)
+
+All data transfer is encrypted. You can deploy only one VPN gateway in each virtual network. You can use one gateway to connect to multiple locations though, including other virtual networks or on-premises datacenters.
+
+VPN gateways can either be policy based or IP based. The main difference is how they determine which traffic should be encrypted. In Azure, regardless of the type, authentication uses a pre-shared key.
+- Policy based VPN gateways specify the static IP address of packets that should be encrypted through each tunnel. This evaluates every single packet against the set of specified IP's.
+- Route based gateways model IPSec tunnels as network interfaces or virtual tunnel interfaces. IP routing (either static or dynamic) decides which one of these interfaces to use when sending each packet. Route based VPN's are the preferred connection method for on-premises devices, as they are more resistant to topology changes such as the creation of new subnets.
+
+Use a route based VPN gateway if you need these types of connectivity:
+- Connections between virtual networks
+- Point-to-site connections
+- Multi-site connections
+- Coexistence with an Azure ExpressRoute gateway
+
+*High Availability*
+Ways to maximize the resiliency and availability of a VPN gateway.
+
+- Active/Standby
+  VPN gateway instances are deployed in active/standby configuration by default. When planned maintenance or unplanned disruption affects the active instance, the standby instance automatically assumes the responsibility for connections (no user intervention). Connections are interrupted during the transition, but typically restored within a few seconds for planned maintenance, or within 90 seconds for unplanned disruptions.
+- Active/Active
+  Support for BGP routing protocol allows users to deploy VPN gateways in active/active configuration. Each instance gets assigned a unique IP address, where the user creates separate tunnels from the on-premises device to each IP address. This extends high availability by deploying an additional VPN device on-premises.
+- ExpressRoute Failover
+  It is possible to configure a VPN gateway as a secure failure path for ExpressRoute connections. ExpressRoute circuits have resiliency built in, but aren't immune to physical problems that affect the cables delivering connectivity, or outages that affect the entire location. If you need high availability, you can configure a VPN gateway that uses the internet as an alternate means of communication, which ensures that there is always a connection to your virtual networks.
+- Zone Redundant Gateways
+  In regions that support availability zones, VPN gateways and ExpressRoute gateways can be deployed in a zone redundant configuration. This improves resiliency, scalability, and availability. Deploying gateways in availability zones physically /and/ logically separates gateways within a region while protecting your on-premises connectivity from zone-level failure. These gateways require different SKU (stock keeping units), and use 'Standard' public IPs instead of 'Basic' public IPs.
 ** Describe Public and Private Endpoints - [[https://youtu.be/bPNkXwRFsek&t=7m23s][video]]
 ** Benefits and Usage of Storage Account Resources - [[https://youtu.be/b8BrfsxLSx8&t=18m4s][video]]
 ** Benefits and Usage of Database Resources - [[https://youtu.be/4sQOF9fSOAU&t=13m29s][video]]
 ** Data Movement and Migration Options - [[https://youtu.be/jNBcXnMTo9s&t=11m47s][video]]
 ** Benefits and Usage of Azure Marketplace - [[https://youtu.be/b7RuB4Bymgc&t=3m12s][video]]
+
 
 * Describe Core Solutions and Management Tools on Azure
 ** Benefits and Usage of Azure IoT Services - [[https://youtu.be/22z9ARaKlbU&t=21m8s][video]]
