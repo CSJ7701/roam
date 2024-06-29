@@ -382,6 +382,63 @@ Ways to maximize the resiliency and availability of a VPN gateway.
   It is possible to configure a VPN gateway as a secure failure path for ExpressRoute connections. ExpressRoute circuits have resiliency built in, but aren't immune to physical problems that affect the cables delivering connectivity, or outages that affect the entire location. If you need high availability, you can configure a VPN gateway that uses the internet as an alternate means of communication, which ensures that there is always a connection to your virtual networks.
 - Zone Redundant Gateways
   In regions that support availability zones, VPN gateways and ExpressRoute gateways can be deployed in a zone redundant configuration. This improves resiliency, scalability, and availability. Deploying gateways in availability zones physically /and/ logically separates gateways within a region while protecting your on-premises connectivity from zone-level failure. These gateways require different SKU (stock keeping units), and use 'Standard' public IPs instead of 'Basic' public IPs.
+
+
+*** Azure ExpressRoute
+Lets you extend on-premises networks into the cloud over a private connection. This connection is called an ExpressRoute Circuit.
+Connectivity can be from an 'any-to-any' network (IP, VPN), an 'point-to-point' ethernet network, or a virtual cross-connection through a connectivity provider at a colocation facility. Connections offer more reliability, faster speeds, consistent latency, and higher security than typical internet connections.
+
+*Features and Benefits*
+- Connectivity to microsoft cloud services across all regions in the geopolitical area
+- Global connectivity to microsoft services across all regions with ExpressRoute Global Reach
+- Dynamic routing between your network and Microsoft via Border Gateway Protocol
+- Built-in redundancy in every peering location for higher reliability
+
+*Connectivity to Cloud Services*
+- Office 365
+- Dynamics 365
+- Azure compute services (VM's etc)
+- Azure cloud services (Azure Cosmos DB, Azure Storage, etc)
+Available in all regions
+
+*Global Connectivity*
+Can enable ExpressRoute to exchange data across your on-premises sites by connecting your ExpressRoute circuits. If you had an office in Asia, datacenter in Europe, both with ExpressRoute circuits connecting them to the Microsoft network. Could use ExpressRoute Global Reach to connect those two facilities, allowing them to communicate without transferring data over the public internet.
+
+*Dynamic Routing*
+ExpressRoute uses the BGP. BGP is used to exchange routes between on-premises networks and resources running in Azure. This protocol enables dynamic routing between your on-premises network and services running in the Microsoft cloud.
+
+*Built In Redundancy*
+Providers use redundant devices to ensure that connections established with Microsoft are highly available. Can configure multiple circuits to complement this feature.
+
+*Connectivity Models*
+Supports 4 models to connect on-premises network to the cloud:
+- CloudExchange Collocation
+  Co-location refers to your datacenter, office, or other facility being co-located at a cloud exchange (such as an ISP). If your facility is co-located, you can request a virtual cross-connect to the Microsoft Cloud
+- Point-to-Point Ethernet connection
+  Can directly connect your facility to the Microsoft Cloud
+- Any-to-Any connection
+  Can integrate your WAN with Azure by providing connections to your offices and datacenters. Azure integrates with your WAN, providing connections to your offices and datacenters. This means that the connection between your on-premises network and Azure is similar to a connection that you might have between your datacenter and branch offices. 
+- Directly from ExpressRoute sites
+  Can connect directly to Microsoft's global network at a peering location, distributed across the world. Provides dual 100 Gbps or 10 Gbps connectivity, which supports Active/Active connectivity at scale.
+
+
+*** Azure DNS
+Azure DNS is a hosting service for DNS domains. It provides name resolution using Azure infrastructure. You can manage your DNS records using the same credentials, APIs, Tools, and billing as your other Azure services.
+
+*Benefits*
+- Reliability and Performance
+  Hosted on Azures global network of DNS name servers. Provides resiliency and high availability. Azure DNS uses anycast networking, so each DNS query is answered by the closest available DNS server to provide fast performance and high availability for your domain. 
+- Security
+  Azure DNS is based on Azure Resource Manager. Provides features like Role Based Access Control, Activity Logs, Resource Locking.
+- Ease of Use
+  Can manage DNS records for Azure services, and provide DNS for external services as well. Integrated into the Azure portal and uses the same credentials, support contract, and billing as your other Azure services. Since the DNS runs on Azure, you can manage domains and records with the Azure portal, PowerShell cmdlets, and Azure CLI. Can also integrate with other services using REST APIs and SDKs.
+- Customizable virtual networks
+  Supports private DNS domains. Allows you to use your own custom domain names in your private virtual networks, rather than using the Azure provided names. 
+- Alias records
+  Supports alias record sets. Can use an alias record set to refer to an azure resource, such as an Azure public IP address, Traffic Manager Profile, or Content Delivery Network endpoint. If the IP address of the underlying resource changes, the record set updates itself during DNS resolution. The alias record set points to the instance and the service instance is associated with an IP address.
+
+*NOTE*: you cant use Azure DNS to buy a domain name. For an annual fee, you can buy a domain name using app service domains or a third-party domain name registrar. Once purchased, your domain names can be hosted in Azure DNS for record management. 
+
 ** Describe Public and Private Endpoints - [[https://youtu.be/bPNkXwRFsek&t=7m23s][video]]
 ** Benefits and Usage of Storage Account Resources - [[https://youtu.be/b8BrfsxLSx8&t=18m4s][video]]
 ** Benefits and Usage of Database Resources - [[https://youtu.be/4sQOF9fSOAU&t=13m29s][video]]
@@ -454,4 +511,4 @@ These functions are a central component of serverless computing, but also server
 
 
 
-#  LocalWords:  deprovision stateful ExpressRoute
+#  LocalWords:  deprovision stateful ExpressRoute CloudExchange
