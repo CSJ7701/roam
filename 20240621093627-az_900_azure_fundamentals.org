@@ -465,7 +465,7 @@ Naming rules:
 - between 3 and 24 characters, numbers and lowercase letters only.
 - Account name must be unique within Azure.
 
-*Azure Storage Redundancy*
+*** Azure Storage Redundancy*
 Azure always stores multiple copies of your data so that it is backed up in case of emergency.
 Choosing a redundancy option is a function of cost vs functionality/availability. Some factors include:
 - How data is replicated in the primary region
@@ -488,8 +488,21 @@ Choosing a redundancy option is a function of cost vs functionality/availability
     Essentially running ZRS in the primary region and LRS in the secondary.
   By default, the data in the secondary region is /not/ available for read or write unless the primary region fails.
   Since data is replicated Async, a failure that affects the primary region may result in data loss if the primary region has unsynced data.
+  
+  *Geo Redundant Storage*
+GRS copies data synchronously within a single physical location in the primary region using LRS. It then copies your  data asynchronously to a single physical location in the secondary region (zone pair) using LRS. GRS offers close to 99.99999999999999% durability per year.
 
-*Geo Redundant Storage* 
+*Geo Zone Redundant Storage*
+GZRS combines the high availability of redundancy across zones with the regional protection provided by geo-replication. Data is copied across 3 Azure availability zones in the primary region (similar to ZRS) and is also replicated to a secondary region using LRS. This is recommended for maximum consistancy, durability and availability; it provides excellent performance and resilience.
+
+*Read access in the secondary region*
+GRS and GZRS replicate your data to another physical location. That data can only be read if the customer or MS initiate a fail-over from the primary to secondary region.
+You /can/ enable read access to the secondary location, which lets you access the secondary location when the primary instance is running. This is denoted with 'RA-GRS' and 'RA-GZRS'.
+
+*** Azure Storage Services
+- Blobs: massively scalable object store for text or binary data. Supports big-data analytics
+- Files: managed file share for cloud or on-premises deployment.
+- Queues: messaging store for reliable messaging between application components.
 ** Benefits and Usage of Database Resources - [[https://youtu.be/4sQOF9fSOAU&t=13m29s][video]]
 ** Data Movement and Migration Options - [[https://youtu.be/jNBcXnMTo9s&t=11m47s][video]]
 ** Benefits and Usage of Azure Marketplace - [[https://youtu.be/b7RuB4Bymgc&t=3m12s][video]]

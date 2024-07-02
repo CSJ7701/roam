@@ -7,7 +7,7 @@
 ** Check-In with Robert Soligan and Navy Team - 25JUN2024
 
 *Intro*
-- Jadyn Dessalines - 2022 Naval Academy Grad. Cyber Grad, worked with Navy Cyber. 
+- Jadyn Dessalines - 2022 Naval Academy Grad. LTJG. Cyber Grad, worked with Navy Cyber. 
 - Christopher Neef - Chief. Worked in IT with the Navy since 2005. Just started moving into Cloud arena. 19 Years. Yale postgrad, thesis BDP and federating data over BDP. Previously certified as a Google Architect.
 
 *Meeting with Chief and Ma'am*
@@ -24,7 +24,7 @@ Trying to get Copilot/OpenAI for the Navy
 Azure Open AI (AOAI) - ChatGPT isolated to a tenant. Information stays local to the client and does not go back to OpenAI.
 There is an API for your AOAI Instance, allows you to create automations and feed information to the model.
 This specifically allows for some integration with Azure capabilities. Soligan showed an example where he had configured the Azure portal so that, for an actual organization, whenever there was an incident report (not sure what for) it made an API call so that the AOAI model could summarize the incident report. The model was able to assign a severity, a general description, and a "next action" (I think? I only managed to read about half.). The model also created tasks based on each report to indicate next steps that should be taken.
-* * Navy Shadowing: Copilot for Security PG Conversation - 26JUN2024
+** Navy Shadowing: Copilot for Security PG Conversation - 26JUN2024
 *In the Meeting*
 - Jadyn Dessalines
 - Robert Soligan
@@ -127,6 +127,35 @@ Was in management before came to MS.
 
   Read [[id:9c358a35-236c-490d-bffb-7dd57eb4d992][Atomic Habits]]
   
+** Ian Leatherman: Conversation with NCDOC
+*In the Meeting*
+- Robert Soligan (not present)
+- Jadyn Dessalines
+- Christopher Neef
+- Joe Church
+- Ian Leatherman
+- Kevin Friedemann
+- Elisha Angeles
+
+
+*Ian Leatherman*
+MS for 2 years
+11 years active with Navy, Submarines
+Left submarines for WarCom (Next to NCDOC)
+Came to Fleet Cyber, CIO Shop
+Job at microsoft is to take Flankspeed (?) and expand that functionality to the entire government.
+Currently a Maritime Cyber Warfare Officer with the reserves - MCPO?
+
+I don't really understand any of what he's talking about. He is discussing the difference/relationship between usability and security.
+Usability and security do not have to be mutually exclusive, but often are because of bad system design.
+
+Talked about making sure that all different commands/units etc within the military use similar auth methods. This is because different sections use different auths, and different logs, and different methods to accomplish the same thiong. we can improve security and cost by consolidating to one common method.
+
+*Key Terms*
+Entra ID
+F5
+- Both are Auth methods?
+
 
 * Notable Links
 aka.ms/discounts
