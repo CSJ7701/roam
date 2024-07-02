@@ -34,6 +34,14 @@
 :END:
 
 * Inbox
+** TODO Atomic Habits
+:PROPERTIES:
+:author: James Clear
+:genre: Personal Development
+:url: 
+:pages: 
+:roam: %![Error: (wrong-type-argument org-roam-node Note with title Atomic Habits not found.)]
+:END:
 ** TODO The Divine Comedy
 :PROPERTIES:
 :author: Dante Alighieri
