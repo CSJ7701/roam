@@ -144,7 +144,7 @@ MS for 2 years
 Left submarines for WarCom (Next to NCDOC)
 Came to Fleet Cyber, CIO Shop
 Job at microsoft is to take Flankspeed (?) and expand that functionality to the entire government.
-Currently a Maritime Cyber Warfare Officer with the reserves - MCPO?
+Currently a Maritime Cyber Warfare Officer with the reserves - MCWO?
 
 I don't really understand any of what he's talking about. He is discussing the difference/relationship between usability and security.
 Usability and security do not have to be mutually exclusive, but often are because of bad system design.
@@ -155,6 +155,52 @@ Talked about making sure that all different commands/units etc within the milita
 Entra ID
 F5
 - Both are Auth methods?
+
+
+*Moral*
+'Zero Trust' can result in a better user experience
+
+** One-on-One Meeting with Dessalines and Neef
+*In Meeting*
+- Jadyn Dessalines
+- Christopher Neef
+- Joe Church
+
+*What do they do?*
+NCDOC - Navy Cyber Defence Operations Command
+DCO (Defence Cyber Operations)
+Manage networks
+Paired with navy network warfare command
+Monitor network usage and acivity
+
+Chief
+- N65 Chief - had own division
+- Scan/Patch/Scan
+- Mainly leadership
+- Keeping an eye on the watchfloor
+
+
+Watchfloor is a 24/7 SOC (Security Operation Center)
+Basically the Navy "Battle Bridge"
+
+Dessalines
+- After Graduation ,led development team
+- Dev team is civilian, she is the only military leadership
+- Started as a developer, actual technical work
+- Microsoft provides support and advice on the telemetry that they have acecss to, but MS doesn't have access to classified info
+
+
+Goal is to move the entire navy to the cloud and fuly implement 'Zero Trust'
+IL - Impact Level
+- IL1 -  IL4 Commercially available cloud
+- IL5 CUI (Navy Standard for unclass)
+- IL6 Secret
+- IL7 TS
+
+Check in regularly with those under you
+- Know them, their family
+- Be involved with everyone under you
+- Dessalines does weekly meetinfs with every sailor under her to check in on what they are doing for their professiopnal development
 
 
 * Notable Links
