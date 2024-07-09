@@ -155,7 +155,7 @@ Azure provides methods to manage a cloud environment and its resources in a secu
 - API's
 - Powershell
 * Describe Core Azure Services
-In general, Azure consists of Physical Infrastructure, and Management Infrastructure. Azure's physical infrastructure consists of datacenters and the servers that they contain. Datacenters all have their own cooling, power, and networking. Datacenters themselves are not individually available, they are instead grouped into Azure Regions or Availability Zones that help the user access data.
+In general, Azure consists of Physical Infrastructure, and Management Infrastructure. Azure's physical infrastructure consists of datacenters and the servers that they contain. Datacenters all have their own cooling, power, and networking. Data-centers themselves are not individually available, they are instead grouped into Azure Regions or Availability Zones that help the user access data.
 ** Benefits and Usage of Regions and Region Pairs - [[https://youtu.be/4RjPOAN54AE&t=13m8s][video]]
 A region - a geographical area that contains at least one but potentially multiple datacenters. These datacenters are located nearby and networked together with a low-latency network.
 
@@ -362,7 +362,7 @@ A VPN gateway is a type of virtual network gateway. Azure VPN Gateway instances 
 All data transfer is encrypted. You can deploy only one VPN gateway in each virtual network. You can use one gateway to connect to multiple locations though, including other virtual networks or on-premises datacenters.
 
 VPN gateways can either be policy based or IP based. The main difference is how they determine which traffic should be encrypted. In Azure, regardless of the type, authentication uses a pre-shared key.
-- Policy based VPN gateways specify the static IP address of packets that should be encrypted through each tunnel. This evaluates every single packet against the set of specified IP's.
+- Policy based VPN gateways specify the static IP address of packets that should be encrypted through each tunnel. This evaluates every single packet against the set of specified IP.
 - Route based gateways model IPSec tunnels as network interfaces or virtual tunnel interfaces. IP routing (either static or dynamic) decides which one of these interfaces to use when sending each packet. Route based VPN's are the preferred connection method for on-premises devices, as they are more resistant to topology changes such as the creation of new subnets.
 
 Use a route based VPN gateway if you need these types of connectivity:
@@ -378,7 +378,7 @@ Ways to maximize the resiliency and availability of a VPN gateway.
   VPN gateway instances are deployed in active/standby configuration by default. When planned maintenance or unplanned disruption affects the active instance, the standby instance automatically assumes the responsibility for connections (no user intervention). Connections are interrupted during the transition, but typically restored within a few seconds for planned maintenance, or within 90 seconds for unplanned disruptions.
 - Active/Active
   Support for BGP routing protocol allows users to deploy VPN gateways in active/active configuration. Each instance gets assigned a unique IP address, where the user creates separate tunnels from the on-premises device to each IP address. This extends high availability by deploying an additional VPN device on-premises.
-- ExpressRoute Failover
+- ExpressRoute Fail-over
   It is possible to configure a VPN gateway as a secure failure path for ExpressRoute connections. ExpressRoute circuits have resiliency built in, but aren't immune to physical problems that affect the cables delivering connectivity, or outages that affect the entire location. If you need high availability, you can configure a VPN gateway that uses the internet as an alternate means of communication, which ensures that there is always a connection to your virtual networks.
 - Zone Redundant Gateways
   In regions that support availability zones, VPN gateways and ExpressRoute gateways can be deployed in a zone redundant configuration. This improves resiliency, scalability, and availability. Deploying gateways in availability zones physically /and/ logically separates gateways within a region while protecting your on-premises connectivity from zone-level failure. These gateways require different SKU (stock keeping units), and use 'Standard' public IPs instead of 'Basic' public IPs.
@@ -501,12 +501,45 @@ You /can/ enable read access to the secondary location, which lets you access th
 
 *** Azure Storage Services
 - Blobs: massively scalable object store for text or binary data. Supports big-data analytics
+  Completely unstructured (which means it accepts any format). Uses tiers to specify different levels of access. Hot access (frequent access), Cool access (infrequent access and stored for at least 30 days), Cold access (infrequent and stored for at least 90 days), Archive access (rarely accessed and stored for at least 180 days). 
 - Files: managed file share for cloud or on-premises deployment.
-- Queues: messaging store for reliable messaging between application components.
-** Benefits and Usage of Database Resources - [[https://youtu.be/4sQOF9fSOAU&t=13m29s][video]]
-** Data Movement and Migration Options - [[https://youtu.be/jNBcXnMTo9s&t=11m47s][video]]
-** Benefits and Usage of Azure Marketplace - [[https://youtu.be/b7RuB4Bymgc&t=3m12s][video]]
+- Queues: messaging store for reliable messaging between application components. Can store messages up to storage limit. Typically used as a 'work backlog'. 
+- Disks: Block-level storage for Azure VMs. Literally just a virtualized disk.
+- Tables: NoSQL table option - structured, non relational data.
 
+*Benefits*
+- Durable and available - redundancy
+- Secure - encrypted, with access control
+- Scalable
+- Managed - Azure handles hardware and critical issues
+- Accessible - Can be accessed from anywhere over HTTP or HTTPS. Clients available in a variety of languages (.NET, Java, Python, Go, Ruby, etc) and a mature API. 
+** Data Movement and Migration Options - [[https://youtu.be/jNBcXnMTo9s&t=11m47s][video]]
+*** Azure Migrate
+Helps you migrate from on premises to Azure. Unified platform with a range of tools. Integrates with other Azure services and independent options as well.
+Is able to discover on-premises data storage, and migrate to Azure.
+ - Discovery and assessment
+ - Server Migration
+
+*Data Migration Assistant*
+Assesses SQL servrs to find potential migration issues. 
+
+*Database Migration Service*
+Helps move on-prem databases to Azure
+
+*** Azure Data Box
+Physical Migration Service.
+You receive a physical 'box' that connects to your system and transfers data to Azure.
+Ideal for scenarios wth limited network connectivity or large amounts of data (over 40 Tb).
+Can also export data from azure.
+
+*** AzCopy
+CLI Utility for copying blobs/files to/from a storage account. Supports one way sync, and can work with other cloud providers.
+*** Azure Storage Explorer
+graphical app for managing files and blobs in Azure Storage. Uses AzCopy for back-end. 
+*** Azure File Sync
+Centralizes file shares in Azure files - maintains flexibility of a windows file server. Supports bi directional sync, multiple caches, cloud tiers. 
+
+** Benefits and Usage of Azure Marketplace - [[https://youtu.be/b7RuB4Bymgc&t=3m12s][video]]
 
 * Describe Core Solutions and Management Tools on Azure
 ** Benefits and Usage of Azure IoT Services - [[https://youtu.be/22z9ARaKlbU&t=21m8s][video]]
@@ -574,3 +607,4 @@ These functions are a central component of serverless computing, but also server
 
 
 #  LocalWords:  deprovision stateful ExpressRoute CloudExchange LRS
+#  LocalWords:  AzCopy
