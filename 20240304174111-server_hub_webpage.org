@@ -59,9 +59,12 @@ On approval, delete from User Requests, move to [[*Users][Users]].
 * Inbox
 
 ** TODO Learn Flask Basics 
-** TODO Add initial tasks
-** TODO State Diagram
-** TODO List prospective pages, and ideal functionality
+** TODO State Diagram - Copy from Tablet
+** TODO List prospective pages, and ideal functionality - From Tablet
+** TODO Update Server Pages. Should have functionality, rather than just descriptions. 
+** TODO Create Homepage
+** TODO Fix "Forgot Password" Functionality
+** TODO Create "Request Access"
 
 
 

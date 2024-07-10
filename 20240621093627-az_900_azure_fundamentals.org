@@ -665,21 +665,60 @@ Azure RBAC:
 Roles are applied to scopes  (such as [[*Benefits and Usage of Management Groups - \[\[https://youtu.be/bPdDiEtCVhM&t=6m30s\]\[video\]\]][management groups]], [[*Benefits and Usage of Subscriptions - \[\[https://youtu.be/9vKAYW_WkLo&t=8m19s\]\[video\]\]][Subscriptions]], [[*Benefits and Usage of Resource Groups - \[\[https://youtu.be/g6thrYZhPZY&t=9m38s\]\[video\]\]][resource groups]], or single resources), they are hierarchical
 RBAC is enforced through Azure resource manager, uses an "allow model" for permissions. This means that Azure RBAC 'allows' you to perform actions within the scope of your role. If you have multiple roles, you inherit the 'allowed' actions for all your roles. 
 ** Functionality and Usage of Resource Locks - [[https://youtu.be/eF_KilJRxbE&t=6m16s][video]]
+Resourec locks prevent the accidental deletion or modification of resources, even with RBAC policies in place.
+Type:
+- Delete: user can read and modify but can't delete
+- ReadOnly: Users can only read, not delete or modify.
+
+  Manage locks via Azure portal, Powershell, Azure CLI, or Azure Resource Manager.
+  Can modify locked resources by removing the lock first.
 ** Functionality and Usage of Tags - [[https://youtu.be/eaf63hE_6SQ&t=5m6s][video]]
+Tags: provide metadata about resources. Aid in managing resources, costs, operations, security, governance, and workload
+Managing Tags: Can be managed with Powershell, Azure CLI, Azure Resource Manager, REST API, and Azure Portal
+Enforcing Tagging Rules: Azure policy can enforce rules and conventions.
+
+Tags consists of a name and a value, can be customized based on resource importance and business needs.
 ** Functionality and Usage of Azure Policy - [[https://youtu.be/z7WMqHE3R8g&t=10m50s][video]]
+Azure Policy helps ensure resources stay compliant with corporate standards by creating, assigning, and managing policies.
+Policies can be defined individually or as groups (initiatives) and can be applied at various levels (resource, resource group, subscription)
+
+Includes built-in definitions for storage, networking, compute, security center, and monitoring.
+Can automatically remediate non-compliant resources and integrates with Azure DevOps for continuous integration and delivery.
 ** Purpose of Microsoft Purview - [[https://youtu.be/mXjXcBr1ajY&t=10m47s][video]]
+Microsoft Purview provides data governance, risk, and compliance solutions to offer a unified view of your data across onprem, multicloud, SaaS.
+Helps protect sensitive data, identify risks, and manage regulatory compliance (Microsoft 365 services)
+Manages data across a variety of platforms (Azure SQL, Hive, Amazon S3, etc) enabling data classification, end-to-end lineage, and secure data access.
+
+Includes automated data discovery, sensitive data classification, and insights into data storage and use. 
 ** Governance Hierarchy Constructs - [[https://youtu.be/ge8r_Z0LKxM&t=6m13s][video]]
 ** Functionality and Usage of Azure Blueprints - [[https://youtu.be/SJbDcvkySCY&t=5m22s][video]]
 ** Describe Cloud Adoption Framework - [[https://youtu.be/VHQxbIynlN4&t=2m3s][video]]
 ** Describe Microsoft Privacy Statement, OST and DPA - [[https://youtu.be/5mqroH3E3gw&t=3m28s][video]]
 ** Purpose of Trust Center and Azure Compliance Documentation - [[https://youtu.be/QkVlogulVX4&t=5m42s][video]]
+Microsoft service trust portal provides access to content, tools, and resources about Microsoft's security, privacy, and noncompliance practices.
+Users must sign in with a MS cloud account and accept an NDA to access resources.
+
+Contains sensitive info about MS's implementation of controls and processes that protect cloud services, and customer data. 
 ** Purpose of Azure Sovereign Regions - [[https://youtu.be/PdAEPAnT2uI&t=5m15s][video]]
 
 * Describe Azure Cost Management and Service Level Agreements
 ** Factors That Affect Costs - [[https://youtu.be/fMShW_RGcxY&t=6m32s][video]]
+- Resource Type - costs vary based on the type of azure resource, settings, and the region they are deployed.
+- Consumption - pay-as-you-go, potential discounts for committing to resource usage
+- Subscription type
+- Geography - costs differ by region (labor, taxes, fees, etc)
 ** Factors to Reduce Cost - [[https://youtu.be/B5yiKE2DLH8&t=15m29s][video]]
 ** Functionality and Usage of Pricing and TCO Calculators - [[https://youtu.be/pE-bf8i5blU&t=7m26s][video]]
+Pricing Calculator: estimates the cost of provisioning resources in Azure. Includes compute, storage, network. Can estimate individual resources, or total cost.
+
+TCO Calculator: Compares costs of running onprem vs Azure. Includes factors like servers, databases, storage, and IT costs.
+
+Purpose: Pricing calculator focuses on the cost of provisioned resources, while TCO compares current infrastructure cost with potential Azure cost. 
 ** Functionality and Usage of Azure Cost Management - [[https://youtu.be/FoBjC9CAF08&t=5m48s][video]]
+Cost Management: Helps monitor and manage Azure resource costs, create alerts, and set budgets
+Cost Analysis: Provides visual tools to explore/analyze costs by billing cycle, region, resource, etc
+Cost Alerts: Includes budget alerts, credit alerts, department spending quota alerts
+Budgets: allows setting spending limits and automating resource management based on budget conditions
 ** Purpose of Service Level Agreements - [[https://youtu.be/3QIVbgnNrR0&t=13m42s][video]]
 ** Describe Service Lifecycle in Azure - [[https://youtu.be/NJ9-S7C0pY4&t=7m0s][video]]
 
@@ -688,4 +727,5 @@ RBAC is enforced through Azure resource manager, uses an "allow model" for permi
 
 #  LocalWords:  deprovision stateful ExpressRoute CloudExchange LRS
 #  LocalWords:  AzCopy onprem Entra auth NTLM Kerberos SSO Multfactor
-#  LocalWords:  passwordless RBAC PAAS CSPM
+#  LocalWords:  passwordless RBAC PAAS CSPM DevOps Powershell SaaS
+#  LocalWords:  multicloud NDA
