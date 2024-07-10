@@ -4,6 +4,8 @@
 :END:
 #+title: AZ-900 Azure Fundamentals
 #+filetags: :Cloud:Azure:
+#+related: [[id:978dd04c-79e3-4153-9efc-54a03c0935ab][Microsoft Internship]]
+
 
 * What is Azure?
 
@@ -568,22 +570,100 @@ These functions are a central component of serverless computing, but also server
 
 * Describe General Security and Network Security Features
 ** Functionality of Microsoft Defender for Cloud - [[https://youtu.be/eWcoMi_nQt4&t=9m47s][video]]
+Defender for Cloud: a monitoring tool for 'security posture management' and threat protection. Monitors your cloud, onprem, hybrid, and multi-cloud environments for guidance and notifications.
+
+Natively integrated with Azure, seamless deployment and protection with no extra setup
+Provides continuous assessment, security alerts, advanced threat protection, and recommendations
+
+For resources that are outside of Azure (onprem), defender for cloud offers a Log Analytics Agent to gather data. This is extended to networks outside Azure using Azure Arc.
+
+Detect threats across:
+- PAAS - app service, Azure SQL, Storage Account
+- Data Services - automatically classify data. Get assessments for potential vulnerability across SQL and storage.
+- Networks - Limit exposure to brute force attacks.
+
+Other Servers:
+- CSPM (protect AWS)
+- Defender for Containers
+- Defender for Servers
 ** Functionality and Usage of Key Vault - [[https://youtu.be/ZBXVAD4S0Tc&t=7m37s][video]]
 ** Functionality and Usage of Microsoft Sentinel - [[https://youtu.be/xaqiPXL6tz0&t=9m36s][video]]
 ** Functionality and Usage of Azure Dedicated Hosts - [[https://youtu.be/RnNqmTH9xok&t=6m49s][video]]
 ** Concept of Defense in Depth - [[https://youtu.be/CHKS2FcEMek&t=7m17s][video]]
+Defense In Depth Strategy: uses multiple layers of security to protect data, ensures that if one layer is breached, others remain intact.
+Layers: includes physical security, identity and access, perimeter, network, compute, application, and data layers. Layers have specific roles.
+
+Physical: first line of defense. Protect computing hardware in data-center.
+Identity and access: controls access to infrastructure and change control
+Perimeter: uses distributed denial of service (DDoS) protection to filter large-scale attacks before they can impact
+Network: limits communication between resources (uses segmentation and access control)
+Compute: secures access to [[id:61d1153b-3d2a-4e72-babc-1969c1849005][Virtual Machine]]s
+Application: ensures that applications are secure and free of vulnerabilities
+Data: controls access to business and consumer data
 ** Describe the Concept of Zero Trust - [[https://youtu.be/JX3w4to-qgo&t=8m13s][video]]
+Zero Trust Model: Assumes the worst case scenario. Assumes a breach at the outset, verifies each request as though it originated from an uncontrolled network.
+
+*Guiding Principles*:
+- Verify explicitly - always authenticate and authorize based on all available data points
+- Use least privilege access - limit user access with 'just in time' and 'just enough access' policies.
+- Assume breach - minimize blast radius, segment access, use analytics for threat detection and defense improvement
+
+*Differences from traditional*
+traditional models assume safety within corporate networks, while zero trust requires auth for access regardless of location.
+Traditional security examines your IP. If you come from a 'trusted IP', you are allowed access. Bad actors have ways of spoofing IP and manipulating their metadata however, so this isn't entirely secure. Zero Trust does not assume that you are allowed to have access, regardless of your source IP - Zero Trust simply means that we verify your identity no matter what.  
 ** Functionality and Usage of NSGs - [[https://youtu.be/flCoRc1uv9o&t=8m32s][video]]
 ** Functionality and Usage of Azure Firewall - [[https://youtu.be/1-_cqpUISg4&t=5m2s][video]]
 ** Functionality and Usage of Azure DDoS Protection - [[https://youtu.be/6cv-wdo9TJw&t=6m30s][video]]
 
 * Describe Identity, Governance, Privacy, and Compliance Features
 ** Explain Authentication and Authorization - [[https://youtu.be/GA-yNu6aFMk&t=3m52s][video]]
-** Describe Azure Directory Services - [[https://youtu.be/E4__JBVE25I&t=14m6s][video]]
+Azure supports multiple auth methods.
+Includes passwords, Single Sign On (SSO), Multfactor auth (MFA) and passwordless.
+Previously, the thought was that convenience and security were mutually exclusive. New auth methods (supposedly) change that.
+
+*SSO*
+- Allows users to sign in once and access multiple resources. Simplifies, prevents a sign on for each resource.
+
+*MFA*
+- Enhances security, requires additional methods of identification
+
+*Passwordless*
+High security and convenience. Uses methods like "Microsoft hello for business", "Microsoft Auth App", "FIDO2 security keys".
+
+Hello for business is ideal if a user has one business issued PC. Bio-metrics and pin are tied to that PC.
+FIDO (Fast Identity Online) helps to promote open auth standards and reduce the use of passwords. These keys are typically an external device, like a USB drive, Bluetooth, or NFC device. 
 ** Describe Azure External Identities - [[https://youtu.be/G5_z4PFgn2o&t=11m14s][video]]
+External Identities: refers to users, devices ,or services outside your organization. Can use their own credentials to sign in, managed by identity provider.
+Microsoft Entra External ID: the ways you can securely interact with users outside your organization.
+Similar to SSO - allows users to "bring their own sign on"
+
+B2B (Business to Business) Collaboration: Allows external users to sign in using preferred identity for Microsoft and other enterprise applications.
+- Direct Connect: Establishes mutual trust with another Entra organization for seamless collaboration (especially in Teams)
+
+Azure AD B2C (Business to Consumer): Manages identity and access for consumer facing apps, allowing users to sign in with social or other identities. 
 ** Functionality of Conditional Access, MFA and SSO - [[https://youtu.be/DFwERh9Xxk0&t=12m29s][video]]
+Conditional Access: a tool in Entra ID that allows/denies access based on identity signals like user identity, location, and device.
+
+Helps IT admins empower users to be productive while protecting assets.
+Granular MFA: provides a more detailed MFA, challenges user on unusual sign in signals.
+Use Cases: requiring MFA, limiting access to approved applications, restrict access to managed devices, block from untrusted sources. 
 ** Overview of Microsoft Entra - [[https://youtu.be/bSIF_GjaCmo&t=11m34s][video]]
+Entra ID: cloud based identity and access management service. Manages identities for Microsoft cloud applications and on-premises Active Directory.
+
+Includes authentication, single sign-on (SSO), application management, and device management.
+Can be connected to onprem Active Directory using Microsoft Entra Connect (consistent identity experience)
+Entra Domain Services: Provides managed domain services (domain join, group policy, Kerberos/NTLM auth) without the need to manage domain controllers (simpler).
+
+
 ** Functionality and Usage of RBAC - [[https://youtu.be/0iVyJBG06fM&t=9m19s][video]]
+
+Least Privilege:
+- Only grant the access that's necessary to complete a task
+Azure RBAC:
+- Simplify access management by assigning roles with specific permissions to individuals or groups.
+
+Roles are applied to scopes  (such as [[*Benefits and Usage of Management Groups - \[\[https://youtu.be/bPdDiEtCVhM&t=6m30s\]\[video\]\]][management groups]], [[*Benefits and Usage of Subscriptions - \[\[https://youtu.be/9vKAYW_WkLo&t=8m19s\]\[video\]\]][Subscriptions]], [[*Benefits and Usage of Resource Groups - \[\[https://youtu.be/g6thrYZhPZY&t=9m38s\]\[video\]\]][resource groups]], or single resources), they are hierarchical
+RBAC is enforced through Azure resource manager, uses an "allow model" for permissions. This means that Azure RBAC 'allows' you to perform actions within the scope of your role. If you have multiple roles, you inherit the 'allowed' actions for all your roles. 
 ** Functionality and Usage of Resource Locks - [[https://youtu.be/eF_KilJRxbE&t=6m16s][video]]
 ** Functionality and Usage of Tags - [[https://youtu.be/eaf63hE_6SQ&t=5m6s][video]]
 ** Functionality and Usage of Azure Policy - [[https://youtu.be/z7WMqHE3R8g&t=10m50s][video]]
@@ -607,4 +687,5 @@ These functions are a central component of serverless computing, but also server
 
 
 #  LocalWords:  deprovision stateful ExpressRoute CloudExchange LRS
-#  LocalWords:  AzCopy
+#  LocalWords:  AzCopy onprem Entra auth NTLM Kerberos SSO Multfactor
+#  LocalWords:  passwordless RBAC PAAS CSPM

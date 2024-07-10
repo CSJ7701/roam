@@ -203,9 +203,69 @@ Check in regularly with those under you
 - Dessalines does weekly meetinfs with every sailor under her to check in on what they are doing for their professiopnal development
 
 
+** Meeting with John Rodriguez (Principal Architect)
+*In Meeting*
+- Robert Soligan
+- Jadyn Dessalines
+- Christopher Neef
+- Elisha Angeles
+- John Rodriguez
+- Joe Church
+- Kevin Friedemann
+
+
+*John Rodriguez*
+Lead architect for the security practice in the federal consulting
+"what should we be doing 6 months from now"
+"how do we get ready to do those new things"
+"How do we partner with other organzations to achive those things"
+"How do we partner with other parts of microsoft"
+"How do we prevent problems for higher ups"
+focuses on DOD.
+
+*Lessons learned from other branches*
+2 big programs - flakspeed (navy) and itaz? (Army)
+- both targeting zero trust
+- both pretty far advanced
+
+Biggest questions surround telemetry - what data to collect and how to use it.
+must ensure that the data you ingest is actually valuable and gets used.
+Biggest lesson learned is to ensure that you actually use the data you take in.
+2 of the hardest parts are data protection and software factory (mechanism for converting legacy applications so that they are more modern. Less monolithic, serverless, function based)
+
+*Question for Jadyn/Chris* - If you had control, what would you change
+- Move away from "legacy archiotecture" that they still try to embed in everything
+- Improve the way you presenbt the 'problem'
+- Give an identity ONCE - i.e. shift to a single identity provider across the board.
+
+
+*Zero Trust*
+You no longer have to worry about outside networks.
+It involves a continuous re-evaluation to determine whether someone should have access to resources.
+Zero Trust involves starting from a point of "Zero" trust, then each individual person works up to a point of trust.
+Shouldn't automatically trust an IP based on their source network (VPN's are a thing).
+You should evaluate each individual to determine, regardless of IP, whether they should be trusted.
+
+*Where do you see AI going*
+"Great Equalizer"
+Can help a junior analyst provide results that you would expect from a senior analyst.
+Can simulate results of years of experience.
+Makes hiring process easier by reducing the expertise needed.
+
+Highlights "sins of the past".
+AI will have access to the data of the company that created it, so if a company has poor data security, the AI will find data that it should not have access to.
+This will help identify and incentive-ize better practice. 
+
+
+
+* My Work
+[[id:b1a8d451-fc98-409f-9287-9d56d8696495][Microsoft Azure]]
+- Following the Microsoft Learn "AZ900" course, to gain a base level understanding of Microsoft azure.
+
 * Notable Links
 aka.ms/discounts
 aka.ms/ESI
+
 
 
 
