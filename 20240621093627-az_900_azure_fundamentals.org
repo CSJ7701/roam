@@ -210,7 +210,10 @@ Examples for using management groups:
 ** Benefits and Usage of Azure Resource Manager - [[https://youtu.be/g4u0NL2-3XM&t=9m57s][video]]
 
 ** Describe the Purpose of Azure Arc - [[https://youtu.be/cW6_rvDYSHg&t=7m23s][video]]
-
+Simplifies governance and management of hybrid and multi-cloud environments. Extends Azure Compliance and Monitoring to non-azure resources.
+Manage onprem and multi-cloud resources (VMs, Kubernetes Clusters, databases) as though they were in Azure.
+Enables use of Azure services and management capabilities across different environments.
+Supports managing wide range of resources (servers, kubernetes, Azure data services, SQL server, VM's...)
 ** Describe the Resources Required for Virtual Machines - [[https://youtu.be/PP5BWZ0cAJo&t=6m17s][video]]
 Azure allows users to create and use [[id:61d1153b-3d2a-4e72-babc-1969c1849005][Virtual Machine]]s in the cloud. These VM's provide [[id:f63302e7-65b9-4fc0-a596-9ec269496756][IaaS]] in the form of a virtualized server.
 This is an ideal choice when you need to:
@@ -563,11 +566,32 @@ Functions can be stateless or stateful. Stateless functions (default) behave as 
 These functions are a central component of serverless computing, but also server as a general compute platform for running any type of code. 
 ** Benefits and Usage of DevOps Technologies - [[https://youtu.be/-acpNiCa0qY&t=10m21s][video]]
 ** Functionality of Azure Management Solutions - [[https://youtu.be/6xp-K60ChAk&t=9m23s][video]]
+Azure Portal: web based, unified console. Manage Azure subscriptions with a [[id:de12ea67-0c1c-4772-aff3-05bab32ba28d][GUI]]. Offers custom dashboard, continuous availability, etc.
+Azure cloud shell: browser based shell, supports Azure Powershell and Azure CLI. Manage Azure resources remotely.
+Azure Powershell: shell for running commands (cmdlets) to manage Azure resource, available via Cloud Shell. Multi-platform.
+Azure CLI: similar to Azure Powershell, uses bash commands (same functionality)
 ** Functionality and Usage of Azure Advisor - [[https://youtu.be/nqH4NboyEl0&t=3m22s][video]]
+Evaluates your Azure resources, and provides recommendations to improve reliability, security, performance, and cost.
+Recommendations are available via the Azure portal, and can be accessed via the Azure Advisor API.
+Dashboard displays personalized recommendations for all subscriptions and resource groups. Can filter for specific resources, and can dismiss recommendations that are not relevant.
+Recommendations are divided into 'reliability', 'security', 'performance', and 'cost' categories.
 ** Functionality and Usage of ARM Templates - [[https://youtu.be/loxcA5MUf-I&t=6m41s][video]]
-** Functionality and Usage of Azure Monitor - [[https://youtu.be/v68jL-l9Fww&t=10m20s][video]]
-** Functionality and Usage of Azure Service Health - [[https://youtu.be/M1xPK4T4Vls&t=2m58s][video]]
+Azure Resource Manager (ARM): deployment and management service for Azure. Handles requests from Azure tools, APIs, SDK's, and ensures consistent results.
 
+Benefits: allows managing infrastucture through declarative templates, deploying resources as a group, and applying access control and tags for better organization and billing.
+Templates: JSON files describe resources in a declarative format. Ensures repeatability deployments and modularity.
+Bicep: simpler, more concise language than JSON for deployiung Azure resources. Supports all resource types and API versions. 
+** Functionality and Usage of Azure Monitor - [[https://youtu.be/v68jL-l9Fww&t=10m20s][video]]
+Azure Monitor: collects, analyzes, and acts on telemetry from your cloud and on-premises environments. Provides a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.
+Azure Log analytics: collects and analyzes data from multiple sources. Can be used to monitor and manage the performance of your applications and infrastructure.
+Tool for writing and running queries against collected data. Can be used to create visualizations and alerts.
+Azure Monitor Alerts: Automated notifications that are sent when a particular condition is met. Can be used to monitor the performance of your applications and infrastructure.
+Application insights: Monitors web applications and services. Provides real-time insights into application performance and user behavior. Monitors across multiple platforms and languages.
+** Functionality and Usage of Azure Service Health - [[https://youtu.be/M1xPK4T4Vls&t=2m58s][video]]
+Azure Status provides a global view of the health of all Azure services, across all regions.
+Service health offers a more focused view of the health of the services in the regions that you use.
+Resource health gives detailed information about the health of an individual resource, such as VM's and allows for alert configuration.
+Historical Alerts stores alerts for 90 days, and allows you to view and manage alerts.
 * Describe General Security and Network Security Features
 ** Functionality of Microsoft Defender for Cloud - [[https://youtu.be/eWcoMi_nQt4&t=9m47s][video]]
 Defender for Cloud: a monitoring tool for 'security posture management' and threat protection. Monitors your cloud, onprem, hybrid, and multi-cloud environments for guidance and notifications.
@@ -728,4 +752,4 @@ Budgets: allows setting spending limits and automating resource management based
 #  LocalWords:  deprovision stateful ExpressRoute CloudExchange LRS
 #  LocalWords:  AzCopy onprem Entra auth NTLM Kerberos SSO Multfactor
 #  LocalWords:  passwordless RBAC PAAS CSPM DevOps Powershell SaaS
-#  LocalWords:  multicloud NDA
+#  LocalWords:  multicloud NDA cmdlets SDK's VM's

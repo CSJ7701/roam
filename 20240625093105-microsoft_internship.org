@@ -257,6 +257,29 @@ AI will have access to the data of the company that created it, so if a company 
 This will help identify and incentive-ize better practice. 
 
 
+** SME Corner Series - Azure Attack Paths (Part 1)
+*In the Meeting*
+- Jadyn Dessalines
+- Christopher Neef
+- Shankar Subramaniyan - Speaker
+- about 150+ more people
+
+
+** John Barbare - Meet and Greet
+*In the Meeting*
+- Christopher Neef
+- Elisha Angeles
+- Jadyn Dessalines
+- John Barbare
+- Joe Church
+- Kevin Friedemann
+
+*John Barbare*
+Army
+5.5 years Defense contracter
+5.5 years, customer success unit
+
+
 
 * My Work
 [[id:b1a8d451-fc98-409f-9287-9d56d8696495][Microsoft Azure]]

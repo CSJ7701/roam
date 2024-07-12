@@ -30,10 +30,24 @@
 - Will add information to [[*User Requests][User Requests]]
 - Will send email to admin with name and user name for request
 - Admin will correspond with requesting user, and add entries to [[*Users][Users]]
+
+** Pending Account Confirmation  
+
 ** Forgot Password 
 - Email
 - Will allow user to either "request old password" or "reset password"
-- 
+
+** Homepage
+- Calendar Widget
+- Messages Widget
+- Tasks Widget
+- RSS Widget
+
+** Chat
+
+** Contacts
+
+** Media
 
 ** Databases
 *** Users
@@ -58,13 +72,24 @@ On approval, delete from User Requests, move to [[*Users][Users]].
 
 * Inbox
 
-** TODO Learn Flask Basics 
+** DONE Learn Flask Basics 
+CLOSED: [2024-07-11 Thu 13:12]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-07-11 Thu 13:12]
+:END:
+
 ** TODO State Diagram - Copy from Tablet
 ** TODO List prospective pages, and ideal functionality - From Tablet
 ** TODO Update Server Pages. Should have functionality, rather than just descriptions. 
 ** TODO Create Homepage
 ** TODO Fix "Forgot Password" Functionality
 ** TODO Create "Request Access"
-
+** TODO Emails not sending [#A]
+** TODO Admin Panel
+- See reset password requests, access requests, users, user activity
+- Log activity.
+** TODO Reset password DB
+** TODO Fix Login - should use a hash
+** TODO Fix Login - username and email are currently both case sensitive
 
 
