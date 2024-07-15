@@ -81,15 +81,40 @@ CLOSED: [2024-07-11 Thu 13:12]
 ** TODO State Diagram - Copy from Tablet
 ** TODO List prospective pages, and ideal functionality - From Tablet
 ** TODO Update Server Pages. Should have functionality, rather than just descriptions. 
-** TODO Create Homepage
-** TODO Fix "Forgot Password" Functionality
-** TODO Create "Request Access"
-** TODO Emails not sending [#A]
+** DONE Create Homepage
+CLOSED: [2024-07-12 Fri 11:51]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-07-12 Fri 11:51]
+:END:
+
+** DONE Fix "Forgot Password" Functionality
+CLOSED: [2024-07-12 Fri 11:51]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-07-12 Fri 11:51]
+:END:
+
+** DONE Create "Request Access"
+CLOSED: [2024-07-12 Fri 11:51]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-07-12 Fri 11:51]
+:END:
+
+** DONE Emails not sending [#A]
+CLOSED: [2024-07-12 Fri 11:51]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-07-12 Fri 11:51]
+:END:
+
 ** TODO Admin Panel
 - See reset password requests, access requests, users, user activity
 - Log activity.
 ** TODO Reset password DB
-** TODO Fix Login - should use a hash
-** TODO Fix Login - username and email are currently both case sensitive
+** DONE Fix Login - should use a hash
+CLOSED: [2024-07-12 Fri 11:50]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-07-12 Fri 11:50]
+:END:
 
+** TODO Fix Login - username and email are currently both case sensitive
+** TODO Optimize CSS
 

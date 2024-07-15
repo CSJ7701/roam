@@ -280,7 +280,7 @@ Army
 5.5 years, customer success unit
 
 
-
+** Security Power Hour - Into the Red Team
 * My Work
 [[id:b1a8d451-fc98-409f-9287-9d56d8696495][Microsoft Azure]]
 - Following the Microsoft Learn "AZ900" course, to gain a base level understanding of Microsoft azure.
