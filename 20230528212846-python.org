@@ -2,7 +2,7 @@
 :ID:       7fc21633-542b-41b5-9019-a820af991795
 :END:
 #+title: Python
-#+filetags: :Coding:
+#+filetags: :Coding:Python:
 
 <BOOKMARK>
 
