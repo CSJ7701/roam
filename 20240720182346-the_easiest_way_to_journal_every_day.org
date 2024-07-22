@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       78668bf7-2032-4f24-b908-732548870276
+:END:
+#+title: The Easiest Way To Journal Every Day
+#+filetags: :Video:
+
+[[yt:xHGtMw-JFRU]]
+
+
+* What should I write about?
+
+Journal about anything, but it's usually helpful to have an intention to focus on.
+What do I want to get out of journaling? (Clarity, organization, mental health, etc)
+
+Without a purpose, your practice can feel meaningless. 
+
+* Rapid Logging
+What was the last meaningful thing someone said to you?
+What did you have for lunch two days ago?
+
+We can't rely on our memory, but our experiences are valuable.
+Experiences are lessons, and writing down our thoughts and feelings on those experiences helps us reflect and learn from them.
+This is made difficult by the complexity of our daily lives.
+
+Rapid logging helps you organize experiences into one of three categories:
+- Tasks - things you need to do
+- Events - Things you experience
+- Notes - Things you don't want to forget
+
+
+Represent each category with a simple symbol.
+Tasks can be represented with a dot, then an x once complete, or an arrow when moved.
+Events can be open circles. These can be things we accomplished, things that happened to us, or any other 'event' that happens in a day.
+Notes can be represented with a dash. These are useful for recording responses to events. Over time, a record of those responses can help us correlate /how/ we feel with what we /do/ and what we /experience/.
+
+
+Signifiers can be used to provide extra context. These go to the left of bullets, such as an asterisk to represent priority, or an exclamation point for inspiration.
