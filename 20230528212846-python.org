@@ -430,6 +430,8 @@ print(myorder.format(quantity, itemno, price))
 
 <BOOKMARK>
 
+** Logical
+Boolean values are denoted by /true/ or /false/ (1 or 0)
 * Comments
 Comments are handled with #.
 Python doesn't support multiline comments, comment each line with a seperate #.
@@ -469,6 +471,12 @@ Using a comma is the best overall method. This method supports different data ty
 : 8
 : bobsayshi
 
+Takes =end= and =sep= keyword arguments (of type string) to determine what the end character, and separators should be.
+** Input
+Takes input from the user.
+Uses the terminal by default.
+It takes a positional string argument for the prompt.
+You can enter a number, but the =input()= function will format it as a string. 
 ** Type
 
 type()
@@ -591,3 +599,38 @@ Uses placeholders ( {} ) and input arguments to input strings of multiple data t
 
 #+RESULTS:
 : My name is John and I am 36
+
+** Mathematical Operators
+
+- + addition
+- - subtraction
+- * multiplication
+- / division
+- // integer division
+  Will always produce an integer (floors the result)
+  1//2 = floor(1/2) = 0
+  24//5 = floor(24/5) = 4
+- % modulus
+  Modulus refers to the remainder left after dividing 2 numbers.
+  2%3 = remainder(2/3) = 2
+  8%5 = remainder(8/5) = 3
+- ** exponent
+
+
+PEMDAS and binding
+- Python uses PEMDAS (which should really be reduced to PE(m/d)(a/s))
+- For repeated operations (5+5+5, or 10/10/10), the order relies on the 'binding direction' of the operator.
+  All operators except =**= are left binding, meaning they perform their operations from left to right.
+  =**= performs operations from right to left
+  1**2**3 = (3**2)**1
+  1+2+3 = (1+2)+3
+
+
+For any *two argument* operator, you can simplify X = X+?, X=X-?, X=X**? etc to X+=?, X-=?, X% =?
+
+** String Operators
+
+- + add
+  Can be used to concatenate strings. Unlike regular addition, this is not commutative. Order matters.
+- * multiply
+  Can be used to repeat strings. Syntax is =string*number=, which will repeat =string=, =number= times.
