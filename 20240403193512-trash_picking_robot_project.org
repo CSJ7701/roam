@@ -3,7 +3,7 @@
 :END:
 #+title: Trash Picking Robot Project
 #+category: Trash Picking Robot Project
-#+filetags: Project
+#+filetags: :Archived:Project:
 * Project Description
 Project for LT Ledzian to implement a "Trash Picking Robot" using [[id:002765d7-9d44-4163-a1c4-1058ef0d128c][Genetic Algorithms]].
 Based on a segment of Melanie Mitchell's book - [[cite:&hollandRecipeGeneticAlgorithm]]

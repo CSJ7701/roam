@@ -118,4 +118,8 @@ CLOSED: [2024-07-12 Fri 11:50]
 ** TODO Fix Login - username and email are currently both case sensitive
 ** TODO Optimize CSS
 ** TODO [#C] Look into Port Forwarding to open this webserver to the internet.
-** TODO Migrate from Radicale to Baikal
+** DONE Migrate from Radicale to Baikal
+CLOSED: [2024-07-24 Wed 12:16]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-07-24 Wed 12:16]
+:END:
