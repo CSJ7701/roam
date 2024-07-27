@@ -281,6 +281,22 @@ Army
 
 
 ** Security Power Hour - Into the Red Team
+
+** Meeting with Soligan
+Use ESI with .mil email to potentially get access to 'LEARN' courses and free exams
+
+TO be successful, don't be 'bill and chill'. Be the person who looks around and finds work
+Two Types in Professional world:
+- sits there and waits for work to do, smartest person in the room, complacent
+- Seeks out work, looks for chances to learn
+
+Getting 30,000 certs isn't always the most useful - have a lab and experiment, look for things you don't understand, do things yourself
+
+Maintain a blog and github to demonstrate your "go-getter" attitude
+
+/Deomonstrate/ that you are constantly learning - with a growth mindset
+
+Company like microsoft - meh base salary, but + 15-20% for sec clearance, utilization bonuses (how many hours you bill clients), impact bonuses (end of year - really big) for principal (120-150 k in stock + a cash bonus of 40-100 k)
 * My Work
 [[id:b1a8d451-fc98-409f-9287-9d56d8696495][Microsoft Azure]]
 - Following the Microsoft Learn "AZ900" course, to gain a base level understanding of Microsoft azure.
@@ -288,7 +304,8 @@ Army
 * Notable Links
 aka.ms/discounts
 aka.ms/ESI
-
+esi.microsoft.com - sign up with .mil address
+Exam Topics - useful for study guides (pretty spot on to whats on the test)
 
 
 
