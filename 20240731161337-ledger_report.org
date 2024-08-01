@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       de570d94-5dec-4318-b860-b12b33a3c95e
+:END:
+#+title: Ledger Report
+#+category: Ledger Report
+#+filetags: :Ledger:Python:Project:
+* Project Description
+Use [[id:7fc21633-542b-41b5-9019-a820af991795][Python]] to generate a profit and loss statement from ledger-cli.
+
+
+* Features
+** Account Info
+Balances for Asset and Liability accounts (Current Month)
+Delta from last month
+(Average monthly Delta and consistancy? - relevant?)
+
+Chart. Sideways bar graph, sorted.
+Axis in center of page.
+Displays net change, red to left for decrease, green ot right for increase.
+** Budget Review
+
+** Money back
+Look for tax deductable tag, and balance of "Reimbursable" account.
+** Trip Costs
+Look for trip tags (use ledger -f [ledger-file] [Period] tags --values | grep -i "trip")
+Split, and grab all trip names.
+
+For each trip, create a heading and list Account names and amounts.
+At the end of each trip, show totals for "reimbursable" and total amounts you are liable for.
+** Amount owed on Liabilities
+Account Balances
+For Credit Cards, uncleared expenses from 15th of last month to 15th of this month 
+
+
+
+* Inbox
+
+** TODO Add initial tasks

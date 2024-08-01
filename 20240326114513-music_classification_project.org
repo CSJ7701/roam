@@ -4,7 +4,7 @@
 :END:
 #+title: Music Classification Project
 #+category: Music Classification Project
-#+filetags: :DSP:Project:
+#+filetags: :Archived:DSP:Project:
 #+STARTUP: shrink
 #+EXPORT_FILE_NAME: /home/csj7701/Projects/Music-Classification/Class-Documents/ProjectOverview.pdf
 * Project Description

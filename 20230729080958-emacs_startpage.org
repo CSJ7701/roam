@@ -3,7 +3,7 @@
 :END:
 #+title: Emacs Startpage
 #+category: Emacs Startpage
-#+filetags:                                                                                                           :Emacs:Project:
+#+filetags: :Archived:Emacs:Project:
 * Inbox
 ** DONE test
 CLOSED: [2023-12-23 Sat 12:37]

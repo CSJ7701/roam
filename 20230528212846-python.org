@@ -615,6 +615,14 @@ Uses placeholders ( {} ) and input arguments to input strings of multiple data t
   2%3 = remainder(2/3) = 2
   8%5 = remainder(8/5) = 3
 - ** exponent
+- == equality (boolean)
+  5==6 -> false
+  5==5 -> true
+- != inequality (boolean)
+  5!=6 -> true
+  6!=6 -> false
+- >/< greater than/less than
+- >= / <= greater than or equal to / less than or equal to
 
 
 PEMDAS and binding

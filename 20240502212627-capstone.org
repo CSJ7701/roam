@@ -16,7 +16,9 @@ Uses Deep Learning to predict velocity and pressure.
 ** Using ML to predict Surface Currents
 https://www.frontiersin.org/articles/10.3389/fmars.2021.672477/full
 
+** Python Particle Tracking
+https://docs.oceanparcels.org/en/latest/examples/parcels_tutorial.html
 
 * Inbox
 
-** TODO Add initial tasks
+
