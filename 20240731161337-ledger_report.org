@@ -3,9 +3,9 @@
 :END:
 #+title: Ledger Report
 #+category: Ledger Report
-#+filetags: :Ledger:Python:Project:
+#+filetags: :Ledger:Python:Project:Budget:
 * Project Description
-Use [[id:7fc21633-542b-41b5-9019-a820af991795][Python]] to generate a profit and loss statement from ledger-cli.
+Use [[id:7fc21633-542b-41b5-9019-a820af991795][Python]] to generate a (profit and loss?) statement from ledger-cli.
 
 
 * Features
@@ -18,6 +18,20 @@ Chart. Sideways bar graph, sorted.
 Axis in center of page.
 Displays net change, red to left for decrease, green ot right for increase.
 ** Budget Review
+Remaining balance for all budget accounts (current month)
+
+(New Table)
+Per Account:
+- contributions this month
+- Spent this month
+- contributions last month
+- Spent last month
+- Average monthly contribution
+- Average monthly expenditure
+
+(Graph) - Double Bar Graph (vertical, sorted by this months expenditure)
+Each account, green bar for this months contributions, red bar for this months deductions.
+
 
 ** Money back
 Look for tax deductable tag, and balance of "Reimbursable" account.
